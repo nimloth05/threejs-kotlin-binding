@@ -3,6 +3,8 @@ package ch.viseon.threejs.parser
 import java.lang.StringBuilder
 import java.nio.file.Files
 import java.nio.file.Path
+import java.text.SimpleDateFormat
+import java.util.*
 
 
 class KotlinFileGenerator(
@@ -14,6 +16,7 @@ class KotlinFileGenerator(
         Files.createDirectories(destinationDirectory)
 
         val content = buildString {
+            append("//Generated date ${SimpleDateFormat.getDateInstance(SimpleDateFormat.MEDIUM, Locale.GERMAN).format(Date())}")
             append("@file:JsModule(\"three\")\n")
 
             append("package ")
@@ -267,7 +270,7 @@ class KotlinFileGenerator(
 
 fun generateKotlinDoc(htmlDoc: String): String {
     return buildString {
-        append("\t/**\n")
+        append("\n\t/**\n")
         htmlDoc
             .split("<br>")
             .asSequence()
@@ -279,7 +282,7 @@ fun generateKotlinDoc(htmlDoc: String): String {
                     .replace("*/*", "* / *")
             }
             .map { "\t* $it" }
-            .joinTo(this, "\n", postfix = "\n")
+            .joinTo(this, "\n")
         append("\t*/\n")
     }
 }

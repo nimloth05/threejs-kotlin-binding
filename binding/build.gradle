@@ -9,4 +9,6 @@ dependencies {
     compile "org.jetbrains.kotlin:kotlin-stdlib-js"
 }
 
+version = '1.0.0_r98'
+
 compileKotlin2Js.kotlinOptions.moduleKind = "commonjs"
