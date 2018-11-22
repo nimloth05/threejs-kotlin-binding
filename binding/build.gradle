@@ -1,5 +1,6 @@
 plugins {
     id 'kotlin2js'
+    id 'maven-publish'
 }
 repositories {
     mavenCentral()
@@ -9,6 +10,15 @@ dependencies {
     compile "org.jetbrains.kotlin:kotlin-stdlib-js"
 }
 
+publishing {
+    publications {
+        maven(MavenPublication) {
+            from components.java
+        }
+    }
+}
+
+group 'ch.viseon.threejs'
 version = '1.0.0_r98'
 
 compileKotlin2Js.kotlinOptions.moduleKind = "commonjs"

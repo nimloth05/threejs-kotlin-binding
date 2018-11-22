@@ -1,4 +1,5 @@
-//Generated date 22.11.2018@file:JsModule("three")
+//Generated date 22.11.2018
+@file:JsModule("three")
 package ch.viseon.threejs.declarations.lights
 
 	/**
