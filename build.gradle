@@ -1,24 +1,13 @@
-plugins {
-    id 'org.jetbrains.kotlin.jvm' version '1.3.0'
-}
-
 group 'ch.viseon.threejs'
 version '1.0-SNAPSHOT'
 
-repositories {
-    mavenCentral()
-}
+buildscript {
+    ext.kotlin_version = '1.3.10'
 
-dependencies {
-    compile "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
-    compile "org.jsoup:jsoup:1.11.3"
-    compile "com.google.code.gson:gson:2.8.5"
-    testCompile "junit:junit-dep:4.11"
-}
-
-compileKotlin {
-    kotlinOptions.jvmTarget = "1.8"
-}
-compileTestKotlin {
-    kotlinOptions.jvmTarget = "1.8"
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    }
 }

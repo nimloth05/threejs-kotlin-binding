@@ -5,32 +5,40 @@ import org.jsoup.nodes.Node
 import org.jsoup.nodes.TextNode
 import java.net.URL
 import java.nio.file.Files
+import java.nio.file.Path
 import java.nio.file.Paths
 
 fun main(args: Array<String>) {
     val classList = ClassList.compile(URL("https://threejs.org/docs/list.js"), "ch.viseon.threejs.declarations")
-    val classDeclarations = collectClassInformation(classList)
+    val targetDirectory = Paths.get("binding/src/main/kotlin")
 
-    generateKotlinFiles(classList, classDeclarations)
+    val classDeclarations = collectClassInformation(targetDirectory, classList)
+    generateKotlinFiles(targetDirectory, classList, classDeclarations)
 }
 
-private fun collectClassInformation(classList: ClassList): ClassDeclarations {
+private fun generateKotlinFiles(targetDirectory: Path, classList: ClassList, classDeclarations: ClassDeclarations) {
+    val generator = KotlinFileGenerator(classList, classDeclarations)
+    classDeclarations.declarations.parallelStream().forEach { declaration ->
+
+        val classListEntry = classList.class2PackageName[declaration.name]!!
+        val directory = classListEntry.packageName.split(".").fold(targetDirectory) { p, s -> p.resolve(s) }
+
+        println("Generate ${classListEntry.name}")
+        generator.generate(directory, declaration)
+    }
+}
+
+private fun collectClassInformation(targetDirectory: Path, classList: ClassList): ClassDeclarations {
     val resultCollector = ClassDeclarationsCollector()
     classList.class2PackageName.entries.parallelStream().forEach { (className, entry) ->
         println("Checking $className")
-        createClassDescription(entry, resultCollector)
+        createClassDescription(targetDirectory, entry, resultCollector)
     }
     return resultCollector.build()
 }
 
-private fun generateKotlinFiles(classList: ClassList, classDeclarations: ClassDeclarations) {
-    classDeclarations.declarations.parallelStream().forEach { declaration ->
-        generateKotlinFile(declaration, classList, classDeclarations)
-    }
-}
-
-fun createClassDescription(classListEntry: ClassListEntry, declarationCollector: ClassDeclarationsCollector) {
-    val directory = classListEntry.packageName.split(".").fold(Paths.get("gen")) { p, s -> p.resolve(s) }
+fun createClassDescription(targetDirectory: Path, classListEntry: ClassListEntry, declarationCollector: ClassDeclarationsCollector) {
+    val directory = classListEntry.packageName.split(".").fold(targetDirectory) { p, s -> p.resolve(s) }
 
     //Check if the file already exists, if so skip.
     val file = directory.resolve("${classListEntry.name}.kt")
@@ -43,15 +51,6 @@ fun createClassDescription(classListEntry: ClassListEntry, declarationCollector:
     val body = doc.select("body").first()
 
     declarationCollector.put(generateDecl(classListEntry.name, body.childNodes()))
-}
-
-fun generateKotlinFile(declaration: ClassDeclaration, classList: ClassList, classDeclarations: ClassDeclarations) {
-    val classListEntry = classList.class2PackageName[declaration.name]!!
-    val directory = classListEntry.packageName.split(".").fold(Paths.get("gen")) { p, s -> p.resolve(s) }
-
-    println("Generate ${classListEntry.name}")
-
-    KotlinFileGenerator(classList, classDeclarations).generate(directory, declaration)
 }
 
 fun generateDecl(name: String, elements: List<Node>): ClassDeclaration {

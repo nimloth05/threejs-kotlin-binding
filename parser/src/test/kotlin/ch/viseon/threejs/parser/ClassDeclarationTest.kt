@@ -28,7 +28,9 @@ class ClassDeclarationTest {
 
         val classDeclarations = ClassDeclarations(mapOf(classA.name to classA, classB.name to classB))
 
-        val result = classB.findParentMember(classDeclarations, methodDeclaration)
+        val result = classB.findParentMember(classDeclarations) {
+            it.name == methodDeclaration.name
+        }
         assertTrue(result)
     }
 
@@ -64,7 +66,9 @@ class ClassDeclarationTest {
 
         val classDeclarations = ClassDeclarations(mapOf(classA.name to classA, classB.name to classB, classC.name to classC))
 
-        val result = classC.findParentMember(classDeclarations, methodDeclaration)
+        val result = classC.findParentMember(classDeclarations) {
+            it.name == methodDeclaration.name
+        }
         assertTrue(result)
     }
 }
