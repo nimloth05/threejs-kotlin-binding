@@ -131,7 +131,7 @@ fun generateDecl(name: String, elements: List<Node>): ClassDeclaration {
                     ++i
                     continue
                 }
-                if (subElement.tagName() == "h2" && subElement.text() == "Constructor") {
+                if (subElement.tagName() == "h2" && (subElement.text() == "Constructor" || subElement.text() == "Properties")) {
                     --i
                     break
                 }

@@ -206,7 +206,7 @@ class ClassDeclarationBuilder(private val name: String) {
 
     fun addMember(staticMember: Boolean, declaration: MemberDeclaration) {
 
-        val finalName = DocCorrections.names.getOrDefault("$name.${declaration.name}", declaration.name)
+        val finalName = DocCorrections.correctMemberName(name, declaration.name)
         val finalType = DocCorrections.types.getOrDefault("$name.${declaration.name}", declaration.type)
         val finalDeclaration = declaration.correctIfDifferent(finalName, finalType)
 

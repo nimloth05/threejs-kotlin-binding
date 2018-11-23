@@ -22,9 +22,18 @@ object DocCorrections {
         "ShaderMaterial.vertexColors" to "Int"
     )
 
-    val names = mapOf(
+    private val names = mapOf(
         "BooleanKeyframeTrack.ValueBufferType" to "_bufferData",
         "StringKeyframeTrack.ValueBufferType" to "_bufferData"
     )
+
+    fun correctMemberName(className: String, name: String): String {
+        val result = names.getOrDefault("$className.$name", name)
+        return if (result.startsWith(".")) {
+            result.substring(1)
+        } else {
+            result
+        }
+    }
 
 }

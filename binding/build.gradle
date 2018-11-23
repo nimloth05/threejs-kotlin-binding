@@ -12,7 +12,7 @@ dependencies {
 }
 
 group 'ch.viseon.threejs'
-version = '98.0.1'
+version = '98.0.2'
 
 compileKotlin2Js.kotlinOptions.moduleKind = "commonjs"
 

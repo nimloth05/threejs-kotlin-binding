@@ -10,5 +10,5 @@ open external class CanvasTexture(canvas: org.w3c.dom.HTMLElement = definedExter
 	/**
 	* True by default. This is required so that the canvas data is loaded.
 	*/
-	open var needsUpdate: Boolean  = definedExternally
+	override var needsUpdate: Boolean 
 }

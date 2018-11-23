@@ -241,6 +241,7 @@ class KotlinFileGenerator(
             "Hex" to "Int",
             "hex" to "Int",
             "Vector" to DYNAMIC, //FIXME Most likely vector2
+            "Image" to DYNAMIC,
             "Color_Hex_or_String" to DYNAMIC,
             "boolean" to "Boolean",
             "Video" to "dynamic",

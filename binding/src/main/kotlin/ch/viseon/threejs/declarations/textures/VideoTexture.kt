@@ -10,7 +10,7 @@ open external class VideoTexture(video: dynamic/*Video*/ = definedExternally, ma
 	/**
 	* You will not need to set this manually here as it is handled by the [page:VideoTexture.update update] method.
 	*/
-	open var needsUpdate: Boolean  = definedExternally
+	override var needsUpdate: Boolean 
 
 
 	/**

@@ -10,11 +10,11 @@ open external class CompressedTexture(mipmaps: Array<dynamic>/*Array*/ = defined
 	/**
 	* False by default. Flipping textures does not work for compressed textures.
 	*/
-	open var flipY: Boolean  = definedExternally
+	override var flipY: Boolean 
 
 
 	/**
 	* False by default. Mipmaps can't be generated for compressed textures
 	*/
-	open var generateMipmaps: Boolean  = definedExternally
+	override var generateMipmaps: Boolean 
 }
