@@ -1,4 +1,4 @@
-//Generated date 22.11.2018
+//Generated date 23.11.2018
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.math
 
@@ -52,7 +52,7 @@ open external class Box2(min: ch.viseon.threejs.declarations.math.Vector2 = defi
 	/**
 	* [page:Vector2 point] - [page:Vector2] to measure distance to. Returns the distance from any edge of this box to the specified point. If the [page:Vector2 point] lies inside of this box, the distance will be 0.
 	*/
-	open fun distanceToPoint(point: ch.viseon.threejs.declarations.math.Vector2 = definedExternally) : Float
+	open fun distanceToPoint(point: ch.viseon.threejs.declarations.math.Vector2 = definedExternally) : Double
 
 
 	/**
@@ -70,7 +70,7 @@ open external class Box2(min: ch.viseon.threejs.declarations.math.Vector2 = defi
 	/**
 	* [page:float scalar] - Distance to expand the box by. Expands each dimension of the box by [page:float scalar]. If negative, the dimensions of the box will be contracted.
 	*/
-	open fun expandByScalar(scalar: Float = definedExternally) : ch.viseon.threejs.declarations.math.Box2
+	open fun expandByScalar(scalar: Double = definedExternally) : ch.viseon.threejs.declarations.math.Box2
 
 
 	/**

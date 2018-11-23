@@ -1,4 +1,4 @@
-//Generated date 22.11.2018
+//Generated date 23.11.2018
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.core
 
@@ -247,19 +247,19 @@ Neither bounding boxes or bounding spheres are computed by default. They need to
 	/**
 	* Rotate the geometry about the X axis. This is typically done as a one time operation but not during the render loop. Use [page:Object3D.rotation] for typical real-time mesh rotation.
 	*/
-	open fun rotateX(radians: Float = definedExternally) : ch.viseon.threejs.declarations.core.Geometry
+	open fun rotateX(radians: Double = definedExternally) : ch.viseon.threejs.declarations.core.Geometry
 
 
 	/**
 	* Rotate the geometry about the Y axis. This is typically done as a one time operation but not during the render loop. Use [page:Object3D.rotation] for typical real-time mesh rotation.
 	*/
-	open fun rotateY(radians: Float = definedExternally) : ch.viseon.threejs.declarations.core.Geometry
+	open fun rotateY(radians: Double = definedExternally) : ch.viseon.threejs.declarations.core.Geometry
 
 
 	/**
 	* Rotate the geometry about the Z axis. This is typically done as a one time operation but not during the render loop. Use [page:Object3D.rotation] for typical real-time mesh rotation.
 	*/
-	open fun rotateZ(radians: Float = definedExternally) : ch.viseon.threejs.declarations.core.Geometry
+	open fun rotateZ(radians: Double = definedExternally) : ch.viseon.threejs.declarations.core.Geometry
 
 
 	/**
@@ -277,7 +277,7 @@ Neither bounding boxes or bounding spheres are computed by default. They need to
 	/**
 	* Scale the geometry data. This is typically done as a one time operation but not during the render loop. Use [page:Object3D.scale] for typical real-time mesh scaling.
 	*/
-	open fun scale(x: Float = definedExternally, y: Float = definedExternally, z: Float = definedExternally) : ch.viseon.threejs.declarations.core.Geometry
+	open fun scale(x: Double = definedExternally, y: Double = definedExternally, z: Double = definedExternally) : ch.viseon.threejs.declarations.core.Geometry
 
 
 	/**
@@ -289,5 +289,5 @@ Neither bounding boxes or bounding spheres are computed by default. They need to
 	/**
 	* Translate the geometry. This is typically done as a one time operation but not during the render loop. Use [page:Object3D.position] for typical real-time mesh translation.
 	*/
-	open fun translate(x: Float = definedExternally, y: Float = definedExternally, z: Float = definedExternally) : ch.viseon.threejs.declarations.core.Geometry
+	open fun translate(x: Double = definedExternally, y: Double = definedExternally, z: Double = definedExternally) : ch.viseon.threejs.declarations.core.Geometry
 }

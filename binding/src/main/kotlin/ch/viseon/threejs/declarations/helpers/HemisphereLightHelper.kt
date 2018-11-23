@@ -1,11 +1,11 @@
-//Generated date 22.11.2018
+//Generated date 23.11.2018
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.helpers
 
 	/**
 	* Creates a visual aid consisting of a spherical [page:Mesh] for a [page:HemisphereLight HemisphereLight].
 	*/
-open external class HemisphereLightHelper(light: ch.viseon.threejs.declarations.lights.HemisphereLight = definedExternally, sphereSize: Float = definedExternally, color: Int = definedExternally): ch.viseon.threejs.declarations.core.Object3D{
+open external class HemisphereLightHelper(light: ch.viseon.threejs.declarations.lights.HemisphereLight = definedExternally, sphereSize: Double = definedExternally, color: Int = definedExternally): ch.viseon.threejs.declarations.core.Object3D{
 
 	/**
 	* Reference to the HemisphereLight being visualized.

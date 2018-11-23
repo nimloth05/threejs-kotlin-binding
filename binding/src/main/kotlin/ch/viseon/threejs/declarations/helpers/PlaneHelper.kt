@@ -1,11 +1,11 @@
-//Generated date 22.11.2018
+//Generated date 23.11.2018
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.helpers
 
 	/**
 	* Helper object to visualize a [page:Plane].
 	*/
-open external class PlaneHelper(plane: ch.viseon.threejs.declarations.math.Plane = definedExternally, size: Float = definedExternally, hex: ch.viseon.threejs.declarations.math.Color = definedExternally): ch.viseon.threejs.declarations.objects.LineSegments{
+open external class PlaneHelper(plane: ch.viseon.threejs.declarations.math.Plane = definedExternally, size: Double = definedExternally, hex: ch.viseon.threejs.declarations.math.Color = definedExternally): ch.viseon.threejs.declarations.objects.LineSegments{
 
 	/**
 	* The [page:Plane plane] being visualized.
@@ -16,7 +16,7 @@ open external class PlaneHelper(plane: ch.viseon.threejs.declarations.math.Plane
 	/**
 	* The side lengths of plane helper.
 	*/
-	open var size: Float  = definedExternally
+	open var size: Double  = definedExternally
 
 
 	/**

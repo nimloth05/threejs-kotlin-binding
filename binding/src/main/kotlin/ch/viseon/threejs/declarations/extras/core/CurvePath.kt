@@ -1,4 +1,4 @@
-//Generated date 22.11.2018
+//Generated date 23.11.2018
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.extras.core
 
@@ -34,5 +34,5 @@ open external class CurvePath(): ch.viseon.threejs.declarations.extras.core.Curv
 	/**
 	* Adds together the lengths of the curves in the [page:.curves] array.
 	*/
-	open fun getCurveLengths() : Float
+	open fun getCurveLengths() : Double
 }

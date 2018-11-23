@@ -1,4 +1,4 @@
-//Generated date 22.11.2018
+//Generated date 23.11.2018
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.math
 
@@ -58,7 +58,7 @@ open external class Triangle(a: ch.viseon.threejs.declarations.math.Vector3 = de
 	/**
 	* Return the area of the triangle.
 	*/
-	open fun getArea() : Float
+	open fun getArea() : Double
 
 
 	/**

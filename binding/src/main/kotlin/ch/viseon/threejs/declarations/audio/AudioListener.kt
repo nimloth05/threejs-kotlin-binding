@@ -1,4 +1,4 @@
-//Generated date 22.11.2018
+//Generated date 23.11.2018
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.audio
 
@@ -28,7 +28,7 @@ open external class AudioListener(): ch.viseon.threejs.declarations.core.Object3
 	/**
 	* Time delta value for audio entities. Use in context of [link:https://developer.mozilla.org/en-US/docs/Web/API/AudioParam/linearRampToValueAtTime AudioParam.linearRampToValueAtTimeDefault](). Default is **0**.
 	*/
-	open var timeDelta: Float  = definedExternally
+	open var timeDelta: Double  = definedExternally
 
 
 	/**
@@ -58,11 +58,11 @@ open external class AudioListener(): ch.viseon.threejs.declarations.core.Object3
 	/**
 	* Return the volume.
 	*/
-	open fun getMasterVolume() : Float
+	open fun getMasterVolume() : Double
 
 
 	/**
 	* Set the volume.
 	*/
-	open fun setMasterVolume(value: Float = definedExternally) : ch.viseon.threejs.declarations.audio.AudioListener
+	open fun setMasterVolume(value: Double = definedExternally) : ch.viseon.threejs.declarations.audio.AudioListener
 }

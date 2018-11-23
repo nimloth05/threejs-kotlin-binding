@@ -1,4 +1,4 @@
-//Generated date 22.11.2018
+//Generated date 23.11.2018
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.extras.core
 
@@ -16,13 +16,13 @@ open external class Curve(){
 	/**
 	* [page:Float t] - A position on the curve. Must be in the range [ 0, 1 ]. [page:Vector optionalTarget] — (optional) If specified, the result will be copied into this Vector, otherwise a new Vector will be created. Returns a vector for a given position on the curve.
 	*/
-	open fun getPoint(t: Float = definedExternally, optionalTarget: dynamic/*Vector*/ = definedExternally) : dynamic/*Vector*/
+	open fun getPoint(t: Double = definedExternally, optionalTarget: dynamic/*Vector*/ = definedExternally) : dynamic/*Vector*/
 
 
 	/**
 	* [page:Float u] - A position on the curve according to the arc length. Must be in the range [ 0, 1 ]. [page:Vector optionalTarget] — (optional) If specified, the result will be copied into this Vector, otherwise a new Vector will be created. Returns a vector for a given position on the curve according to the arc length.
 	*/
-	open fun getPointAt(u: Float = definedExternally, optionalTarget: dynamic/*Vector*/ = definedExternally) : dynamic/*Vector*/
+	open fun getPointAt(u: Double = definedExternally, optionalTarget: dynamic/*Vector*/ = definedExternally) : dynamic/*Vector*/
 
 
 	/**
@@ -40,7 +40,7 @@ open external class Curve(){
 	/**
 	* Get total curve arc length.
 	*/
-	open fun getLength() : Float
+	open fun getLength() : Double
 
 
 	/**
@@ -58,19 +58,19 @@ open external class Curve(){
 	/**
 	* Given u in the range ( 0 .. 1 ), returns [page:Float t] also in the range ( 0 .. 1 ). u and t can then be used to give you points which are equidistant from the ends of the curve, using [page:.getPoint].
 	*/
-	open fun getUtoTmapping(u: Float = definedExternally, distance: Float = definedExternally) : Float
+	open fun getUtoTmapping(u: Double = definedExternally, distance: Double = definedExternally) : Double
 
 
 	/**
 	* Returns a unit vector tangent at t. If the derived curve does not implement its tangent derivation, two points a small delta apart will be used to find its gradient which seems to give a reasonable approximation.
 	*/
-	open fun getTangent(t: Float = definedExternally) : dynamic/*Vector*/
+	open fun getTangent(t: Double = definedExternally) : dynamic/*Vector*/
 
 
 	/**
 	* Returns tangent at a point which is equidistant to the ends of the curve from the point given in [page:.getTangent].
 	*/
-	open fun getTangentAt(u: Float = definedExternally) : dynamic/*Vector*/
+	open fun getTangentAt(u: Double = definedExternally) : dynamic/*Vector*/
 
 
 	/**

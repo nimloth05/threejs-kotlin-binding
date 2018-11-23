@@ -1,16 +1,16 @@
-//Generated date 22.11.2018
+//Generated date 23.11.2018
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.lights
 
 	/**
 	* This light gets emitted from a single point in one direction, along a cone that increases in size the further from the light it gets. This light can cast shadows - see the [page:SpotLightShadow] page for details.
 	*/
-open external class SpotLight(color: Int = definedExternally, intensity: Float = definedExternally, distance: Float = definedExternally, angle: Float = definedExternally, penumbra: Float = definedExternally, decay: Float = definedExternally): ch.viseon.threejs.declarations.lights.Light{
+open external class SpotLight(color: Int = definedExternally, intensity: Double = definedExternally, distance: Double = definedExternally, angle: Double = definedExternally, penumbra: Double = definedExternally, decay: Double = definedExternally): ch.viseon.threejs.declarations.lights.Light{
 
 	/**
 	* Maximum extent of the spotlight, in radians, from its direction. Should be no more than **Math.PI/2**. The default is **Math.PI/3**.
 	*/
-	open var angle: Float  = definedExternally
+	open var angle: Double  = definedExternally
 
 
 	/**
@@ -22,7 +22,7 @@ open external class SpotLight(color: Int = definedExternally, intensity: Float =
 	/**
 	* The amount the light dims along the distance of the light. In [page:WebGLRenderer.physicallyCorrectLights physically correct] mode, decay = 2 leads to physically realistic light falloff. The default is **1**.
 	*/
-	open var decay: Float  = definedExternally
+	open var decay: Double  = definedExternally
 
 
 	/**
@@ -30,7 +30,7 @@ open external class SpotLight(color: Int = definedExternally, intensity: Float =
 [page:WebGLRenderer.physicallyCorrectLights Physically correct] mode — When distance is zero, light will attenuate according to inverse-square law to infinite distance. When distance is non-zero, light will attenuate according to inverse-square law until near the distance cutoff, where it will then attenuate quickly and smoothly to 0. Inherently, cutoffs are not physically correct.
 Default is **0.0**.
 	*/
-	open var distance: Float  = definedExternally
+	open var distance: Double  = definedExternally
 
 
 	/**
@@ -42,7 +42,7 @@ Default is **0.0**.
 	/**
 	* Percent of the spotlight cone that is attenuated due to penumbra. Takes values between zero and 1. The default is **0.0**.
 	*/
-	open var penumbra: Float  = definedExternally
+	open var penumbra: Double  = definedExternally
 
 
 	/**
@@ -54,7 +54,7 @@ Default is **0.0**.
 	/**
 	* The light's power. In [page:WebGLRenderer.physicallyCorrectLights physically correct] mode, the luminous power of the light measured in lumens. Default is **4Math.PI**. This is directly related to the [page:.intensity intensity] in the ratio power = intensity ** π and changing this will also change the intensity.
 	*/
-	open var power: Float  = definedExternally
+	open var power: Double  = definedExternally
 
 
 	/**

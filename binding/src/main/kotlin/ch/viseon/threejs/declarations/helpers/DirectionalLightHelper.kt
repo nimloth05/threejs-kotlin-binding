@@ -1,11 +1,11 @@
-//Generated date 22.11.2018
+//Generated date 23.11.2018
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.helpers
 
 	/**
 	* Helper object to assist with visualizing a [page:DirectionalLight]'s effect on the scene. This consists of plane and a line representing the light's position and direction.
 	*/
-open external class DirectionalLightHelper(light: ch.viseon.threejs.declarations.lights.DirectionalLight = definedExternally, size: Float = definedExternally, color: Int = definedExternally): ch.viseon.threejs.declarations.core.Object3D{
+open external class DirectionalLightHelper(light: ch.viseon.threejs.declarations.lights.DirectionalLight = definedExternally, size: Double = definedExternally, color: Int = definedExternally): ch.viseon.threejs.declarations.core.Object3D{
 
 	/**
 	* Contains the line mesh showing the location of the directional light.

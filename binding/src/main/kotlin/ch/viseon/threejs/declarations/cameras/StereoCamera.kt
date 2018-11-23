@@ -1,4 +1,4 @@
-//Generated date 22.11.2018
+//Generated date 23.11.2018
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.cameras
 
@@ -10,13 +10,13 @@ open external class StereoCamera(){
 	/**
 	* Default is **1**.
 	*/
-	open var aspect: Float  = definedExternally
+	open var aspect: Double  = definedExternally
 
 
 	/**
 	* Default is **0.064**.
 	*/
-	open var eyeSep: Float  = definedExternally
+	open var eyeSep: Double  = definedExternally
 
 
 	/**

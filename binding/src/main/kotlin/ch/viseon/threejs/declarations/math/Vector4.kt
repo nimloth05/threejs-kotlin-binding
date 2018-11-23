@@ -1,24 +1,24 @@
-//Generated date 22.11.2018
+//Generated date 23.11.2018
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.math
 
 	/**
 	* Class representing a 4D [link:https://en.wikipedia.org/wiki/Vector_space vector]. A 4D vector is an ordered quadruplet of numbers (labeled x, y, z, and w), which can be used to represent a number of things, such as:
 	*/
-open external class Vector4(x: Float = definedExternally, y: Float = definedExternally, z: Float = definedExternally, w: Float = definedExternally){
+open external class Vector4(x: Double = definedExternally, y: Double = definedExternally, z: Double = definedExternally, w: Double = definedExternally){
 
 	/**
 	* Used to check whether this or derived classes are Vector4s. Default is **true**. You should not change this, as it is used internally for optimisation.
 	*/
 	open var isVector4: Boolean  = definedExternally
 
-	open var x: Float  = definedExternally
+	open var x: Double  = definedExternally
 
-	open var y: Float  = definedExternally
+	open var y: Double  = definedExternally
 
-	open var z: Float  = definedExternally
+	open var z: Double  = definedExternally
 
-	open var w: Float  = definedExternally
+	open var w: Double  = definedExternally
 
 
 	/**
@@ -30,13 +30,13 @@ open external class Vector4(x: Float = definedExternally, y: Float = definedExte
 	/**
 	* Adds the scalar value s to this vector's [page:.x x], [page:.y y], [page:.z z] and [page:.w w] values.
 	*/
-	open fun addScalar(s: Float = definedExternally) : Vector4
+	open fun addScalar(s: Double = definedExternally) : Vector4
 
 
 	/**
 	* Adds the multiple of [page:Vector4 v] and [page:Float s] to this vector.
 	*/
-	open fun addScaledVector(v: ch.viseon.threejs.declarations.math.Vector4 = definedExternally, s: Float = definedExternally) : Vector4
+	open fun addScaledVector(v: ch.viseon.threejs.declarations.math.Vector4 = definedExternally, s: Double = definedExternally) : Vector4
 
 
 	/**
@@ -66,13 +66,13 @@ open external class Vector4(x: Float = definedExternally, y: Float = definedExte
 	/**
 	* [page:Float min] - the minimum value the length will be clamped to [page:Float max] - the maximum value the length will be clamped to If this vector's length is greater than the max value, it is replaced by the max value. If this vector's length is less than the min value, it is replaced by the min value.
 	*/
-	open fun clampLength(min: Float = definedExternally, max: Float = definedExternally) : Vector4
+	open fun clampLength(min: Double = definedExternally, max: Double = definedExternally) : Vector4
 
 
 	/**
 	* [page:Float min] - the minimum value the components will be clamped to [page:Float max] - the maximum value the components will be clamped to If this vector's x, y, z or w values are greater than the max value, they are replaced by the max value. If this vector's x, y, z or w values are less than the min value, they are replaced by the min value.
 	*/
-	open fun clampScalar(min: Float = definedExternally, max: Float = definedExternally) : Vector4
+	open fun clampScalar(min: Double = definedExternally, max: Double = definedExternally) : Vector4
 
 
 	/**
@@ -90,13 +90,13 @@ open external class Vector4(x: Float = definedExternally, y: Float = definedExte
 	/**
 	* Divides this vector by scalar [page:Float s]. Sets vector to **( 0, 0, 0, 0 )** if **[page:Float s] = 0**.
 	*/
-	open fun divideScalar(s: Float = definedExternally) : Vector4
+	open fun divideScalar(s: Double = definedExternally) : Vector4
 
 
 	/**
 	* Calculates the [link:https://en.wikipedia.org/wiki/Dot_product dot product] of this vector and [page:Vector4 v].
 	*/
-	open fun dot(v: ch.viseon.threejs.declarations.math.Vector4 = definedExternally) : Float
+	open fun dot(v: ch.viseon.threejs.declarations.math.Vector4 = definedExternally) : Double
 
 
 	/**
@@ -126,37 +126,37 @@ open external class Vector4(x: Float = definedExternally, y: Float = definedExte
 	/**
 	* [page:Integer index] - 0, 1, 2 or 3. If index equals 0 returns the [page:.x x] value. If index equals 1 returns the [page:.y y] value. If index equals 2 returns the [page:.z z] value. If index equals 3 returns the [page:.w w] value.
 	*/
-	open fun getComponent(index: Int = definedExternally) : Float
+	open fun getComponent(index: Int = definedExternally) : Double
 
 
 	/**
 	* Computes the [link:https://en.wikipedia.org/wiki/Euclidean_distance Euclidean length] (straight-line length) from (0, 0, 0, 0) to (x, y, z, w).
 	*/
-	open fun length() : Float
+	open fun length() : Double
 
 
 	/**
 	* Computes the [link:http://en.wikipedia.org/wiki/Taxicab_geometry Manhattan length] of this vector.
 	*/
-	open fun manhattanLength() : Float
+	open fun manhattanLength() : Double
 
 
 	/**
 	* Computes the square of the [link:https://en.wikipedia.org/wiki/Euclidean_distance Euclidean length] (straight-line length) from (0, 0, 0, 0) to (x, y, z, w). If you are comparing the lengths of vectors, you should compare the length squared instead as it is slightly more efficient to calculate.
 	*/
-	open fun lengthSq() : Float
+	open fun lengthSq() : Double
 
 
 	/**
 	* [page:Vector4 v] - [page:Vector4] to interpolate towards. alpha - interpolation factor in the closed interval [0, 1]. Linearly interpolates between this vector and [page:Vector4 v], where alpha is the distance along the line - alpha = 0 will be this vector, and alpha = 1 will be [page:Vector4 v].
 	*/
-	open fun lerp(v: ch.viseon.threejs.declarations.math.Vector4 = definedExternally, alpha: Float = definedExternally) : Vector4
+	open fun lerp(v: ch.viseon.threejs.declarations.math.Vector4 = definedExternally, alpha: Double = definedExternally) : Vector4
 
 
 	/**
 	* [page:Vector4 v1] - the starting [page:Vector4]. [page:Vector4 v2] - [page:Vector4] to interpolate towards. [page:Float alpha] - interpolation factor in the closed interval [0, 1]. Sets this vector to be the vector linearly interpolated between [page:Vector4 v1] and [page:Vector4 v2] where alpha is the distance along the line connecting the two vectors - alpha = 0 will be [page:Vector4 v1], and alpha = 1 will be [page:Vector4 v2].
 	*/
-	open fun lerpVectors(v1: ch.viseon.threejs.declarations.math.Vector4 = definedExternally, v2: ch.viseon.threejs.declarations.math.Vector4 = definedExternally, alpha: Float = definedExternally) : Vector4
+	open fun lerpVectors(v1: ch.viseon.threejs.declarations.math.Vector4 = definedExternally, v2: ch.viseon.threejs.declarations.math.Vector4 = definedExternally, alpha: Double = definedExternally) : Vector4
 
 
 	/**
@@ -186,7 +186,7 @@ open external class Vector4(x: Float = definedExternally, y: Float = definedExte
 	/**
 	* Multiplies this vector by scalar [page:Float s].
 	*/
-	open fun multiplyScalar(s: Float = definedExternally) : Vector4
+	open fun multiplyScalar(s: Double = definedExternally) : Vector4
 
 
 	/**
@@ -204,7 +204,7 @@ open external class Vector4(x: Float = definedExternally, y: Float = definedExte
 	/**
 	* Sets the [page:.x x], [page:.y y], [page:.z z] and [page:.w w] components of this vector.
 	*/
-	open fun set(x: Float = definedExternally, y: Float = definedExternally, z: Float = definedExternally, w: Float = definedExternally) : Vector4
+	open fun set(x: Double = definedExternally, y: Double = definedExternally, z: Double = definedExternally, w: Double = definedExternally) : Vector4
 
 
 	/**
@@ -222,43 +222,43 @@ open external class Vector4(x: Float = definedExternally, y: Float = definedExte
 	/**
 	* [page:Integer index] - 0, 1 or 2. [page:Float value] - [page:Float] If index equals 0 set [page:.x x] to [page:Float value]. If index equals 1 set [page:.y y] to [page:Float value]. If index equals 2 set [page:.z z] to [page:Float value]. If index equals 3 set [page:.w w] to [page:Float value].
 	*/
-	open fun setComponent(index: Int = definedExternally, value: Float = definedExternally) : dynamic/*null*/
+	open fun setComponent(index: Int = definedExternally, value: Double = definedExternally) : dynamic/*null*/
 
 
 	/**
 	* Sets this vector to the vector with the same direction as this one, but [page:.length length] [page:Float l].
 	*/
-	open fun setLength(l: Float = definedExternally) : Vector4
+	open fun setLength(l: Double = definedExternally) : Vector4
 
 
 	/**
 	* Sets the [page:.x x], [page:.y y], [page:.z z] and [page:.w w] values of this vector both equal to [page:Float scalar].
 	*/
-	open fun setScalar(scalar: Float = definedExternally) : Vector4
+	open fun setScalar(scalar: Double = definedExternally) : Vector4
 
 
 	/**
 	* Replaces this vector's [page:.x x] value with [page:Float x].
 	*/
-	open fun setX(x: Float = definedExternally) : Vector4
+	open fun setX(x: Double = definedExternally) : Vector4
 
 
 	/**
 	* Replaces this vector's [page:.y y] value with [page:Float y].
 	*/
-	open fun setY(y: Float = definedExternally) : Vector4
+	open fun setY(y: Double = definedExternally) : Vector4
 
 
 	/**
 	* Replaces this vector's [page:.z z] value with [page:Float z].
 	*/
-	open fun setZ(z: Float = definedExternally) : Vector4
+	open fun setZ(z: Double = definedExternally) : Vector4
 
 
 	/**
 	* Replaces this vector's [page:.w w] value with [page:Float w].
 	*/
-	open fun setW(w: Float = definedExternally) : Vector4
+	open fun setW(w: Double = definedExternally) : Vector4
 
 
 	/**
@@ -270,7 +270,7 @@ open external class Vector4(x: Float = definedExternally, y: Float = definedExte
 	/**
 	* Subtracts [page:Float s] from this vector's [page:.x x], [page:.y y], [page:.z z] and [page:.w w] compnents.
 	*/
-	open fun subScalar(s: Float = definedExternally) : Vector4
+	open fun subScalar(s: Double = definedExternally) : Vector4
 
 
 	/**

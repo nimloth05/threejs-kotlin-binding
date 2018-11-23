@@ -1,11 +1,11 @@
-//Generated date 22.11.2018
+//Generated date 23.11.2018
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.cameras
 
 	/**
 	* Creates 6 cameras that render to a [page:WebGLRenderTargetCube].
 	*/
-open external class CubeCamera(near: Float = definedExternally, far: Float = definedExternally, cubeResolution: Float = definedExternally, options: dynamic/*Object*/ = definedExternally): ch.viseon.threejs.declarations.core.Object3D{
+open external class CubeCamera(near: Double = definedExternally, far: Double = definedExternally, cubeResolution: Double = definedExternally, options: dynamic/*Object*/ = definedExternally): ch.viseon.threejs.declarations.core.Object3D{
 
 	/**
 	* The cube texture that gets generated.

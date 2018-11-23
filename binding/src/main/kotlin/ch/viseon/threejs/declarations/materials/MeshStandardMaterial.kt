@@ -1,4 +1,4 @@
-//Generated date 22.11.2018
+//Generated date 23.11.2018
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.materials
 
@@ -22,7 +22,7 @@ open external class MeshStandardMaterial(parameters: dynamic/*Object*/ = defined
 	/**
 	* Intensity of the ambient occlusion effect. Default is 1. Zero is no occlusion effect.
 	*/
-	open var aoMapIntensity: Float  = definedExternally
+	open var aoMapIntensity: Double  = definedExternally
 
 
 	/**
@@ -34,7 +34,7 @@ open external class MeshStandardMaterial(parameters: dynamic/*Object*/ = defined
 	/**
 	* How much the bump map affects the material. Typical ranges are 0-1. Default is 1.
 	*/
-	open var bumpScale: Float  = definedExternally
+	open var bumpScale: Double  = definedExternally
 
 
 	/**
@@ -58,13 +58,13 @@ open external class MeshStandardMaterial(parameters: dynamic/*Object*/ = defined
 	/**
 	* How much the displacement map affects the mesh (where black is no displacement, and white is maximum displacement). Without a displacement map set, this value is not applied. Default is 1.
 	*/
-	open var displacementScale: Float  = definedExternally
+	open var displacementScale: Double  = definedExternally
 
 
 	/**
 	* The offset of the displacement map's values on the mesh's vertices. Without a displacement map set, this value is not applied. Default is 0.
 	*/
-	open var displacementBias: Float  = definedExternally
+	open var displacementBias: Double  = definedExternally
 
 
 	/**
@@ -82,7 +82,7 @@ open external class MeshStandardMaterial(parameters: dynamic/*Object*/ = defined
 	/**
 	* Intensity of the emissive light. Modulates the emissive color. Default is 1.
 	*/
-	open var emissiveIntensity: Float  = definedExternally
+	open var emissiveIntensity: Double  = definedExternally
 
 
 	/**
@@ -95,7 +95,7 @@ Note: only [link:https://threejs.org/docs/#api/textures/CubeTexture cube environ
 	/**
 	* Scales the effect of the environment map by multiplying its color.
 	*/
-	open var envMapIntensity: Float  = definedExternally
+	open var envMapIntensity: Double  = definedExternally
 
 
 	/**
@@ -113,7 +113,7 @@ Note: only [link:https://threejs.org/docs/#api/textures/CubeTexture cube environ
 	/**
 	* Intensity of the baked light. Default is 1.
 	*/
-	open var lightMapIntensity: Float  = definedExternally
+	open var lightMapIntensity: Double  = definedExternally
 
 
 	/**
@@ -125,7 +125,7 @@ Note: only [link:https://threejs.org/docs/#api/textures/CubeTexture cube environ
 	/**
 	* How much the material is like a metal. Non-metallic materials such as wood or stone use 0.0, metallic use 1.0, with nothing (usually) in between. Default is 0.5. A value between 0.0 and 1.0 could be used for a rusty metal look. If metalnessMap is also provided, both values are multiplied.
 	*/
-	open var metalness: Float  = definedExternally
+	open var metalness: Double  = definedExternally
 
 
 	/**
@@ -167,13 +167,13 @@ Note: only [link:https://threejs.org/docs/#api/textures/CubeTexture cube environ
 	/**
 	* The index of refraction (IOR) of air (approximately 1) divided by the index of refraction of the material. It is used with environment mapping modes [page:Textures THREE.CubeRefractionMapping] and [page:Textures THREE.EquirectangularRefractionMapping]. The refraction ratio should not exceed 1. Default is **0.98**.
 	*/
-	open var refractionRatio: Float  = definedExternally
+	open var refractionRatio: Double  = definedExternally
 
 
 	/**
 	* How rough the material appears. 0.0 means a smooth mirror reflection, 1.0 means fully diffuse. Default is 0.5. If roughnessMap is also provided, both values are multiplied.
 	*/
-	open var roughness: Float  = definedExternally
+	open var roughness: Double  = definedExternally
 
 
 	/**
@@ -209,5 +209,5 @@ Note: only [link:https://threejs.org/docs/#api/textures/CubeTexture cube environ
 	/**
 	* Controls wireframe thickness. Default is 1. Due to limitations of the [link:https://www.khronos.org/registry/OpenGL/specs/gl/glspec46.core.pdf OpenGL Core Profile] with the [page:WebGLRenderer WebGL] renderer on most platforms linewidth will always be 1 regardless of the set value.
 	*/
-	open var wireframeLinewidth: Float  = definedExternally
+	open var wireframeLinewidth: Double  = definedExternally
 }

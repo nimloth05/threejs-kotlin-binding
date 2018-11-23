@@ -1,4 +1,4 @@
-//Generated date 22.11.2018
+//Generated date 23.11.2018
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.materials
 
@@ -34,7 +34,7 @@ open external class SpriteMaterial(parameters: dynamic/*Object*/ = definedExtern
 	/**
 	* The rotation of the sprite in radians. Default is 0.
 	*/
-	open var rotation: Float  = definedExternally
+	open var rotation: Double  = definedExternally
 
 
 	/**

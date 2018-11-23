@@ -1,4 +1,4 @@
-//Generated date 22.11.2018
+//Generated date 23.11.2018
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.audio
 
@@ -22,25 +22,25 @@ open external class PositionalAudio(listener: ch.viseon.threejs.declarations.aud
 	/**
 	* Returns the value of [link:https://developer.mozilla.org/en-US/docs/Web/API/PannerNode/refDistance panner.refDistance].
 	*/
-	open fun getRefDistance() : Float
+	open fun getRefDistance() : Double
 
 
 	/**
 	* Sets the value of [link:https://developer.mozilla.org/en-US/docs/Web/API/PannerNode/refDistance panner.refDistance].
 	*/
-	open fun setRefDistance(value: Float = definedExternally) : ch.viseon.threejs.declarations.audio.PositionalAudio
+	open fun setRefDistance(value: Double = definedExternally) : ch.viseon.threejs.declarations.audio.PositionalAudio
 
 
 	/**
 	* Returns the value of [link:https://developer.mozilla.org/en-US/docs/Web/API/PannerNode/rolloffFactor panner.rolloffFactor].
 	*/
-	open fun getRolloffFactor() : Float
+	open fun getRolloffFactor() : Double
 
 
 	/**
 	* Sets the value of [link:https://developer.mozilla.org/en-US/docs/Web/API/PannerNode/rolloffFactor panner.rolloffFactor].
 	*/
-	open fun setRolloffFactor(value: Float = definedExternally) : ch.viseon.threejs.declarations.audio.PositionalAudio
+	open fun setRolloffFactor(value: Double = definedExternally) : ch.viseon.threejs.declarations.audio.PositionalAudio
 
 
 	/**
@@ -58,17 +58,17 @@ open external class PositionalAudio(listener: ch.viseon.threejs.declarations.aud
 	/**
 	* Returns the value of [link:https://developer.mozilla.org/en-US/docs/Web/API/PannerNode/maxDistance panner.maxDistance].
 	*/
-	open fun getMaxDistance() : Float
+	open fun getMaxDistance() : Double
 
 
 	/**
 	* Sets the value of [link:https://developer.mozilla.org/en-US/docs/Web/API/PannerNode/maxDistance panner.maxDistance].
 	*/
-	open fun setMaxDistance(value: Float = definedExternally) : ch.viseon.threejs.declarations.audio.PositionalAudio
+	open fun setMaxDistance(value: Double = definedExternally) : ch.viseon.threejs.declarations.audio.PositionalAudio
 
 
 	/**
 	* This method can be used in order to transform an omnidirectional sound into a [link:https://developer.mozilla.org/en-US/docs/Web/API/PannerNode directional sound].
 	*/
-	open fun setDirectionalCone(coneInnerAngle: Float = definedExternally, coneOuterAngle: Float = definedExternally, coneOuterGain: Float = definedExternally) : ch.viseon.threejs.declarations.audio.PositionalAudio
+	open fun setDirectionalCone(coneInnerAngle: Double = definedExternally, coneOuterAngle: Double = definedExternally, coneOuterGain: Double = definedExternally) : ch.viseon.threejs.declarations.audio.PositionalAudio
 }

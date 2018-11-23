@@ -1,11 +1,11 @@
-//Generated date 22.11.2018
+//Generated date 23.11.2018
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.lights
 
 	/**
 	* A light source positioned directly above the scene, with color fading from the sky color to the ground color. This light cannot be used to cast shadows.
 	*/
-open external class HemisphereLight(skyColor: Int = definedExternally, groundColor: Int = definedExternally, intensity: Float = definedExternally): ch.viseon.threejs.declarations.lights.Light{
+open external class HemisphereLight(skyColor: Int = definedExternally, groundColor: Int = definedExternally, intensity: Double = definedExternally): ch.viseon.threejs.declarations.lights.Light{
 
 	/**
 	* This is set to **undefined** in the constructor as hemisphere lights cannot cast shadows.
@@ -22,7 +22,7 @@ open external class HemisphereLight(skyColor: Int = definedExternally, groundCol
 	/**
 	* The light's ground color, as passed in the constructor. Default is a new [page:Color] set to white (0xffffff).
 	*/
-	open var groundColor: Float  = definedExternally
+	open var groundColor: Double  = definedExternally
 
 
 	/**

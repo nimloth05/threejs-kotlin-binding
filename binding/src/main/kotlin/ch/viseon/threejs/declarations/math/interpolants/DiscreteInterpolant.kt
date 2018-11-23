@@ -1,4 +1,4 @@
-//Generated date 22.11.2018
+//Generated date 23.11.2018
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.math.interpolants
 
@@ -40,5 +40,5 @@ open external class DiscreteInterpolant(): ch.viseon.threejs.declarations.math.I
 	/**
 	* Evaluate the interpolant at position **t**.
 	*/
-	override fun evaluate(t: Float) : dynamic/*null*/
+	override fun evaluate(t: Double) : dynamic/*null*/
 }

@@ -1,4 +1,4 @@
-//Generated date 22.11.2018
+//Generated date 23.11.2018
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.materials
 
@@ -28,13 +28,13 @@ open external class MeshDepthMaterial(parameters: dynamic/*Object*/ = definedExt
 	/**
 	* How much the displacement map affects the mesh (where black is no displacement, and white is maximum displacement). Without a displacement map set, this value is not applied. Default is 1.
 	*/
-	open var displacementScale: Float  = definedExternally
+	open var displacementScale: Double  = definedExternally
 
 
 	/**
 	* The offset of the displacement map's values on the mesh's vertices. Without a displacement map set, this value is not applied. Default is 0.
 	*/
-	open var displacementBias: Float  = definedExternally
+	open var displacementBias: Double  = definedExternally
 
 
 	/**
@@ -82,5 +82,5 @@ open external class MeshDepthMaterial(parameters: dynamic/*Object*/ = definedExt
 	/**
 	* Controls wireframe thickness. Default is 1. Due to limitations of the [link:https://www.khronos.org/registry/OpenGL/specs/gl/glspec46.core.pdf OpenGL Core Profile] with the [page:WebGLRenderer WebGL] renderer on most platforms linewidth will always be 1 regardless of the set value.
 	*/
-	open var wireframeLinewidth: Float  = definedExternally
+	open var wireframeLinewidth: Double  = definedExternally
 }

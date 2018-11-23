@@ -1,4 +1,4 @@
-//Generated date 22.11.2018
+//Generated date 23.11.2018
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.audio
 
@@ -34,5 +34,5 @@ open external class AudioAnalyser(){
 	/**
 	* Get the average of the frequencies returned by the [page:AudioAnalyser.getFrequencyData getFrequencyData] method.
 	*/
-	open fun getAverageFrequency() : Float
+	open fun getAverageFrequency() : Double
 }

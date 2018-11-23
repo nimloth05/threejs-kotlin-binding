@@ -1,16 +1,16 @@
-//Generated date 22.11.2018
+//Generated date 23.11.2018
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.animation
 
 	/**
 	* An AnimationClip is a reusable set of keyframe tracks which represent an animation. For an overview of the different elements of the three.js animation system see the "Animation System" article in the "Next Steps" section of the manual.
 	*/
-open external class AnimationClip(name: String = definedExternally, duration: Float = definedExternally, tracks: Array<dynamic>/*Array*/ = definedExternally){
+open external class AnimationClip(name: String = definedExternally, duration: Double = definedExternally, tracks: Array<dynamic>/*Array*/ = definedExternally){
 
 	/**
 	* The duration of this clip (in seconds). This can be calculated from the [page:.tracks tracks] array via [page:.resetDuration resetDuration].
 	*/
-	open var duration: Float  = definedExternally
+	open var duration: Double  = definedExternally
 
 
 	/**
@@ -58,13 +58,13 @@ open external class AnimationClip(name: String = definedExternally, duration: Fl
 	/**
 	* Returns an array of new AnimationClips created from the [page:Geometry.morphTargets morph target sequences] of a geometry, trying to sort morph target names into animation-group-based patterns like "Walk_001, Walk_002, Run_001, Run_002 ..." This method is called by the [page:JSONLoader] internally, and it uses [page:.CreateFromMorphTargetSequence CreateFromMorphTargetSequence].
 	*/
-	open fun CreateClipsFromMorphTargetSequences(name: String = definedExternally, morphTargetSequence: Array<dynamic>/*Array*/ = definedExternally, fps: Float = definedExternally, noLoop: Boolean = definedExternally) : Array<dynamic>/*Array*/
+	open fun CreateClipsFromMorphTargetSequences(name: String = definedExternally, morphTargetSequence: Array<dynamic>/*Array*/ = definedExternally, fps: Double = definedExternally, noLoop: Boolean = definedExternally) : Array<dynamic>/*Array*/
 
 
 	/**
 	* Returns a new AnimationClip from the passed [page:Geometry.morphTargets morph targets array] of a geometry, taking a name and the number of frames per second. Note: The fps parameter is required, but the animation speed can be overridden in an **AnimationAction** via [page:AnimationAction.setDuration animationAction.setDuration].
 	*/
-	open fun CreateFromMorphTargetSequence(name: String = definedExternally, morphTargetSequence: Array<dynamic>/*Array*/ = definedExternally, fps: Float = definedExternally, noLoop: Boolean = definedExternally) : ch.viseon.threejs.declarations.animation.AnimationClip
+	open fun CreateFromMorphTargetSequence(name: String = definedExternally, morphTargetSequence: Array<dynamic>/*Array*/ = definedExternally, fps: Double = definedExternally, noLoop: Boolean = definedExternally) : ch.viseon.threejs.declarations.animation.AnimationClip
 
 
 	/**

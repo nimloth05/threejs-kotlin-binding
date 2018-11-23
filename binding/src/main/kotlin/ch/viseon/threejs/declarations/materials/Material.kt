@@ -1,4 +1,4 @@
-//Generated date 22.11.2018
+//Generated date 23.11.2018
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.materials
 
@@ -10,7 +10,7 @@ open external class Material(){
 	/**
 	* Sets the alpha value to be used when running an alpha test. The material will not be renderered if the opacity is lower than this value. Default is **0**.
 	*/
-	open var alphaTest: Float  = definedExternally
+	open var alphaTest: Double  = definedExternally
 
 
 	/**
@@ -160,7 +160,7 @@ open external class Material(){
 	/**
 	* Float in the range of **0.0** - **1.0** indicating how transparent the material is. A value of **0.0** indicates fully transparent, **1.0** is fully opaque. If the material's [page:Boolean transparent] property is not set to **true**, the material will remain fully opaque and this value will only affect its color. Default is **1.0**.
 	*/
-	open var opacity: Float  = definedExternally
+	open var opacity: Double  = definedExternally
 
 
 	/**

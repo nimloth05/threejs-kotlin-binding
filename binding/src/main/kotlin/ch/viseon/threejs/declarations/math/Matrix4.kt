@@ -1,4 +1,4 @@
-//Generated date 22.11.2018
+//Generated date 23.11.2018
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.math
 
@@ -58,7 +58,7 @@ open external class Matrix4(){
 	/**
 	* Computes and returns the [link:https://en.wikipedia.org/wiki/Determinant determinant] of this matrix. Based on the method outlined [link:http://www.euclideanspace.com/maths/algebra/matrix/functions/inverse/fourD/index.htm here].
 	*/
-	open fun determinant() : Float
+	open fun determinant() : Double
 
 
 	/**
@@ -94,7 +94,7 @@ open external class Matrix4(){
 	/**
 	* Gets the maximum scale value of the 3 axes.
 	*/
-	open fun getMaxScaleOnAxis() : Float
+	open fun getMaxScaleOnAxis() : Double
 
 
 	/**
@@ -112,7 +112,7 @@ open external class Matrix4(){
 	/**
 	* [page:Vector3 axis] — Rotation axis, should be normalized. [page:Float theta] — Rotation angle in radians. Sets this matrix as rotation transform around [page:Vector3 axis] by [page:Float theta] radians. This is a somewhat controversial but mathematically sound alternative to rotating via [page:Quaternions]. See the discussion [link:http://www.gamedev.net/reference/articles/article1199.asp here].
 	*/
-	open fun makeRotationAxis(axis: ch.viseon.threejs.declarations.math.Vector3 = definedExternally, theta: Float = definedExternally) : Matrix4
+	open fun makeRotationAxis(axis: ch.viseon.threejs.declarations.math.Vector3 = definedExternally, theta: Double = definedExternally) : Matrix4
 
 
 	/**
@@ -124,13 +124,13 @@ open external class Matrix4(){
 	/**
 	* Creates a [link:https://en.wikipedia.org/wiki/3D_projection#Perspective_projection perspective projection] matrix. This is used internally by [page:PerspectiveCamera.updateProjectionMatrix]()
 	*/
-	open fun makePerspective(left: Float = definedExternally, right: Float = definedExternally, top: Float = definedExternally, bottom: Float = definedExternally, near: Float = definedExternally, far: Float = definedExternally) : Matrix4
+	open fun makePerspective(left: Double = definedExternally, right: Double = definedExternally, top: Double = definedExternally, bottom: Double = definedExternally, near: Double = definedExternally, far: Double = definedExternally) : Matrix4
 
 
 	/**
 	* Creates an [link:https://en.wikipedia.org/wiki/Orthographic_projection orthographic projection] matrix. This is used internally by [page:OrthographicCamera.updateProjectionMatrix]().
 	*/
-	open fun makeOrthographic(left: Float = definedExternally, right: Float = definedExternally, top: Float = definedExternally, bottom: Float = definedExternally, near: Float = definedExternally, far: Float = definedExternally) : Matrix4
+	open fun makeOrthographic(left: Double = definedExternally, right: Double = definedExternally, top: Double = definedExternally, bottom: Double = definedExternally, near: Double = definedExternally, far: Double = definedExternally) : Matrix4
 
 
 	/**
@@ -148,37 +148,37 @@ open external class Matrix4(){
 	/**
 	* [page:Float theta] — Rotation angle in radians. Sets this matrix as a rotational transformation around the X axis by [page:Float theta] (θ) radians. The resulting matrix will be: 1 0 0 0 0 cos(θ) -sin(θ) 0 0 sin(θ) cos(θ) 0 0 0 0 1
 	*/
-	open fun makeRotationX(theta: Float = definedExternally) : Matrix4
+	open fun makeRotationX(theta: Double = definedExternally) : Matrix4
 
 
 	/**
 	* [page:Float theta] — Rotation angle in radians. Sets this matrix as a rotational transformation around the Y axis by [page:Float theta] (θ) radians. The resulting matrix will be: cos(θ) 0 sin(θ) 0 0 1 0 0 -sin(θ) 0 cos(θ) 0 0 0 0 1
 	*/
-	open fun makeRotationY(theta: Float = definedExternally) : Matrix4
+	open fun makeRotationY(theta: Double = definedExternally) : Matrix4
 
 
 	/**
 	* [page:Float theta] — Rotation angle in radians. Sets this matrix as a rotational transformation around the Z axis by [page:Float theta] (θ) radians. The resulting matrix will be: cos(θ) -sin(θ) 0 0 sin(θ) cos(θ) 0 0 0 0 1 0 0 0 0 1
 	*/
-	open fun makeRotationZ(theta: Float = definedExternally) : Matrix4
+	open fun makeRotationZ(theta: Double = definedExternally) : Matrix4
 
 
 	/**
 	* [page:Float x] - the amount to scale in the X axis. [page:Float y] - the amount to scale in the Y axis. [page:Float z] - the amount to scale in the Z axis. Sets this matrix as scale transform: x, 0, 0, 0, 0, y, 0, 0, 0, 0, z, 0, 0, 0, 0, 1
 	*/
-	open fun makeScale(x: Float = definedExternally, y: Float = definedExternally, z: Float = definedExternally) : Matrix4
+	open fun makeScale(x: Double = definedExternally, y: Double = definedExternally, z: Double = definedExternally) : Matrix4
 
 
 	/**
 	* [page:Float x] - the amount to shear in the X axis. [page:Float y] - the amount to shear in the Y axis. [page:Float z] - the amount to shear in the Z axis. Sets this matrix as a shear transform: 1, y, z, 0, x, 1, z, 0, x, y, 1, 0, 0, 0, 0, 1
 	*/
-	open fun makeShear(x: Float = definedExternally, y: Float = definedExternally, z: Float = definedExternally) : Matrix4
+	open fun makeShear(x: Double = definedExternally, y: Double = definedExternally, z: Double = definedExternally) : Matrix4
 
 
 	/**
 	* [page:Float x] - the amount to translate in the X axis. [page:Float y] - the amount to translate in the Y axis. [page:Float z] - the amount to translate in the Z axis. Sets this matrix as a translation transform: 1, 0, 0, x, 0, 1, 0, y, 0, 0, 1, z, 0, 0, 0, 1
 	*/
-	open fun makeTranslation(x: Float = definedExternally, y: Float = definedExternally, z: Float = definedExternally) : Matrix4
+	open fun makeTranslation(x: Double = definedExternally, y: Double = definedExternally, z: Double = definedExternally) : Matrix4
 
 
 	/**
@@ -196,7 +196,7 @@ open external class Matrix4(){
 	/**
 	* Multiplies every component of the matrix by a scalar value [page:Float s].
 	*/
-	open fun multiplyScalar(s: Float = definedExternally) : Matrix4
+	open fun multiplyScalar(s: Double = definedExternally) : Matrix4
 
 
 	/**
@@ -214,7 +214,7 @@ open external class Matrix4(){
 	/**
 	* Set the [page:.elements elements] of this matrix to the supplied row-major values [page:Float n11], [page:Float n12], ... [page:Float n44].
 	*/
-	open fun set(n11: Float = definedExternally, n12: Float = definedExternally, n13: Float = definedExternally, n14: Float = definedExternally, n21: Float = definedExternally, n22: Float = definedExternally, n23: Float = definedExternally, n24: Float = definedExternally, n31: Float = definedExternally, n32: Float = definedExternally, n33: Float = definedExternally, n34: Float = definedExternally, n41: Float = definedExternally, n42: Float = definedExternally, n43: Float = definedExternally, n44: Float = definedExternally) : Matrix4
+	open fun set(n11: Double = definedExternally, n12: Double = definedExternally, n13: Double = definedExternally, n14: Double = definedExternally, n21: Double = definedExternally, n22: Double = definedExternally, n23: Double = definedExternally, n24: Double = definedExternally, n31: Double = definedExternally, n32: Double = definedExternally, n33: Double = definedExternally, n34: Double = definedExternally, n41: Double = definedExternally, n42: Double = definedExternally, n43: Double = definedExternally, n44: Double = definedExternally) : Matrix4
 
 
 	/**

@@ -1,11 +1,11 @@
-//Generated date 22.11.2018
+//Generated date 23.11.2018
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.lights
 
 	/**
 	* Abstract base class for lights - all other light types inherit the properties and methods described here.
 	*/
-open external class Light(color: Int = definedExternally, intensity: Float = definedExternally): ch.viseon.threejs.declarations.core.Object3D{
+open external class Light(color: Int = definedExternally, intensity: Double = definedExternally): ch.viseon.threejs.declarations.core.Object3D{
 
 	/**
 	* Color of the light. Defaults to a new [page:Color] set to white, if not passed in the constructor.
@@ -16,7 +16,7 @@ open external class Light(color: Int = definedExternally, intensity: Float = def
 	/**
 	* The light's intensity, or strength. In [page:WebGLRenderer.physicallyCorrectLights physically correct] mode, the product of [page:.color color] ** intensity is interpreted as luminous intensity measured in candela. Default - **1.0**.
 	*/
-	open var intensity: Float  = definedExternally
+	open var intensity: Double  = definedExternally
 
 
 	/**

@@ -1,16 +1,16 @@
-//Generated date 22.11.2018
+//Generated date 23.11.2018
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.math
 
 	/**
 	* A point's [link:https://en.wikipedia.org/wiki/Cylindrical_coordinate_system cylindrical coordinates].
 	*/
-open external class Cylindrical(radius: Float = definedExternally, theta: Float = definedExternally, y: Float = definedExternally){
-	open var radius: Float  = definedExternally
+open external class Cylindrical(radius: Double = definedExternally, theta: Double = definedExternally, y: Double = definedExternally){
+	open var radius: Double  = definedExternally
 
-	open var theta: Float  = definedExternally
+	open var theta: Double  = definedExternally
 
-	open var y: Float  = definedExternally
+	open var y: Double  = definedExternally
 
 
 	/**
@@ -28,7 +28,7 @@ open external class Cylindrical(radius: Float = definedExternally, theta: Float 
 	/**
 	* Sets values of this cylindrical's [page:.radius radius], [page:.theta theta] and [page:.y y] properties.
 	*/
-	open fun set(radius: Float = definedExternally, theta: Float = definedExternally, y: Float = definedExternally) : ch.viseon.threejs.declarations.math.Cylindrical
+	open fun set(radius: Double = definedExternally, theta: Double = definedExternally, y: Double = definedExternally) : ch.viseon.threejs.declarations.math.Cylindrical
 
 
 	/**
@@ -40,5 +40,5 @@ open external class Cylindrical(radius: Float = definedExternally, theta: Float 
 	/**
 	* Sets values of this cylindrical's [page:.radius radius], [page:.theta theta] and [page:.y y] properties from Cartesian coordinates.
 	*/
-	open fun setFromCartesianCoords(x: Float = definedExternally, y: Float = definedExternally, z: Float = definedExternally) : ch.viseon.threejs.declarations.math.Cylindrical
+	open fun setFromCartesianCoords(x: Double = definedExternally, y: Double = definedExternally, z: Double = definedExternally) : ch.viseon.threejs.declarations.math.Cylindrical
 }

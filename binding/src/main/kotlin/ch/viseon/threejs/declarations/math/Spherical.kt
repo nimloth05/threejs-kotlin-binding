@@ -1,16 +1,16 @@
-//Generated date 22.11.2018
+//Generated date 23.11.2018
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.math
 
 	/**
 	* A point's [link:https://en.wikipedia.org/wiki/Spherical_coordinate_system spherical coordinates].
 	*/
-open external class Spherical(radius: Float = definedExternally, phi: Float = definedExternally, theta: Float = definedExternally){
-	open var radius: Float  = definedExternally
+open external class Spherical(radius: Double = definedExternally, phi: Double = definedExternally, theta: Double = definedExternally){
+	open var radius: Double  = definedExternally
 
-	open var phi: Float  = definedExternally
+	open var phi: Double  = definedExternally
 
-	open var theta: Float  = definedExternally
+	open var theta: Double  = definedExternally
 
 
 	/**
@@ -34,7 +34,7 @@ open external class Spherical(radius: Float = definedExternally, phi: Float = de
 	/**
 	* Sets values of this spherical's [page:.radius radius], [page:.phi phi] and [page:.theta theta] properties.
 	*/
-	open fun set(radius: Float = definedExternally, phi: Float = definedExternally, theta: Float = definedExternally) : ch.viseon.threejs.declarations.math.Spherical
+	open fun set(radius: Double = definedExternally, phi: Double = definedExternally, theta: Double = definedExternally) : ch.viseon.threejs.declarations.math.Spherical
 
 
 	/**
@@ -46,5 +46,5 @@ open external class Spherical(radius: Float = definedExternally, phi: Float = de
 	/**
 	* Sets values of this spherical's [page:.radius radius], [page:.phi phi] and [page:.theta theta] properties from Cartesian coordinates.
 	*/
-	open fun setFromCartesianCoords(x: Float = definedExternally, y: Float = definedExternally, z: Float = definedExternally) : ch.viseon.threejs.declarations.math.Spherical
+	open fun setFromCartesianCoords(x: Double = definedExternally, y: Double = definedExternally, z: Double = definedExternally) : ch.viseon.threejs.declarations.math.Spherical
 }

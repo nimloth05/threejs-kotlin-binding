@@ -1,11 +1,11 @@
-//Generated date 22.11.2018
+//Generated date 23.11.2018
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.math
 
 	/**
 	* A sphere defined by a center and radius.
 	*/
-open external class Sphere(center: ch.viseon.threejs.declarations.math.Vector3 = definedExternally, radius: Float = definedExternally){
+open external class Sphere(center: ch.viseon.threejs.declarations.math.Vector3 = definedExternally, radius: Double = definedExternally){
 
 	/**
 	* A [page:Vector3] defining the center of the sphere. Default is (0, 0, 0).
@@ -16,7 +16,7 @@ open external class Sphere(center: ch.viseon.threejs.declarations.math.Vector3 =
 	/**
 	* The radius of the sphere. Default is 0.
 	*/
-	open var radius: Float  = definedExternally
+	open var radius: Double  = definedExternally
 
 
 	/**
@@ -52,7 +52,7 @@ open external class Sphere(center: ch.viseon.threejs.declarations.math.Vector3 =
 	/**
 	* Returns the closest distance from the boundary of the sphere to the [page:Vector3 point]. If the sphere contains the point, the distance will be negative.
 	*/
-	open fun distanceToPoint(point: ch.viseon.threejs.declarations.math.Vector3 = definedExternally) : Float
+	open fun distanceToPoint(point: ch.viseon.threejs.declarations.math.Vector3 = definedExternally) : Double
 
 
 	/**
@@ -94,7 +94,7 @@ open external class Sphere(center: ch.viseon.threejs.declarations.math.Vector3 =
 	/**
 	* [page:Vector3 center] - center of the sphere. [page:Float radius] - radius of the sphere. Sets the [page:.center center] and [page:.radius radius] properties of this sphere.
 	*/
-	open fun set(center: ch.viseon.threejs.declarations.math.Vector3 = definedExternally, radius: Float = definedExternally) : ch.viseon.threejs.declarations.math.Sphere
+	open fun set(center: ch.viseon.threejs.declarations.math.Vector3 = definedExternally, radius: Double = definedExternally) : ch.viseon.threejs.declarations.math.Sphere
 
 
 	/**

@@ -1,11 +1,11 @@
-//Generated date 22.11.2018
+//Generated date 23.11.2018
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.animation
 
 	/**
 	* Buffered scene graph property that allows weighted accumulation; used internally.
 	*/
-open external class PropertyMixer(binding: ch.viseon.threejs.declarations.animation.PropertyBinding = definedExternally, typeName: String = definedExternally, valueSize: Float = definedExternally){
+open external class PropertyMixer(binding: ch.viseon.threejs.declarations.animation.PropertyBinding = definedExternally, typeName: String = definedExternally, valueSize: Double = definedExternally){
 
 	/**
 	* 
@@ -22,37 +22,37 @@ open external class PropertyMixer(binding: ch.viseon.threejs.declarations.animat
 	/**
 	* Default is **0**.
 	*/
-	open var cumulativeWeight: Float  = definedExternally
+	open var cumulativeWeight: Double  = definedExternally
 
 
 	/**
 	* 
 	*/
-	open var valueSize: Float  = definedExternally
+	open var valueSize: Double  = definedExternally
 
 
 	/**
 	* Default is **0**.
 	*/
-	open var referenceCount: Float  = definedExternally
+	open var referenceCount: Double  = definedExternally
 
 
 	/**
 	* Default is **0**.
 	*/
-	open var useCount: Float  = definedExternally
+	open var useCount: Double  = definedExternally
 
 
 	/**
 	* Accumulate data in [page:PropertyMixer.buffer buffer][accuIndex] 'incoming' region into 'accu[i]'. If weight is **0** this does nothing.
 	*/
-	open fun accumulate(accuIndex: Float = definedExternally, weight: Float = definedExternally) : dynamic/*null*/
+	open fun accumulate(accuIndex: Double = definedExternally, weight: Double = definedExternally) : dynamic/*null*/
 
 
 	/**
 	* Apply the state of [page:PropertyMixer.buffer buffer] 'accu[i]' to the binding when accus differ.
 	*/
-	open fun apply(accuIndex: Float = definedExternally) : dynamic/*null*/
+	open fun apply(accuIndex: Double = definedExternally) : dynamic/*null*/
 
 
 	/**

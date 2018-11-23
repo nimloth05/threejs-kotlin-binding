@@ -1,11 +1,11 @@
-//Generated date 22.11.2018
+//Generated date 23.11.2018
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.scenes
 
 	/**
 	* This class contains the parameters that define linear fog, i.e., that grows linearly denser with the distance.
 	*/
-open external class Fog(color: Int = definedExternally, near: Float = definedExternally, far: Float = definedExternally){
+open external class Fog(color: Int = definedExternally, near: Double = definedExternally, far: Double = definedExternally){
 
 	/**
 	* Optional name of the object (doesn't need to be unique). Default is an empty string.
@@ -23,14 +23,14 @@ open external class Fog(color: Int = definedExternally, near: Float = definedExt
 	* The minimum distance to start applying fog. Objects that are less than 'near' units from the active camera won't be affected by fog.
 Default is 1.
 	*/
-	open var near: Float  = definedExternally
+	open var near: Double  = definedExternally
 
 
 	/**
 	* The maximum distance at which fog stops being calculated and applied. Objects that are more than 'far' units away from the active camera won't be affected by fog.
 Default is 1000.
 	*/
-	open var far: Float  = definedExternally
+	open var far: Double  = definedExternally
 
 
 	/**

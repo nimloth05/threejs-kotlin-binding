@@ -204,7 +204,7 @@ class KotlinFileGenerator(
     companion object {
         const val DYNAMIC = "dynamic"
         const val DYNAMIC_ARRAY = "Array<dynamic>"
-        const val FLOAT_TYPE = "Float"
+        const val FLOAT_TYPE = "Double"
 
         val notSaveNames = hashSetOf("object", "this")
 
@@ -234,6 +234,7 @@ class KotlinFileGenerator(
             "Integer" to "Int",
             "integer" to "Int",
             "float" to FLOAT_TYPE,
+            "Float" to FLOAT_TYPE,
             "number" to FLOAT_TYPE,
             "Number" to FLOAT_TYPE,
             "Radians" to FLOAT_TYPE,

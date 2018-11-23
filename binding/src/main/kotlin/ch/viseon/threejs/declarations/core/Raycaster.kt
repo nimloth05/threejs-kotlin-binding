@@ -1,28 +1,28 @@
-//Generated date 22.11.2018
+//Generated date 23.11.2018
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.core
 
 	/**
 	* This class is designed to assist with [link:https://en.wikipedia.org/wiki/Ray_casting raycasting]. Raycasting is used for mouse picking (working out what objects in the 3d space the mouse is over) amongst other things.
 	*/
-open external class Raycaster(origin: ch.viseon.threejs.declarations.math.Vector3 = definedExternally, direction: ch.viseon.threejs.declarations.math.Vector3 = definedExternally, near: Float = definedExternally, far: Float = definedExternally){
+open external class Raycaster(origin: ch.viseon.threejs.declarations.math.Vector3 = definedExternally, direction: ch.viseon.threejs.declarations.math.Vector3 = definedExternally, near: Double = definedExternally, far: Double = definedExternally){
 
 	/**
 	* The far factor of the raycaster. This value indicates which objects can be discarded based on the distance. This value shouldn't be negative and should be larger than the near property.
 	*/
-	open var far: Float  = definedExternally
+	open var far: Double  = definedExternally
 
 
 	/**
 	* The precision factor of the raycaster when intersecting [page:Line] objects.
 	*/
-	open var linePrecision: Float  = definedExternally
+	open var linePrecision: Double  = definedExternally
 
 
 	/**
 	* The near factor of the raycaster. This value indicates which objects can be discarded based on the distance. This value shouldn't be negative and should be smaller than the far property.
 	*/
-	open var near: Float  = definedExternally
+	open var near: Double  = definedExternally
 
 
 	/**

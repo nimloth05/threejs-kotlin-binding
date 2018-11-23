@@ -1,4 +1,4 @@
-//Generated date 22.11.2018
+//Generated date 23.11.2018
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.extras
 
@@ -10,7 +10,7 @@ open external class ShapeUtils(){
 	/**
 	* contour -- 2D polygon. Calculate area of a ( 2D ) contour polygon.
 	*/
-	open fun area() : Float
+	open fun area() : Double
 
 
 	/**

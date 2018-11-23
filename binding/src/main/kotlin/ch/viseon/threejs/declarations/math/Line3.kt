@@ -1,4 +1,4 @@
-//Generated date 22.11.2018
+//Generated date 23.11.2018
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.math
 
@@ -28,7 +28,7 @@ open external class Line3(start: ch.viseon.threejs.declarations.math.Vector3 = d
 	/**
 	* [page:Float t] - Use values 0-1 to return a position along the line segment. [page:Vector3 target] — the result will be copied into this Vector3. Returns a vector at a certain position along the line. When [page:Float t] = 0, it returns the start vector, and when [page:Float t] = 1 it returns the end vector.
 	*/
-	open fun at(t: Float = definedExternally, target: ch.viseon.threejs.declarations.math.Vector3 = definedExternally) : ch.viseon.threejs.declarations.math.Vector3
+	open fun at(t: Double = definedExternally, target: ch.viseon.threejs.declarations.math.Vector3 = definedExternally) : ch.viseon.threejs.declarations.math.Vector3
 
 
 	/**
@@ -46,7 +46,7 @@ open external class Line3(start: ch.viseon.threejs.declarations.math.Vector3 = d
 	/**
 	* [page:Vector3 point] - the point for which to return a point parameter. [page:Boolean clampToLine] - Whether to clamp the result to the range [0, 1]. Returns a point parameter based on the closest point as projected on the line segement. If [page:Boolean clampToLine] is true, then the returned value will be between 0 and 1.
 	*/
-	open fun closestPointToPointParameter(point: ch.viseon.threejs.declarations.math.Vector3 = definedExternally, clampToLine: Boolean = definedExternally) : Float
+	open fun closestPointToPointParameter(point: ch.viseon.threejs.declarations.math.Vector3 = definedExternally, clampToLine: Boolean = definedExternally) : Double
 
 
 	/**
@@ -64,13 +64,13 @@ open external class Line3(start: ch.viseon.threejs.declarations.math.Vector3 = d
 	/**
 	* Returns the [link:https://en.wikipedia.org/wiki/Euclidean_distance Euclidean distance] (straight-line distance) between the line's [page:.start start] and [page:.end end] points.
 	*/
-	open fun distance() : Float
+	open fun distance() : Double
 
 
 	/**
 	* Returns the square of the [link:https://en.wikipedia.org/wiki/Euclidean_distance Euclidean distance] (straight-line distance) between the line's [page:.start start] and [page:.end end] vectors.
 	*/
-	open fun distanceSq() : Float
+	open fun distanceSq() : Double
 
 
 	/**

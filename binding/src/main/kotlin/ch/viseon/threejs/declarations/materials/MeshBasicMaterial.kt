@@ -1,4 +1,4 @@
-//Generated date 22.11.2018
+//Generated date 23.11.2018
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.materials
 
@@ -22,7 +22,7 @@ open external class MeshBasicMaterial(parameters: dynamic/*Object*/ = definedExt
 	/**
 	* Intensity of the ambient occlusion effect. Default is 1. Zero is no occlusion effect.
 	*/
-	open var aoMapIntensity: Float  = definedExternally
+	open var aoMapIntensity: Double  = definedExternally
 
 
 	/**
@@ -58,7 +58,7 @@ open external class MeshBasicMaterial(parameters: dynamic/*Object*/ = definedExt
 	/**
 	* Intensity of the baked light. Default is 1.
 	*/
-	open var lightMapIntensity: Float  = definedExternally
+	open var lightMapIntensity: Double  = definedExternally
 
 
 	/**
@@ -82,13 +82,13 @@ open external class MeshBasicMaterial(parameters: dynamic/*Object*/ = definedExt
 	/**
 	* How much the environment map affects the surface; also see [page:.combine]. The default value is 1 and the valid range is between 0 (no reflections) and 1 (full reflections).
 	*/
-	open var reflectivity: Float  = definedExternally
+	open var reflectivity: Double  = definedExternally
 
 
 	/**
 	* The index of refraction (IOR) of air (approximately 1) divided by the index of refraction of the material. It is used with environment mapping modes [page:Textures THREE.CubeRefractionMapping] and [page:Textures THREE.EquirectangularRefractionMapping]. The refraction ratio should not exceed 1. Default is **0.98**.
 	*/
-	open var refractionRatio: Float  = definedExternally
+	open var refractionRatio: Double  = definedExternally
 
 
 	/**
@@ -124,5 +124,5 @@ open external class MeshBasicMaterial(parameters: dynamic/*Object*/ = definedExt
 	/**
 	* Controls wireframe thickness. Default is 1. Due to limitations of the [link:https://www.khronos.org/registry/OpenGL/specs/gl/glspec46.core.pdf OpenGL Core Profile] with the [page:WebGLRenderer WebGL] renderer on most platforms linewidth will always be 1 regardless of the set value.
 	*/
-	open var wireframeLinewidth: Float  = definedExternally
+	open var wireframeLinewidth: Double  = definedExternally
 }

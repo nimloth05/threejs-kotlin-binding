@@ -1,11 +1,11 @@
-//Generated date 22.11.2018
+//Generated date 23.11.2018
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.math
 
 	/**
 	* Class representing a color.
 	*/
-open external class Color(r: dynamic/*Color_Hex_or_String*/ = definedExternally, g: Float = definedExternally, b: Float = definedExternally){
+open external class Color(r: dynamic/*Color_Hex_or_String*/ = definedExternally, g: Double = definedExternally, b: Double = definedExternally){
 
 	/**
 	* Used to check whether this or derived classes are Colors. Default is **true**. You should not change this, as it used internally for optimisation.
@@ -16,19 +16,19 @@ open external class Color(r: dynamic/*Color_Hex_or_String*/ = definedExternally,
 	/**
 	* Red channel value between 0 and 1. Default is 1.
 	*/
-	open var r: Float  = definedExternally
+	open var r: Double  = definedExternally
 
 
 	/**
 	* Green channel value between 0 and 1. Default is 1.
 	*/
-	open var g: Float  = definedExternally
+	open var g: Double  = definedExternally
 
 
 	/**
 	* Blue channel value between 0 and 1. Default is 1.
 	*/
-	open var b: Float  = definedExternally
+	open var b: Double  = definedExternally
 
 
 	/**
@@ -46,7 +46,7 @@ open external class Color(r: dynamic/*Color_Hex_or_String*/ = definedExternally,
 	/**
 	* Adds [page:Number s] to the RGB values of this color.
 	*/
-	open fun addScalar(s: Float = definedExternally) : ch.viseon.threejs.declarations.math.Color
+	open fun addScalar(s: Double = definedExternally) : ch.viseon.threejs.declarations.math.Color
 
 
 	/**
@@ -64,13 +64,13 @@ open external class Color(r: dynamic/*Color_Hex_or_String*/ = definedExternally,
 	/**
 	* [page:Float gammaFactor] - (optional). Default is **2.0**. Converts this color from gamma space to linear space by taking [page:.r r], [page:.g g] and [page:.b b] to the power of [page:Float gammaFactor].
 	*/
-	open fun convertGammaToLinear(gammaFactor: Float = definedExternally) : ch.viseon.threejs.declarations.math.Color
+	open fun convertGammaToLinear(gammaFactor: Double = definedExternally) : ch.viseon.threejs.declarations.math.Color
 
 
 	/**
 	* [page:Float gammaFactor] - (optional). Default is **2.0**. Converts this color from linear space to gamma space by taking [page:.r r], [page:.g g] and [page:.b b] to the power of 1 / [page:Float gammaFactor].
 	*/
-	open fun convertLinearToGamma(gammaFactor: Float = definedExternally) : ch.viseon.threejs.declarations.math.Color
+	open fun convertLinearToGamma(gammaFactor: Double = definedExternally) : ch.viseon.threejs.declarations.math.Color
 
 
 	/**
@@ -88,13 +88,13 @@ open external class Color(r: dynamic/*Color_Hex_or_String*/ = definedExternally,
 	/**
 	* [page:Color color] — Color to copy. [page:Float gammaFactor] - (optional). Default is **2.0**. Copies the given color into this color, and then converts this color from gamma space to linear space by taking [page:.r r], [page:.g g] and [page:.b b] to the power of [page:Float gammaFactor].
 	*/
-	open fun copyGammaToLinear(color: ch.viseon.threejs.declarations.math.Color = definedExternally, gammaFactor: Float = definedExternally) : ch.viseon.threejs.declarations.math.Color
+	open fun copyGammaToLinear(color: ch.viseon.threejs.declarations.math.Color = definedExternally, gammaFactor: Double = definedExternally) : ch.viseon.threejs.declarations.math.Color
 
 
 	/**
 	* [page:Color color] — Color to copy. [page:Float gammaFactor] - (optional). Default is **2.0**. Copies the given color into this color, and then converts this color from linear space to gamma space by taking [page:.r r], [page:.g g] and [page:.b b] to the power of 1 / [page:Float gammaFactor].
 	*/
-	open fun copyLinearToGamma(color: ch.viseon.threejs.declarations.math.Color = definedExternally, gammaFactor: Float = definedExternally) : ch.viseon.threejs.declarations.math.Color
+	open fun copyLinearToGamma(color: ch.viseon.threejs.declarations.math.Color = definedExternally, gammaFactor: Double = definedExternally) : ch.viseon.threejs.declarations.math.Color
 
 
 	/**
@@ -148,13 +148,13 @@ open external class Color(r: dynamic/*Color_Hex_or_String*/ = definedExternally,
 	/**
 	* [page:Color color] - color to converge on. [page:Float alpha] - interpolation factor in the closed interval [0, 1]. Linearly interpolates this color's RGB values toward the RGB values of the passed argument. The alpha argument can be thought of as the ratio between the two colors, where 0.0 is this color and 1.0 is the first argument.
 	*/
-	open fun lerp(color: ch.viseon.threejs.declarations.math.Color = definedExternally, alpha: Float = definedExternally) : ch.viseon.threejs.declarations.math.Color
+	open fun lerp(color: ch.viseon.threejs.declarations.math.Color = definedExternally, alpha: Double = definedExternally) : ch.viseon.threejs.declarations.math.Color
 
 
 	/**
 	* [page:Color color] - color to converge on. [page:Float alpha] - interpolation factor in the closed interval [0, 1]. Linearly interpolates this color's HSL values toward the HSL values of the passed argument. It differs from the classic [page:.lerp] by not interpolating straight from one color to the other, but instead going through all the hues in between those two colors. The alpha argument can be thought of as the ratio between the two colors, where 0.0 is this color and 1.0 is the first argument.
 	*/
-	open fun lerpHSL(color: ch.viseon.threejs.declarations.math.Color = definedExternally, alpha: Float = definedExternally) : ch.viseon.threejs.declarations.math.Color
+	open fun lerpHSL(color: ch.viseon.threejs.declarations.math.Color = definedExternally, alpha: Double = definedExternally) : ch.viseon.threejs.declarations.math.Color
 
 
 	/**
@@ -166,13 +166,13 @@ open external class Color(r: dynamic/*Color_Hex_or_String*/ = definedExternally,
 	/**
 	* Multiplies this color's RGB values by [page:Number s].
 	*/
-	open fun multiplyScalar(s: Float = definedExternally) : ch.viseon.threejs.declarations.math.Color
+	open fun multiplyScalar(s: Double = definedExternally) : ch.viseon.threejs.declarations.math.Color
 
 
 	/**
 	* Adds the given [page:Float h], [page:Float s], and [page:Float l] to this color's values. Internally, this converts the color's [page:.r r], [page:.g g] and [page:.b b] values to HSL, adds [page:Float h], [page:Float s], and [page:Float l], and then converts the color back to RGB.
 	*/
-	open fun offsetHSL(h: Float = definedExternally, s: Float = definedExternally, l: Float = definedExternally) : ch.viseon.threejs.declarations.math.Color
+	open fun offsetHSL(h: Double = definedExternally, s: Double = definedExternally, l: Double = definedExternally) : ch.viseon.threejs.declarations.math.Color
 
 
 	/**
@@ -190,19 +190,19 @@ open external class Color(r: dynamic/*Color_Hex_or_String*/ = definedExternally,
 	/**
 	* [page:Float h] — hue value between 0.0 and 1.0 [page:Float s] — saturation value between 0.0 and 1.0 [page:Float l] — lightness value between 0.0 and 1.0 Sets color from HSL values.
 	*/
-	open fun setHSL(h: Float = definedExternally, s: Float = definedExternally, l: Float = definedExternally) : ch.viseon.threejs.declarations.math.Color
+	open fun setHSL(h: Double = definedExternally, s: Double = definedExternally, l: Double = definedExternally) : ch.viseon.threejs.declarations.math.Color
 
 
 	/**
 	* [page:Float r] — Red channel value between 0.0 and 1.0. [page:Float g] — Green channel value between 0.0 and 1.0. [page:Float b] — Blue channel value between 0.0 and 1.0. Sets this color from RGB values.
 	*/
-	open fun setRGB(r: Float = definedExternally, g: Float = definedExternally, b: Float = definedExternally) : ch.viseon.threejs.declarations.math.Color
+	open fun setRGB(r: Double = definedExternally, g: Double = definedExternally, b: Double = definedExternally) : ch.viseon.threejs.declarations.math.Color
 
 
 	/**
 	* [page:Float scalar] — a value between 0.0 and 1.0. Sets all three color components to the value [page:Float scalar].
 	*/
-	open fun setScalar(scalar: Float = definedExternally) : ch.viseon.threejs.declarations.math.Color
+	open fun setScalar(scalar: Double = definedExternally) : ch.viseon.threejs.declarations.math.Color
 
 
 	/**

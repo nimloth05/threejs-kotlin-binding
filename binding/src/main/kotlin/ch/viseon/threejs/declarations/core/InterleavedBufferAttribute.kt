@@ -1,4 +1,4 @@
-//Generated date 22.11.2018
+//Generated date 23.11.2018
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.core
 
@@ -52,65 +52,65 @@ open external class InterleavedBufferAttribute(interleavedBuffer: ch.viseon.thre
 	/**
 	* Returns the x component of the item at the given index.
 	*/
-	open fun getX(index: Int = definedExternally) : Float
+	open fun getX(index: Int = definedExternally) : Double
 
 
 	/**
 	* Returns the y component of the item at the given index.
 	*/
-	open fun getY(index: Int = definedExternally) : Float
+	open fun getY(index: Int = definedExternally) : Double
 
 
 	/**
 	* Returns the z component of the item at the given index.
 	*/
-	open fun getZ(index: Int = definedExternally) : Float
+	open fun getZ(index: Int = definedExternally) : Double
 
 
 	/**
 	* Returns the w component of the item at the given index.
 	*/
-	open fun getW(index: Int = definedExternally) : Float
+	open fun getW(index: Int = definedExternally) : Double
 
 
 	/**
 	* Sets the x component of the item at the given index.
 	*/
-	open fun setX(index: Int = definedExternally, x: Float = definedExternally) : dynamic/*null*/
+	open fun setX(index: Int = definedExternally, x: Double = definedExternally) : dynamic/*null*/
 
 
 	/**
 	* Sets the y component of the item at the given index.
 	*/
-	open fun setY(index: Int = definedExternally, y: Float = definedExternally) : dynamic/*null*/
+	open fun setY(index: Int = definedExternally, y: Double = definedExternally) : dynamic/*null*/
 
 
 	/**
 	* Sets the z component of the item at the given index.
 	*/
-	open fun setZ(index: Int = definedExternally, z: Float = definedExternally) : dynamic/*null*/
+	open fun setZ(index: Int = definedExternally, z: Double = definedExternally) : dynamic/*null*/
 
 
 	/**
 	* Sets the w component of the item at the given index.
 	*/
-	open fun setW(index: Int = definedExternally, w: Float = definedExternally) : dynamic/*null*/
+	open fun setW(index: Int = definedExternally, w: Double = definedExternally) : dynamic/*null*/
 
 
 	/**
 	* Sets the x and y components of the item at the given index.
 	*/
-	open fun setXY(index: Int = definedExternally, x: Float = definedExternally, y: Float = definedExternally) : dynamic/*null*/
+	open fun setXY(index: Int = definedExternally, x: Double = definedExternally, y: Double = definedExternally) : dynamic/*null*/
 
 
 	/**
 	* Sets the x, y and z components of the item at the given index.
 	*/
-	open fun setXYZ(index: Int = definedExternally, x: Float = definedExternally, y: Float = definedExternally, z: Float = definedExternally) : dynamic/*null*/
+	open fun setXYZ(index: Int = definedExternally, x: Double = definedExternally, y: Double = definedExternally, z: Double = definedExternally) : dynamic/*null*/
 
 
 	/**
 	* Sets the x, y, z and w components of the item at the given index.
 	*/
-	open fun setXYZW(index: Int = definedExternally, x: Float = definedExternally, y: Float = definedExternally, z: Float = definedExternally, w: Float = definedExternally) : dynamic/*null*/
+	open fun setXYZW(index: Int = definedExternally, x: Double = definedExternally, y: Double = definedExternally, z: Double = definedExternally, w: Double = definedExternally) : dynamic/*null*/
 }

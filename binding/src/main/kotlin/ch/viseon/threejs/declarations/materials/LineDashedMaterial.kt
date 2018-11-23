@@ -1,4 +1,4 @@
-//Generated date 22.11.2018
+//Generated date 23.11.2018
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.materials
 
@@ -16,13 +16,13 @@ open external class LineDashedMaterial(parameters: dynamic/*Object*/ = definedEx
 	/**
 	* The size of the dash. This is both the gap with the stroke. Default is **3**.
 	*/
-	open var dashSize: Float  = definedExternally
+	open var dashSize: Double  = definedExternally
 
 
 	/**
 	* The size of the gap. Default is **1**.
 	*/
-	open var gapSize: Float  = definedExternally
+	open var gapSize: Double  = definedExternally
 
 
 	/**
@@ -40,11 +40,11 @@ open external class LineDashedMaterial(parameters: dynamic/*Object*/ = definedEx
 	/**
 	* Controls line thickness. Default is **1**. Due to limitations of the [link:https://www.khronos.org/registry/OpenGL/specs/gl/glspec46.core.pdf OpenGL Core Profile] with the [page:WebGLRenderer WebGL] renderer on most platforms linewidth will always be 1 regardless of the set value.
 	*/
-	open var linewidth: Float  = definedExternally
+	open var linewidth: Double  = definedExternally
 
 
 	/**
 	* The scale of the dashed part of a line. Default is **1**.
 	*/
-	open var scale: Float  = definedExternally
+	open var scale: Double  = definedExternally
 }

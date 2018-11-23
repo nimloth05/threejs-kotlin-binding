@@ -1,4 +1,4 @@
-//Generated date 22.11.2018
+//Generated date 23.11.2018
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.renderers
 
@@ -64,7 +64,7 @@ open external class WebGLRenderer(parameters: dynamic/*Object*/ = definedExterna
 	/**
 	* Default is **2**.
 	*/
-	open var gammaFactor: Float  = definedExternally
+	open var gammaFactor: Double  = definedExternally
 
 
 	/**
@@ -149,13 +149,13 @@ open external class WebGLRenderer(parameters: dynamic/*Object*/ = definedExterna
 	/**
 	* Exposure level of tone mapping. Default is **1**.
 	*/
-	open var toneMappingExposure: Float  = definedExternally
+	open var toneMappingExposure: Double  = definedExternally
 
 
 	/**
 	* Tone mapping white point. Default is **1**.
 	*/
-	open var toneMappingWhitePoint: Float  = definedExternally
+	open var toneMappingWhitePoint: Double  = definedExternally
 
 
 	/**
@@ -197,13 +197,13 @@ open external class WebGLRenderer(parameters: dynamic/*Object*/ = definedExterna
 	/**
 	* Copies pixels from the current WebGLFramebuffer into a 2D texture. Enables access to [link:https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/copyTexImage2D WebGLRenderingContext.copyTexImage2D].
 	*/
-	open fun copyFramebufferToTexture(position: ch.viseon.threejs.declarations.math.Vector2 = definedExternally, texture: ch.viseon.threejs.declarations.textures.Texture = definedExternally, level: Float = definedExternally) : dynamic/*null*/
+	open fun copyFramebufferToTexture(position: ch.viseon.threejs.declarations.math.Vector2 = definedExternally, texture: ch.viseon.threejs.declarations.textures.Texture = definedExternally, level: Double = definedExternally) : dynamic/*null*/
 
 
 	/**
 	* Copies all pixels of a texture to an existing texture starting from the given position. Enables access to [link:https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texSubImage2D WebGLRenderingContext.texSubImage2D].
 	*/
-	open fun copyTextureToTexture(position: ch.viseon.threejs.declarations.math.Vector2 = definedExternally, srcTexture: ch.viseon.threejs.declarations.textures.Texture = definedExternally, dstTexture: ch.viseon.threejs.declarations.textures.Texture = definedExternally, level: Float = definedExternally) : dynamic/*null*/
+	open fun copyTextureToTexture(position: ch.viseon.threejs.declarations.math.Vector2 = definedExternally, srcTexture: ch.viseon.threejs.declarations.textures.Texture = definedExternally, dstTexture: ch.viseon.threejs.declarations.textures.Texture = definedExternally, level: Double = definedExternally) : dynamic/*null*/
 
 
 	/**
@@ -221,7 +221,7 @@ open external class WebGLRenderer(parameters: dynamic/*Object*/ = definedExterna
 	/**
 	* Returns a [page:Float float] with the current clear alpha. Ranges from 0 to 1.
 	*/
-	open fun getClearAlpha() : Float
+	open fun getClearAlpha() : Double
 
 
 	/**
@@ -263,7 +263,7 @@ open external class WebGLRenderer(parameters: dynamic/*Object*/ = definedExterna
 	/**
 	* Returns current device pixel ratio used.
 	*/
-	open fun getPixelRatio() : Float
+	open fun getPixelRatio() : Double
 
 
 	/**
@@ -281,7 +281,7 @@ open external class WebGLRenderer(parameters: dynamic/*Object*/ = definedExterna
 	/**
 	* Reads the pixel data from the renderTarget into the buffer you pass in. This is a wrapper around [link:https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/readPixels WebGLRenderingContext.readPixels](). See the [example:webgl_interactive_cubes_gpu interactive / cubes / gpu] example.
 	*/
-	open fun readRenderTargetPixels(renderTarget: ch.viseon.threejs.declarations.renderers.WebGLRenderTarget = definedExternally, x: Float = definedExternally, y: Float = definedExternally, width: Float = definedExternally, height: Float = definedExternally) : dynamic/*null*/
+	open fun readRenderTargetPixels(renderTarget: ch.viseon.threejs.declarations.renderers.WebGLRenderTarget = definedExternally, x: Double = definedExternally, y: Double = definedExternally, width: Double = definedExternally, height: Double = definedExternally) : dynamic/*null*/
 
 
 	/**
@@ -312,19 +312,19 @@ A build in function that can be used instead of [link:https://developer.mozilla.
 	/**
 	* Sets the clear alpha. Valid input is a float between **0.0** and **1.0**.
 	*/
-	open fun setClearAlpha(alpha: Float = definedExternally) : dynamic/*null*/
+	open fun setClearAlpha(alpha: Double = definedExternally) : dynamic/*null*/
 
 
 	/**
 	* Sets the clear color and opacity.
 	*/
-	open fun setClearColor(color: ch.viseon.threejs.declarations.math.Color = definedExternally, alpha: Float = definedExternally) : dynamic/*null*/
+	open fun setClearColor(color: ch.viseon.threejs.declarations.math.Color = definedExternally, alpha: Double = definedExternally) : dynamic/*null*/
 
 
 	/**
 	* Sets device pixel ratio. This is usually used for HiDPI device to prevent bluring output canvas.
 	*/
-	open fun setPixelRatio(value: Float = definedExternally) : dynamic/*null*/
+	open fun setPixelRatio(value: Double = definedExternally) : dynamic/*null*/
 
 
 	/**
@@ -354,13 +354,13 @@ A build in function that can be used instead of [link:https://developer.mozilla.
 	/**
 	* texture -- The [page:Texture texture] that needs to be set. slot -- The number indicating which slot should be used by the texture. This method sets the correct texture to the correct slot for the WebGL shader. The slot number can be found as a value of the uniform of the sampler. Note: This method replaces the older [method:null setTexture] method.
 	*/
-	open fun setTexture2D(texture: ch.viseon.threejs.declarations.textures.Texture = definedExternally, slot: Float = definedExternally) : dynamic/*null*/
+	open fun setTexture2D(texture: ch.viseon.threejs.declarations.textures.Texture = definedExternally, slot: Double = definedExternally) : dynamic/*null*/
 
 
 	/**
 	* texture -- The [page:CubeTexture cubeTexture] that needs to be set. slot -- The number indicating which slot should be used by the texture. This method sets the correct texture to the correct slot for the WebGL shader. The slot number can be found as a value of the uniform of the sampler.
 	*/
-	open fun setTextureCube(cubeTexture: ch.viseon.threejs.declarations.textures.CubeTexture = definedExternally, slot: Float = definedExternally) : dynamic/*null*/
+	open fun setTextureCube(cubeTexture: ch.viseon.threejs.declarations.textures.CubeTexture = definedExternally, slot: Double = definedExternally) : dynamic/*null*/
 
 
 	/**

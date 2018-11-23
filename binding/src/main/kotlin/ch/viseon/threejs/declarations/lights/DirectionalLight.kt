@@ -1,11 +1,11 @@
-//Generated date 22.11.2018
+//Generated date 23.11.2018
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.lights
 
 	/**
 	* A light that gets emitted in a specific direction. This light will behave as though it is infinitely far away and the rays produced from it are all parallel. The common use case for this is to simulate daylight; the sun is far enough away that its position can be considered to be infinite, and all light rays coming from it are parallel. This light can cast shadows - see the [page:DirectionalLightShadow] page for details.
 	*/
-open external class DirectionalLight(color: Int = definedExternally, intensity: Float = definedExternally): ch.viseon.threejs.declarations.lights.Light{
+open external class DirectionalLight(color: Int = definedExternally, intensity: Double = definedExternally): ch.viseon.threejs.declarations.lights.Light{
 
 	/**
 	* If set to **true** light will cast dynamic shadows. **Warning**: This is expensive and requires tweaking to get shadows looking right. See the [page:DirectionalLightShadow] for details. The default is **false**.

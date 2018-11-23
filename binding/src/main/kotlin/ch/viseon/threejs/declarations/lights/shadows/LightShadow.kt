@@ -1,4 +1,4 @@
-//Generated date 22.11.2018
+//Generated date 23.11.2018
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.lights.shadows
 
@@ -16,7 +16,7 @@ open external class LightShadow(camera: ch.viseon.threejs.declarations.cameras.C
 	/**
 	* Shadow map bias, how much to add or subtract from the normalized depth when deciding whether a surface is in shadow. The default is 0. Very tiny adjustments here (in the order of 0.0001) may help reduce artefacts in shadows
 	*/
-	open var bias: Float  = definedExternally
+	open var bias: Double  = definedExternally
 
 
 	/**
@@ -40,7 +40,7 @@ open external class LightShadow(camera: ch.viseon.threejs.declarations.cameras.C
 	/**
 	* Setting this to values greater than 1 will blur the edges of the shadow. High values will cause unwanted banding effects in the shadows - a greater [page:.mapSize mapSize] will allow for a higher value to be used here before these effects become visible. Note that this has no effect if the [page:WebGLRenderer.shadowMap.type] is set to [page:Renderer BasicShadowMap].
 	*/
-	open var radius: Float  = definedExternally
+	open var radius: Double  = definedExternally
 
 
 	/**

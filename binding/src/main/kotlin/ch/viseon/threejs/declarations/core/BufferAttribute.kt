@@ -1,4 +1,4 @@
-//Generated date 22.11.2018
+//Generated date 23.11.2018
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.core
 
@@ -124,25 +124,25 @@ open external class BufferAttribute(array: Array<dynamic>/*TypedArray*/ = define
 	/**
 	* Returns the x component of the vector at the given index.
 	*/
-	open fun getX(index: Int = definedExternally) : Float
+	open fun getX(index: Int = definedExternally) : Double
 
 
 	/**
 	* Returns the y component of the vector at the given index.
 	*/
-	open fun getY(index: Int = definedExternally) : Float
+	open fun getY(index: Int = definedExternally) : Double
 
 
 	/**
 	* Returns the z component of the vector at the given index.
 	*/
-	open fun getZ(index: Int = definedExternally) : Float
+	open fun getZ(index: Int = definedExternally) : Double
 
 
 	/**
 	* Returns the w component of the vector at the given index.
 	*/
-	open fun getW(index: Int = definedExternally) : Float
+	open fun getW(index: Int = definedExternally) : Double
 
 
 	/**
@@ -172,41 +172,41 @@ open external class BufferAttribute(array: Array<dynamic>/*TypedArray*/ = define
 	/**
 	* Sets the x component of the vector at the given index.
 	*/
-	open fun setX(index: Int = definedExternally, x: Float = definedExternally) : ch.viseon.threejs.declarations.core.BufferAttribute
+	open fun setX(index: Int = definedExternally, x: Double = definedExternally) : ch.viseon.threejs.declarations.core.BufferAttribute
 
 
 	/**
 	* Sets the y component of the vector at the given index.
 	*/
-	open fun setY(index: Int = definedExternally, y: Float = definedExternally) : ch.viseon.threejs.declarations.core.BufferAttribute
+	open fun setY(index: Int = definedExternally, y: Double = definedExternally) : ch.viseon.threejs.declarations.core.BufferAttribute
 
 
 	/**
 	* Sets the z component of the vector at the given index.
 	*/
-	open fun setZ(index: Int = definedExternally, z: Float = definedExternally) : ch.viseon.threejs.declarations.core.BufferAttribute
+	open fun setZ(index: Int = definedExternally, z: Double = definedExternally) : ch.viseon.threejs.declarations.core.BufferAttribute
 
 
 	/**
 	* Sets the w component of the vector at the given index.
 	*/
-	open fun setW(index: Int = definedExternally, w: Float = definedExternally) : ch.viseon.threejs.declarations.core.BufferAttribute
+	open fun setW(index: Int = definedExternally, w: Double = definedExternally) : ch.viseon.threejs.declarations.core.BufferAttribute
 
 
 	/**
 	* Sets the x and y components of the vector at the given index.
 	*/
-	open fun setXY(index: Int = definedExternally, x: Float = definedExternally, y: Float = definedExternally) : ch.viseon.threejs.declarations.core.BufferAttribute
+	open fun setXY(index: Int = definedExternally, x: Double = definedExternally, y: Double = definedExternally) : ch.viseon.threejs.declarations.core.BufferAttribute
 
 
 	/**
 	* Sets the x, y and z components of the vector at the given index.
 	*/
-	open fun setXYZ(index: Int = definedExternally, x: Float = definedExternally, y: Float = definedExternally, z: Float = definedExternally) : ch.viseon.threejs.declarations.core.BufferAttribute
+	open fun setXYZ(index: Int = definedExternally, x: Double = definedExternally, y: Double = definedExternally, z: Double = definedExternally) : ch.viseon.threejs.declarations.core.BufferAttribute
 
 
 	/**
 	* Sets the x, y, z and w components of the vector at the given index.
 	*/
-	open fun setXYZW(index: Int = definedExternally, x: Float = definedExternally, y: Float = definedExternally, z: Float = definedExternally, w: Float = definedExternally) : ch.viseon.threejs.declarations.core.BufferAttribute
+	open fun setXYZW(index: Int = definedExternally, x: Double = definedExternally, y: Double = definedExternally, z: Double = definedExternally, w: Double = definedExternally) : ch.viseon.threejs.declarations.core.BufferAttribute
 }

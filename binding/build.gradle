@@ -1,6 +1,7 @@
 plugins {
     id 'kotlin2js'
     id 'maven-publish'
+    id 'signing'
 }
 repositories {
     mavenCentral()
@@ -10,15 +11,67 @@ dependencies {
     compile "org.jetbrains.kotlin:kotlin-stdlib-js"
 }
 
+group 'ch.viseon.threejs'
+version = '98.0.1'
+
+compileKotlin2Js.kotlinOptions.moduleKind = "commonjs"
+
+task sourcesJar(type: Jar) {
+    from sourceSets.main.allSource
+    classifier = 'sources'
+}
+
+//task javadocJar(type: Jar) {
+//    from javadoc
+//    classifier = 'javadoc'
+//}
+
 publishing {
     publications {
         maven(MavenPublication) {
             from components.java
+            artifact sourcesJar
+//            artifact javadocJar
+            pom {
+                name = 'ThreeJs Binding'
+                description = 'Kotlin binding for ThreeJs, javascript library for 3d rendering'
+                url = 'https://github.com/nimloth05/threejs-kotlin-parser'
+                licenses {
+                    license {
+                        name = 'The Apache License, Version 2.0'
+                        url = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+                    }
+                }
+                developers {
+                    developer {
+                        id = 'sandroo'
+                        name = 'Sandro Orlando'
+                        email = 'info@viseon.ch'
+                        organization = 'viseon gmbh'
+                    }
+                }
+                scm {
+                    connection = 'scm:git:https://github.com/nimloth05/threejs-kotlin-parser.git'
+                    url = 'https://github.com/nimloth05/threejs-kotlin-parser'
+                }
+            }
+        }
+
+    }
+    repositories {
+        maven {
+            def releasesRepoUrl = "https://oss.sonatype.org/service/local/staging/deploy/maven2/"
+            def snapshotsRepoUrl = "https://oss.sonatype.org/content/repositories/snapshots"
+            url = version.endsWith('SNAPSHOT') ? snapshotsRepoUrl : releasesRepoUrl
+            credentials {
+                username "$mavenUser"
+                password "$mavenPassword"
+            }
         }
     }
 }
 
-group 'ch.viseon.threejs'
-version = '1.0.0_r98'
+signing {
+    sign publishing.publications.maven
+}
 
-compileKotlin2Js.kotlinOptions.moduleKind = "commonjs"

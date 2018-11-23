@@ -1,4 +1,4 @@
-//Generated date 22.11.2018
+//Generated date 23.11.2018
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.animation
 
@@ -10,13 +10,13 @@ open external class AnimationMixer(rootObject: ch.viseon.threejs.declarations.co
 	/**
 	* The global mixer time (in seconds; starting with 0 on the mixer's creation).
 	*/
-	open var time: Float  = definedExternally
+	open var time: Double  = definedExternally
 
 
 	/**
 	* A scaling factor for the global [page:.time mixer time]. Note: Setting the mixer's timeScale to 0 and later back to 1 is a possibility to pause/unpause all actions that are controlled by this mixer.
 	*/
-	open var timeScale: Float  = definedExternally
+	open var timeScale: Double  = definedExternally
 
 
 	/**
@@ -46,7 +46,7 @@ open external class AnimationMixer(rootObject: ch.viseon.threejs.declarations.co
 	/**
 	* Advances the global mixer time and updates the animation. This is usually done in the render loop, passing [page:Clock.getDelta clock.getDelta] scaled by the mixer's [page:.timeScale timeScale]).
 	*/
-	open fun update(deltaTimeInSeconds: Float = definedExternally) : ch.viseon.threejs.declarations.animation.AnimationMixer
+	open fun update(deltaTimeInSeconds: Double = definedExternally) : ch.viseon.threejs.declarations.animation.AnimationMixer
 
 
 	/**

@@ -1,4 +1,4 @@
-//Generated date 22.11.2018
+//Generated date 23.11.2018
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.core
 
@@ -124,7 +124,7 @@ open external class Object3D(){
 	/**
 	* This value allows the default rendering order of [link:https://en.wikipedia.org/wiki/Scene_graph scene graph] objects to be overridden although opaque and transparent objects remain sorted independently. Sorting is from lowest to highest renderOrder. Default value is **0**.
 	*/
-	open var renderOrder: Float  = definedExternally
+	open var renderOrder: Double  = definedExternally
 
 
 	/**
@@ -220,7 +220,7 @@ open external class Object3D(){
 	/**
 	* name -- the property name to search for. value -- value of the given property. Searches through the object's children and returns the first with a property that matches the value given.
 	*/
-	open fun getObjectByProperty(name: String = definedExternally, value: Float = definedExternally) : ch.viseon.threejs.declarations.core.Object3D
+	open fun getObjectByProperty(name: String = definedExternally, value: Double = definedExternally) : ch.viseon.threejs.declarations.core.Object3D
 
 
 	/**
@@ -256,7 +256,7 @@ open external class Object3D(){
 	/**
 	* vector - A vector representing a position in world space. Optionally, the [page:.x x], [page:.y y] and [page:.z z] components of the world space position. Rotates the object to face a point in world space. This method does not support objects with rotated and/or translated parent(s).
 	*/
-	open fun lookAt(vector: ch.viseon.threejs.declarations.math.Vector3 = definedExternally, lookAt: dynamic/*null*/ = definedExternally, x: Float = definedExternally, y: Float = definedExternally, z: Float = definedExternally) : dynamic/*null*/
+	open fun lookAt(vector: ch.viseon.threejs.declarations.math.Vector3 = definedExternally, lookAt: dynamic/*null*/ = definedExternally, x: Double = definedExternally, y: Double = definedExternally, z: Double = definedExternally) : dynamic/*null*/
 
 
 	/**
@@ -274,37 +274,37 @@ open external class Object3D(){
 	/**
 	* axis -- A normalized vector in object space. angle -- The angle in radians. Rotate an object along an axis in object space. The axis is assumed to be normalized.
 	*/
-	open fun rotateOnAxis(axis: ch.viseon.threejs.declarations.math.Vector3 = definedExternally, angle: Float = definedExternally) : Object3D
+	open fun rotateOnAxis(axis: ch.viseon.threejs.declarations.math.Vector3 = definedExternally, angle: Double = definedExternally) : Object3D
 
 
 	/**
 	* axis -- A normalized vector in world space. angle -- The angle in radians. Rotate an object along an axis in world space. The axis is assumed to be normalized. Method Assumes no rotated parent.
 	*/
-	open fun rotateOnWorldAxis(axis: ch.viseon.threejs.declarations.math.Vector3 = definedExternally, angle: Float = definedExternally) : Object3D
+	open fun rotateOnWorldAxis(axis: ch.viseon.threejs.declarations.math.Vector3 = definedExternally, angle: Double = definedExternally) : Object3D
 
 
 	/**
 	* rad - the angle to rotate in radians. Rotates the object around x axis in local space.
 	*/
-	open fun rotateX(rad: Float = definedExternally) : Object3D
+	open fun rotateX(rad: Double = definedExternally) : Object3D
 
 
 	/**
 	* rad - the angle to rotate in radians. Rotates the object around y axis in local space.
 	*/
-	open fun rotateY(rad: Float = definedExternally) : Object3D
+	open fun rotateY(rad: Double = definedExternally) : Object3D
 
 
 	/**
 	* rad - the angle to rotate in radians. Rotates the object around z axis in local space.
 	*/
-	open fun rotateZ(rad: Float = definedExternally) : Object3D
+	open fun rotateZ(rad: Double = definedExternally) : Object3D
 
 
 	/**
 	* axis -- A normalized vector in object space. angle -- angle in radians Calls [page:Quaternion.setFromAxisAngle setFromAxisAngle]( [page:Float axis], [page:Float angle] ) on the [page:.quaternion].
 	*/
-	open fun setRotationFromAxisAngle(axis: ch.viseon.threejs.declarations.math.Vector3 = definedExternally, angle: Float = definedExternally) : dynamic/*null*/
+	open fun setRotationFromAxisAngle(axis: ch.viseon.threejs.declarations.math.Vector3 = definedExternally, angle: Double = definedExternally) : dynamic/*null*/
 
 
 	/**
@@ -334,25 +334,25 @@ open external class Object3D(){
 	/**
 	* axis -- A normalized vector in object space. distance -- The distance to translate. Translate an object by distance along an axis in object space. The axis is assumed to be normalized.
 	*/
-	open fun translateOnAxis(axis: ch.viseon.threejs.declarations.math.Vector3 = definedExternally, distance: Float = definedExternally) : Object3D
+	open fun translateOnAxis(axis: ch.viseon.threejs.declarations.math.Vector3 = definedExternally, distance: Double = definedExternally) : Object3D
 
 
 	/**
 	* Translates object along x axis in object space by **distance** units.
 	*/
-	open fun translateX(distance: Float = definedExternally) : Object3D
+	open fun translateX(distance: Double = definedExternally) : Object3D
 
 
 	/**
 	* Translates object along y axis in object space by **distance** units.
 	*/
-	open fun translateY(distance: Float = definedExternally) : Object3D
+	open fun translateY(distance: Double = definedExternally) : Object3D
 
 
 	/**
 	* Translates object along z axis in object space by **distance** units.
 	*/
-	open fun translateZ(distance: Float = definedExternally) : Object3D
+	open fun translateZ(distance: Double = definedExternally) : Object3D
 
 
 	/**

@@ -1,11 +1,11 @@
-//Generated date 22.11.2018
+//Generated date 23.11.2018
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.helpers
 
 	/**
 	* This displays a helper object consisting of a spherical [page:Mesh] for visualizing a [page:PointLight].
 	*/
-open external class PointLightHelper(light: ch.viseon.threejs.declarations.lights.PointLight = definedExternally, sphereSize: Float = definedExternally, color: Int = definedExternally): ch.viseon.threejs.declarations.objects.Mesh{
+open external class PointLightHelper(light: ch.viseon.threejs.declarations.lights.PointLight = definedExternally, sphereSize: Double = definedExternally, color: Int = definedExternally): ch.viseon.threejs.declarations.objects.Mesh{
 
 	/**
 	* The [page:PointLight] that is being visualized.

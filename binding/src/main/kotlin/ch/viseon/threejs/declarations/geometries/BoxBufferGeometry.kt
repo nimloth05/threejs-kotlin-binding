@@ -1,11 +1,11 @@
-//Generated date 22.11.2018
+//Generated date 23.11.2018
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.geometries
 
 	/**
 	* This is the [page:BufferGeometry] port of [page:BoxGeometry].
 	*/
-open external class BoxBufferGeometry(width: Float = definedExternally, height: Float = definedExternally, depth: Float = definedExternally, widthSegments: Int = definedExternally, heightSegments: Int = definedExternally, depthSegments: Int = definedExternally): ch.viseon.threejs.declarations.core.BufferGeometry{
+open external class BoxBufferGeometry(width: Double = definedExternally, height: Double = definedExternally, depth: Double = definedExternally, widthSegments: Int = definedExternally, heightSegments: Int = definedExternally, depthSegments: Int = definedExternally): ch.viseon.threejs.declarations.core.BufferGeometry{
 
 	/**
 	* An object with a property for each of the constructor parameters. Any modification after instantiation does not change the geometry.

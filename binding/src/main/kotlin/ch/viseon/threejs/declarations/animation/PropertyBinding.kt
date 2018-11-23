@@ -1,4 +1,4 @@
-//Generated date 22.11.2018
+//Generated date 23.11.2018
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.animation
 
@@ -10,25 +10,25 @@ open external class PropertyBinding(rootNode: ch.viseon.threejs.declarations.cor
 	/**
 	* 
 	*/
-	open var path: Float  = definedExternally
+	open var path: Double  = definedExternally
 
 
 	/**
 	* 
 	*/
-	open var parsedPath: Float  = definedExternally
+	open var parsedPath: Double  = definedExternally
 
 
 	/**
 	* 
 	*/
-	open var node: Float  = definedExternally
+	open var node: Double  = definedExternally
 
 
 	/**
 	* 
 	*/
-	open var rootNode: Float  = definedExternally
+	open var rootNode: Double  = definedExternally
 
 
 	/**
@@ -58,13 +58,13 @@ open external class PropertyBinding(rootNode: ch.viseon.threejs.declarations.cor
 	/**
 	* 
 	*/
-	open fun getValue(targetArray: Array<dynamic>/*Array*/ = definedExternally, offset: Float = definedExternally) : dynamic/*null*/
+	open fun getValue(targetArray: Array<dynamic>/*Array*/ = definedExternally, offset: Double = definedExternally) : dynamic/*null*/
 
 
 	/**
 	* 
 	*/
-	open fun setValue(sourceArray: Array<dynamic>/*Array*/ = definedExternally, offset: Float = definedExternally) : dynamic/*null*/
+	open fun setValue(sourceArray: Array<dynamic>/*Array*/ = definedExternally, offset: Double = definedExternally) : dynamic/*null*/
 
 
 	/**

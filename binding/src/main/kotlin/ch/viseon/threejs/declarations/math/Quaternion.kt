@@ -1,40 +1,40 @@
-//Generated date 22.11.2018
+//Generated date 23.11.2018
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.math
 
 	/**
 	* Implementation of a [link:http://en.wikipedia.org/wiki/Quaternion quaternion]. This is used for [link:https://en.wikipedia.org/wiki/Quaternions_and_spatial_rotation rotating things] without encountering the dreaded [link:http://en.wikipedia.org/wiki/Gimbal_lock gimbal lock] issue, amongst other advantages.
 	*/
-open external class Quaternion(x: Float = definedExternally, y: Float = definedExternally, z: Float = definedExternally, w: Float = definedExternally){
+open external class Quaternion(x: Double = definedExternally, y: Double = definedExternally, z: Double = definedExternally, w: Double = definedExternally){
 
 	/**
 	* Changing this property will result in [page:.onChangeCallback onChangeCallback] being called.
 	*/
-	open var x: Float  = definedExternally
-
-
-	/**
-	* Changing this property will result in [page:.onChangeCallback onChangeCallback] being called.
-	*/
-	open var y: Float  = definedExternally
+	open var x: Double  = definedExternally
 
 
 	/**
 	* Changing this property will result in [page:.onChangeCallback onChangeCallback] being called.
 	*/
-	open var z: Float  = definedExternally
+	open var y: Double  = definedExternally
 
 
 	/**
 	* Changing this property will result in [page:.onChangeCallback onChangeCallback] being called.
 	*/
-	open var w: Float  = definedExternally
+	open var z: Double  = definedExternally
+
+
+	/**
+	* Changing this property will result in [page:.onChangeCallback onChangeCallback] being called.
+	*/
+	open var w: Double  = definedExternally
 
 
 	/**
 	* Returns the angle between this quaternion and quaternion [page:Quaternion q] in radians.
 	*/
-	open fun angleTo(q: ch.viseon.threejs.declarations.math.Quaternion = definedExternally) : Float
+	open fun angleTo(q: ch.viseon.threejs.declarations.math.Quaternion = definedExternally) : Double
 
 
 	/**
@@ -64,7 +64,7 @@ open external class Quaternion(x: Float = definedExternally, y: Float = definedE
 	/**
 	* Calculates the [link:https://en.wikipedia.org/wiki/Dot_product dot product] of quaternions [page:Quaternion v] and this one.
 	*/
-	open fun dot(v: ch.viseon.threejs.declarations.math.Quaternion = definedExternally) : Float
+	open fun dot(v: ch.viseon.threejs.declarations.math.Quaternion = definedExternally) : Double
 
 
 	/**
@@ -82,13 +82,13 @@ open external class Quaternion(x: Float = definedExternally, y: Float = definedE
 	/**
 	* Computes the [link:https://en.wikipedia.org/wiki/Euclidean_distance Euclidean length] (straight-line length) of this quaternion, considered as a 4 dimensional vector.
 	*/
-	open fun length() : Float
+	open fun length() : Double
 
 
 	/**
 	* Computes the [link:https://en.wikipedia.org/wiki/Euclidean_distance Euclidean length] (straight-line length) of this quaternion, considered as a 4 dimensional vector. This can be useful if you are comparing the lengths of two quaternions, as this is a slightly more efficient calculation than [page:.length length]().
 	*/
-	open fun lengthSq() : Float
+	open fun lengthSq() : Double
 
 
 	/**
@@ -130,25 +130,25 @@ open external class Quaternion(x: Float = definedExternally, y: Float = definedE
 	/**
 	* [page:Quaternion q] - The target quaternion. [page:float step] - The angular step in radians. Rotates this quaternion by a given angular step to the defined quaternion **q**. The method ensures that the final quaternion will not overshoot **q**.
 	*/
-	open fun rotateTowards(q: ch.viseon.threejs.declarations.math.Quaternion = definedExternally, step: Float = definedExternally) : ch.viseon.threejs.declarations.math.Quaternion
+	open fun rotateTowards(q: ch.viseon.threejs.declarations.math.Quaternion = definedExternally, step: Double = definedExternally) : ch.viseon.threejs.declarations.math.Quaternion
 
 
 	/**
 	* [page:Quaternion qb] - The other quaternion rotation [page:float t] - interpolation factor in the closed interval [0, 1]. Handles the spherical linear interpolation between quaternions. [page:float t] represents the amount of rotation between this quaternion (where [page:float t] is 0) and [page:Quaternion qb] (where [page:float t] is 1). This quaternion is set to the result. Also see the static version of the **slerp** below. // rotate a mesh towards a target quaternion mesh.quaternion.slerp( endQuaternion, 0.01 );
 	*/
-	open fun slerp(qb: ch.viseon.threejs.declarations.math.Quaternion = definedExternally, t: Float = definedExternally) : ch.viseon.threejs.declarations.math.Quaternion
+	open fun slerp(qb: ch.viseon.threejs.declarations.math.Quaternion = definedExternally, t: Double = definedExternally) : ch.viseon.threejs.declarations.math.Quaternion
 
 
 	/**
 	* Sets [page:.x x], [page:.y y], [page:.z z], [page:.w w] properties of this quaternion.
 	*/
-	open fun set(x: Float = definedExternally, y: Float = definedExternally, z: Float = definedExternally, w: Float = definedExternally) : ch.viseon.threejs.declarations.math.Quaternion
+	open fun set(x: Double = definedExternally, y: Double = definedExternally, z: Double = definedExternally, w: Double = definedExternally) : ch.viseon.threejs.declarations.math.Quaternion
 
 
 	/**
 	* Sets this quaternion from rotation specified by [page:Vector3 axis] and [page:Float angle]. Adapted from the method [link:http://www.euclideanspace.com/maths/geometry/rotations/conversions/angleToQuaternion/index.htm here]. **Axis** is assumed to be normalized, **angle** is in radians.
 	*/
-	open fun setFromAxisAngle(axis: ch.viseon.threejs.declarations.math.Vector3 = definedExternally, angle: Float = definedExternally) : ch.viseon.threejs.declarations.math.Quaternion
+	open fun setFromAxisAngle(axis: ch.viseon.threejs.declarations.math.Vector3 = definedExternally, angle: Double = definedExternally) : ch.viseon.threejs.declarations.math.Quaternion
 
 
 	/**
@@ -178,14 +178,14 @@ open external class Quaternion(x: Float = definedExternally, y: Float = definedE
 	/**
 	* [page:Quaternion qStart] - The starting quaternion (where [page:Float t] is 0) [page:Quaternion qEnd] - The ending quaternion (where [page:Float t] is 1) [page:Quaternion qTarget] - The target quaternion that gets set with the result [page:float t] - interpolation factor in the closed interval [0, 1]. Unlike the normal method, the static version of slerp sets a target quaternion to the result of the slerp operation. // Code setup var startQuaternion = new THREE.Quaternion().set( 0, 0, 0, 1 ).normalize(); var endQuaternion = new THREE.Quaternion().set( 1, 1, 1, 1 ).normalize(); var t = 0; // Update a mesh's rotation in the loop t = ( t + 0.01 ) % 1; // constant angular momentum THREE.Quaternion.slerp( startQuaternion, endQuaternion, mesh.quaternion, t );
 	*/
-	open fun slerp(qStart: ch.viseon.threejs.declarations.math.Quaternion = definedExternally, qEnd: ch.viseon.threejs.declarations.math.Quaternion = definedExternally, qTarget: ch.viseon.threejs.declarations.math.Quaternion = definedExternally, t: Float = definedExternally) : ch.viseon.threejs.declarations.math.Quaternion
+	open fun slerp(qStart: ch.viseon.threejs.declarations.math.Quaternion = definedExternally, qEnd: ch.viseon.threejs.declarations.math.Quaternion = definedExternally, qTarget: ch.viseon.threejs.declarations.math.Quaternion = definedExternally, t: Double = definedExternally) : ch.viseon.threejs.declarations.math.Quaternion
 
 
 	/**
 	* [page:Array dst] - The output array. [page:Integer dstOffset] - An offset into the output array. [page:Array src0] - The source array of the starting quaternion. [page:Integer srcOffset0] - An offset into the array **src0**. [page:Array src1] - The source array of the target quatnerion. [page:Integer srcOffset1] - An offset into the array **src1**. [page:float t] - Normalized interpolation factor (between 0 and 1).
 Like the static **slerp** method above, but operates directly on flat arrays of numbers.
 	*/
-	open fun slerpFlat(dst: Array<dynamic>/*Array*/ = definedExternally, dstOffset: Int = definedExternally, src0: Array<dynamic>/*Array*/ = definedExternally, srcOffset0: Int = definedExternally, src1: Array<dynamic>/*Array*/ = definedExternally, srcOffset1: Int = definedExternally, t: Float = definedExternally) : dynamic/*null*/
+	open fun slerpFlat(dst: Array<dynamic>/*Array*/ = definedExternally, dstOffset: Int = definedExternally, src0: Array<dynamic>/*Array*/ = definedExternally, srcOffset0: Int = definedExternally, src1: Array<dynamic>/*Array*/ = definedExternally, srcOffset1: Int = definedExternally, t: Double = definedExternally) : dynamic/*null*/
 	
 }
 }

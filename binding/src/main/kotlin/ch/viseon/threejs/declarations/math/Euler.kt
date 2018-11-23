@@ -1,11 +1,11 @@
-//Generated date 22.11.2018
+//Generated date 23.11.2018
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.math
 
 	/**
 	* A class representing [link:http://en.wikipedia.org/wiki/Euler_angles Euler Angles]. Euler angles describe a rotational transformation by rotating an object on its various axes in specified amounts per axis, and a specified axis order.
 	*/
-open external class Euler(x: Float = definedExternally, y: Float = definedExternally, z: Float = definedExternally, order: String = definedExternally){
+open external class Euler(x: Double = definedExternally, y: Double = definedExternally, z: Double = definedExternally, order: String = definedExternally){
 
 	/**
 	* Used to check whether this or derived classes are Eulers. Default is **true**. You should not change this, as it used internally for optimisation.
@@ -22,19 +22,19 @@ open external class Euler(x: Float = definedExternally, y: Float = definedExtern
 	/**
 	* The current value of the x component. If this is changed, [page:.onChangeCallback onChangeCallback] will be called.
 	*/
-	open var x: Float  = definedExternally
+	open var x: Double  = definedExternally
 
 
 	/**
 	* The current value of the y component. If this is changed, [page:.onChangeCallback onChangeCallback] will be called.
 	*/
-	open var y: Float  = definedExternally
+	open var y: Double  = definedExternally
 
 
 	/**
 	* The current value of the z component. If this is changed, [page:.onChangeCallback onChangeCallback] will be called.
 	*/
-	open var z: Float  = definedExternally
+	open var z: Double  = definedExternally
 
 
 	/**
@@ -82,7 +82,7 @@ open external class Euler(x: Float = definedExternally, y: Float = definedExtern
 	/**
 	* [page:.x x] - the angle of the x axis in radians. [page:.y y] - the angle of the y axis in radians. [page:.z z] - the angle of the z axis in radians. [page:.order order] - (optional) a string representing the order that the rotations are applied. Sets the angles of this euler transform and optionally the [page:.order order] and then call [page:.onChangeCallback onChangeCallback]().
 	*/
-	open fun set(x: Float = definedExternally, y: Float = definedExternally, z: Float = definedExternally, order: String = definedExternally) : ch.viseon.threejs.declarations.math.Euler
+	open fun set(x: Double = definedExternally, y: Double = definedExternally, z: Double = definedExternally, order: String = definedExternally) : ch.viseon.threejs.declarations.math.Euler
 
 
 	/**

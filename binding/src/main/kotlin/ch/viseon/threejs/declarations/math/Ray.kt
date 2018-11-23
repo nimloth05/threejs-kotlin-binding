@@ -1,4 +1,4 @@
-//Generated date 22.11.2018
+//Generated date 23.11.2018
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.math
 
@@ -28,7 +28,7 @@ open external class Ray(origin: ch.viseon.threejs.declarations.math.Vector3 = de
 	/**
 	* [page:Float t] - the distance along the [page:Ray] to retrieve a position for. [page:Vector3 target] — the result will be copied into this Vector3. Get a [page:Vector3] that is a given distance along this [page:Ray].
 	*/
-	open fun at(t: Float = definedExternally, target: ch.viseon.threejs.declarations.math.Vector3 = definedExternally) : ch.viseon.threejs.declarations.math.Vector3
+	open fun at(t: Double = definedExternally, target: ch.viseon.threejs.declarations.math.Vector3 = definedExternally) : ch.viseon.threejs.declarations.math.Vector3
 
 
 	/**
@@ -52,25 +52,25 @@ open external class Ray(origin: ch.viseon.threejs.declarations.math.Vector3 = de
 	/**
 	* [page:Vector3 point] - the [page:Vector3] to compute a distance to. Get the squared distance of the closest approach between the [page:Ray] and the [page:Vector3].
 	*/
-	open fun distanceSqToPoint(point: ch.viseon.threejs.declarations.math.Vector3 = definedExternally) : Float
+	open fun distanceSqToPoint(point: ch.viseon.threejs.declarations.math.Vector3 = definedExternally) : Double
 
 
 	/**
 	* [page:Vector3 v0] - the start of the line segment. [page:Vector3 v1] - the end of the line segment. optionalPointOnRay - (optional) if this is provided, it receives the point on this [page:Ray] that is closest to the segment. optionalPointOnSegment - (optional) if this is provided, it receives the point on the line segment that is closest to this [page:Ray]. Get the squared distance between this [page:Ray] and a line segment.
 	*/
-	open fun distanceSqToSegment(v0: ch.viseon.threejs.declarations.math.Vector3 = definedExternally, v1: ch.viseon.threejs.declarations.math.Vector3 = definedExternally, optionalPointOnRay: ch.viseon.threejs.declarations.math.Vector3 = definedExternally, optionalPointOnSegment: ch.viseon.threejs.declarations.math.Vector3 = definedExternally) : Float
+	open fun distanceSqToSegment(v0: ch.viseon.threejs.declarations.math.Vector3 = definedExternally, v1: ch.viseon.threejs.declarations.math.Vector3 = definedExternally, optionalPointOnRay: ch.viseon.threejs.declarations.math.Vector3 = definedExternally, optionalPointOnSegment: ch.viseon.threejs.declarations.math.Vector3 = definedExternally) : Double
 
 
 	/**
 	* [page:Plane plane] - the [page:Plane] to get the distance to. Get the distance from [page:.origin origin] to the [page:Plane], or **null** if the [page:Ray] doesn't intersect the [page:Plane].
 	*/
-	open fun distanceToPlane(plane: ch.viseon.threejs.declarations.math.Plane = definedExternally) : Float
+	open fun distanceToPlane(plane: ch.viseon.threejs.declarations.math.Plane = definedExternally) : Double
 
 
 	/**
 	* [page:Vector3 point] - [page:Vector3] The [page:Vector3] to compute a distance to. Get the distance of the closest approach between the [page:Ray] and the [page:Vector3 point].
 	*/
-	open fun distanceToPoint(point: ch.viseon.threejs.declarations.math.Vector3 = definedExternally) : Float
+	open fun distanceToPoint(point: ch.viseon.threejs.declarations.math.Vector3 = definedExternally) : Double
 
 
 	/**
@@ -130,7 +130,7 @@ open external class Ray(origin: ch.viseon.threejs.declarations.math.Vector3 = de
 	/**
 	* [page:Float t] - The distance along the [page:Ray] to interpolate. Shift the origin of this [page:Ray] along its direction by the distance given.
 	*/
-	open fun recast(t: Float = definedExternally) : ch.viseon.threejs.declarations.math.Ray
+	open fun recast(t: Double = definedExternally) : ch.viseon.threejs.declarations.math.Ray
 
 
 	/**

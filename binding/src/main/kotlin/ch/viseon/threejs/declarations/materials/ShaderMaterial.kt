@@ -1,4 +1,4 @@
-//Generated date 22.11.2018
+//Generated date 23.11.2018
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.materials
 
@@ -64,7 +64,7 @@ open external class ShaderMaterial(parameters: dynamic/*Object*/ = definedExtern
 	/**
 	* Controls wireframe thickness. Default is 1. Due to limitations of the [link:https://www.khronos.org/registry/OpenGL/specs/gl/glspec46.core.pdf OpenGL Core Profile] with the [page:WebGLRenderer WebGL] renderer on most platforms linewidth will always be 1 regardless of the set value.
 	*/
-	open var linewidth: Float  = definedExternally
+	open var linewidth: Double  = definedExternally
 
 
 	/**
@@ -124,7 +124,7 @@ open external class ShaderMaterial(parameters: dynamic/*Object*/ = definedExtern
 	/**
 	* Controls wireframe thickness. Default is 1. Due to limitations of the [link:https://www.khronos.org/registry/OpenGL/specs/gl/glspec46.core.pdf OpenGL Core Profile] with the [page:WebGLRenderer WebGL] renderer on most platforms linewidth will always be 1 regardless of the set value.
 	*/
-	open var wireframeLinewidth: Float  = definedExternally
+	open var wireframeLinewidth: Double  = definedExternally
 
 
 	/**

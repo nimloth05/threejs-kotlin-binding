@@ -1,4 +1,4 @@
-//Generated date 22.11.2018
+//Generated date 23.11.2018
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.core
 
@@ -198,25 +198,25 @@ open external class BufferGeometry(){
 	/**
 	* Rotate the geometry about the X axis. This is typically done as a one time operation, and not during a loop. Use [page:Object3D.rotation] for typical real-time mesh rotation.
 	*/
-	open fun rotateX(radians: Float = definedExternally) : ch.viseon.threejs.declarations.core.BufferGeometry
+	open fun rotateX(radians: Double = definedExternally) : ch.viseon.threejs.declarations.core.BufferGeometry
 
 
 	/**
 	* Rotate the geometry about the Y axis. This is typically done as a one time operation, and not during a loop. Use [page:Object3D.rotation] for typical real-time mesh rotation.
 	*/
-	open fun rotateY(radians: Float = definedExternally) : ch.viseon.threejs.declarations.core.BufferGeometry
+	open fun rotateY(radians: Double = definedExternally) : ch.viseon.threejs.declarations.core.BufferGeometry
 
 
 	/**
 	* Rotate the geometry about the Z axis. This is typically done as a one time operation, and not during a loop. Use [page:Object3D.rotation] for typical real-time mesh rotation.
 	*/
-	open fun rotateZ(radians: Float = definedExternally) : ch.viseon.threejs.declarations.core.BufferGeometry
+	open fun rotateZ(radians: Double = definedExternally) : ch.viseon.threejs.declarations.core.BufferGeometry
 
 
 	/**
 	* Scale the geometry data. This is typically done as a one time operation, and not during a loop. Use [page:Object3D.scale] for typical real-time mesh scaling.
 	*/
-	open fun scale(x: Float = definedExternally, y: Float = definedExternally, z: Float = definedExternally) : ch.viseon.threejs.declarations.core.BufferGeometry
+	open fun scale(x: Double = definedExternally, y: Double = definedExternally, z: Double = definedExternally) : ch.viseon.threejs.declarations.core.BufferGeometry
 
 
 	/**
@@ -258,7 +258,7 @@ open external class BufferGeometry(){
 	/**
 	* Translate the geometry. This is typically done as a one time operation, and not during a loop. Use [page:Object3D.position] for typical real-time mesh translation.
 	*/
-	open fun translate(x: Float = definedExternally, y: Float = definedExternally, z: Float = definedExternally) : ch.viseon.threejs.declarations.core.BufferGeometry
+	open fun translate(x: Double = definedExternally, y: Double = definedExternally, z: Double = definedExternally) : ch.viseon.threejs.declarations.core.BufferGeometry
 
 
 	/**

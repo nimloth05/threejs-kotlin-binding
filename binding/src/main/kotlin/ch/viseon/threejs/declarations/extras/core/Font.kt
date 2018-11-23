@@ -1,4 +1,4 @@
-//Generated date 22.11.2018
+//Generated date 23.11.2018
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.extras.core
 
@@ -22,5 +22,5 @@ open external class Font(){
 	/**
 	* [page:String text] -- string of text. [page:Float size] -- (optional) scale for the [page:Shape Shapes]. Default is **100**. Creates an array of [page:Shape Shapes] representing the text in the font.
 	*/
-	open fun generateShapes(text: String = definedExternally, size: Float = definedExternally) : dynamic/*null*/
+	open fun generateShapes(text: String = definedExternally, size: Double = definedExternally) : dynamic/*null*/
 }

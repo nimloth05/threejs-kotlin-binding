@@ -1,4 +1,4 @@
-//Generated date 22.11.2018
+//Generated date 23.11.2018
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.materials
 
@@ -34,7 +34,7 @@ open external class PointsMaterial(parameters: dynamic/*Object*/ = definedExtern
 	/**
 	* Sets the size of the points. Default is 1.0.
 	*/
-	open var size: Float  = definedExternally
+	open var size: Double  = definedExternally
 
 
 	/**

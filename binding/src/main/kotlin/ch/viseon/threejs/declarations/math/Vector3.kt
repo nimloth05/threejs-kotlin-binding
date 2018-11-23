@@ -1,22 +1,22 @@
-//Generated date 22.11.2018
+//Generated date 23.11.2018
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.math
 
 	/**
 	* Class representing a 3D [link:https://en.wikipedia.org/wiki/Vector_space vector]. A 3D vector is an ordered triplet of numbers (labeled x, y, and z), which can be used to represent a number of things, such as:
 	*/
-open external class Vector3(x: Float = definedExternally, y: Float = definedExternally, z: Float = definedExternally){
+open external class Vector3(x: Double = definedExternally, y: Double = definedExternally, z: Double = definedExternally){
 
 	/**
 	* Used to check whether this or derived classes are Vector3s. Default is **true**. You should not change this, as it is used internally for optimisation.
 	*/
 	open var isVector3: Boolean  = definedExternally
 
-	open var x: Float  = definedExternally
+	open var x: Double  = definedExternally
 
-	open var y: Float  = definedExternally
+	open var y: Double  = definedExternally
 
-	open var z: Float  = definedExternally
+	open var z: Double  = definedExternally
 
 
 	/**
@@ -28,13 +28,13 @@ open external class Vector3(x: Float = definedExternally, y: Float = definedExte
 	/**
 	* Adds the scalar value s to this vector's [page:.x x], [page:.y y] and [page:.z z] values.
 	*/
-	open fun addScalar(s: Float = definedExternally) : Vector3
+	open fun addScalar(s: Double = definedExternally) : Vector3
 
 
 	/**
 	* Adds the multiple of [page:Vector3 v] and [page:Float s] to this vector.
 	*/
-	open fun addScaledVector(v: ch.viseon.threejs.declarations.math.Vector3 = definedExternally, s: Float = definedExternally) : Vector3
+	open fun addScaledVector(v: ch.viseon.threejs.declarations.math.Vector3 = definedExternally, s: Double = definedExternally) : Vector3
 
 
 	/**
@@ -46,7 +46,7 @@ open external class Vector3(x: Float = definedExternally, y: Float = definedExte
 	/**
 	* [page:Vector3 axis] - A normalized [page:Vector3]. [page:Float angle] - An angle in radians. Applies a rotation specified by an axis and an angle to this vector.
 	*/
-	open fun applyAxisAngle(axis: ch.viseon.threejs.declarations.math.Vector3 = definedExternally, angle: Float = definedExternally) : Vector3
+	open fun applyAxisAngle(axis: ch.viseon.threejs.declarations.math.Vector3 = definedExternally, angle: Double = definedExternally) : Vector3
 
 
 	/**
@@ -76,7 +76,7 @@ open external class Vector3(x: Float = definedExternally, y: Float = definedExte
 	/**
 	* Returns the angle between this vector and vector [page:Vector3 v] in radians.
 	*/
-	open fun angleTo(v: ch.viseon.threejs.declarations.math.Vector3 = definedExternally) : Float
+	open fun angleTo(v: ch.viseon.threejs.declarations.math.Vector3 = definedExternally) : Double
 
 
 	/**
@@ -94,13 +94,13 @@ open external class Vector3(x: Float = definedExternally, y: Float = definedExte
 	/**
 	* [page:Float min] - the minimum value the length will be clamped to [page:Float max] - the maximum value the length will be clamped to If this vector's length is greater than the max value, it is replaced by the max value. If this vector's length is less than the min value, it is replaced by the min value.
 	*/
-	open fun clampLength(min: Float = definedExternally, max: Float = definedExternally) : Vector3
+	open fun clampLength(min: Double = definedExternally, max: Double = definedExternally) : Vector3
 
 
 	/**
 	* [page:Float min] - the minimum value the components will be clamped to [page:Float max] - the maximum value the components will be clamped to If this vector's x, y or z values are greater than the max value, they are replaced by the max value. If this vector's x, y or z values are less than the min value, they are replaced by the min value.
 	*/
-	open fun clampScalar(min: Float = definedExternally, max: Float = definedExternally) : Vector3
+	open fun clampScalar(min: Double = definedExternally, max: Double = definedExternally) : Vector3
 
 
 	/**
@@ -130,19 +130,19 @@ open external class Vector3(x: Float = definedExternally, y: Float = definedExte
 	/**
 	* Computes the distance from this vector to [page:Vector3 v].
 	*/
-	open fun distanceTo(v: ch.viseon.threejs.declarations.math.Vector3 = definedExternally) : Float
+	open fun distanceTo(v: ch.viseon.threejs.declarations.math.Vector3 = definedExternally) : Double
 
 
 	/**
 	* Computes the [link:https://en.wikipedia.org/wiki/Taxicab_geometry Manhattan distance] from this vector to [page:Vector3 v].
 	*/
-	open fun manhattanDistanceTo(v: ch.viseon.threejs.declarations.math.Vector3 = definedExternally) : Float
+	open fun manhattanDistanceTo(v: ch.viseon.threejs.declarations.math.Vector3 = definedExternally) : Double
 
 
 	/**
 	* Computes the squared distance from this vector to [page:Vector3 v]. If you are just comparing the distance with another distance, you should compare the distance squared instead as it is slightly more efficient to calculate.
 	*/
-	open fun distanceToSquared(v: ch.viseon.threejs.declarations.math.Vector3 = definedExternally) : Float
+	open fun distanceToSquared(v: ch.viseon.threejs.declarations.math.Vector3 = definedExternally) : Double
 
 
 	/**
@@ -154,13 +154,13 @@ open external class Vector3(x: Float = definedExternally, y: Float = definedExte
 	/**
 	* Divides this vector by scalar [page:Float s]. Sets vector to **( 0, 0, 0 )** if **[page:Float s] = 0**.
 	*/
-	open fun divideScalar(s: Float = definedExternally) : Vector3
+	open fun divideScalar(s: Double = definedExternally) : Vector3
 
 
 	/**
 	* Calculate the [link:https://en.wikipedia.org/wiki/Dot_product dot product] of this vector and [page:Vector3 v].
 	*/
-	open fun dot(v: ch.viseon.threejs.declarations.math.Vector3 = definedExternally) : Float
+	open fun dot(v: ch.viseon.threejs.declarations.math.Vector3 = definedExternally) : Double
 
 
 	/**
@@ -190,37 +190,37 @@ open external class Vector3(x: Float = definedExternally, y: Float = definedExte
 	/**
 	* [page:Integer index] - 0, 1 or 2. If index equals 0 returns the [page:.x x] value. If index equals 1 returns the [page:.y y] value. If index equals 2 returns the [page:.z z] value.
 	*/
-	open fun getComponent(index: Int = definedExternally) : Float
+	open fun getComponent(index: Int = definedExternally) : Double
 
 
 	/**
 	* Computes the [link:https://en.wikipedia.org/wiki/Euclidean_distance Euclidean length] (straight-line length) from (0, 0, 0) to (x, y, z).
 	*/
-	open fun length() : Float
+	open fun length() : Double
 
 
 	/**
 	* Computes the [link:http://en.wikipedia.org/wiki/Taxicab_geometry Manhattan length] of this vector.
 	*/
-	open fun manhattanLength() : Float
+	open fun manhattanLength() : Double
 
 
 	/**
 	* Computes the square of the [link:https://en.wikipedia.org/wiki/Euclidean_distance Euclidean length] (straight-line length) from (0, 0, 0) to (x, y, z). If you are comparing the lengths of vectors, you should compare the length squared instead as it is slightly more efficient to calculate.
 	*/
-	open fun lengthSq() : Float
+	open fun lengthSq() : Double
 
 
 	/**
 	* [page:Vector3 v] - [page:Vector3] to interpolate towards. alpha - interpolation factor in the closed interval [0, 1]. Linearly interpolate between this vector and [page:Vector3 v], where alpha is the distance along the line - alpha = 0 will be this vector, and alpha = 1 will be [page:Vector3 v].
 	*/
-	open fun lerp(v: ch.viseon.threejs.declarations.math.Vector3 = definedExternally, alpha: Float = definedExternally) : Vector3
+	open fun lerp(v: ch.viseon.threejs.declarations.math.Vector3 = definedExternally, alpha: Double = definedExternally) : Vector3
 
 
 	/**
 	* [page:Vector3 v1] - the starting [page:Vector3]. [page:Vector3 v2] - [page:Vector3] to interpolate towards. [page:Float alpha] - interpolation factor in the closed interval [0, 1]. Sets this vector to be the vector linearly interpolated between [page:Vector3 v1] and [page:Vector3 v2] where alpha is the distance along the line connecting the two vectors - alpha = 0 will be [page:Vector3 v1], and alpha = 1 will be [page:Vector3 v2].
 	*/
-	open fun lerpVectors(v1: ch.viseon.threejs.declarations.math.Vector3 = definedExternally, v2: ch.viseon.threejs.declarations.math.Vector3 = definedExternally, alpha: Float = definedExternally) : Vector3
+	open fun lerpVectors(v1: ch.viseon.threejs.declarations.math.Vector3 = definedExternally, v2: ch.viseon.threejs.declarations.math.Vector3 = definedExternally, alpha: Double = definedExternally) : Vector3
 
 
 	/**
@@ -244,7 +244,7 @@ open external class Vector3(x: Float = definedExternally, y: Float = definedExte
 	/**
 	* Multiplies this vector by scalar [page:Float s].
 	*/
-	open fun multiplyScalar(s: Float = definedExternally) : Vector3
+	open fun multiplyScalar(s: Double = definedExternally) : Vector3
 
 
 	/**
@@ -304,13 +304,13 @@ open external class Vector3(x: Float = definedExternally, y: Float = definedExte
 	/**
 	* Sets the [page:.x x], [page:.y y] and [page:.z z] components of this vector.
 	*/
-	open fun set(x: Float = definedExternally, y: Float = definedExternally, z: Float = definedExternally) : Vector3
+	open fun set(x: Double = definedExternally, y: Double = definedExternally, z: Double = definedExternally) : Vector3
 
 
 	/**
 	* [page:Integer index] - 0, 1 or 2. [page:Float value] - [page:Float] If index equals 0 set [page:.x x] to [page:Float value]. If index equals 1 set [page:.y y] to [page:Float value]. If index equals 2 set [page:.z z] to [page:Float value]
 	*/
-	open fun setComponent(index: Int = definedExternally, value: Float = definedExternally) : dynamic/*null*/
+	open fun setComponent(index: Int = definedExternally, value: Double = definedExternally) : dynamic/*null*/
 
 
 	/**
@@ -322,7 +322,7 @@ open external class Vector3(x: Float = definedExternally, y: Float = definedExte
 	/**
 	* Sets this vector from the cylindrical coordinates [page:Cylindrical radius], [page:Cylindrical theta] and [page:Cylindrical y].
 	*/
-	open fun setFromCylindricalCoords(radius: Float = definedExternally, theta: Float = definedExternally, y: Float = definedExternally) : Vector3
+	open fun setFromCylindricalCoords(radius: Double = definedExternally, theta: Double = definedExternally, y: Double = definedExternally) : Vector3
 
 
 	/**
@@ -352,37 +352,37 @@ open external class Vector3(x: Float = definedExternally, y: Float = definedExte
 	/**
 	* Sets this vector from the spherical coordinates [page:Spherical radius], [page:Spherical phi] and [page:Spherical theta].
 	*/
-	open fun setFromSphericalCoords(radius: Float = definedExternally, phi: Float = definedExternally, theta: Float = definedExternally) : Vector3
+	open fun setFromSphericalCoords(radius: Double = definedExternally, phi: Double = definedExternally, theta: Double = definedExternally) : Vector3
 
 
 	/**
 	* Set this vector to the vector with the same direction as this one, but [page:.length length] [page:Float l].
 	*/
-	open fun setLength(l: Float = definedExternally) : Vector3
+	open fun setLength(l: Double = definedExternally) : Vector3
 
 
 	/**
 	* Set the [page:.x x], [page:.y y] and [page:.z z] values of this vector both equal to [page:Float scalar].
 	*/
-	open fun setScalar(scalar: Float = definedExternally) : Vector3
+	open fun setScalar(scalar: Double = definedExternally) : Vector3
 
 
 	/**
 	* Replace this vector's [page:.x x] value with [page:Float x].
 	*/
-	open fun setX(x: Float = definedExternally) : Vector3
+	open fun setX(x: Double = definedExternally) : Vector3
 
 
 	/**
 	* Replace this vector's [page:.y y] value with [page:Float y].
 	*/
-	open fun setY(y: Float = definedExternally) : Vector3
+	open fun setY(y: Double = definedExternally) : Vector3
 
 
 	/**
 	* Replace this vector's [page:.z z] value with [page:Float z].
 	*/
-	open fun setZ(z: Float = definedExternally) : Vector3
+	open fun setZ(z: Double = definedExternally) : Vector3
 
 
 	/**
@@ -394,7 +394,7 @@ open external class Vector3(x: Float = definedExternally, y: Float = definedExte
 	/**
 	* Subtracts [page:Float s] from this vector's [page:.x x], [page:.y y] and [page:.z z] compnents.
 	*/
-	open fun subScalar(s: Float = definedExternally) : Vector3
+	open fun subScalar(s: Double = definedExternally) : Vector3
 
 
 	/**

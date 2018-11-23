@@ -1,4 +1,4 @@
-//Generated date 22.11.2018
+//Generated date 23.11.2018
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.materials
 
@@ -10,13 +10,13 @@ open external class MeshPhysicalMaterial(parameters: dynamic/*Object*/ = defined
 	/**
 	* ClearCoat level, from **0.0** to **1.0**. Default is **0.0**.
 	*/
-	open var clearCoat: Float  = definedExternally
+	open var clearCoat: Double  = definedExternally
 
 
 	/**
 	* How rough the clearCoat appears, from **0.0** to **1.0**. Default is **0.0**.
 	*/
-	open var clearCoatRoughness: Float  = definedExternally
+	open var clearCoatRoughness: Double  = definedExternally
 
 
 	/**
@@ -34,5 +34,5 @@ open external class MeshPhysicalMaterial(parameters: dynamic/*Object*/ = defined
 	/**
 	* Degree of reflectivity, from **0.0** to **1.0**. Default is **0.5**. This models the reflectivity of non-metallic materials. It has no effect when [page:MeshStandardMaterial.metalness metalness] is **1.0**
 	*/
-	open var reflectivity: Float  = definedExternally
+	open var reflectivity: Double  = definedExternally
 }

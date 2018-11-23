@@ -1,14 +1,14 @@
-//Generated date 22.11.2018
+//Generated date 23.11.2018
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.math
 
 	/**
 	* A two dimensional surface that extends infinitely in 3d space, represented in [link:http://mathworld.wolfram.com/HessianNormalForm.html Hessian normal form] by a unit length normal vector and a constant.
 	*/
-open external class Plane(normal: ch.viseon.threejs.declarations.math.Vector3 = definedExternally, constant: Float = definedExternally){
+open external class Plane(normal: ch.viseon.threejs.declarations.math.Vector3 = definedExternally, constant: Double = definedExternally){
 	open var normal: ch.viseon.threejs.declarations.math.Vector3  = definedExternally
 
-	open var constant: Float  = definedExternally
+	open var constant: Double  = definedExternally
 
 
 	/**
@@ -38,13 +38,13 @@ open external class Plane(normal: ch.viseon.threejs.declarations.math.Vector3 = 
 	/**
 	* Returns the signed distance from the [page:Vector3 point] to the plane.
 	*/
-	open fun distanceToPoint(point: ch.viseon.threejs.declarations.math.Vector3 = definedExternally) : Float
+	open fun distanceToPoint(point: ch.viseon.threejs.declarations.math.Vector3 = definedExternally) : Double
 
 
 	/**
 	* Returns the signed distance from the [page:Sphere sphere] to the plane.
 	*/
-	open fun distanceToSphere(sphere: ch.viseon.threejs.declarations.math.Sphere = definedExternally) : Float
+	open fun distanceToSphere(sphere: ch.viseon.threejs.declarations.math.Sphere = definedExternally) : Double
 
 
 	/**
@@ -98,13 +98,13 @@ open external class Plane(normal: ch.viseon.threejs.declarations.math.Vector3 = 
 	/**
 	* [page:Vector3 normal] - a unit length [page:Vector3] defining the normal of the plane. [page:Float constant] - the signed distance from the origin to the plane. Default is **0**. Sets the plane's [page:.normal normal] and [page:.constant constant] properties.
 	*/
-	open fun set(normal: ch.viseon.threejs.declarations.math.Vector3 = definedExternally, constant: Float = definedExternally) : ch.viseon.threejs.declarations.math.Plane
+	open fun set(normal: ch.viseon.threejs.declarations.math.Vector3 = definedExternally, constant: Double = definedExternally) : ch.viseon.threejs.declarations.math.Plane
 
 
 	/**
 	* [page:Float x] - x value of the unit length normal vector. [page:Float y] - y value of the unit length normal vector. [page:Float z] - z value of the unit length normal vector. [page:Float w] - the value of the plane's [page:.constant constant] property. Set the individual components that define the plane.
 	*/
-	open fun setComponents(x: Float = definedExternally, y: Float = definedExternally, z: Float = definedExternally, w: Float = definedExternally) : ch.viseon.threejs.declarations.math.Plane
+	open fun setComponents(x: Double = definedExternally, y: Double = definedExternally, z: Double = definedExternally, w: Double = definedExternally) : ch.viseon.threejs.declarations.math.Plane
 
 
 	/**

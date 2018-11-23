@@ -1,4 +1,4 @@
-//Generated date 22.11.2018
+//Generated date 23.11.2018
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.audio
 
@@ -52,19 +52,19 @@ open external class Audio(listener: ch.viseon.threejs.declarations.audio.AudioLi
 	/**
 	* Speed of playback. Default is **1**.
 	*/
-	open var playbackRate: Float  = definedExternally
+	open var playbackRate: Double  = definedExternally
 
 
 	/**
 	* The time at which the sound should begin to play. Same as the **when** paramter of [link:https://developer.mozilla.org/en-US/docs/Web/API/AudioBufferSourceNode/start AudioBufferSourceNode.start](). Default is **0**.
 	*/
-	open var startTime: Float  = definedExternally
+	open var startTime: Double  = definedExternally
 
 
 	/**
 	* An offset to the time within the audio buffer that playback should begin. Same as the **offset** paramter of [link:https://developer.mozilla.org/en-US/docs/Web/API/AudioBufferSourceNode/start AudioBufferSourceNode.start](). Default is **0**.
 	*/
-	open var offset: Float  = definedExternally
+	open var offset: Double  = definedExternally
 
 
 	/**
@@ -124,13 +124,13 @@ open external class Audio(listener: ch.viseon.threejs.declarations.audio.AudioLi
 	/**
 	* Return the value of [page:Audio.playbackRate playbackRate].
 	*/
-	open fun getPlaybackRate() : Float
+	open fun getPlaybackRate() : Double
 
 
 	/**
 	* Return the current volume.
 	*/
-	open fun getVolume() : Float
+	open fun getVolume() : Double
 
 
 	/**
@@ -190,13 +190,13 @@ open external class Audio(listener: ch.viseon.threejs.declarations.audio.AudioLi
 	/**
 	* If [page:Audio.hasPlaybackControl hasPlaybackControl] is enabled, set the [page:Audio.playbackRate playbackRate] to **value**.
 	*/
-	open fun setPlaybackRate(value: Float = definedExternally) : ch.viseon.threejs.declarations.audio.Audio
+	open fun setPlaybackRate(value: Double = definedExternally) : ch.viseon.threejs.declarations.audio.Audio
 
 
 	/**
 	* Set the volume.
 	*/
-	open fun setVolume(value: Float = definedExternally) : ch.viseon.threejs.declarations.audio.Audio
+	open fun setVolume(value: Double = definedExternally) : ch.viseon.threejs.declarations.audio.Audio
 
 
 	/**

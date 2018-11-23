@@ -1,4 +1,4 @@
-//Generated date 22.11.2018
+//Generated date 23.11.2018
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.math
 
@@ -40,7 +40,7 @@ open external class Matrix3(){
 	/**
 	* Computes and returns the [link:https://en.wikipedia.org/wiki/Determinant determinant] of this matrix.
 	*/
-	open fun determinant() : Float
+	open fun determinant() : Double
 
 
 	/**
@@ -88,13 +88,13 @@ open external class Matrix3(){
 	/**
 	* Multiplies every component of the matrix by the scalar value **s**.
 	*/
-	open fun multiplyScalar(s: Float = definedExternally) : Matrix3
+	open fun multiplyScalar(s: Double = definedExternally) : Matrix3
 
 
 	/**
 	* [page:Float n11] - value to put in row 1, col 1. [page:Float n12] - value to put in row 1, col 2. ... ... [page:Float n32] - value to put in row 3, col 2. [page:Float n33] - value to put in row 3, col 3. Sets the 3x3 matrix values to the given [link:https://en.wikipedia.org/wiki/Row-_and_column-major_order row-major] sequence of values.
 	*/
-	open fun set(n11: Float = definedExternally, n12: Float = definedExternally, n13: Float = definedExternally, n21: Float = definedExternally, n22: Float = definedExternally, n23: Float = definedExternally, n31: Float = definedExternally, n32: Float = definedExternally, n33: Float = definedExternally) : Matrix3
+	open fun set(n11: Double = definedExternally, n12: Double = definedExternally, n13: Double = definedExternally, n21: Double = definedExternally, n22: Double = definedExternally, n23: Double = definedExternally, n31: Double = definedExternally, n32: Double = definedExternally, n33: Double = definedExternally) : Matrix3
 
 
 	/**
@@ -112,7 +112,7 @@ open external class Matrix3(){
 	/**
 	* [page:Float tx] - offset x [page:Float ty] - offset y [page:Float sx] - repeat x [page:Float sy] - repeat y [page:Float rotation] - rotation (in radians) [page:Float cx] - center x of rotation [page:Float cy] - center y of rotation Sets the UV transform matrix from offset, repeat, rotation, and center.
 	*/
-	open fun setUvTransform(tx: Float = definedExternally, ty: Float = definedExternally, sx: Float = definedExternally, sy: Float = definedExternally, rotation: Float = definedExternally, cx: Float = definedExternally, cy: Float = definedExternally) : Matrix3
+	open fun setUvTransform(tx: Double = definedExternally, ty: Double = definedExternally, sx: Double = definedExternally, sy: Double = definedExternally, rotation: Double = definedExternally, cx: Double = definedExternally, cy: Double = definedExternally) : Matrix3
 
 
 	/**

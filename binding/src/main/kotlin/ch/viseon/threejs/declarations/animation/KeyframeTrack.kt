@@ -1,4 +1,4 @@
-//Generated date 22.11.2018
+//Generated date 23.11.2018
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.animation
 
@@ -68,7 +68,7 @@ Note: The track's name does not necessarily have to be unique. Multiple tracks c
 	/**
 	* Returns the size of each value (that is the length of the [page:.values values] array divided by the length of the [page:.times times] array).
 	*/
-	open fun getValueSize() : Float
+	open fun getValueSize() : Double
 
 
 	/**
@@ -110,13 +110,13 @@ Note: The track's name does not necessarily have to be unique. Multiple tracks c
 	/**
 	* Moves all keyframes either forward or backward in time.
 	*/
-	open fun shift(timeOffsetInSeconds: Float = definedExternally) : KeyframeTrack
+	open fun shift(timeOffsetInSeconds: Double = definedExternally) : KeyframeTrack
 
 
 	/**
 	* Removes keyframes before **startTime** and after **endTime**, without changing any values within the range [**startTime**, **endTime**].
 	*/
-	open fun trim(startTimeInSeconds: Float = definedExternally, endTimeInSeconds: Float = definedExternally) : KeyframeTrack
+	open fun trim(startTimeInSeconds: Double = definedExternally, endTimeInSeconds: Double = definedExternally) : KeyframeTrack
 
 
 	/**

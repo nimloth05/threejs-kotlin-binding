@@ -1,4 +1,4 @@
-//Generated date 22.11.2018
+//Generated date 23.11.2018
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.core
 
@@ -10,7 +10,7 @@ open external class InstancedBufferGeometry(): ch.viseon.threejs.declarations.co
 	/**
 	* Default is **undefined**.
 	*/
-	open var maxInstancedCount: Float  = definedExternally
+	open var maxInstancedCount: Double  = definedExternally
 
 
 	/**
@@ -22,5 +22,5 @@ open external class InstancedBufferGeometry(): ch.viseon.threejs.declarations.co
 	/**
 	* 
 	*/
-	open var addGroup: Float  = definedExternally
+	open var addGroup: Double  = definedExternally
 }

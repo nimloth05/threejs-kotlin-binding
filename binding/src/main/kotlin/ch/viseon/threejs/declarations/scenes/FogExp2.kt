@@ -1,11 +1,11 @@
-//Generated date 22.11.2018
+//Generated date 23.11.2018
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.scenes
 
 	/**
 	* This class contains the parameters that define exponential fog, i.e., that grows exponentially denser with the distance.
 	*/
-open external class FogExp2(color: Int = definedExternally, density: Float = definedExternally){
+open external class FogExp2(color: Int = definedExternally, density: Double = definedExternally){
 
 	/**
 	* Optional name of the object (doesn't need to be unique). Default is an empty string.
@@ -23,7 +23,7 @@ open external class FogExp2(color: Int = definedExternally, density: Float = def
 	* Defines how fast the fog will grow dense.
 Default is 0.00025.
 	*/
-	open var density: Float  = definedExternally
+	open var density: Double  = definedExternally
 
 
 	/**

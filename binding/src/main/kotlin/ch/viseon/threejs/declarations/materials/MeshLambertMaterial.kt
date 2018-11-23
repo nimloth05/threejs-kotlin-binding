@@ -1,4 +1,4 @@
-//Generated date 22.11.2018
+//Generated date 23.11.2018
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.materials
 
@@ -22,7 +22,7 @@ open external class MeshLambertMaterial(parameters: dynamic/*Object*/ = definedE
 	/**
 	* Intensity of the ambient occlusion effect. Default is 1. Zero is no occlusion effect.
 	*/
-	open var aoMapIntensity: Float  = definedExternally
+	open var aoMapIntensity: Double  = definedExternally
 
 
 	/**
@@ -52,7 +52,7 @@ open external class MeshLambertMaterial(parameters: dynamic/*Object*/ = definedE
 	/**
 	* Intensity of the emissive light. Modulates the emissive color. Default is 1.
 	*/
-	open var emissiveIntensity: Float  = definedExternally
+	open var emissiveIntensity: Double  = definedExternally
 
 
 	/**
@@ -76,7 +76,7 @@ open external class MeshLambertMaterial(parameters: dynamic/*Object*/ = definedE
 	/**
 	* Intensity of the baked light. Default is 1.
 	*/
-	open var lightMapIntensity: Float  = definedExternally
+	open var lightMapIntensity: Double  = definedExternally
 
 
 	/**
@@ -100,13 +100,13 @@ open external class MeshLambertMaterial(parameters: dynamic/*Object*/ = definedE
 	/**
 	* How much the environment map affects the surface; also see [page:.combine].
 	*/
-	open var reflectivity: Float  = definedExternally
+	open var reflectivity: Double  = definedExternally
 
 
 	/**
 	* The index of refraction (IOR) of air (approximately 1) divided by the index of refraction of the material. It is used with environment mapping modes [page:Textures THREE.CubeRefractionMapping] and [page:Textures THREE.EquirectangularRefractionMapping]. The refraction ratio should not exceed 1. Default is **0.98**.
 	*/
-	open var refractionRatio: Float  = definedExternally
+	open var refractionRatio: Double  = definedExternally
 
 
 	/**
@@ -142,5 +142,5 @@ open external class MeshLambertMaterial(parameters: dynamic/*Object*/ = definedE
 	/**
 	* Controls wireframe thickness. Default is 1. Due to limitations of the [link:https://www.khronos.org/registry/OpenGL/specs/gl/glspec46.core.pdf OpenGL Core Profile] with the [page:WebGLRenderer WebGL] renderer on most platforms linewidth will always be 1 regardless of the set value.
 	*/
-	open var wireframeLinewidth: Float  = definedExternally
+	open var wireframeLinewidth: Double  = definedExternally
 }
