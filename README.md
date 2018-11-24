@@ -7,6 +7,8 @@ Please report any bug or type problem you encounter.
 
 ## Maven dependency
 
+The binding is available at the maven central repository.
+
 Gradle:
 
     dependencies {
