@@ -19,7 +19,8 @@ object DocCorrections {
         "SpotLightHelper.matrix" to "Matrix4",
         "SpotLightHelper.matrixAutoUpdate" to "Boolean",
         "VertexNormalsHelper.matrixAutoUpdate" to "Boolean",
-        "ShaderMaterial.vertexColors" to "Int"
+        "ShaderMaterial.vertexColors" to "Int",
+        "Object3D.children" to "Array<Object3D>"
     )
 
     private val names = mapOf(
