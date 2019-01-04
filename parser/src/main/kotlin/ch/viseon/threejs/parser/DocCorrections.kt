@@ -20,7 +20,12 @@ object DocCorrections {
         "SpotLightHelper.matrixAutoUpdate" to "Boolean",
         "VertexNormalsHelper.matrixAutoUpdate" to "Boolean",
         "ShaderMaterial.vertexColors" to "Int",
-        "Object3D.children" to "Array<Object3D>"
+        "Object3D.children" to "Array<Object3D>",
+        //Null values
+        "MeshPhongMaterial.map" to "Texture?",
+        "MeshPhongMaterial.lightMap" to "Texture?",
+        "MeshPhongMaterial.emissiveMap" to "Texture?",
+        "MeshPhongMaterial.displacementMap" to "Texture?"
     )
 
     private val names = mapOf(
