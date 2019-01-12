@@ -1,4 +1,4 @@
-//Generated date 29.11.2018
+//Generated date 12.01.2019
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.loaders.managers
 

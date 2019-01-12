@@ -1,4 +1,4 @@
-//Generated date 29.11.2018
+//Generated date 12.01.2019
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.materials
 
@@ -77,18 +77,6 @@ open external class Material(){
 	* Whether to render the material's color. This can be used in conjunction with a mesh's [page:Integer renderOrder] property to create invisible objects that occlude other objects. Default is **true**.
 	*/
 	open var colorWrite: Boolean  = definedExternally
-
-
-	/**
-	* Custom depth material to be used by this material when rendering to the depth map. When shadow-casting with a [page:DirectionalLight] or [page:SpotLight], if you are (a) modifying vertex positions in the vertex shader, (b) using a displacement map, (c) using an alpha map with alphaTest, or (d) using a transparent texture with alphaTest, you must specify a customDepthMaterial for proper shadows. Default is **undefined**.
-	*/
-	open var customDepthMaterial: ch.viseon.threejs.declarations.materials.Material  = definedExternally
-
-
-	/**
-	* Same as customDepthMaterial, but used with [page:PointLight]. Default is **undefined**.
-	*/
-	open var customDistanceMaterial: ch.viseon.threejs.declarations.materials.Material  = definedExternally
 
 
 	/**

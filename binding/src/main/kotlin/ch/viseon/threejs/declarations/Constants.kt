@@ -9,7 +9,7 @@ enum class Mouse(val value: Int) {
     RIGHT(2)
 }
 
-const val REVISION = "98"
+const val REVISION = "100"
 const val CullFaceNone = 0
 const val CullFaceBack = 1
 const val CullFaceFront = 2
@@ -65,6 +65,8 @@ const val LinearToneMapping = 1
 const val ReinhardToneMapping = 2
 const val Uncharted2ToneMapping = 3
 const val CineonToneMapping = 4
+const val ACESFilmicToneMapping = 5
+
 const val UVMapping = 300
 const val CubeReflectionMapping = 301
 const val CubeRefractionMapping = 302

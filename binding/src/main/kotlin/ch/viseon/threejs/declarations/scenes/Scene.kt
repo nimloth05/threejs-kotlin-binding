@@ -1,4 +1,4 @@
-//Generated date 29.11.2018
+//Generated date 12.01.2019
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.scenes
 
@@ -26,7 +26,7 @@ open external class Scene(): ch.viseon.threejs.declarations.core.Object3D{
 
 
 	/**
-	* If not null, sets the background used when rendering the scene, and is always rendered first. Can be set to a [page:Color] which sets the clear color, a [page:Texture] covering the canvas, or a [page:CubeTexture]. Default is null.
+	* If not null, sets the background used when rendering the scene, and is always rendered first. Can be set to a [page:Color] which sets the clear color, a [page:Texture] covering the canvas, or a cubemap as a [page:CubeTexture] or [page:WebGLRenderTargetCube]. Default is null.
 	*/
 	open var background: dynamic/*Object*/  = definedExternally
 

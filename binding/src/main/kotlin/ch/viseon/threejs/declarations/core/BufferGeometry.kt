@@ -1,4 +1,4 @@
-//Generated date 29.11.2018
+//Generated date 12.01.2019
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.core
 
@@ -28,7 +28,7 @@ open external class BufferGeometry(){
 
 
 	/**
-	* Used to determine what part of the geometry should be rendered. This should not be set directly, instead use [page:.setDrawRange]. Default is { start: 0, count: Infinity }
+	* Determines the part of the geometry to render. This should not be set directly, instead use [page:.setDrawRange]. Default is { start: 0, count: Infinity } For non-indexed BufferGeometry, count is the number of vertices to render. For indexed BufferGeometry, count is the number of indices to render.
 	*/
 	open var drawRange: dynamic/*Object*/  = definedExternally
 
@@ -226,7 +226,7 @@ open external class BufferGeometry(){
 
 
 	/**
-	* Set the [page:.drawRange] buffer. See that property for details.
+	* Set the [page:.drawRange] property. For non-indexed BufferGeometry, count is the number of vertices to render. For indexed BufferGeometry, count is the number of indices to render.
 	*/
 	open fun setDrawRange(start: Int = definedExternally, count: Int = definedExternally) : dynamic/*null*/
 

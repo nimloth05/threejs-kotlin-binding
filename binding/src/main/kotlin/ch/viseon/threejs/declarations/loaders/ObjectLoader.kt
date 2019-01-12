@@ -1,9 +1,9 @@
-//Generated date 29.11.2018
+//Generated date 12.01.2019
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.loaders
 
 	/**
-	* A loader for loading a JSON resource. Unlike the [page:JSONLoader], this one make use of the .type attributes of objects to map them to their original classes. Note that this loader can't load [page:Geometries]. Use [page:JSONLoader] instead for that. This uses the [page:FileLoader] internally for loading files.
+	* A loader for loading a JSON resource in the [link:https://github.com/mrdoob/three.js/wiki/JSON-Object-Scene-format-4 JSON Object/Scene format]. This uses the [page:FileLoader] internally for loading files.
 	*/
 open external class ObjectLoader(manager: ch.viseon.threejs.declarations.loaders.managers.LoadingManager = definedExternally){
 
@@ -39,7 +39,7 @@ Begin loading from url and call onLoad with the parsed response content.
 
 
 	/**
-	* [page:Object json] — required. The JSON source to parse. This is used [page:.parse] to parse any [page:Geometry geometries] or [page:BufferGeometry buffer geometries] in the JSON structure. Internally it uses [page:JSONLoader] for geometries and [page:BufferGeometryLoader] for buffer geometries.
+	* [page:Object json] — required. The JSON source to parse. This is used [page:.parse] to parse any [page:Geometry geometries] or [page:BufferGeometry buffer geometries] in the JSON structure.
 	*/
 	open fun parseGeometries(json: dynamic/*Object*/ = definedExternally) : ch.viseon.threejs.declarations.core.Object3D
 

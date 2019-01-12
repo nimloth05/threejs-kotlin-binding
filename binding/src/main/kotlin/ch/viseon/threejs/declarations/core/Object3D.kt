@@ -1,4 +1,4 @@
-//Generated date 29.11.2018
+//Generated date 12.01.2019
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.core
 
@@ -17,6 +17,18 @@ open external class Object3D(){
 	* Array with object's children. See [page:Group] for info on manually grouping objects.
 	*/
 	open var children: Array<Object3D>  = definedExternally
+
+
+	/**
+	* Custom depth material to be used when rendering to the depth map. Can only be used in context of meshes. When shadow-casting with a [page:DirectionalLight] or [page:SpotLight], if you are (a) modifying vertex positions in the vertex shader, (b) using a displacement map, (c) using an alpha map with alphaTest, or (d) using a transparent texture with alphaTest, you must specify a customDepthMaterial for proper shadows. Default is **undefined**.
+	*/
+	open var customDepthMaterial: ch.viseon.threejs.declarations.materials.Material  = definedExternally
+
+
+	/**
+	* Same as customDepthMaterial, but used with [page:PointLight]. Default is **undefined**.
+	*/
+	open var customDistanceMaterial: ch.viseon.threejs.declarations.materials.Material  = definedExternally
 
 
 	/**
@@ -254,7 +266,7 @@ open external class Object3D(){
 
 
 	/**
-	* vector - A vector representing a position in world space. Optionally, the [page:.x x], [page:.y y] and [page:.z z] components of the world space position. Rotates the object to face a point in world space. This method does not support objects with rotated and/or translated parent(s).
+	* vector - A vector representing a position in world space. Optionally, the [page:.x x], [page:.y y] and [page:.z z] components of the world space position. Rotates the object to face a point in world space. This method does not support objects having non-uniformly-scaled parent(s).
 	*/
 	open fun lookAt(vector: ch.viseon.threejs.declarations.math.Vector3 = definedExternally, lookAt: dynamic/*null*/ = definedExternally, x: Double = definedExternally, y: Double = definedExternally, z: Double = definedExternally) : dynamic/*null*/
 

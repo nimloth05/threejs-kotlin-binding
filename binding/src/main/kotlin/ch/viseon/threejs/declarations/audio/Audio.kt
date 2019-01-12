@@ -1,4 +1,4 @@
-//Generated date 29.11.2018
+//Generated date 12.01.2019
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.audio
 
@@ -17,6 +17,12 @@ open external class Audio(listener: ch.viseon.threejs.declarations.audio.AudioLi
 	* The [link:https://developer.mozilla.org/en-US/docs/Web/API/AudioContext AudioContext] of the [page:AudioListener listener] given in the constructor.
 	*/
 	open var context: dynamic/*AudioContext*/  = definedExternally
+
+
+	/**
+	* Modify pitch, measured in cents. +/- 100 is a semitone. +/- 1200 is an octave. Default is **0**.
+	*/
+	open var detune: Double  = definedExternally
 
 
 	/**

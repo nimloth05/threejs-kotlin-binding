@@ -1,4 +1,4 @@
-//Generated date 29.11.2018
+//Generated date 12.01.2019
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.renderers
 
@@ -129,7 +129,7 @@ open external class WebGLRenderer(parameters: dynamic/*Object*/ = definedExterna
 
 
 	/**
-	* Defines whether the renderer should sort objects. Default is **true**. Note: Sorting is used to attempt to properly render objects that have some degree of transparency. By definition, sorting objects may not work in all cases. Depending on the needs of application, it may be neccessary to turn off sorting and use other methods to deal with transparency rendering e.g. manually determining each object's rendering order.
+	* Defines whether the renderer should sort objects. Default is **true**. Note: Sorting is used to attempt to properly render objects that have some degree of transparency. By definition, sorting objects may not work in all cases. Depending on the needs of application, it may be necessary to turn off sorting and use other methods to deal with transparency rendering e.g. manually determining each object's rendering order.
 	*/
 	open var sortObjects: Boolean  = definedExternally
 

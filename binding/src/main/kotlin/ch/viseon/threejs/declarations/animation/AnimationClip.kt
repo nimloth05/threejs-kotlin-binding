@@ -1,4 +1,4 @@
-//Generated date 29.11.2018
+//Generated date 12.01.2019
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.animation
 
@@ -56,7 +56,7 @@ open external class AnimationClip(name: String = definedExternally, duration: Do
 	companion object {
 
 	/**
-	* Returns an array of new AnimationClips created from the [page:Geometry.morphTargets morph target sequences] of a geometry, trying to sort morph target names into animation-group-based patterns like "Walk_001, Walk_002, Run_001, Run_002 ..." This method is called by the [page:JSONLoader] internally, and it uses [page:.CreateFromMorphTargetSequence CreateFromMorphTargetSequence].
+	* Returns an array of new AnimationClips created from the [page:Geometry.morphTargets morph target sequences] of a geometry, trying to sort morph target names into animation-group-based patterns like "Walk_001, Walk_002, Run_001, Run_002 ...".
 	*/
 	open fun CreateClipsFromMorphTargetSequences(name: String = definedExternally, morphTargetSequence: Array<dynamic>/*Array*/ = definedExternally, fps: Double = definedExternally, noLoop: Boolean = definedExternally) : Array<dynamic>/*Array*/
 

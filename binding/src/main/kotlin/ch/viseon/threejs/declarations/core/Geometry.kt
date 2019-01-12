@@ -1,4 +1,4 @@
-//Generated date 29.11.2018
+//Generated date 12.01.2019
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.core
 
@@ -62,7 +62,7 @@ open external class Geometry(){
 
 
 	/**
-	* Array of morph normals. Morph normals have similar structure as morph targets, each normal set is a Javascript object: morphNormal = { name: "NormalName", normals: [ new THREE.Vector3(), ... ] } See the [example:webgl_morphnormals WebGL / morphNormals] example.
+	* Array of morph normals. Morph normals have similar structure as morph targets, each normal set is a Javascript object: morphNormal = { name: "NormalName", normals: [ new THREE.Vector3(), ... ] }
 	*/
 	open var morphNormals: Array<dynamic>/*Array*/  = definedExternally
 
@@ -209,7 +209,7 @@ Neither bounding boxes or bounding spheres are computed by default. They need to
 
 
 	/**
-	* Convert a [page:BufferGeometry] to a Geometry. The array used to store the vertices in the bufferGeometry is a non indexed array, so the resultant geometry may contain duplicated vertices. Use [page:mergeVertices] to remove them.
+	* Convert a [page:BufferGeometry] to a Geometry. When converting from BufferGeometry to Geometry, all vertices are preserved, so duplicated vertices may appear. Use [page:Geometry.mergeVertices] to remove them.
 	*/
 	open fun fromBufferGeometry(geometry: ch.viseon.threejs.declarations.core.BufferGeometry = definedExternally) : ch.viseon.threejs.declarations.core.Geometry
 

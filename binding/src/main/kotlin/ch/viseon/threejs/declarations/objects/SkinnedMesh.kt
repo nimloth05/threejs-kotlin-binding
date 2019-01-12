@@ -1,11 +1,11 @@
-//Generated date 29.11.2018
+//Generated date 12.01.2019
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.objects
 
 	/**
 	* A mesh that has a [page:Skeleton] with [page:Bone bones] that can then be used to animate the vertices of the geometry. The material must support skinning and have skinning enabled - see [page:MeshStandardMaterial.skinning].
 	*/
-open external class SkinnedMesh(geometry: ch.viseon.threejs.declarations.core.Geometry = definedExternally, material: ch.viseon.threejs.declarations.materials.Material = definedExternally): ch.viseon.threejs.declarations.objects.Mesh{
+open external class SkinnedMesh(geometry: ch.viseon.threejs.declarations.core.BufferGeometry = definedExternally, material: ch.viseon.threejs.declarations.materials.Material = definedExternally): ch.viseon.threejs.declarations.objects.Mesh{
 
 	/**
 	* Either "attached" or "detached". "attached" uses the [page:SkinnedMesh.matrixWorld] property for the base transform matrix of the bones. "detached" uses the [page:SkinnedMesh.bindMatrix]. Default is "attached".
@@ -32,13 +32,13 @@ open external class SkinnedMesh(geometry: ch.viseon.threejs.declarations.core.Ge
 
 
 	/**
-	* [page:Skeleton] created from the [page:Geometry.bones bones] of the [page:Geometry] passed in the constructor.
+	* [page:Skeleton] representing the bone hierachy of the skinned mesh.
 	*/
 	open var skeleton: ch.viseon.threejs.declarations.objects.Skeleton  = definedExternally
 
 
 	/**
-	* [page:Skeleton skeleton] - [page:Skeleton] created from a [page:Bone Bones] tree. [page:Matrix4 bindMatrix] - [page:Matrix4] that represents the base transform of the skeleton. Bind a skeleton to the skinned mesh. The bindMatrix gets saved to .bindMatrix property and the .bindMatrixInverse gets calculated. This is called automatically in the constructor, and the skeleton is created from the [page:Geometry.bones bones] of the [page:Geometry] passed in the constructor.
+	* [page:Skeleton skeleton] - [page:Skeleton] created from a [page:Bone Bones] tree. [page:Matrix4 bindMatrix] - [page:Matrix4] that represents the base transform of the skeleton. Bind a skeleton to the skinned mesh. The bindMatrix gets saved to .bindMatrix property and the .bindMatrixInverse gets calculated.
 	*/
 	open fun bind(skeleton: ch.viseon.threejs.declarations.objects.Skeleton = definedExternally, bindMatrix: ch.viseon.threejs.declarations.math.Matrix4 = definedExternally) : dynamic/*null*/
 
@@ -50,7 +50,7 @@ open external class SkinnedMesh(geometry: ch.viseon.threejs.declarations.core.Ge
 
 
 	/**
-	* Normalizes the [page:Geometry.skinWeights] vectors. Does not affect [page:BufferGeometry].
+	* Normalizes the skin weights.
 	*/
 	open fun normalizeSkinWeights() : dynamic/*null*/
 
@@ -65,10 +65,4 @@ open external class SkinnedMesh(geometry: ch.viseon.threejs.declarations.core.Ge
 	* Updates the [page:Matrix4 MatrixWorld].
 	*/
 	override fun updateMatrixWorld(force: Boolean) : dynamic/*null*/
-
-
-	/**
-	* Creates an array of hierarchical [page:Bone bones] objects from the internal geometry.
-	*/
-	open fun initBones() : dynamic/*null*/
 }
