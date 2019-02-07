@@ -2,7 +2,8 @@
 This project provides an update to date binding of three.js. (r101)
 This binding was generated out of the threejs doc. This means, that most classes/methods/properties contains documentation.
 
-##setup
+## setup
+
 The binding is available at the maven central repository.
 
 Reference this library in your build.gradle file:
@@ -19,7 +20,7 @@ Threejs needs to be loaded via npm (use kotlinFrontend Plugin)
         }
     }
     
-##Example
+## Example
 
 Example code for rotating cube:
 
@@ -76,7 +77,7 @@ Example code for rotating cube:
     
 The complete example is in the `example` project.
 
-#Future
+# Future
 Next thing I'd like to implement is coroutine based loading of assets. Threejs uses a callback based mechanism.
  This would be a separate project.
 
