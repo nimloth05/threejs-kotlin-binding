@@ -1,11 +1,11 @@
-//Generated date 12.01.2019
+//Generated date 07.02.2019
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.renderers
 
 	/**
 	* The WebGL renderer displays your beautifully crafted scenes using [link:https://en.wikipedia.org/wiki/WebGL WebGL].
 	*/
-open external class WebGLRenderer(parameters: dynamic/*Object*/ = definedExternally){
+open external class WebGLRenderer(parameters: dynamic = definedExternally){
 
 	/**
 	* Defines whether the renderer should automatically clear its output before rendering a frame.
@@ -34,13 +34,13 @@ open external class WebGLRenderer(parameters: dynamic/*Object*/ = definedExterna
 	/**
 	* An object containing details about the capabilities of the current [link:https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext RenderingContext]. - [page:Boolean floatFragmentTextures]: whether the context supports the [link:https://developer.mozilla.org/en-US/docs/Web/API/OES_texture_float OES_texture_float] extension. According to [link:https://webglstats.com/ WebGLStats], as of February 2016 over 95% of WebGL enabled devices support this. - [page:Boolean floatVertexTextures]: **true** if [page:Boolean floatFragmentTextures] and [page:Boolean vertexTextures] are both true. - [page:Method getMaxAnisotropy](): Returns the maximum available anisotropy. - [page:Method getMaxPrecision](): Returns the maximum available precision for vertex and fragment shaders. - [page:Boolean logarithmicDepthBuffer]: **true** if the [page:parameter logarithmicDepthBuffer] was set to true in the constructor and the context supports the [link:https://developer.mozilla.org/en-US/docs/Web/API/EXT_frag_depth EXT_frag_depth] extension. According to [link:https://webglstats.com/ WebGLStats], as of February 2016 around 66% of WebGL enabled devices support this. - [page:Integer maxAttributes]: The value of **gl.MAX_VERTEX_ATTRIBS**. - [page:Integer maxCubemapSize]: The value of **gl.MAX_CUBE_MAP_TEXTURE_SIZE**. Maximum height ** width of cube map textures that a shader can use. - [page:Integer maxFragmentUniforms]: The value of **gl.MAX_FRAGMENT_UNIFORM_VECTORS**. The number of uniforms that can be used by a fragment shader. - [page:Integer maxTextureSize]: The value of **gl.MAX_TEXTURE_SIZE**. Maximum height ** width of a texture that a shader use. - [page:Integer maxTextures]: The value of **gl.MAX_TEXTURE_IMAGE_UNITS**. The maximum number of textures that can be used by a shader. - [page:Integer maxVaryings]: The value of **gl.MAX_VARYING_VECTORS**. The number of varying vectors that can used by shaders. - [page:Integer maxVertexTextures]: The value of **gl.MAX_VERTEX_TEXTURE_IMAGE_UNITS**. The number of textures that can be used in a vertex shader. - [page:Integer maxVertexUniforms]: The value of **gl.MAX_VERTEX_UNIFORM_VECTORS**. The maximum number of uniforms that can be used in a vertex shader. - [page:String precision]: The shader precision currently being used by the renderer. - [page:Boolean vertexTextures]: **true** if [property:Integer maxVertexTextures] is greater than 0 (i.e. vertext textures can be used).
 	*/
-	open var capabilities: dynamic/*Object*/  = definedExternally
+	open var capabilities: dynamic  = definedExternally
 
 
 	/**
 	* User-defined clipping planes specified as THREE.Plane objects in world space. These planes apply globally. Points in space whose dot product with the plane is negative are cut away. Default is [].
 	*/
-	open var clippingPlanes: Array<dynamic>/*Array*/  = definedExternally
+	open var clippingPlanes: Array<dynamic>  = definedExternally
 
 
 	/**
@@ -58,7 +58,7 @@ open external class WebGLRenderer(parameters: dynamic/*Object*/ = definedExterna
 	/**
 	* A wrapper for the [page:WebGLRenderer.extensions.get .extensions.get] method, used to check whether various WebGL extensions are supported.
 	*/
-	open var extensions: dynamic/*Object*/  = definedExternally
+	open var extensions: dynamic  = definedExternally
 
 
 	/**
@@ -83,7 +83,7 @@ open external class WebGLRenderer(parameters: dynamic/*Object*/ = definedExterna
 	* An object with a series of statistical information about the graphics board memory and the rendering process. Useful for debugging or just for the sake of curiosity. The object contains the following fields:
 
 	*/
-	open var info: dynamic/*Object*/  = definedExternally
+	open var info: dynamic  = definedExternally
 
 
 	/**
@@ -113,19 +113,19 @@ open external class WebGLRenderer(parameters: dynamic/*Object*/ = definedExterna
 	/**
 	* Used internally by the renderer to keep track of various sub object properties.
 	*/
-	open var properties: dynamic/*Object*/  = definedExternally
+	open var properties: dynamic  = definedExternally
 
 
 	/**
 	* Used internally to handle ordering of scene object rendering.
 	*/
-	open var renderLists: dynamic/*WebGLRenderLists*/  = definedExternally
+	open var renderLists: dynamic  = definedExternally
 
 
 	/**
 	* This contains the reference to the shadow map, if used.
 	*/
-	open var shadowMap: dynamic/*WebGLShadowMap*/  = definedExternally
+	open var shadowMap: dynamic  = definedExternally
 
 
 	/**
@@ -137,7 +137,7 @@ open external class WebGLRenderer(parameters: dynamic/*Object*/ = definedExterna
 	/**
 	* Contains functions for setting various properties of the [page:WebGLRenderer.context] state.
 	*/
-	open var state: dynamic/*Object*/  = definedExternally
+	open var state: dynamic  = definedExternally
 
 
 	/**
@@ -167,55 +167,55 @@ open external class WebGLRenderer(parameters: dynamic/*Object*/ = definedExterna
 	/**
 	* Tells the renderer to clear its color, depth or stencil drawing buffer(s). This method initializes the color buffer to the current clear color value. Arguments default to **true**.
 	*/
-	open fun clear(color: Boolean = definedExternally, depth: Boolean = definedExternally, stencil: Boolean = definedExternally) : dynamic/*null*/
+	open fun clear(color: Boolean = definedExternally, depth: Boolean = definedExternally, stencil: Boolean = definedExternally) : dynamic
 
 
 	/**
 	* Clear the color buffer. Equivalent to calling [page:WebGLRenderer.clear .clear]( true, false, false ).
 	*/
-	open fun clearColor() : dynamic/*null*/
+	open fun clearColor() : dynamic
 
 
 	/**
 	* Clear the depth buffer. Equivalent to calling [page:WebGLRenderer.clear .clear]( false, true, false ).
 	*/
-	open fun clearDepth() : dynamic/*null*/
+	open fun clearDepth() : dynamic
 
 
 	/**
 	* Clear the stencil buffers. Equivalent to calling [page:WebGLRenderer.clear .clear]( false, false, true ).
 	*/
-	open fun clearStencil() : dynamic/*null*/
+	open fun clearStencil() : dynamic
 
 
 	/**
 	* Compiles all materials in the scene with the camera. This is useful to precompile shaders before the first rendering.
 	*/
-	open fun compile(scene: ch.viseon.threejs.declarations.scenes.Scene = definedExternally, camera: ch.viseon.threejs.declarations.cameras.Camera = definedExternally) : dynamic/*null*/
+	open fun compile(scene: ch.viseon.threejs.declarations.scenes.Scene = definedExternally, camera: ch.viseon.threejs.declarations.cameras.Camera = definedExternally) : dynamic
 
 
 	/**
 	* Copies pixels from the current WebGLFramebuffer into a 2D texture. Enables access to [link:https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/copyTexImage2D WebGLRenderingContext.copyTexImage2D].
 	*/
-	open fun copyFramebufferToTexture(position: ch.viseon.threejs.declarations.math.Vector2 = definedExternally, texture: ch.viseon.threejs.declarations.textures.Texture = definedExternally, level: Double = definedExternally) : dynamic/*null*/
+	open fun copyFramebufferToTexture(position: ch.viseon.threejs.declarations.math.Vector2 = definedExternally, texture: ch.viseon.threejs.declarations.textures.Texture = definedExternally, level: Double = definedExternally) : dynamic
 
 
 	/**
 	* Copies all pixels of a texture to an existing texture starting from the given position. Enables access to [link:https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texSubImage2D WebGLRenderingContext.texSubImage2D].
 	*/
-	open fun copyTextureToTexture(position: ch.viseon.threejs.declarations.math.Vector2 = definedExternally, srcTexture: ch.viseon.threejs.declarations.textures.Texture = definedExternally, dstTexture: ch.viseon.threejs.declarations.textures.Texture = definedExternally, level: Double = definedExternally) : dynamic/*null*/
+	open fun copyTextureToTexture(position: ch.viseon.threejs.declarations.math.Vector2 = definedExternally, srcTexture: ch.viseon.threejs.declarations.textures.Texture = definedExternally, dstTexture: ch.viseon.threejs.declarations.textures.Texture = definedExternally, level: Double = definedExternally) : dynamic
 
 
 	/**
 	* Dispose of the current rendering context.
 	*/
-	open fun dispose() : dynamic/*null*/
+	open fun dispose() : dynamic
 
 
 	/**
 	* Simulate loss of the WebGL context. This requires support for the [link:https://developer.mozilla.org/en-US/docs/Web/API/WEBGL_lose_context WEBGL_lose_context] extensions. According to [link:https://webglstats.com/ WebGLStats], as of February 2016 90% of WebGL enabled devices support this.
 	*/
-	open fun forceContextLoss() : dynamic/*null*/
+	open fun forceContextLoss() : dynamic
 
 
 	/**
@@ -245,19 +245,19 @@ open external class WebGLRenderer(parameters: dynamic/*Object*/ = definedExterna
 	/**
 	* Returns the current RenderTarget, if any.
 	*/
-	open fun getRenderTarget() : dynamic/*RenderTarget*/
+	open fun getRenderTarget() : dynamic
 
 
 	/**
 	* Returns the current viewport.
 	*/
-	open fun getCurrentViewport() : dynamic/*RenderTarget*/
+	open fun getCurrentViewport() : dynamic
 
 
 	/**
 	* Returns an object containing the width and height of the renderer's drawing buffer, in pixels.
 	*/
-	open fun getDrawingBufferSize() : dynamic/*Object*/
+	open fun getDrawingBufferSize() : dynamic
 
 
 	/**
@@ -269,102 +269,102 @@ open external class WebGLRenderer(parameters: dynamic/*Object*/ = definedExterna
 	/**
 	* Returns an object containing the width and height of the renderer's output canvas, in pixels.
 	*/
-	open fun getSize() : dynamic/*Object*/
+	open fun getSize() : dynamic
 
 
 	/**
 	* Reset the GL state to default. Called internally if the WebGL context is lost.
 	*/
-	open fun resetGLState() : dynamic/*null*/
+	open fun resetGLState() : dynamic
 
 
 	/**
 	* Reads the pixel data from the renderTarget into the buffer you pass in. This is a wrapper around [link:https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/readPixels WebGLRenderingContext.readPixels](). See the [example:webgl_interactive_cubes_gpu interactive / cubes / gpu] example.
 	*/
-	open fun readRenderTargetPixels(renderTarget: ch.viseon.threejs.declarations.renderers.WebGLRenderTarget = definedExternally, x: Double = definedExternally, y: Double = definedExternally, width: Double = definedExternally, height: Double = definedExternally) : dynamic/*null*/
+	open fun readRenderTargetPixels(renderTarget: ch.viseon.threejs.declarations.renderers.WebGLRenderTarget = definedExternally, x: Double = definedExternally, y: Double = definedExternally, width: Double = definedExternally, height: Double = definedExternally) : dynamic
 
 
 	/**
 	* Render a [page:Scene scene] using a [page:Camera camera]. The render is done to the [page:WebGLRenderTarget renderTarget] (if specified) or to the canvas as usual. If [page:Boolean forceClear] is **true**, the depth, stencil and color buffers will be cleared before rendering even if the renderer's [page:WebGLRenderer.autoClear autoClear] property is false. Even with forceClear set to true you can prevent certain buffers being cleared by setting either the [page:WebGLRenderer.autoClearColor autoClearColor], [page:WebGLRenderer.autoClearStencil autoClearStencil] or [page:WebGLRenderer.autoClearDepth autoClearDepth] properties to false.
 	*/
-	open fun render(scene: ch.viseon.threejs.declarations.scenes.Scene = definedExternally, camera: ch.viseon.threejs.declarations.cameras.Camera = definedExternally, renderTarget: ch.viseon.threejs.declarations.renderers.WebGLRenderTarget = definedExternally, forceClear: Boolean = definedExternally) : dynamic/*null*/
+	open fun render(scene: ch.viseon.threejs.declarations.scenes.Scene = definedExternally, camera: ch.viseon.threejs.declarations.cameras.Camera = definedExternally, renderTarget: ch.viseon.threejs.declarations.renderers.WebGLRenderTarget = definedExternally, forceClear: Boolean = definedExternally) : dynamic
 
 
 	/**
 	* Render a buffer geometry group using the camera and with the specified material.
 	*/
-	open fun renderBufferDirect(camera: ch.viseon.threejs.declarations.cameras.Camera = definedExternally, fog: ch.viseon.threejs.declarations.scenes.Fog = definedExternally, geometry: ch.viseon.threejs.declarations.core.Geometry = definedExternally, material: ch.viseon.threejs.declarations.materials.Material = definedExternally, `object`: ch.viseon.threejs.declarations.core.Object3D = definedExternally, group: dynamic/*Object*/ = definedExternally) : dynamic/*null*/
+	open fun renderBufferDirect(camera: ch.viseon.threejs.declarations.cameras.Camera = definedExternally, fog: ch.viseon.threejs.declarations.scenes.Fog = definedExternally, geometry: ch.viseon.threejs.declarations.core.Geometry = definedExternally, material: ch.viseon.threejs.declarations.materials.Material = definedExternally, `object`: ch.viseon.threejs.declarations.core.Object3D = definedExternally, group: dynamic = definedExternally) : dynamic
 
 
 	/**
 	* object - an instance of [page:Object3D] program - an instance of shaderProgram shading - an instance of Material Render an immediate buffer. Gets called by renderImmediateObject.
 	*/
-	open fun renderBufferImmediate(`object`: ch.viseon.threejs.declarations.core.Object3D = definedExternally, program: dynamic/*shaderprogram*/ = definedExternally, shading: ch.viseon.threejs.declarations.materials.Material = definedExternally) : dynamic/*null*/
+	open fun renderBufferImmediate(`object`: ch.viseon.threejs.declarations.core.Object3D = definedExternally, program: dynamic = definedExternally, shading: ch.viseon.threejs.declarations.materials.Material = definedExternally) : dynamic
 
 
 	/**
 	* [page:Function callback] — The function will be called every available frame. If `null` is passed it will stop any already ongoing animation.
 A build in function that can be used instead of [link:https://developer.mozilla.org/en-US/docs/Web/API/window/requestAnimationFrame requestAnimationFrame]. For WebVR projects this function must be used.
 	*/
-	open fun setAnimationLoop(callback: dynamic/*Function*/ = definedExternally) : dynamic/*null*/
+	open fun setAnimationLoop(callback: dynamic = definedExternally) : dynamic
 
 
 	/**
 	* Sets the clear alpha. Valid input is a float between **0.0** and **1.0**.
 	*/
-	open fun setClearAlpha(alpha: Double = definedExternally) : dynamic/*null*/
+	open fun setClearAlpha(alpha: Double = definedExternally) : dynamic
 
 
 	/**
 	* Sets the clear color and opacity.
 	*/
-	open fun setClearColor(color: ch.viseon.threejs.declarations.math.Color = definedExternally, alpha: Double = definedExternally) : dynamic/*null*/
+	open fun setClearColor(color: ch.viseon.threejs.declarations.math.Color = definedExternally, alpha: Double = definedExternally) : dynamic
 
 
 	/**
 	* Sets device pixel ratio. This is usually used for HiDPI device to prevent bluring output canvas.
 	*/
-	open fun setPixelRatio(value: Double = definedExternally) : dynamic/*null*/
+	open fun setPixelRatio(value: Double = definedExternally) : dynamic
 
 
 	/**
 	* renderTarget -- The [page:WebGLRenderTarget renderTarget] that needs to be activated (optional). This method sets the active rendertarget. If the parameter is omitted the canvas is set as the active rendertarget.
 	*/
-	open fun setRenderTarget(renderTarget: ch.viseon.threejs.declarations.renderers.WebGLRenderTarget = definedExternally) : dynamic/*null*/
+	open fun setRenderTarget(renderTarget: ch.viseon.threejs.declarations.renderers.WebGLRenderTarget = definedExternally) : dynamic
 
 
 	/**
 	* Sets the scissor area from (x, y) to (x + width, y + height)
 	*/
-	open fun setScissor(x: Int = definedExternally, y: Int = definedExternally, width: Int = definedExternally, height: Int = definedExternally) : dynamic/*null*/
+	open fun setScissor(x: Int = definedExternally, y: Int = definedExternally, width: Int = definedExternally, height: Int = definedExternally) : dynamic
 
 
 	/**
 	* Enable or disable the scissor test. When this is enabled, only the pixels within the defined scissor area will be affected by further renderer actions.
 	*/
-	open fun setScissorTest(boolean: Boolean = definedExternally) : dynamic/*null*/
+	open fun setScissorTest(boolean: Boolean = definedExternally) : dynamic
 
 
 	/**
 	* Resizes the output canvas to (width, height) with device pixel ratio taken into account, and also sets the viewport to fit that size, starting in (0, 0). Setting [page:Boolean updateStyle] to false prevents any style changes to the output canvas.
 	*/
-	open fun setSize(width: Int = definedExternally, height: Int = definedExternally, updateStyle: Boolean = definedExternally) : dynamic/*null*/
+	open fun setSize(width: Int = definedExternally, height: Int = definedExternally, updateStyle: Boolean = definedExternally) : dynamic
 
 
 	/**
 	* texture -- The [page:Texture texture] that needs to be set. slot -- The number indicating which slot should be used by the texture. This method sets the correct texture to the correct slot for the WebGL shader. The slot number can be found as a value of the uniform of the sampler. Note: This method replaces the older [method:null setTexture] method.
 	*/
-	open fun setTexture2D(texture: ch.viseon.threejs.declarations.textures.Texture = definedExternally, slot: Double = definedExternally) : dynamic/*null*/
+	open fun setTexture2D(texture: ch.viseon.threejs.declarations.textures.Texture = definedExternally, slot: Double = definedExternally) : dynamic
 
 
 	/**
 	* texture -- The [page:CubeTexture cubeTexture] that needs to be set. slot -- The number indicating which slot should be used by the texture. This method sets the correct texture to the correct slot for the WebGL shader. The slot number can be found as a value of the uniform of the sampler.
 	*/
-	open fun setTextureCube(cubeTexture: ch.viseon.threejs.declarations.textures.CubeTexture = definedExternally, slot: Double = definedExternally) : dynamic/*null*/
+	open fun setTextureCube(cubeTexture: ch.viseon.threejs.declarations.textures.CubeTexture = definedExternally, slot: Double = definedExternally) : dynamic
 
 
 	/**
 	* Sets the viewport to render from (x, y) to (x + width, y + height).
 	*/
-	open fun setViewport(x: Int = definedExternally, y: Int = definedExternally, width: Int = definedExternally, height: Int = definedExternally) : dynamic/*null*/
+	open fun setViewport(x: Int = definedExternally, y: Int = definedExternally, width: Int = definedExternally, height: Int = definedExternally) : dynamic
 }

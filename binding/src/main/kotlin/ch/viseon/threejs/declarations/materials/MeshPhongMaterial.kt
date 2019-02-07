@@ -1,11 +1,11 @@
-//Generated date 12.01.2019
+//Generated date 07.02.2019
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.materials
 
 	/**
 	* A material for shiny surfaces with specular highlights. The material uses a non-physically based [link:https://en.wikipedia.org/wiki/Blinn-Phong_shading_model Blinn-Phong] model for calculating reflectance. Unlike the Lambertian model used in the [page:MeshLambertMaterial] this can simulate shiny surfaces with specular highlights (such as varnished wood). Shading is calculated using a [link:https://en.wikipedia.org/wiki/Phong_shading Phong] shading model. This calculates shading per pixel (i.e. in the [link:https://en.wikipedia.org/wiki/Shader#Pixel_shaders fragment shader], AKA pixel shader) which gives more accurate results than the Gouraud model used by [page:MeshLambertMaterial], at the cost of some performance. The [page:MeshStandardMaterial] and [page:MeshPhysicalMaterial] also use this shading model. Performance will generally be greater when using this material over the [page:MeshStandardMaterial] or [page:MeshPhysicalMaterial], at the cost of some graphical accuracy.
 	*/
-open external class MeshPhongMaterial(parameters: dynamic/*Object*/ = definedExternally): ch.viseon.threejs.declarations.materials.Material{
+open external class MeshPhongMaterial(parameters: dynamic = definedExternally): ch.viseon.threejs.declarations.materials.Material{
 
 	/**
 	* The alpha map is a grayscale texture that controls the opacity across the surface (black: fully transparent; white: fully opaque). Default is null. Only the color of the texture is used, ignoring the alpha channel if one exists. For RGB and RGBA textures, the [page:WebGLRenderer WebGL] renderer will use the green channel when sampling this texture due to the extra bit of precision provided for green in DXT-compressed and uncompressed RGB 565 formats. Luminance-only and luminance/alpha textures will also still work as expected.
@@ -52,7 +52,7 @@ open external class MeshPhongMaterial(parameters: dynamic/*Object*/ = definedExt
 	/**
 	* The displacement map affects the position of the mesh's vertices. Unlike other maps which only affect the light and shade of the material the displaced vertices can cast shadows, block other objects, and otherwise act as real geometry. The displacement texture is an image where the value of each pixel (white being the highest) is mapped against, and repositions, the vertices of the mesh.
 	*/
-	open var displacementMap: ch.viseon.threejs.declarations.textures.Texture  = definedExternally
+	open var displacementMap: ch.viseon.threejs.declarations.textures.Texture?  = definedExternally
 
 
 	/**
@@ -76,7 +76,7 @@ open external class MeshPhongMaterial(parameters: dynamic/*Object*/ = definedExt
 	/**
 	* Set emisssive (glow) map. Default is null. The emissive map color is modulated by the emissive color and the emissive intensity. If you have an emissive map, be sure to set the emissive color to something other than black.
 	*/
-	open var emissiveMap: ch.viseon.threejs.declarations.textures.Texture  = definedExternally
+	open var emissiveMap: ch.viseon.threejs.declarations.textures.Texture?  = definedExternally
 
 
 	/**
@@ -100,7 +100,7 @@ open external class MeshPhongMaterial(parameters: dynamic/*Object*/ = definedExt
 	/**
 	* The light map. Default is null. The lightMap requires a second set of UVs, and consequently will ignore the [page:Texture repeat] and [page:Texture offset] Texture properties.
 	*/
-	open var lightMap: ch.viseon.threejs.declarations.textures.Texture  = definedExternally
+	open var lightMap: ch.viseon.threejs.declarations.textures.Texture?  = definedExternally
 
 
 	/**
@@ -112,7 +112,7 @@ open external class MeshPhongMaterial(parameters: dynamic/*Object*/ = definedExt
 	/**
 	* The color map. Default is null. The texture map color is modulated by the diffuse [page:.color].
 	*/
-	open var map: ch.viseon.threejs.declarations.textures.Texture  = definedExternally
+	open var map: ch.viseon.threejs.declarations.textures.Texture?  = definedExternally
 
 
 	/**

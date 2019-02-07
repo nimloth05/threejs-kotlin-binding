@@ -1,11 +1,11 @@
-//Generated date 12.01.2019
+//Generated date 07.02.2019
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.materials
 
 	/**
 	* An extension of the [page:MeshStandardMaterial] that allows for greater control over reflectivity. Note that for best results you should always specify an [page:.envMap environment map] when using this material.
 	*/
-open external class MeshPhysicalMaterial(parameters: dynamic/*Object*/ = definedExternally): ch.viseon.threejs.declarations.materials.MeshStandardMaterial{
+open external class MeshPhysicalMaterial(parameters: dynamic = definedExternally): ch.viseon.threejs.declarations.materials.MeshStandardMaterial{
 
 	/**
 	* ClearCoat level, from **0.0** to **1.0**. Default is **0.0**.
@@ -28,7 +28,7 @@ open external class MeshPhysicalMaterial(parameters: dynamic/*Object*/ = defined
 	/**
 	* An object of the form: { 'PHYSICAL': '' }; This is used by the [page:WebGLRenderer] for selecting shaders.
 	*/
-	override var defines: dynamic/*Object*/ 
+	override var defines: dynamic 
 
 
 	/**

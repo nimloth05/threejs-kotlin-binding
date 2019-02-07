@@ -1,4 +1,4 @@
-//Generated date 12.01.2019
+//Generated date 07.02.2019
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.helpers
 
@@ -40,11 +40,11 @@ open external class SpotLightHelper(light: ch.viseon.threejs.declarations.lights
 	/**
 	* Disposes of the light helper.
 	*/
-	open fun dispose() : dynamic/*null*/
+	open fun dispose() : dynamic
 
 
 	/**
 	* Updates the light helper.
 	*/
-	open fun update() : dynamic/*null*/
+	open fun update() : dynamic
 }

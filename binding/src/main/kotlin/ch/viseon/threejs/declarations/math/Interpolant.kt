@@ -1,4 +1,4 @@
-//Generated date 12.01.2019
+//Generated date 07.02.2019
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.math
 
@@ -10,35 +10,35 @@ open external class Interpolant(){
 	/**
 	* 
 	*/
-	open var parameterPositions: dynamic/*null*/  = definedExternally
+	open var parameterPositions: dynamic  = definedExternally
 
 
 	/**
 	* 
 	*/
-	open var resultBuffer: dynamic/*null*/  = definedExternally
+	open var resultBuffer: dynamic  = definedExternally
 
 
 	/**
 	* 
 	*/
-	open var sampleValues: dynamic/*null*/  = definedExternally
+	open var sampleValues: dynamic  = definedExternally
 
 
 	/**
 	* Optional, subclass-specific settings structure.
 	*/
-	open var settings: dynamic/*Object*/  = definedExternally
+	open var settings: dynamic  = definedExternally
 
 
 	/**
 	* 
 	*/
-	open var valueSize: dynamic/*null*/  = definedExternally
+	open var valueSize: dynamic  = definedExternally
 
 
 	/**
 	* Evaluate the interpolant at position **t**.
 	*/
-	open fun evaluate(t: Double = definedExternally) : dynamic/*null*/
+	open fun evaluate(t: Double = definedExternally) : dynamic
 }

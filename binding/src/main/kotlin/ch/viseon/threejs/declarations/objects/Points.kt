@@ -1,4 +1,4 @@
-//Generated date 12.01.2019
+//Generated date 07.02.2019
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.objects
 
@@ -28,7 +28,7 @@ open external class Points(geometry: ch.viseon.threejs.declarations.core.Geometr
 	/**
 	* Get intersections between a casted ray and this Points. [page:Raycaster.intersectObject] will call this method.
 	*/
-	override fun raycast(raycaster: ch.viseon.threejs.declarations.core.Raycaster, intersects: Array<dynamic>/*Array*/) : dynamic/*null*/
+	override fun raycast(raycaster: ch.viseon.threejs.declarations.core.Raycaster, intersects: Array<dynamic>) : dynamic
 
 
 	/**

@@ -1,4 +1,4 @@
-//Generated date 12.01.2019
+//Generated date 07.02.2019
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.textures
 
@@ -10,5 +10,5 @@ open external class DataTexture(): ch.viseon.threejs.declarations.textures.Textu
 	/**
 	* Overridden with a record type holding data, width and height.
 	*/
-	override var image: dynamic/*Image*/ 
+	override var image: dynamic 
 }

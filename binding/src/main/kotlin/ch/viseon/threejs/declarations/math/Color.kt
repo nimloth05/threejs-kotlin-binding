@@ -1,11 +1,11 @@
-//Generated date 12.01.2019
+//Generated date 07.02.2019
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.math
 
 	/**
 	* Class representing a color.
 	*/
-open external class Color(r: dynamic/*Color_Hex_or_String*/ = definedExternally, g: Double = definedExternally, b: Double = definedExternally){
+open external class Color(r: dynamic = definedExternally, g: Double = definedExternally, b: Double = definedExternally){
 
 	/**
 	* Used to check whether this or derived classes are Colors. Default is **true**. You should not change this, as it used internally for optimisation.
@@ -118,7 +118,7 @@ open external class Color(r: dynamic/*Color_Hex_or_String*/ = definedExternally,
 	/**
 	* [page:Array array] - [page:Array] of floats in the form [ [page:Float r], [page:Float g], [page:Float b] ]. [page:Integer offset] - An optional offset into the array. Sets this color's components based on an array formatted like [ [page:Float r], [page:Float g], [page:Float b] ].
 	*/
-	open fun fromArray(array: Array<dynamic>/*Array*/ = definedExternally, offset: Int = definedExternally) : ch.viseon.threejs.declarations.math.Color
+	open fun fromArray(array: Array<dynamic> = definedExternally, offset: Int = definedExternally) : ch.viseon.threejs.declarations.math.Color
 
 
 	/**
@@ -136,7 +136,7 @@ open external class Color(r: dynamic/*Color_Hex_or_String*/ = definedExternally,
 	/**
 	* [page:Object target] — the result will be copied into this Object. Adds h, s and l keys to the object (if not already present). Convert this Color's [page:.r r], [page:.g g] and [page:.b b] values to [link:https://en.wikipedia.org/wiki/HSL_and_HSV HSL] format and returns an object of the form: { h: 0, s: 0, l: 0 }
 	*/
-	open fun getHSL(target: dynamic/*Object*/ = definedExternally) : dynamic/*Object*/
+	open fun getHSL(target: dynamic = definedExternally) : dynamic
 
 
 	/**
@@ -178,7 +178,7 @@ open external class Color(r: dynamic/*Color_Hex_or_String*/ = definedExternally,
 	/**
 	* [page:Color_Hex_or_String value] - Value to set this color to. See the Constructor above for full details of what [page:Color_Hex_or_String value] can be. Delegates to [page:.copy], [page:.setStyle], or [page:.setHex] depending on input type.
 	*/
-	open fun set(value: dynamic/*Color_Hex_or_String*/ = definedExternally) : ch.viseon.threejs.declarations.math.Color
+	open fun set(value: dynamic = definedExternally) : ch.viseon.threejs.declarations.math.Color
 
 
 	/**
@@ -220,5 +220,5 @@ open external class Color(r: dynamic/*Color_Hex_or_String*/ = definedExternally,
 	/**
 	* [page:Array array] - An optional array to store the color to. [page:Integer offset] - An optional offset into the array. Returns an array of the form [ r, g, b ].
 	*/
-	open fun toArray(array: Array<dynamic>/*Array*/ = definedExternally, offset: Int = definedExternally) : Array<dynamic>/*Array*/
+	open fun toArray(array: Array<dynamic> = definedExternally, offset: Int = definedExternally) : Array<dynamic>
 }

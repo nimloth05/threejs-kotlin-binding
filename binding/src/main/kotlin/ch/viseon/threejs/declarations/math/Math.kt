@@ -1,4 +1,4 @@
-//Generated date 12.01.2019
+//Generated date 07.02.2019
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.math
 
@@ -28,7 +28,7 @@ open external class Math(){
 	/**
 	* Generate a [link:https://en.wikipedia.org/wiki/Universally_unique_identifier UUID] (universally unique identifier).
 	*/
-	open fun generateUUID() : dynamic/*UUID*/
+	open fun generateUUID() : dynamic
 
 
 	/**

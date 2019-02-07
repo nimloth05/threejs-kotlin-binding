@@ -1,4 +1,4 @@
-//Generated date 12.01.2019
+//Generated date 07.02.2019
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.animation
 
@@ -52,17 +52,17 @@ open external class AnimationMixer(rootObject: ch.viseon.threejs.declarations.co
 	/**
 	* Deallocates all memory resources for a clip.
 	*/
-	open fun uncacheClip(clip: ch.viseon.threejs.declarations.animation.AnimationClip = definedExternally) : dynamic/*null*/
+	open fun uncacheClip(clip: ch.viseon.threejs.declarations.animation.AnimationClip = definedExternally) : dynamic
 
 
 	/**
 	* Deallocates all memory resources for a root object.
 	*/
-	open fun uncacheRoot(root: ch.viseon.threejs.declarations.core.Object3D = definedExternally) : dynamic/*null*/
+	open fun uncacheRoot(root: ch.viseon.threejs.declarations.core.Object3D = definedExternally) : dynamic
 
 
 	/**
 	* Deallocates all memory resources for an action.
 	*/
-	open fun uncacheAction(clip: ch.viseon.threejs.declarations.animation.AnimationClip = definedExternally, optionalRoot: ch.viseon.threejs.declarations.core.Object3D = definedExternally) : dynamic/*null*/
+	open fun uncacheAction(clip: ch.viseon.threejs.declarations.animation.AnimationClip = definedExternally, optionalRoot: ch.viseon.threejs.declarations.core.Object3D = definedExternally) : dynamic
 }

@@ -1,4 +1,4 @@
-//Generated date 12.01.2019
+//Generated date 07.02.2019
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.core
 
@@ -100,13 +100,13 @@ open external class Object3D(){
 	/**
 	* An optional callback that is executed immediately after the Object3D is rendered. This function is called with the following parameters: renderer, scene, camera, geometry, material, group.
 	*/
-	open var onAfterRender: dynamic/*function*/  = definedExternally
+	open var onAfterRender: dynamic  = definedExternally
 
 
 	/**
 	* An optional callback that is executed immediately before the Object3D is rendered. This function is called with the following parameters: renderer, scene, camera, geometry, material, group.
 	*/
-	open var onBeforeRender: dynamic/*function*/  = definedExternally
+	open var onBeforeRender: dynamic  = definedExternally
 
 
 	/**
@@ -134,7 +134,7 @@ open external class Object3D(){
 
 
 	/**
-	* This value allows the default rendering order of [link:https://en.wikipedia.org/wiki/Scene_graph scene graph] objects to be overridden although opaque and transparent objects remain sorted independently. Sorting is from lowest to highest renderOrder. Default value is **0**.
+	* This value allows the default rendering order of [link:https://en.wikipedia.org/wiki/Scene_graph scene graph] objects to be overridden although opaque and transparent objects remain sorted independently. When this property is set for an instance of [page:Group Group], all descendants objects will be sorted and rendered together. Sorting is from lowest to highest renderOrder. Default value is **0**.
 	*/
 	open var renderOrder: Double  = definedExternally
 
@@ -160,7 +160,7 @@ open external class Object3D(){
 	/**
 	* An object that can be used to store custom data about the Object3D. It should not hold references to functions as these will not be cloned.
 	*/
-	open var userData: dynamic/*object*/  = definedExternally
+	open var userData: dynamic  = definedExternally
 
 
 	/**
@@ -190,19 +190,19 @@ open external class Object3D(){
 	/**
 	* Adds **object** as child of this object. An arbitrary number of objects may be added. Any current parent on an object passed in here will be removed, since an object can have at most one parent. See [page:Group] for info on manually grouping objects.
 	*/
-	open fun add(`object`: ch.viseon.threejs.declarations.core.Object3D = definedExternally) : dynamic/*null*/
+	open fun add(`object`: ch.viseon.threejs.declarations.core.Object3D = definedExternally) : Object3D
 
 
 	/**
 	* Applies the matrix transform to the object and updates the object's position, rotation and scale.
 	*/
-	open fun applyMatrix(matrix: ch.viseon.threejs.declarations.math.Matrix4 = definedExternally) : dynamic/*null*/
+	open fun applyMatrix(matrix: ch.viseon.threejs.declarations.math.Matrix4 = definedExternally) : dynamic
 
 
 	/**
 	* Applies the rotation represented by the quaternion to the object.
 	*/
-	open fun applyQuaternion(quaternion: ch.viseon.threejs.declarations.math.Quaternion = definedExternally) : ch.viseon.threejs.declarations.core.Object3D
+	open fun applyQuaternion(quaternion: ch.viseon.threejs.declarations.math.Quaternion = definedExternally) : Object3D
 
 
 	/**
@@ -268,19 +268,19 @@ open external class Object3D(){
 	/**
 	* vector - A vector representing a position in world space. Optionally, the [page:.x x], [page:.y y] and [page:.z z] components of the world space position. Rotates the object to face a point in world space. This method does not support objects having non-uniformly-scaled parent(s).
 	*/
-	open fun lookAt(vector: ch.viseon.threejs.declarations.math.Vector3 = definedExternally, lookAt: dynamic/*null*/ = definedExternally, x: Double = definedExternally, y: Double = definedExternally, z: Double = definedExternally) : dynamic/*null*/
+	open fun lookAt(vector: ch.viseon.threejs.declarations.math.Vector3 = definedExternally, lookAt: dynamic = definedExternally, x: Double = definedExternally, y: Double = definedExternally, z: Double = definedExternally) : dynamic
 
 
 	/**
 	* Abstract (empty) method to get intersections between a casted ray and this object. Subclasses such as [page:Mesh], [page:Line], and [page:Points] implement this method in order to use raycasting.
 	*/
-	open fun raycast(raycaster: ch.viseon.threejs.declarations.core.Raycaster = definedExternally, intersects: Array<dynamic>/*Array*/ = definedExternally) : Array<dynamic>/*Array*/
+	open fun raycast(raycaster: ch.viseon.threejs.declarations.core.Raycaster = definedExternally, intersects: Array<dynamic> = definedExternally) : Array<dynamic>
 
 
 	/**
 	* Removes **object** as child of this object. An arbitrary number of objects may be removed.
 	*/
-	open fun remove(`object`: ch.viseon.threejs.declarations.core.Object3D = definedExternally) : dynamic/*null*/
+	open fun remove(`object`: ch.viseon.threejs.declarations.core.Object3D = definedExternally) : Object3D
 
 
 	/**
@@ -316,31 +316,31 @@ open external class Object3D(){
 	/**
 	* axis -- A normalized vector in object space. angle -- angle in radians Calls [page:Quaternion.setFromAxisAngle setFromAxisAngle]( [page:Float axis], [page:Float angle] ) on the [page:.quaternion].
 	*/
-	open fun setRotationFromAxisAngle(axis: ch.viseon.threejs.declarations.math.Vector3 = definedExternally, angle: Double = definedExternally) : dynamic/*null*/
+	open fun setRotationFromAxisAngle(axis: ch.viseon.threejs.declarations.math.Vector3 = definedExternally, angle: Double = definedExternally) : dynamic
 
 
 	/**
 	* euler -- Euler angle specifying rotation amount. Calls [page:Quaternion.setRotationFromEuler setRotationFromEuler]( [page:Euler euler]) on the [page:.quaternion].
 	*/
-	open fun setRotationFromEuler(euler: ch.viseon.threejs.declarations.math.Euler = definedExternally) : dynamic/*null*/
+	open fun setRotationFromEuler(euler: ch.viseon.threejs.declarations.math.Euler = definedExternally) : dynamic
 
 
 	/**
 	* m -- rotate the quaternion by the rotation component of the matrix. Calls [page:Quaternion.setFromRotationMatrix setFromRotationMatrix]( [page:Matrix4 m]) on the [page:.quaternion]. Note that this assumes that the upper 3x3 of m is a pure rotation matrix (i.e, unscaled).
 	*/
-	open fun setRotationFromMatrix(m: ch.viseon.threejs.declarations.math.Matrix4 = definedExternally) : dynamic/*null*/
+	open fun setRotationFromMatrix(m: ch.viseon.threejs.declarations.math.Matrix4 = definedExternally) : dynamic
 
 
 	/**
 	* q -- normalized Quaternion. Copy the given quaternion into [page:.quaternion].
 	*/
-	open fun setRotationFromQuaternion(q: ch.viseon.threejs.declarations.math.Quaternion = definedExternally) : dynamic/*null*/
+	open fun setRotationFromQuaternion(q: ch.viseon.threejs.declarations.math.Quaternion = definedExternally) : dynamic
 
 
 	/**
 	* Convert the object to JSON format.
 	*/
-	open fun toJSON(q: ch.viseon.threejs.declarations.math.Quaternion = definedExternally) : dynamic/*null*/
+	open fun toJSON(q: ch.viseon.threejs.declarations.math.Quaternion = definedExternally) : dynamic
 
 
 	/**
@@ -370,31 +370,31 @@ open external class Object3D(){
 	/**
 	* callback - A function with as first argument an object3D object. Executes the callback on this object and all descendants.
 	*/
-	open fun traverse(callback: dynamic/*Function*/ = definedExternally) : dynamic/*null*/
+	open fun traverse(callback: dynamic = definedExternally) : dynamic
 
 
 	/**
 	* callback - A function with as first argument an object3D object. Like traverse, but the callback will only be executed for visible objects. Descendants of invisible objects are not traversed.
 	*/
-	open fun traverseVisible(callback: dynamic/*Function*/ = definedExternally) : dynamic/*null*/
+	open fun traverseVisible(callback: dynamic = definedExternally) : dynamic
 
 
 	/**
 	* callback - A function with as first argument an object3D object. Executes the callback on all ancestors.
 	*/
-	open fun traverseAncestors(callback: dynamic/*Function*/ = definedExternally) : dynamic/*null*/
+	open fun traverseAncestors(callback: dynamic = definedExternally) : dynamic
 
 
 	/**
 	* Update the local transform.
 	*/
-	open fun updateMatrix() : dynamic/*null*/
+	open fun updateMatrix() : dynamic
 
 
 	/**
 	* Update the global transform of the object and its children.
 	*/
-	open fun updateMatrixWorld(force: Boolean = definedExternally) : dynamic/*null*/
+	open fun updateMatrixWorld(force: Boolean = definedExternally) : dynamic
 
 
 	/**

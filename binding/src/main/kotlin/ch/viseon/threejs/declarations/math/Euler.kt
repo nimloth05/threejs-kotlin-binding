@@ -1,4 +1,4 @@
-//Generated date 12.01.2019
+//Generated date 07.02.2019
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.math
 
@@ -58,13 +58,13 @@ open external class Euler(x: Double = definedExternally, y: Double = definedExte
 	/**
 	* [page:Array array] of length 3 or 4. The optional 4th argument corresponds to the [page:.order order]. Assigns this euler's [page:.x x] angle to array[0]. Assigns this euler's [page:.y y] angle to array[1]. Assigns this euler's [page:.z z] angle to array[2]. Optionally assigns this euler's [page:.order order] to array[3].
 	*/
-	open fun fromArray(array: Array<dynamic>/*Array*/ = definedExternally) : ch.viseon.threejs.declarations.math.Euler
+	open fun fromArray(array: Array<dynamic> = definedExternally) : ch.viseon.threejs.declarations.math.Euler
 
 
 	/**
 	* [page:Function onChangeCallback] - set the value of the onChangeCallback() function.
 	*/
-	open fun onChange(onChangeCallback: dynamic/*Function*/ = definedExternally) : ch.viseon.threejs.declarations.math.Euler
+	open fun onChange(onChangeCallback: dynamic = definedExternally) : ch.viseon.threejs.declarations.math.Euler
 
 
 	/**
@@ -106,7 +106,7 @@ open external class Euler(x: Double = definedExternally, y: Double = definedExte
 	/**
 	* [page:Array array] - (optional) array to store the euler in. [page:Integer offset] (optional) offset in the array. Returns an array of the form [[page:.x x], [page:.y y], [page:.z z], [page:.order order ]].
 	*/
-	open fun toArray(array: Array<dynamic>/*Array*/ = definedExternally, offset: Int = definedExternally) : Array<dynamic>/*Array*/
+	open fun toArray(array: Array<dynamic> = definedExternally, offset: Int = definedExternally) : Array<dynamic>
 
 
 	/**

@@ -1,4 +1,4 @@
-//Generated date 12.01.2019
+//Generated date 07.02.2019
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.math
 
@@ -22,7 +22,7 @@ open external class Matrix3(){
 	/**
 	* [page:BufferAttribute attribute] - An attribute of floats that represent 3D vectors. Multiplies (applies) this matrix to every 3D vector in the [page:BufferAttribute attribute].
 	*/
-	open fun applyToBufferAttribute(attribute: ch.viseon.threejs.declarations.core.BufferAttribute = definedExternally) : Array<dynamic>/*Array*/
+	open fun applyToBufferAttribute(attribute: ch.viseon.threejs.declarations.core.BufferAttribute = definedExternally) : Array<dynamic>
 
 
 	/**
@@ -52,7 +52,7 @@ open external class Matrix3(){
 	/**
 	* [page:Array array] - the array to read the elements from. [page:Integer offset] - (optional) index of first element in the array. Default is 0. Sets the elements of this matrix based on an array in [link:https://en.wikipedia.org/wiki/Row-_and_column-major_order#Column-major_order column-major] format.
 	*/
-	open fun fromArray(array: Array<dynamic>/*Array*/ = definedExternally, offset: Int = definedExternally) : Matrix3
+	open fun fromArray(array: Array<dynamic> = definedExternally, offset: Int = definedExternally) : Matrix3
 
 
 	/**
@@ -118,7 +118,7 @@ open external class Matrix3(){
 	/**
 	* [page:Array array] - (optional) array to store the resulting vector in. If not given a new array will be created. [page:Integer offset] - (optional) offset in the array at which to put the result. Writes the elements of this matrix to an array in [link:https://en.wikipedia.org/wiki/Row-_and_column-major_order#Column-major_order column-major] format.
 	*/
-	open fun toArray(array: Array<dynamic>/*Array*/ = definedExternally, offset: Int = definedExternally) : Array<dynamic>/*Array*/
+	open fun toArray(array: Array<dynamic> = definedExternally, offset: Int = definedExternally) : Array<dynamic>
 
 
 	/**
@@ -130,5 +130,5 @@ open external class Matrix3(){
 	/**
 	* [page:Array array] - array to store the resulting vector in. [link:https://en.wikipedia.org/wiki/Transpose Transposes] this matrix into the supplied array, and returns itself unchanged.
 	*/
-	open fun transposeIntoArray(array: Array<dynamic>/*Array*/ = definedExternally) : Matrix3
+	open fun transposeIntoArray(array: Array<dynamic> = definedExternally) : Matrix3
 }

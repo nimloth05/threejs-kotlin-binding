@@ -1,11 +1,11 @@
-//Generated date 12.01.2019
+//Generated date 07.02.2019
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.animation.tracks
 
 	/**
 	* A Track of quaternion keyframe values.
 	*/
-open external class QuaternionKeyframeTrack(name: String = definedExternally, times: Array<dynamic>/*Array*/ = definedExternally, values: Array<dynamic>/*Array*/ = definedExternally): ch.viseon.threejs.declarations.animation.KeyframeTrack{
+open external class QuaternionKeyframeTrack(name: String = definedExternally, times: Array<dynamic> = definedExternally, values: Array<dynamic> = definedExternally): ch.viseon.threejs.declarations.animation.KeyframeTrack{
 
 	/**
 	* The default interpolation type to use, [page:Animation InterpolateLinear].
@@ -22,5 +22,5 @@ open external class QuaternionKeyframeTrack(name: String = definedExternally, ti
 	/**
 	* Returns a new [page:QuaternionLinearInterpolant QuaternionLinearInterpolant] based on the [page:KeyframeTrack.values values], [page:KeyframeTrack.times times] and [page:KeyframeTrack.valueSize valueSize] of the keyframes.
 	*/
-	override fun InterpolantFactoryMethodLinear() : dynamic/*null*/
+	override fun InterpolantFactoryMethodLinear() : dynamic
 }

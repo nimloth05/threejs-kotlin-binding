@@ -1,16 +1,16 @@
-//Generated date 12.01.2019
+//Generated date 07.02.2019
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.core
 
 	/**
 	* Uniforms are global [link:https://www.opengl.org/documentation/glsl/ GLSL] variables. They are passed to shader programs.
 	*/
-open external class Uniform(value: dynamic/*Object*/ = definedExternally){
+open external class Uniform(value: dynamic = definedExternally){
 
 	/**
 	* Current value of the uniform.
 	*/
-	open var value: dynamic/*Object*/  = definedExternally
+	open var value: dynamic  = definedExternally
 
 
 	/**

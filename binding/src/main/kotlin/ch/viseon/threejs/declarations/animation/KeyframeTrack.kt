@@ -1,4 +1,4 @@
-//Generated date 12.01.2019
+//Generated date 07.02.2019
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.animation
 
@@ -10,7 +10,7 @@ Instead of this there are always two arrays in a **KeyframeTrack**: the [page:.t
 A single value, belonging to a certain point of time, can not only be a simple number, but (for example) a vector (if a position is animated) or a quaternion (if a rotation is animated). For this reason the values array (which is a flat array, too) might be three or four times as long as the times array.
 Corresponding to the different possible types of animated values there are several subclasses of **KeyframeTrack**, inheriting the most properties and methods:
 	*/
-open external class KeyframeTrack(name: String = definedExternally, times: Array<dynamic>/*Array*/ = definedExternally, values: Array<dynamic>/*Array*/ = definedExternally, interpolation: Int = definedExternally){
+open external class KeyframeTrack(name: String = definedExternally, times: Array<dynamic> = definedExternally, values: Array<dynamic> = definedExternally, interpolation: Int = definedExternally){
 
 	/**
 	* The track's name can refer to [page:Geometry.morphTargets morph targets] or [page:SkinnedMesh bones] or possibly other values within an animated object. See [page:PropertyBinding.parseTrackName] for the forms of strings that can be parsed for property binding:
@@ -54,15 +54,21 @@ Note: The track's name does not necessarily have to be unique. Multiple tracks c
 
 
 	/**
+	* Returns a copy of this track.
+	*/
+	open fun clone() : ch.viseon.threejs.declarations.animation.KeyframeTrack
+
+
+	/**
 	* Creates a [page:LinearInterpolant LinearInterpolant], [page:CubicInterpolant CubicInterpolant] or [page:DiscreteInterpolant DiscreteInterpolant], depending on the value of the interpolation parameter passed in the constructor.
 	*/
-	open fun createInterpolant() : dynamic/*null*/
+	open fun createInterpolant() : dynamic
 
 
 	/**
 	* Returns the interpolation type.
 	*/
-	open fun getInterpolation() : dynamic/*null*/
+	open fun getInterpolation() : dynamic
 
 
 	/**
@@ -80,13 +86,13 @@ Note: The track's name does not necessarily have to be unique. Multiple tracks c
 	/**
 	* Creates a new [page:LinearInterpolant LinearInterpolant] from the [page:KeyframeTrack.times times] and [page:KeyframeTrack.times values]. A Float32Array can be passed which will receive the results. Otherwise a new array with the appropriate size will be created automatically.
 	*/
-	open fun InterpolantFactoryMethodLinear() : dynamic/*null*/
+	open fun InterpolantFactoryMethodLinear() : dynamic
 
 
 	/**
 	* Create a new [page:CubicInterpolant CubicInterpolant] from the [page:KeyframeTrack.times times] and [page:KeyframeTrack.times values]. A Float32Array can be passed which will receive the results. Otherwise a new array with the appropriate size will be created automatically.
 	*/
-	open fun InterpolantFactoryMethodSmooth() : dynamic/*null*/
+	open fun InterpolantFactoryMethodSmooth() : dynamic
 
 
 	/**

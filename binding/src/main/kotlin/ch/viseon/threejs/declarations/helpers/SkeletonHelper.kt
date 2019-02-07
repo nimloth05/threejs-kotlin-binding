@@ -1,4 +1,4 @@
-//Generated date 12.01.2019
+//Generated date 07.02.2019
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.helpers
 
@@ -10,11 +10,11 @@ open external class SkeletonHelper(): ch.viseon.threejs.declarations.objects.Lin
 	/**
 	* The list of bones that the helper renders as [page:Line Lines].
 	*/
-	open var bones: Array<dynamic>/*Array*/  = definedExternally
+	open var bones: Array<dynamic>  = definedExternally
 
 
 	/**
 	* The object passed in the constructor.
 	*/
-	open var root: dynamic/*Object*/  = definedExternally
+	open var root: dynamic  = definedExternally
 }

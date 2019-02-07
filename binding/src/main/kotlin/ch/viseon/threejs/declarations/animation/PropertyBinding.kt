@@ -1,4 +1,4 @@
-//Generated date 12.01.2019
+//Generated date 07.02.2019
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.animation
 
@@ -34,71 +34,71 @@ open external class PropertyBinding(rootNode: ch.viseon.threejs.declarations.cor
 	/**
 	* 
 	*/
-	open var BindingType: dynamic/*Object*/  = definedExternally
+	open var BindingType: dynamic  = definedExternally
 
 
 	/**
 	* 
 	*/
-	open var Versioning: dynamic/*Object*/  = definedExternally
+	open var Versioning: dynamic  = definedExternally
 
 
 	/**
 	* 
 	*/
-	open var GetterByBindingType: Array<dynamic>/*Array*/  = definedExternally
+	open var GetterByBindingType: Array<dynamic>  = definedExternally
 
 
 	/**
 	* 
 	*/
-	open var SetterByBindingTypeAndVersioning: Array<dynamic>/*Array*/  = definedExternally
+	open var SetterByBindingTypeAndVersioning: Array<dynamic>  = definedExternally
 
 
 	/**
 	* 
 	*/
-	open fun getValue(targetArray: Array<dynamic>/*Array*/ = definedExternally, offset: Double = definedExternally) : dynamic/*null*/
+	open fun getValue(targetArray: Array<dynamic> = definedExternally, offset: Double = definedExternally) : dynamic
 
 
 	/**
 	* 
 	*/
-	open fun setValue(sourceArray: Array<dynamic>/*Array*/ = definedExternally, offset: Double = definedExternally) : dynamic/*null*/
+	open fun setValue(sourceArray: Array<dynamic> = definedExternally, offset: Double = definedExternally) : dynamic
 
 
 	/**
 	* Create getter / setter pair for a property in the scene graph. Used internally by [page:PropertyBinding.getValue getValue] and [page:PropertyBinding.setValue setValue].
 	*/
-	open fun bind() : dynamic/*null*/
+	open fun bind() : dynamic
 
 
 	/**
 	* Unbind getter / setter pair for a property in the scene graph.
 	*/
-	open fun unbind() : dynamic/*null*/
+	open fun unbind() : dynamic
 
 
 	/**
 	* Create a new Composite PropertyBinding.
 	*/
-	open fun Composite() : dynamic/*Constructor*/
+	open fun Composite() : dynamic
 
 
 	/**
 	* Create a new Composite PropertyBinding (if root is an [page:AnimationObjectGroup]) or PropertyBinding.
 	*/
-	open fun create() : dynamic/*Constructor*/
+	open fun create() : dynamic
 
 
 	/**
 	* Matches strings in the following forms: -- nodeName.property -- nodeName.property[accessor] -- nodeName.material.property[accessor] -- uuid.property[accessor] -- uuid.objectName[objectIndex].propertyName[propertyIndex] -- parentName/nodeName.property -- parentName/parentName/nodeName.property[index] -- .bone[Armature.DEF_cog].position -- scene:helium_balloon_model:helium_balloon_model.position
 	*/
-	open fun parseTrackName() : dynamic/*Constructor*/
+	open fun parseTrackName() : dynamic
 
 
 	/**
 	* Find a node in a node tree or [page:Skeleton Skeleton].
 	*/
-	open fun findNode() : dynamic/*Constructor*/
+	open fun findNode() : dynamic
 }

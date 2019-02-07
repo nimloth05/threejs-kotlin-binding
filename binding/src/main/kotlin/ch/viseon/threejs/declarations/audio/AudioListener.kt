@@ -1,4 +1,4 @@
-//Generated date 12.01.2019
+//Generated date 07.02.2019
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.audio
 
@@ -10,19 +10,19 @@ open external class AudioListener(): ch.viseon.threejs.declarations.core.Object3
 	/**
 	* The [link:https://developer.mozilla.org/en-US/docs/Web/API/AudioContext AudioContext] of the [page:AudioListener listener] given in the constructor.
 	*/
-	open var context: dynamic/*AudioContext*/  = definedExternally
+	open var context: dynamic  = definedExternally
 
 
 	/**
 	* A [link:https://developer.mozilla.org/en-US/docs/Web/API/GainNode GainNode] created using [link:https://developer.mozilla.org/en-US/docs/Web/API/AudioContext/createGain AudioContext.createGain]().
 	*/
-	open var gain: dynamic/*GainNode*/  = definedExternally
+	open var gain: dynamic  = definedExternally
 
 
 	/**
 	* Default is **null**.
 	*/
-	open var filter: dynamic/*AudioNode*/  = definedExternally
+	open var filter: dynamic  = definedExternally
 
 
 	/**
@@ -34,7 +34,7 @@ open external class AudioListener(): ch.viseon.threejs.declarations.core.Object3
 	/**
 	* Return the [page:AudioListener.gain gainNode].
 	*/
-	open fun getInput() : dynamic/*GainNode*/
+	open fun getInput() : dynamic
 
 
 	/**
@@ -46,13 +46,13 @@ open external class AudioListener(): ch.viseon.threejs.declarations.core.Object3
 	/**
 	* Returns the value of the [page:AudioListener.filter filter] property.
 	*/
-	open fun getFilter() : dynamic/*AudioNode*/
+	open fun getFilter() : dynamic
 
 
 	/**
 	* Set the [page:AudioListener.filter filter] property to **value**.
 	*/
-	open fun setFilter(value: dynamic/*AudioNode*/ = definedExternally) : ch.viseon.threejs.declarations.audio.AudioListener
+	open fun setFilter(value: dynamic = definedExternally) : ch.viseon.threejs.declarations.audio.AudioListener
 
 
 	/**

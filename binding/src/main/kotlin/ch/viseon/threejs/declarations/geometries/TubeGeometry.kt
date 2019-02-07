@@ -1,4 +1,4 @@
-//Generated date 12.01.2019
+//Generated date 07.02.2019
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.geometries
 
@@ -10,23 +10,23 @@ open external class TubeGeometry(path: ch.viseon.threejs.declarations.extras.cor
 	/**
 	* An object with a property for each of the constructor parameters. Any modification after instantiation does not change the geometry.
 	*/
-	open var parameters: dynamic/*Object*/  = definedExternally
+	open var parameters: dynamic  = definedExternally
 
 
 	/**
 	* An array of [page:Vector3] tangents
 	*/
-	open var tangents: Array<dynamic>/*Array*/  = definedExternally
+	open var tangents: Array<dynamic>  = definedExternally
 
 
 	/**
 	* An array of [page:Vector3] normals
 	*/
-	open var normals: Array<dynamic>/*Array*/  = definedExternally
+	open var normals: Array<dynamic>  = definedExternally
 
 
 	/**
 	* An array of [page:Vector3] binormals
 	*/
-	open var binormals: Array<dynamic>/*Array*/  = definedExternally
+	open var binormals: Array<dynamic>  = definedExternally
 }

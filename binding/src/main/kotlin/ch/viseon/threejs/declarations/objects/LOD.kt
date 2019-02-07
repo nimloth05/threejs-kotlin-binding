@@ -1,4 +1,4 @@
-//Generated date 12.01.2019
+//Generated date 07.02.2019
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.objects
 
@@ -10,13 +10,13 @@ open external class LOD(): ch.viseon.threejs.declarations.core.Object3D{
 	/**
 	* An array of [page:object level] objects Each level is an object with two properties: [page:Object3D object] - The [page:Object3D] to display at this level. [page:Float distance] - The distance at which to display this level of detail.
 	*/
-	open var levels: Array<dynamic>/*array*/  = definedExternally
+	open var levels: Array<dynamic>  = definedExternally
 
 
 	/**
 	* [page:Object3D object] - The [page:Object3D] to display at this level. [page:Float distance] - The distance at which to display this level of detail. Adds a mesh that will display at a certain distance and greater. Typically the further away the distance, the lower the detail on the mesh.
 	*/
-	open fun addLevel(`object`: ch.viseon.threejs.declarations.core.Object3D = definedExternally, distance: Double = definedExternally) : dynamic/*null*/
+	open fun addLevel(`object`: ch.viseon.threejs.declarations.core.Object3D = definedExternally, distance: Double = definedExternally) : dynamic
 
 
 	/**
@@ -34,17 +34,17 @@ open external class LOD(): ch.viseon.threejs.declarations.core.Object3D{
 	/**
 	* Get intersections between a casted [page:Ray] and this LOD. [page:Raycaster.intersectObject] will call this method.
 	*/
-	override fun raycast(raycaster: ch.viseon.threejs.declarations.core.Raycaster, intersects: Array<dynamic>/*Array*/) : Array<dynamic>/*Array*/
+	override fun raycast(raycaster: ch.viseon.threejs.declarations.core.Raycaster, intersects: Array<dynamic>) : Array<dynamic>
 
 
 	/**
 	* Create a JSON structure with details of this LOD object.
 	*/
-	open fun toJSON() : dynamic/*null*/
+	open fun toJSON() : dynamic
 
 
 	/**
 	* Set the visibility of each [page:levels level]'s [page:Object3D object] based on distance from the [page:Camera camera]. This needs to be called in the render loop for levels of detail to be updated dynamically.
 	*/
-	open fun update(camera: ch.viseon.threejs.declarations.cameras.Camera = definedExternally) : dynamic/*null*/
+	open fun update(camera: ch.viseon.threejs.declarations.cameras.Camera = definedExternally) : dynamic
 }

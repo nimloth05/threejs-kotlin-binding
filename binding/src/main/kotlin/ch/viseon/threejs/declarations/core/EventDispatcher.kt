@@ -1,4 +1,4 @@
-//Generated date 12.01.2019
+//Generated date 07.02.2019
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.core
 
@@ -11,26 +11,26 @@ open external class EventDispatcher(){
 	* type - The type of event to listen to. listener - The function that gets called when the event is fired.
 Adds a listener to an event type.
 	*/
-	open fun addEventListener(type: String = definedExternally, listener: dynamic/*Function*/ = definedExternally) : dynamic/*null*/
+	open fun addEventListener(type: String = definedExternally, listener: dynamic = definedExternally) : dynamic
 
 
 	/**
 	* type - The type of event to listen to. listener - The function that gets called when the event is fired.
 Checks if listener is added to an event type.
 	*/
-	open fun hasEventListener(type: String = definedExternally, listener: dynamic/*Function*/ = definedExternally) : Boolean
+	open fun hasEventListener(type: String = definedExternally, listener: dynamic = definedExternally) : Boolean
 
 
 	/**
 	* type - The type of the listener that gets removed. listener - The listener function that gets removed.
 Removes a listener from an event type.
 	*/
-	open fun removeEventListener(type: String = definedExternally, listener: dynamic/*Function*/ = definedExternally) : dynamic/*null*/
+	open fun removeEventListener(type: String = definedExternally, listener: dynamic = definedExternally) : dynamic
 
 
 	/**
 	* event - The event that gets fired.
 Fire an event type.
 	*/
-	open fun dispatchEvent(event: dynamic/*object*/ = definedExternally) : dynamic/*null*/
+	open fun dispatchEvent(event: dynamic = definedExternally) : dynamic
 }

@@ -1,4 +1,4 @@
-//Generated date 12.01.2019
+//Generated date 07.02.2019
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.audio
 
@@ -10,7 +10,7 @@ open external class AudioAnalyser(){
 	/**
 	* An [link:https://developer.mozilla.org/en-US/docs/Web/API/AnalyserNode AnalyserNode] used to analyze audio.
 	*/
-	open var analyser: dynamic/*AnalyserNode*/  = definedExternally
+	open var analyser: dynamic  = definedExternally
 
 
 	/**

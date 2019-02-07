@@ -20,7 +20,7 @@ private fun generateKotlinFiles(targetDirectory: Path, classList: ClassList, cla
     val generator = KotlinFileGenerator(classList, classDeclarations)
     classDeclarations.declarations.parallelStream().forEach { declaration ->
 
-        val classListEntry = classList.class2PackageName[declaration.name]!!
+        val classListEntry = classList.class2PackageName.getValue(declaration.name)
         val directory = classListEntry.packageName.split(".").fold(targetDirectory) { p, s -> p.resolve(s) }
 
         println("Generate ${classListEntry.name}")
@@ -70,7 +70,7 @@ fun generateDecl(name: String, elements: List<Node>): ClassDeclaration {
         }
         ?: emptyList()
 
-    classBuilder.inheritence = DeclarationFactory.createInheritence(inheritenceToken)
+    classBuilder.inheritance = DeclarationFactory.createInheritance(inheritenceToken)
 
     fun moveToNextNonBrNode(): Element {
         ++i
@@ -106,13 +106,6 @@ fun generateDecl(name: String, elements: List<Node>): ClassDeclaration {
         return result.toString()
     }
 
-    fun Element.ensureNodeType(expected: String): Element {
-        if (this.tagName() != expected) {
-            throw IllegalStateException("unexpected node found in '$name' at position $i node '$this'. expected node $expected \nnodes: $elements")
-        }
-        return this
-    }
-
 
     while (i < elements.size) {
         val element = elements[i]
@@ -144,9 +137,10 @@ fun generateDecl(name: String, elements: List<Node>): ClassDeclaration {
             if (ctorNode.tagName() == "h2") {
                 classBuilder.ctorDeclaration = ConstructorDeclaration(listOf(), "")
             } else {
-                val docNode = collectPs()
+                val docNode = collectPs() //skips current element
 
                 classBuilder.ctorDeclaration = DeclarationFactory.fromStream(
+                    classBuilder.name,
                     TokenStream.parse(ctorNode.text()),
                     docNode
                 ) as ConstructorDeclaration
@@ -166,7 +160,7 @@ fun generateDecl(name: String, elements: List<Node>): ClassDeclaration {
             }
 
             val docNode = collectPs()
-            val declaration = DeclarationFactory.fromStream(stream, docNode)
+            val declaration = DeclarationFactory.fromStream(classBuilder.name, stream, docNode)
             if (declaration != EmptyDeclaration) {
                 if (declaration !is ConstructorDeclaration) {
                     classBuilder.addMember(staticMethod, declaration as MemberDeclaration)

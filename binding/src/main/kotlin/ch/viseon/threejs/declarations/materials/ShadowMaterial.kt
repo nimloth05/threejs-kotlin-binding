@@ -1,11 +1,11 @@
-//Generated date 12.01.2019
+//Generated date 07.02.2019
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.materials
 
 	/**
 	* This material can receive shadows, but otherwise is completely transparent.
 	*/
-open external class ShadowMaterial(parameters: dynamic/*Object*/ = definedExternally): ch.viseon.threejs.declarations.materials.ShaderMaterial{
+open external class ShadowMaterial(parameters: dynamic = definedExternally): ch.viseon.threejs.declarations.materials.ShaderMaterial{
 
 	/**
 	* Used to check whether this or derived classes are shadow materials. Default is **true**. You should not change this, as it used internally for optimisation.

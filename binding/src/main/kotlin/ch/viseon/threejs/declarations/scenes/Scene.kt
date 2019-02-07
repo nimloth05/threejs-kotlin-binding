@@ -1,4 +1,4 @@
-//Generated date 12.01.2019
+//Generated date 07.02.2019
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.scenes
 
@@ -28,11 +28,17 @@ open external class Scene(): ch.viseon.threejs.declarations.core.Object3D{
 	/**
 	* If not null, sets the background used when rendering the scene, and is always rendered first. Can be set to a [page:Color] which sets the clear color, a [page:Texture] covering the canvas, or a cubemap as a [page:CubeTexture] or [page:WebGLRenderTargetCube]. Default is null.
 	*/
-	open var background: dynamic/*Object*/  = definedExternally
+	open var background: dynamic  = definedExternally
 
 
 	/**
 	* Return the scene data in JSON format.
 	*/
 	open fun toJSON() : JSON
+
+
+	/**
+	* Clears scene related data internally cached by [page:WebGLRenderer].
+	*/
+	open fun dispose() : dynamic
 }

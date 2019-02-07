@@ -1,4 +1,4 @@
-//Generated date 12.01.2019
+//Generated date 07.02.2019
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.loaders
 
@@ -11,7 +11,7 @@ open external class LoaderUtils(){
 	* [page:TypedArray array] — A stream of bytes as a typed array.
 The function takes a stream of bytes as input and returns a string representation.
 	*/
-	open fun decodeText(array: Array<dynamic>/*TypedArray*/ = definedExternally) : String
+	open fun decodeText(array: Array<dynamic> = definedExternally) : String
 
 
 	/**

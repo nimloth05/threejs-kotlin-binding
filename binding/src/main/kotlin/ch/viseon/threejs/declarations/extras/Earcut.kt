@@ -1,4 +1,4 @@
-//Generated date 12.01.2019
+//Generated date 07.02.2019
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.extras
 
@@ -10,5 +10,5 @@ open external class Earcut(){
 	/**
 	* data -- A flat array of vertice coordinates. holeIndices -- An array of hole indices if any. dim -- The number of coordinates per vertice in the input array.
 	*/
-	open fun triangulate() : Array<dynamic>/*Array*/
+	open fun triangulate() : Array<dynamic>
 }

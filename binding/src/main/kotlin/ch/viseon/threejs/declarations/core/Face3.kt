@@ -1,4 +1,4 @@
-//Generated date 12.01.2019
+//Generated date 07.02.2019
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.core
 
@@ -40,13 +40,13 @@ open external class Face3(a: Int = definedExternally, b: Int = definedExternally
 	/**
 	* Array of 3 [page:Vector3 vertex normals].
 	*/
-	open var vertexNormals: Array<dynamic>/*Array*/  = definedExternally
+	open var vertexNormals: Array<dynamic>  = definedExternally
 
 
 	/**
 	* Array of 3 vertex colors - for these to be used a material's [page:Material.vertexColors vertexColors] property must be set to [page:Materials THREE.VertexColors].
 	*/
-	open var vertexColors: Array<dynamic>/*Array*/  = definedExternally
+	open var vertexColors: Array<dynamic>  = definedExternally
 
 
 	/**

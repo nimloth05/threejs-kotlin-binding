@@ -59,7 +59,7 @@ class ClassList(val class2PackageName: Map<String, ClassListEntry>) {
 
     fun toFullReference(type: String): String {
         return class2PackageName[type]?.let {
-            it.packageName + "." + it.name
+            it.packageName + "." + type
         } ?: type
     }
 

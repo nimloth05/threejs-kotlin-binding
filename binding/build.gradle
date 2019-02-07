@@ -12,7 +12,7 @@ dependencies {
 }
 
 group 'ch.viseon.threejs'
-version = '100.0.0'
+version = '101.0.0'
 
 compileKotlin2Js.kotlinOptions.moduleKind = "commonjs"
 
@@ -62,7 +62,7 @@ publishing {
         maven {
             def releasesRepoUrl = "https://oss.sonatype.org/service/local/staging/deploy/maven2/"
             def snapshotsRepoUrl = "https://oss.sonatype.org/content/repositories/snapshots"
-            url = version.endsWith('SNAPSHOT') ? snapshotsRepoUrl : releasesRepoUrl
+            url = version.endsWith("SNAPSHOT") ? snapshotsRepoUrl : releasesRepoUrl
             credentials {
                 //Global gradle system properties
                 username "$mavenUser"

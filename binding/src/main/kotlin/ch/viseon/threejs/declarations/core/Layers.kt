@@ -1,4 +1,4 @@
-//Generated date 12.01.2019
+//Generated date 07.02.2019
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.core
 
@@ -16,19 +16,19 @@ open external class Layers(){
 	/**
 	* layer - an integer from 0 to 31. Remove membership of this **layer**.
 	*/
-	open fun disable(layer: Int = definedExternally) : dynamic/*null*/
+	open fun disable(layer: Int = definedExternally) : dynamic
 
 
 	/**
 	* layer - an integer from 0 to 31. Add membership of this **layer**.
 	*/
-	open fun enable(layer: Int = definedExternally) : dynamic/*null*/
+	open fun enable(layer: Int = definedExternally) : dynamic
 
 
 	/**
 	* layer - an integer from 0 to 31. Set membership to **layer**, and remove membership all other layers.
 	*/
-	open fun set(layer: Int = definedExternally) : dynamic/*null*/
+	open fun set(layer: Int = definedExternally) : dynamic
 
 
 	/**
@@ -40,5 +40,5 @@ open external class Layers(){
 	/**
 	* layer - an integer from 0 to 31. Toggle membership of **layer**.
 	*/
-	open fun toggle(layer: Int = definedExternally) : dynamic/*null*/
+	open fun toggle(layer: Int = definedExternally) : dynamic
 }

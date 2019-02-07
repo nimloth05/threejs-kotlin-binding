@@ -1,4 +1,4 @@
-//Generated date 12.01.2019
+//Generated date 07.02.2019
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.loaders
 
@@ -11,21 +11,21 @@ open external class Loader(){
 	* Will be called when load starts.
 The default is a function with empty body.
 	*/
-	open var onLoadStart: dynamic/*Function*/  = definedExternally
+	open var onLoadStart: dynamic  = definedExternally
 
 
 	/**
 	* Will be called while load progresses.
 The default is a function with empty body.
 	*/
-	open var onLoadProgress: dynamic/*Function*/  = definedExternally
+	open var onLoadProgress: dynamic  = definedExternally
 
 
 	/**
 	* Will be called when load completes.
 The default is a function with empty body.
 	*/
-	open var onLoadComplete: dynamic/*Function*/  = definedExternally
+	open var onLoadComplete: dynamic  = definedExternally
 
 
 	/**
@@ -38,12 +38,12 @@ The default is a function with empty body.
 	* [page:Object m] — The parameters to create the material. [page:String texturePath] — The base path of the textures.
 Creates the Material based on the parameters m.
 	*/
-	open fun createMaterial(m: dynamic/*object*/ = definedExternally, texturePath: String = definedExternally) : ch.viseon.threejs.declarations.materials.Material
+	open fun createMaterial(m: dynamic = definedExternally, texturePath: String = definedExternally) : ch.viseon.threejs.declarations.materials.Material
 
 
 	/**
 	* [page:Array materials] — an array of parameters to create materials. [page:String texturePath] — The base path of the textures.
 Creates an array of [page:Material] based on the array of parameters m. The index of the parameters decide the correct index of the materials.
 	*/
-	open fun initMaterials(materials: Array<dynamic>/*Array*/ = definedExternally, texturePath: String = definedExternally) : Array<dynamic>/*Array*/
+	open fun initMaterials(materials: Array<dynamic> = definedExternally, texturePath: String = definedExternally) : Array<dynamic>
 }

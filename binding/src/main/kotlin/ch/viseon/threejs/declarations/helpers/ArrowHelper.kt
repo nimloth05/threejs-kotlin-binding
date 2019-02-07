@@ -1,4 +1,4 @@
-//Generated date 12.01.2019
+//Generated date 07.02.2019
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.helpers
 
@@ -22,17 +22,17 @@ open external class ArrowHelper(dir: ch.viseon.threejs.declarations.math.Vector3
 	/**
 	* hex -- The hexadecimal value of the color. Sets the color of the arrowHelper.
 	*/
-	open fun setColor(hex: Double = definedExternally) : dynamic/*null*/
+	open fun setColor(hex: Double = definedExternally) : dynamic
 
 
 	/**
 	* length -- The desired length. headLength -- The length of the head of the arrow. headWidth -- The length of the width of the arrow. Sets the length of the arrowhelper.
 	*/
-	open fun setLength(length: Double = definedExternally, headLength: Double = definedExternally, headWidth: Double = definedExternally) : dynamic/*null*/
+	open fun setLength(length: Double = definedExternally, headLength: Double = definedExternally, headWidth: Double = definedExternally) : dynamic
 
 
 	/**
 	* dir -- The desired direction. Must be a unit vector. Sets the direction of the arrowhelper.
 	*/
-	open fun setDirection(dir: ch.viseon.threejs.declarations.math.Vector3 = definedExternally) : dynamic/*null*/
+	open fun setDirection(dir: ch.viseon.threejs.declarations.math.Vector3 = definedExternally) : dynamic
 }

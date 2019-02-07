@@ -1,4 +1,4 @@
-//Generated date 12.01.2019
+//Generated date 07.02.2019
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.math
 
@@ -10,7 +10,7 @@ open external class Frustum(p0: ch.viseon.threejs.declarations.math.Plane = defi
 	/**
 	* Array of 6 [page:Plane planes].
 	*/
-	open var planes: Array<dynamic>/*Array*/  = definedExternally
+	open var planes: Array<dynamic>  = definedExternally
 
 
 	/**

@@ -1,11 +1,11 @@
-//Generated date 12.01.2019
+//Generated date 07.02.2019
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.materials
 
 	/**
 	* A standard physically based material, using Metallic-Roughness workflow. Physically based rendering (PBR) has recently become the standard in many 3D applications, such as [link:https://blogs.unity3d.com/2014/10/29/physically-based-shading-in-unity-5-a-primer/ Unity], [link:https://docs.unrealengine.com/latest/INT/Engine/Rendering/Materials/PhysicallyBased/ Unreal] and [link:http://area.autodesk.com/blogs/the-3ds-max-blog/what039s-new-for-rendering-in-3ds-max-2017 3D Studio Max]. This approach differs from older approaches in that instead of using approximations for the way in which light interacts with a surface, a physically correct model is used. The idea is that, instead of tweaking materials to look good under specific lighting, a material can be created that will react 'correctly' under all lighting scenarios. In practice this gives a more accurate and realistic looking result than the [page:MeshLambertMaterial] or [page:MeshPhongMaterial], at the cost of being somewhat more computationally expensive. Shading is calculated in the same way as for the [page:MeshPhongMaterial], using a [link:https://en.wikipedia.org/wiki/Phong_shading Phong] shading model. This calculates shading per pixel (i.e. in the [link:https://en.wikipedia.org/wiki/Shader#Pixel_shaders fragment shader], AKA pixel shader) which gives more accurate results than the Gouraud model used by [page:MeshLambertMaterial], at the cost of some performance. Note that for best results you should always specify an [page:.envMap environment map] when using this material. For a non-technical introduction to the concept of PBR and how to set up a PBR material, check out these articles by the people at [link:https://www.marmoset.co marmoset]:
 	*/
-open external class MeshStandardMaterial(parameters: dynamic/*Object*/ = definedExternally): ch.viseon.threejs.declarations.materials.Material{
+open external class MeshStandardMaterial(parameters: dynamic = definedExternally): ch.viseon.threejs.declarations.materials.Material{
 
 	/**
 	* The alpha map is a grayscale texture that controls the opacity across the surface (black: fully transparent; white: fully opaque). Default is null. Only the color of the texture is used, ignoring the alpha channel if one exists. For RGB and RGBA textures, the [page:WebGLRenderer WebGL] renderer will use the green channel when sampling this texture due to the extra bit of precision provided for green in DXT-compressed and uncompressed RGB 565 formats. Luminance-only and luminance/alpha textures will also still work as expected.
@@ -46,7 +46,7 @@ open external class MeshStandardMaterial(parameters: dynamic/*Object*/ = defined
 	/**
 	* An object of the form: { 'STANDARD': '' }; This is used by the [page:WebGLRenderer] for selecting shaders.
 	*/
-	override var defines: dynamic/*Object*/ 
+	override var defines: dynamic 
 
 
 	/**

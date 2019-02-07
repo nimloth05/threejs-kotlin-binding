@@ -1,4 +1,4 @@
-//Generated date 12.01.2019
+//Generated date 07.02.2019
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.helpers
 
@@ -28,5 +28,5 @@ open external class VertexNormalsHelper(`object`: ch.viseon.threejs.declarations
 	/**
 	* Updates the vertex normal preview based on movement of the object.
 	*/
-	open fun update() : dynamic/*null*/
+	open fun update() : dynamic
 }

@@ -1,11 +1,11 @@
-//Generated date 12.01.2019
+//Generated date 07.02.2019
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.animation
 
 	/**
 	* An AnimationClip is a reusable set of keyframe tracks which represent an animation. For an overview of the different elements of the three.js animation system see the "Animation System" article in the "Next Steps" section of the manual.
 	*/
-open external class AnimationClip(name: String = definedExternally, duration: Double = definedExternally, tracks: Array<dynamic>/*Array*/ = definedExternally){
+open external class AnimationClip(name: String = definedExternally, duration: Double = definedExternally, tracks: Array<dynamic> = definedExternally){
 
 	/**
 	* The duration of this clip (in seconds). This can be calculated from the [page:.tracks tracks] array via [page:.resetDuration resetDuration].
@@ -22,13 +22,19 @@ open external class AnimationClip(name: String = definedExternally, duration: Do
 	/**
 	* An array containing a [page:KeyframeTrack] for each property that are animated by this clip.
 	*/
-	open var tracks: Array<dynamic>/*Array*/  = definedExternally
+	open var tracks: Array<dynamic>  = definedExternally
 
 
 	/**
 	* The [link:http://en.wikipedia.org/wiki/Universally_unique_identifier UUID] of this clip instance. It gets automatically assigned and shouldn't be edited.
 	*/
 	open var uuid: String  = definedExternally
+
+
+	/**
+	* Returns a copy of this clip.
+	*/
+	open fun clone() : ch.viseon.threejs.declarations.animation.AnimationClip
 
 
 	/**
@@ -58,37 +64,37 @@ open external class AnimationClip(name: String = definedExternally, duration: Do
 	/**
 	* Returns an array of new AnimationClips created from the [page:Geometry.morphTargets morph target sequences] of a geometry, trying to sort morph target names into animation-group-based patterns like "Walk_001, Walk_002, Run_001, Run_002 ...".
 	*/
-	open fun CreateClipsFromMorphTargetSequences(name: String = definedExternally, morphTargetSequence: Array<dynamic>/*Array*/ = definedExternally, fps: Double = definedExternally, noLoop: Boolean = definedExternally) : Array<dynamic>/*Array*/
+	open fun CreateClipsFromMorphTargetSequences(name: String = definedExternally, morphTargetSequence: Array<dynamic> = definedExternally, fps: Double = definedExternally, noLoop: Boolean = definedExternally) : Array<dynamic>
 
 
 	/**
 	* Returns a new AnimationClip from the passed [page:Geometry.morphTargets morph targets array] of a geometry, taking a name and the number of frames per second. Note: The fps parameter is required, but the animation speed can be overridden in an **AnimationAction** via [page:AnimationAction.setDuration animationAction.setDuration].
 	*/
-	open fun CreateFromMorphTargetSequence(name: String = definedExternally, morphTargetSequence: Array<dynamic>/*Array*/ = definedExternally, fps: Double = definedExternally, noLoop: Boolean = definedExternally) : ch.viseon.threejs.declarations.animation.AnimationClip
+	open fun CreateFromMorphTargetSequence(name: String = definedExternally, morphTargetSequence: Array<dynamic> = definedExternally, fps: Double = definedExternally, noLoop: Boolean = definedExternally) : ch.viseon.threejs.declarations.animation.AnimationClip
 
 
 	/**
 	* Searches for an AnimationClip by name, taking as its first parameter either an array of AnimationClips, or a mesh or geometry that contains an array named "animations".
 	*/
-	open fun findByName(objectOrClipArray: dynamic/*Object*/ = definedExternally, name: String = definedExternally) : ch.viseon.threejs.declarations.animation.AnimationClip
+	open fun findByName(objectOrClipArray: dynamic = definedExternally, name: String = definedExternally) : ch.viseon.threejs.declarations.animation.AnimationClip
 
 
 	/**
 	* Parses a JSON representation of a clip and returns an AnimationClip.
 	*/
-	open fun parse(json: dynamic/*Object*/ = definedExternally) : ch.viseon.threejs.declarations.animation.AnimationClip
+	open fun parse(json: dynamic = definedExternally) : ch.viseon.threejs.declarations.animation.AnimationClip
 
 
 	/**
 	* Parses the animation.hierarchy format and returns an AnimationClip.
 	*/
-	open fun parseAnimation(animation: dynamic/*Object*/ = definedExternally, bones: Array<dynamic>/*Array*/ = definedExternally) : ch.viseon.threejs.declarations.animation.AnimationClip
+	open fun parseAnimation(animation: dynamic = definedExternally, bones: Array<dynamic> = definedExternally) : ch.viseon.threejs.declarations.animation.AnimationClip
 
 
 	/**
 	* Takes an AnimationClip and returns a JSON object.
 	*/
-	open fun toJSON(clip: ch.viseon.threejs.declarations.animation.AnimationClip = definedExternally) : dynamic/*Object*/
+	open fun toJSON(clip: ch.viseon.threejs.declarations.animation.AnimationClip = definedExternally) : dynamic
 	
 }
 }

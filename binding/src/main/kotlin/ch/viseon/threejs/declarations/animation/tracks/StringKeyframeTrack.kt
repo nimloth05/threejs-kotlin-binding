@@ -1,11 +1,11 @@
-//Generated date 12.01.2019
+//Generated date 07.02.2019
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.animation.tracks
 
 	/**
 	* A Track of string keyframe values.
 	*/
-open external class StringKeyframeTrack(name: String = definedExternally, times: Array<dynamic>/*Array*/ = definedExternally, values: Array<dynamic>/*Array*/ = definedExternally): ch.viseon.threejs.declarations.animation.KeyframeTrack{
+open external class StringKeyframeTrack(name: String = definedExternally, times: Array<dynamic> = definedExternally, values: Array<dynamic> = definedExternally): ch.viseon.threejs.declarations.animation.KeyframeTrack{
 
 	/**
 	* The default interpolation type to use, [page:Animation InterpolateDiscrete].
@@ -16,7 +16,7 @@ open external class StringKeyframeTrack(name: String = definedExternally, times:
 	/**
 	* A normal Array (no Float32Array in this case, unlike **ValueBufferType** of [page:KeyframeTrack]).
 	*/
-	open var _bufferData: Array<dynamic>/*Array*/  = definedExternally
+	open var _bufferData: Array<dynamic>  = definedExternally
 
 
 	/**
@@ -28,11 +28,11 @@ open external class StringKeyframeTrack(name: String = definedExternally, times:
 	/**
 	* The value of this method here is 'undefined', as it does not make sense for discrete properties.
 	*/
-	override fun InterpolantFactoryMethodLinear() : dynamic/*null*/
+	override fun InterpolantFactoryMethodLinear() : dynamic
 
 
 	/**
 	* The value of this method here is 'undefined', as it does not make sense for discrete properties.
 	*/
-	override fun InterpolantFactoryMethodSmooth() : dynamic/*null*/
+	override fun InterpolantFactoryMethodSmooth() : dynamic
 }

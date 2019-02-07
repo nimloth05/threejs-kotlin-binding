@@ -1,4 +1,4 @@
-//Generated date 12.01.2019
+//Generated date 07.02.2019
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.math
 
@@ -172,19 +172,13 @@ open external class Box3(min: ch.viseon.threejs.declarations.math.Vector3 = defi
 	/**
 	* array -- An array of position data that the resulting box will envelop. Sets the upper and lower bounds of this box to include all of the data in **array**.
 	*/
-	open fun setFromArray(array: Array<dynamic>/*Array*/ = definedExternally, `this`: ch.viseon.threejs.declarations.math.Box3 = definedExternally) : ch.viseon.threejs.declarations.math.Box3
+	open fun setFromArray(array: Array<dynamic> = definedExternally, `this`: ch.viseon.threejs.declarations.math.Box3 = definedExternally) : ch.viseon.threejs.declarations.math.Box3
 
 
 	/**
 	* [page:BufferAttribute attribute] - A buffer attribute of position data that the resulting box will envelop. Sets the upper and lower bounds of this box to include all of the data in [page:BufferAttribute attribute].
 	*/
 	open fun setFromBufferAttribute(attribute: ch.viseon.threejs.declarations.core.BufferAttribute = definedExternally, `this`: ch.viseon.threejs.declarations.math.Box3 = definedExternally) : ch.viseon.threejs.declarations.math.Box3
-
-
-	/**
-	* [page:Vector3 center] - Desired center position of the box ([page:Vector3]). [page:Vector3 size] - Desired x, y and z dimensions of the box ([page:Vector3]). Centers this box on [page:Vector3 center] and sets this box's width and height to the values specified in [page:Vector3 size].
-	*/
-	open fun setFromCenterAndSize(center: ch.viseon.threejs.declarations.math.Vector3 = definedExternally, size: ch.viseon.threejs.declarations.math.Vector3 = definedExternally) : ch.viseon.threejs.declarations.math.Box3
 
 
 	/**
@@ -202,7 +196,7 @@ open external class Box3(min: ch.viseon.threejs.declarations.math.Vector3 = defi
 	/**
 	* [page:Array points] - Array of [page:Vector3 Vector3s] that the resulting box will contain. Sets the upper and lower bounds of this box to include all of the points in [page:Array points].
 	*/
-	open fun setFromPoints(points: Array<dynamic>/*Array*/ = definedExternally) : ch.viseon.threejs.declarations.math.Box3
+	open fun setFromPoints(points: Array<dynamic> = definedExternally) : ch.viseon.threejs.declarations.math.Box3
 
 
 	/**

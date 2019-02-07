@@ -1,4 +1,4 @@
-//Generated date 12.01.2019
+//Generated date 07.02.2019
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.audio
 
@@ -10,13 +10,13 @@ open external class PositionalAudio(listener: ch.viseon.threejs.declarations.aud
 	/**
 	* The PositionalAudio's [link:https://developer.mozilla.org/en-US/docs/Web/API/PannerNode PannerNode].
 	*/
-	open var panner: dynamic/*PannerNode*/  = definedExternally
+	open var panner: dynamic  = definedExternally
 
 
 	/**
 	* Returns the [page:PositionalAudio.panner panner].
 	*/
-	override fun getOutput() : dynamic/*PannerNode*/
+	override fun getOutput() : dynamic
 
 
 	/**

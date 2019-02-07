@@ -1,4 +1,4 @@
-//Generated date 12.01.2019
+//Generated date 07.02.2019
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.math
 
@@ -114,7 +114,7 @@ open external class Vector4(x: Double = definedExternally, y: Double = definedEx
 	/**
 	* [page:Array array] - the source array. [page:Integer offset] - (optional) offset into the array. Default is 0. Sets this vector's [page:.x x] value to be array[ offset + 0 ], [page:.y y] value to be array[ offset + 1 ] [page:.z z] value to be array[ offset + 2 ] and [page:.w w ] value to be array[ offset + 3 ].
 	*/
-	open fun fromArray(array: Array<dynamic>/*Array*/ = definedExternally, offset: Int = definedExternally) : Vector4
+	open fun fromArray(array: Array<dynamic> = definedExternally, offset: Int = definedExternally) : Vector4
 
 
 	/**
@@ -222,7 +222,7 @@ open external class Vector4(x: Double = definedExternally, y: Double = definedEx
 	/**
 	* [page:Integer index] - 0, 1 or 2. [page:Float value] - [page:Float] If index equals 0 set [page:.x x] to [page:Float value]. If index equals 1 set [page:.y y] to [page:Float value]. If index equals 2 set [page:.z z] to [page:Float value]. If index equals 3 set [page:.w w] to [page:Float value].
 	*/
-	open fun setComponent(index: Int = definedExternally, value: Double = definedExternally) : dynamic/*null*/
+	open fun setComponent(index: Int = definedExternally, value: Double = definedExternally) : dynamic
 
 
 	/**
@@ -282,5 +282,5 @@ open external class Vector4(x: Double = definedExternally, y: Double = definedEx
 	/**
 	* [page:Array array] - (optional) array to store the vector to. If this is not provided, a new array will be created. [page:Integer offset] - (optional) optional offset into the array. Returns an array [x, y, z, w], or copies x, y, z and w into the provided [page:Array array].
 	*/
-	open fun toArray(array: Array<dynamic>/*Array*/ = definedExternally, offset: Int = definedExternally) : Array<dynamic>/*Array*/
+	open fun toArray(array: Array<dynamic> = definedExternally, offset: Int = definedExternally) : Array<dynamic>
 }

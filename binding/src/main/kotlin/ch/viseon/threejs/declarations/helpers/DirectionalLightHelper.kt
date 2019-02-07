@@ -1,4 +1,4 @@
-//Generated date 12.01.2019
+//Generated date 07.02.2019
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.helpers
 
@@ -40,11 +40,11 @@ open external class DirectionalLightHelper(light: ch.viseon.threejs.declarations
 	/**
 	* Dispose of the directionalLightHelper.
 	*/
-	open fun dispose() : dynamic/*null*/
+	open fun dispose() : dynamic
 
 
 	/**
 	* Updates the helper to match the position and direction of the [page:.light directionalLight] being visualized.
 	*/
-	open fun update() : dynamic/*null*/
+	open fun update() : dynamic
 }

@@ -1,4 +1,4 @@
-//Generated date 12.01.2019
+//Generated date 07.02.2019
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.geometries
 
@@ -10,5 +10,5 @@ open external class TorusGeometry(radius: Double = definedExternally, tube: Doub
 	/**
 	* An object with a property for each of the constructor parameters. Any modification after instantiation does not change the geometry.
 	*/
-	open var parameters: dynamic/*object*/  = definedExternally
+	open var parameters: dynamic  = definedExternally
 }

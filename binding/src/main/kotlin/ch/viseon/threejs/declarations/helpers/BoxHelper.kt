@@ -1,4 +1,4 @@
-//Generated date 12.01.2019
+//Generated date 07.02.2019
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.helpers
 
@@ -10,7 +10,7 @@ open external class BoxHelper(`object`: ch.viseon.threejs.declarations.core.Obje
 	/**
 	* Updates the helper's geometry to match the dimensions of the object, including any children. See [page:Box3.setFromObject].
 	*/
-	open fun update() : dynamic/*null*/
+	open fun update() : dynamic
 
 
 	/**

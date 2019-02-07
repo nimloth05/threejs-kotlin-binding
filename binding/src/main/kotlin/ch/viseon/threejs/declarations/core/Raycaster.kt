@@ -1,4 +1,4 @@
-//Generated date 12.01.2019
+//Generated date 07.02.2019
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.core
 
@@ -28,7 +28,7 @@ open external class Raycaster(origin: ch.viseon.threejs.declarations.math.Vector
 	/**
 	* An object with the following properties: { Mesh: {}, Line: {}, LOD: {}, Points: { threshold: 1 }, Sprite: {} }
 	*/
-	open var params: dynamic/*Object*/  = definedExternally
+	open var params: dynamic  = definedExternally
 
 
 	/**
@@ -41,26 +41,26 @@ open external class Raycaster(origin: ch.viseon.threejs.declarations.math.Vector
 	* [page:Vector3 origin] — The origin vector where the ray casts from. [page:Vector3 direction] — The normalized direction vector that gives direction to the ray.
 Updates the ray with a new origin and direction.
 	*/
-	open fun set(origin: ch.viseon.threejs.declarations.math.Vector3 = definedExternally, direction: ch.viseon.threejs.declarations.math.Vector3 = definedExternally) : dynamic/*null*/
+	open fun set(origin: ch.viseon.threejs.declarations.math.Vector3 = definedExternally, direction: ch.viseon.threejs.declarations.math.Vector3 = definedExternally) : dynamic
 
 
 	/**
 	* [page:Vector2 coords] — 2D coordinates of the mouse, in normalized device coordinates (NDC)---X and Y components should be between -1 and 1. [page:Camera camera] — camera from which the ray should originate
 Updates the ray with a new origin and direction.
 	*/
-	open fun setFromCamera(coords: ch.viseon.threejs.declarations.math.Vector2 = definedExternally, camera: ch.viseon.threejs.declarations.cameras.Camera = definedExternally) : dynamic/*null*/
+	open fun setFromCamera(coords: ch.viseon.threejs.declarations.math.Vector2 = definedExternally, camera: ch.viseon.threejs.declarations.cameras.Camera = definedExternally) : dynamic
 
 
 	/**
 	* [page:Object3D object] — The object to check for intersection with the ray. [page:Boolean recursive] — If true, it also checks all descendants. Otherwise it only checks intersection with the object. Default is false. [page:Array optionalTarget] — (optional) target to set the result. Otherwise a new [page:Array] is instantiated. If set, you must clear this array prior to each call (i.e., array.length = 0;).
 Checks all intersection between the ray and the object with or without the descendants. Intersections are returned sorted by distance, closest first. An array of intersections is returned...
 	*/
-	open fun intersectObject(`object`: ch.viseon.threejs.declarations.core.Object3D = definedExternally, recursive: Boolean = definedExternally, optionalTarget: Array<dynamic>/*Array*/ = definedExternally) : Array<dynamic>/*Array*/
+	open fun intersectObject(`object`: ch.viseon.threejs.declarations.core.Object3D = definedExternally, recursive: Boolean = definedExternally, optionalTarget: Array<dynamic> = definedExternally) : Array<dynamic>
 
 
 	/**
 	* [page:Array objects] — The objects to check for intersection with the ray. [page:Boolean recursive] — If true, it also checks all descendants of the objects. Otherwise it only checks intersection with the objects. Default is false. [page:Array optionalTarget] — (optional) target to set the result. Otherwise a new [page:Array] is instantiated. If set, you must clear this array prior to each call (i.e., array.length = 0;).
 Checks all intersection between the ray and the objects with or without the descendants. Intersections are returned sorted by distance, closest first. Intersections are of the same form as those returned by [page:.intersectObject].
 	*/
-	open fun intersectObjects(objects: Array<dynamic>/*Array*/ = definedExternally, recursive: Boolean = definedExternally, optionalTarget: Array<dynamic>/*Array*/ = definedExternally) : Array<dynamic>/*Array*/
+	open fun intersectObjects(objects: Array<dynamic> = definedExternally, recursive: Boolean = definedExternally, optionalTarget: Array<dynamic> = definedExternally) : Array<dynamic>
 }

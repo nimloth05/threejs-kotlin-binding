@@ -1,11 +1,11 @@
-//Generated date 12.01.2019
+//Generated date 07.02.2019
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.materials
 
 	/**
 	* A material for non-shiny surfaces, without specular highlights. The material uses a non-physically based [link:https://en.wikipedia.org/wiki/Lambertian_reflectance Lambertian] model for calculating reflectance. This can simulate some surfaces (such as untreated wood or stone) well, but cannot simulate shiny surfaces with specular highlights (such as varnished wood). Shading is calculated using a [link:https://en.wikipedia.org/wiki/Gouraud_shading Gouraud] shading model. This calculates shading per vertex (i.e. in the [link:https://en.wikipedia.org/wiki/Shader#Vertex_shaders vertex shader]) and interpolates the results over the polygon's faces. Due to the simplicity of the reflectance and illumination models, performance will be greater when using this material over the [page:MeshPhongMaterial], [page:MeshStandardMaterial] or [page:MeshPhysicalMaterial], at the cost of some graphical accuracy.
 	*/
-open external class MeshLambertMaterial(parameters: dynamic/*Object*/ = definedExternally): ch.viseon.threejs.declarations.materials.Material{
+open external class MeshLambertMaterial(parameters: dynamic = definedExternally): ch.viseon.threejs.declarations.materials.Material{
 
 	/**
 	* The alpha map is a grayscale texture that controls the opacity across the surface (black: fully transparent; white: fully opaque). Default is null. Only the color of the texture is used, ignoring the alpha channel if one exists. For RGB and RGBA textures, the [page:WebGLRenderer WebGL] renderer will use the green channel when sampling this texture due to the extra bit of precision provided for green in DXT-compressed and uncompressed RGB 565 formats. Luminance-only and luminance/alpha textures will also still work as expected.

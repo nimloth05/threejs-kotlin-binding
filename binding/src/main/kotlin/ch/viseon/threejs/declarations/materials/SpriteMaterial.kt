@@ -1,11 +1,11 @@
-//Generated date 12.01.2019
+//Generated date 07.02.2019
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.materials
 
 	/**
 	* A material for a use with a [page:Sprite].
 	*/
-open external class SpriteMaterial(parameters: dynamic/*Object*/ = definedExternally): ch.viseon.threejs.declarations.materials.Material{
+open external class SpriteMaterial(parameters: dynamic = definedExternally): ch.viseon.threejs.declarations.materials.Material{
 
 	/**
 	* [page:Color] of the material, by default set to white (0xffffff). The [page:.map] is mutiplied by the color.

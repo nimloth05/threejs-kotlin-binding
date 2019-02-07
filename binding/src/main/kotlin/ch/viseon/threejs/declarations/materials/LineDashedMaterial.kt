@@ -1,11 +1,11 @@
-//Generated date 12.01.2019
+//Generated date 07.02.2019
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.materials
 
 	/**
 	* A material for drawing wireframe-style geometries with dashed lines.
 	*/
-open external class LineDashedMaterial(parameters: dynamic/*Object*/ = definedExternally): ch.viseon.threejs.declarations.materials.Material{
+open external class LineDashedMaterial(parameters: dynamic = definedExternally): ch.viseon.threejs.declarations.materials.Material{
 
 	/**
 	* [page:Color] of the material, by default set to white (0xffffff).

@@ -1,11 +1,11 @@
-//Generated date 12.01.2019
+//Generated date 07.02.2019
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.core
 
 	/**
 	* An instanced version of [page:BufferAttribute].
 	*/
-open external class InstancedBufferAttribute(array: Array<dynamic>/*TypedArray*/ = definedExternally, itemSize: Int = definedExternally, normalized: Boolean = definedExternally, meshPerAttribute: Double = definedExternally): ch.viseon.threejs.declarations.core.BufferAttribute{
+open external class InstancedBufferAttribute(array: Array<dynamic> = definedExternally, itemSize: Int = definedExternally, normalized: Boolean = definedExternally, meshPerAttribute: Double = definedExternally): ch.viseon.threejs.declarations.core.BufferAttribute{
 
 	/**
 	* Default is **1**.

@@ -1,4 +1,4 @@
-//Generated date 12.01.2019
+//Generated date 07.02.2019
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.objects
 
@@ -40,5 +40,5 @@ open external class Sprite(material: ch.viseon.threejs.declarations.materials.Ma
 	/**
 	* Get intersections between a casted ray and this sprite. [page:Raycaster.intersectObject] will call this method.
 	*/
-	override fun raycast(raycaster: ch.viseon.threejs.declarations.core.Raycaster, intersects: Array<dynamic>/*Array*/) : dynamic/*null*/
+	override fun raycast(raycaster: ch.viseon.threejs.declarations.core.Raycaster, intersects: Array<dynamic>) : dynamic
 }

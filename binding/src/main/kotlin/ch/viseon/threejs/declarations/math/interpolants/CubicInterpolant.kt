@@ -1,4 +1,4 @@
-//Generated date 12.01.2019
+//Generated date 07.02.2019
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.math.interpolants
 
@@ -10,35 +10,35 @@ open external class CubicInterpolant(): ch.viseon.threejs.declarations.math.Inte
 	/**
 	* 
 	*/
-	override var parameterPositions: dynamic/*null*/ 
+	override var parameterPositions: dynamic 
 
 
 	/**
 	* 
 	*/
-	override var resultBuffer: dynamic/*null*/ 
+	override var resultBuffer: dynamic 
 
 
 	/**
 	* 
 	*/
-	override var sampleValues: dynamic/*null*/ 
+	override var sampleValues: dynamic 
 
 
 	/**
 	* 
 	*/
-	override var settings: dynamic/*Object*/ 
+	override var settings: dynamic 
 
 
 	/**
 	* 
 	*/
-	override var valueSize: dynamic/*null*/ 
+	override var valueSize: dynamic 
 
 
 	/**
 	* Evaluate the interpolant at position **t**.
 	*/
-	override fun evaluate(t: Double) : dynamic/*null*/
+	override fun evaluate(t: Double) : dynamic
 }

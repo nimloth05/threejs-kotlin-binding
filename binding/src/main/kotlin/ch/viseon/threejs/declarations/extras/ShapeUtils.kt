@@ -1,4 +1,4 @@
-//Generated date 12.01.2019
+//Generated date 07.02.2019
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.extras
 
@@ -22,5 +22,5 @@ open external class ShapeUtils(){
 	/**
 	* contour -- 2D polygon. holes -- array of holes Used internally by [page:ExtrudeGeometry ExtrudeGeometry] and [page:ShapeGeometry ShapeGeometry] to calculate faces in shapes with holes.
 	*/
-	open fun triangulateShape() : Array<dynamic>/*Array*/
+	open fun triangulateShape() : Array<dynamic>
 }

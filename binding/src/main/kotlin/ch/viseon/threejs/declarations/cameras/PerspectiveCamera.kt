@@ -1,4 +1,4 @@
-//Generated date 12.01.2019
+//Generated date 07.02.2019
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.cameras
 
@@ -58,7 +58,7 @@ open external class PerspectiveCamera(fov: Double = definedExternally, aspect: D
 	/**
 	* Frustum window specification or null. This is set using the [page:PerspectiveCamera.setViewOffset .setViewOffset] method and cleared using [page:PerspectiveCamera.clearViewOffset .clearViewOffset].
 	*/
-	open var view: dynamic/*Object*/  = definedExternally
+	open var view: dynamic  = definedExternally
 
 
 	/**
@@ -70,7 +70,7 @@ open external class PerspectiveCamera(fov: Double = definedExternally, aspect: D
 	/**
 	* Removes any offset set by the [page:PerspectiveCamera.setViewOffset .setViewOffset] method.
 	*/
-	open fun clearViewOffset() : dynamic/*null*/
+	open fun clearViewOffset() : dynamic
 
 
 	/**
@@ -100,7 +100,7 @@ open external class PerspectiveCamera(fov: Double = definedExternally, aspect: D
 	/**
 	* Sets the FOV by focal length in respect to the current [page:PerspectiveCamera.filmGauge .filmGauge]. By default, the focal length is specified for a 35mm (full frame) camera.
 	*/
-	open fun setFocalLength(focalLength: Double = definedExternally) : dynamic/*null*/
+	open fun setFocalLength(focalLength: Double = definedExternally) : dynamic
 
 
 	/**
@@ -108,13 +108,13 @@ open external class PerspectiveCamera(fov: Double = definedExternally, aspect: D
 Sets an offset in a larger frustum. This is useful for multi-window or multi-monitor/multi-machine setups.
 For example, if you have 3x2 monitors and each monitor is 1920x1080 and the monitors are in grid like this:
 	*/
-	open fun setViewOffset(fullWidth: Double = definedExternally, fullHeight: Double = definedExternally, x: Double = definedExternally, y: Double = definedExternally, width: Double = definedExternally, height: Double = definedExternally) : dynamic/*null*/
+	open fun setViewOffset(fullWidth: Double = definedExternally, fullHeight: Double = definedExternally, x: Double = definedExternally, y: Double = definedExternally, width: Double = definedExternally, height: Double = definedExternally) : dynamic
 
 
 	/**
 	* Updates the camera projection matrix. Must be called after any change of parameters.
 	*/
-	open fun updateProjectionMatrix() : dynamic/*null*/
+	open fun updateProjectionMatrix() : dynamic
 
 
 	/**

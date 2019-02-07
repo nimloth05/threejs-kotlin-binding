@@ -1,22 +1,22 @@
-//Generated date 12.01.2019
+//Generated date 07.02.2019
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.objects
 
 	/**
 	* Use an array of [page:Bone bones] to create a skeleton that can be used by a [page:SkinnedMesh].
 	*/
-open external class Skeleton(bones: Array<dynamic>/*Array*/ = definedExternally, boneInverses: Array<dynamic>/*Array*/ = definedExternally){
+open external class Skeleton(bones: Array<dynamic> = definedExternally, boneInverses: Array<dynamic> = definedExternally){
 
 	/**
 	* The array of [page:bone bones]. Note this is a copy of the original array, not a reference, so you can modify the original array without effecting this one.
 	*/
-	open var bones: Array<dynamic>/*Array*/  = definedExternally
+	open var bones: Array<dynamic>  = definedExternally
 
 
 	/**
 	* An array of [page:Matrix4 Matrix4s] that represent the inverse of the [page:Matrix4 matrixWorld] of the individual bones.
 	*/
-	open var boneInverses: Array<dynamic>/*Array*/  = definedExternally
+	open var boneInverses: Array<dynamic>  = definedExternally
 
 
 	/**
@@ -40,19 +40,19 @@ open external class Skeleton(bones: Array<dynamic>/*Array*/ = definedExternally,
 	/**
 	* Generates the [page:.boneInverses boneInverses] array if not provided in the constructor.
 	*/
-	open fun calculateInverses() : dynamic/*null*/
+	open fun calculateInverses() : dynamic
 
 
 	/**
 	* Returns the skeleton to the base pose.
 	*/
-	open fun pose() : dynamic/*null*/
+	open fun pose() : dynamic
 
 
 	/**
 	* Updates the [page:Float32Array boneMatrices] and [page:DataTexture boneTexture] after changing the bones. This is called automatically by the [page:WebGLRenderer] if the skeleton is used with a [page:SkinnedMesh].
 	*/
-	open fun update() : dynamic/*null*/
+	open fun update() : dynamic
 
 
 	/**

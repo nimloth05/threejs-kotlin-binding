@@ -1,4 +1,4 @@
-//Generated date 12.01.2019
+//Generated date 07.02.2019
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.animation
 
@@ -10,25 +10,25 @@ open external class AnimationUtils(){
 	/**
 	* This is the same as Array.prototype.slice, but also works on typed arrays.
 	*/
-	open fun arraySlice() : Array<dynamic>/*Array*/
+	open fun arraySlice() : Array<dynamic>
 
 
 	/**
 	* Converts an array to a specific type.
 	*/
-	open fun convertArray() : Array<dynamic>/*Array*/
+	open fun convertArray() : Array<dynamic>
 
 
 	/**
 	* Used for parsing AOS keyframe formats.
 	*/
-	open fun flattenJSON() : Array<dynamic>/*Array*/
+	open fun flattenJSON() : Array<dynamic>
 
 
 	/**
 	* Returns an array by which times and values can be sorted.
 	*/
-	open fun getKeyframeOrder() : Array<dynamic>/*Array*/
+	open fun getKeyframeOrder() : Array<dynamic>
 
 
 	/**
@@ -40,5 +40,5 @@ open external class AnimationUtils(){
 	/**
 	* Sorts the array previously returned by [page:AnimationUtils.getKeyframeOrder getKeyframeOrder].
 	*/
-	open fun sortedArray() : Array<dynamic>/*Array*/
+	open fun sortedArray() : Array<dynamic>
 }

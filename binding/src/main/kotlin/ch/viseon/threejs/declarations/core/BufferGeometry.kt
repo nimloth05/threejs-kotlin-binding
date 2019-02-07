@@ -1,4 +1,4 @@
-//Generated date 12.01.2019
+//Generated date 07.02.2019
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.core
 
@@ -12,7 +12,7 @@ open external class BufferGeometry(){
 	/**
 	* This hashmap has as id the name of the attribute to be set and as value the [page:BufferAttribute buffer] to set it to. Rather than accessing this property directly, use [page:.addAttribute] and [page:.getAttribute] to access attributes of this geometry.
 	*/
-	open var attributes: dynamic/*Object*/  = definedExternally
+	open var attributes: dynamic  = definedExternally
 
 
 	/**
@@ -30,13 +30,13 @@ open external class BufferGeometry(){
 	/**
 	* Determines the part of the geometry to render. This should not be set directly, instead use [page:.setDrawRange]. Default is { start: 0, count: Infinity } For non-indexed BufferGeometry, count is the number of vertices to render. For indexed BufferGeometry, count is the number of indices to render.
 	*/
-	open var drawRange: dynamic/*Object*/  = definedExternally
+	open var drawRange: dynamic  = definedExternally
 
 
 	/**
 	* Split the geometry into groups, each of which will be rendered in a separate WebGL draw call. This allows an array of materials to be used with the bufferGeometry. Each group is an object of the form: { start: Integer, count: Integer, materialIndex: Integer } where start specifies the first element in this draw call – the first vertex for non-indexed geometry, otherwise the first triangle index. Count specifies how many vertices (or indices) are included, and materialIndex specifies the material array index to use. Use [page:.addGroup] to add groups, rather than modifying this array directly.
 	*/
-	open var groups: Array<dynamic>/*Array*/  = definedExternally
+	open var groups: Array<dynamic>  = definedExternally
 
 
 	/**
@@ -60,7 +60,7 @@ open external class BufferGeometry(){
 	/**
 	* Hashmap of [page:BufferAttribute]s holding details of the geometry's [page:Geometry.morphTargets morphTargets].
 	*/
-	open var morphAttributes: dynamic/*Object*/  = definedExternally
+	open var morphAttributes: dynamic  = definedExternally
 
 
 	/**
@@ -72,7 +72,7 @@ open external class BufferGeometry(){
 	/**
 	* An object that can be used to store custom data about the BufferGeometry. It should not hold references to functions as these will not be cloned.
 	*/
-	open var userData: dynamic/*Object*/  = definedExternally
+	open var userData: dynamic  = definedExternally
 
 
 	/**
@@ -90,13 +90,13 @@ open external class BufferGeometry(){
 	/**
 	* Adds a group to this geometry; see the [page:BufferGeometry.groups groups] property for details.
 	*/
-	open fun addGroup(start: Int = definedExternally, count: Int = definedExternally, materialIndex: Int = definedExternally) : dynamic/*null*/
+	open fun addGroup(start: Int = definedExternally, count: Int = definedExternally, materialIndex: Int = definedExternally) : dynamic
 
 
 	/**
 	* Bakes matrix transform directly into vertex coordinates.
 	*/
-	open fun applyMatrix(matrix: ch.viseon.threejs.declarations.math.Matrix4 = definedExternally) : dynamic/*null*/
+	open fun applyMatrix(matrix: ch.viseon.threejs.declarations.math.Matrix4 = definedExternally) : dynamic
 
 
 	/**
@@ -120,31 +120,31 @@ open external class BufferGeometry(){
 	/**
 	* Clears all groups.
 	*/
-	open fun clearGroups() : dynamic/*null*/
+	open fun clearGroups() : dynamic
 
 
 	/**
 	* Computes bounding box of the geometry, updating [page:.boundingBox] attribute. Bounding boxes aren't computed by default. They need to be explicitly computed, otherwise they are **null**.
 	*/
-	open fun computeBoundingBox() : dynamic/*null*/
+	open fun computeBoundingBox() : dynamic
 
 
 	/**
 	* Computes bounding sphere of the geometry, updating [page:.boundingSphere] attribute. Bounding spheres aren't computed by default. They need to be explicitly computed, otherwise they are **null**.
 	*/
-	open fun computeBoundingSphere() : dynamic/*null*/
+	open fun computeBoundingSphere() : dynamic
 
 
 	/**
 	* Computes vertex normals by averaging face normals.
 	*/
-	open fun computeVertexNormals() : dynamic/*null*/
+	open fun computeVertexNormals() : dynamic
 
 
 	/**
 	* Disposes the object from memory. You need to call this when you want the BufferGeometry removed while the application is running.
 	*/
-	open fun dispose() : dynamic/*null*/
+	open fun dispose() : dynamic
 
 
 	/**
@@ -180,13 +180,13 @@ open external class BufferGeometry(){
 	/**
 	* Merge in another BufferGeometry with an optional offset of where to start merging in.
 	*/
-	open fun merge(bufferGeometry: ch.viseon.threejs.declarations.core.BufferGeometry = definedExternally, offset: Int = definedExternally) : dynamic/*null*/
+	open fun merge(bufferGeometry: ch.viseon.threejs.declarations.core.BufferGeometry = definedExternally, offset: Int = definedExternally) : dynamic
 
 
 	/**
 	* Every normal vector in a geometry will have a magnitude of 1. This will correct lighting on the geometry surfaces.
 	*/
-	open fun normalizeNormals() : dynamic/*null*/
+	open fun normalizeNormals() : dynamic
 
 
 	/**
@@ -222,13 +222,13 @@ open external class BufferGeometry(){
 	/**
 	* Set the [page:.index] buffer.
 	*/
-	open fun setIndex(index: ch.viseon.threejs.declarations.core.BufferAttribute = definedExternally) : dynamic/*null*/
+	open fun setIndex(index: ch.viseon.threejs.declarations.core.BufferAttribute = definedExternally) : dynamic
 
 
 	/**
 	* Set the [page:.drawRange] property. For non-indexed BufferGeometry, count is the number of vertices to render. For indexed BufferGeometry, count is the number of indices to render.
 	*/
-	open fun setDrawRange(start: Int = definedExternally, count: Int = definedExternally) : dynamic/*null*/
+	open fun setDrawRange(start: Int = definedExternally, count: Int = definedExternally) : dynamic
 
 
 	/**
@@ -240,13 +240,13 @@ open external class BufferGeometry(){
 	/**
 	* Sets the attributes for this BufferGeometry from an array of points.
 	*/
-	open fun setFromPoints(points: Array<dynamic>/*Array*/ = definedExternally) : ch.viseon.threejs.declarations.core.BufferGeometry
+	open fun setFromPoints(points: Array<dynamic> = definedExternally) : ch.viseon.threejs.declarations.core.BufferGeometry
 
 
 	/**
 	* Returns a JSON object representation of the BufferGeometry.
 	*/
-	open fun toJSON() : dynamic/*Object*/
+	open fun toJSON() : dynamic
 
 
 	/**

@@ -1,16 +1,16 @@
-//Generated date 12.01.2019
+//Generated date 07.02.2019
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.core
 
 	/**
 	* "Interleaved" means that multiple attributes, possibly of different types, (e.g., position, normal, uv, color) are packed into a single array buffer. An introduction into interleaved arrays can be found here: [link:https://blog.tojicode.com/2011/05/interleaved-array-basics.html Interleaved array basics]
 	*/
-open external class InterleavedBuffer(array: Array<dynamic>/*TypedArray*/ = definedExternally, stride: Int = definedExternally){
+open external class InterleavedBuffer(array: Array<dynamic> = definedExternally, stride: Int = definedExternally){
 
 	/**
 	* A typed array with a shared buffer. Stores the geometry data.
 	*/
-	open var array: Array<dynamic>/*Array*/  = definedExternally
+	open var array: Array<dynamic>  = definedExternally
 
 
 	/**
@@ -34,7 +34,7 @@ open external class InterleavedBuffer(array: Array<dynamic>/*TypedArray*/ = defi
 	/**
 	* Object containing offset and count.
 	*/
-	open var updateRange: dynamic/*Object*/  = definedExternally
+	open var updateRange: dynamic  = definedExternally
 
 
 	/**
@@ -58,7 +58,7 @@ open external class InterleavedBuffer(array: Array<dynamic>/*TypedArray*/ = defi
 	/**
 	* array - must be a Typed Array.
 	*/
-	open fun setArray(array: Array<dynamic>/*TypedArray*/ = definedExternally) : ch.viseon.threejs.declarations.core.InterleavedBuffer
+	open fun setArray(array: Array<dynamic> = definedExternally) : ch.viseon.threejs.declarations.core.InterleavedBuffer
 
 
 	/**
@@ -82,7 +82,7 @@ open external class InterleavedBuffer(array: Array<dynamic>/*TypedArray*/ = defi
 	/**
 	* value - The source (typed) array. offset - The offset into the target array at which to begin writing values from the source array. Default is **0**. Stores multiple values in the buffer, reading input values from a specified array.
 	*/
-	open fun set(value: Array<dynamic>/*TypedArray*/ = definedExternally, offset: Int = definedExternally) : ch.viseon.threejs.declarations.core.InterleavedBuffer
+	open fun set(value: Array<dynamic> = definedExternally, offset: Int = definedExternally) : ch.viseon.threejs.declarations.core.InterleavedBuffer
 
 
 	/**

@@ -1,11 +1,11 @@
-//Generated date 12.01.2019
+//Generated date 07.02.2019
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.renderers
 
 	/**
 	* A [link:https://msdn.microsoft.com/en-us/library/ff604997.aspx render target] is a buffer where the video card draws pixels for a scene that is being rendered in the background. It is used in different effects, such as applying postprocessing to a rendered image before displaying it on the screen.
 	*/
-open external class WebGLRenderTarget(width: Double = definedExternally, height: Double = definedExternally, options: dynamic/*Object*/ = definedExternally){
+open external class WebGLRenderTarget(width: Double = definedExternally, height: Double = definedExternally, options: dynamic = definedExternally){
 
 	/**
 	* The width of the render target.
@@ -64,7 +64,7 @@ open external class WebGLRenderTarget(width: Double = definedExternally, height:
 	/**
 	* Sets the size of the render target.
 	*/
-	open fun setSize(width: Double = definedExternally, height: Double = definedExternally) : dynamic/*null*/
+	open fun setSize(width: Double = definedExternally, height: Double = definedExternally) : dynamic
 
 
 	/**
@@ -82,5 +82,5 @@ open external class WebGLRenderTarget(width: Double = definedExternally, height:
 	/**
 	* Dispatches a dispose event.
 	*/
-	open fun dispose() : dynamic/*null*/
+	open fun dispose() : dynamic
 }

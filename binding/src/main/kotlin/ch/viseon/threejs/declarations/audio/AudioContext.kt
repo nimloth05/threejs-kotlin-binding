@@ -1,4 +1,4 @@
-//Generated date 12.01.2019
+//Generated date 07.02.2019
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.audio
 
@@ -10,11 +10,11 @@ open external class AudioContext(){
 	/**
 	* Return the value of the variable **context** in the outer scope, if defined, otherwise set it to a new [link:https://developer.mozilla.org/en-US/docs/Web/API/AudioContext AudioContext].
 	*/
-	open fun getContext() : dynamic/*AudioContext*/
+	open fun getContext() : dynamic
 
 
 	/**
 	* Set the variable **context** in the outer scope to **value**.
 	*/
-	open fun setContext(value: dynamic/*AudioConetxt*/ = definedExternally) : dynamic/*AudioContext*/
+	open fun setContext(value: dynamic = definedExternally) : dynamic
 }

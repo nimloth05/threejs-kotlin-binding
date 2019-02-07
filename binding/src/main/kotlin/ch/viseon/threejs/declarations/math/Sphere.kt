@@ -1,4 +1,4 @@
-//Generated date 12.01.2019
+//Generated date 07.02.2019
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.math
 
@@ -100,7 +100,7 @@ open external class Sphere(center: ch.viseon.threejs.declarations.math.Vector3 =
 	/**
 	* [page:Array points] - an [page:Array] of [page:Vector3] positions. [page:Vector3 optionalCenter] - Optional [page:Vector3] position for the sphere's center. Computes the minimum bounding sphere for an array of [page:Array points]. If [page:Vector3 optionalCenter]is given, it is used as the sphere's center. Otherwise, the center of the axis-aligned bounding box encompassing [page:Array points] is calculated.
 	*/
-	open fun setFromPoints(points: Array<dynamic>/*Array*/ = definedExternally, optionalCenter: ch.viseon.threejs.declarations.math.Vector3 = definedExternally) : ch.viseon.threejs.declarations.math.Sphere
+	open fun setFromPoints(points: Array<dynamic> = definedExternally, optionalCenter: ch.viseon.threejs.declarations.math.Vector3 = definedExternally) : ch.viseon.threejs.declarations.math.Sphere
 
 
 	/**

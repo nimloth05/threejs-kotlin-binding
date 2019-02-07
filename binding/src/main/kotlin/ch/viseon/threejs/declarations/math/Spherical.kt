@@ -1,4 +1,4 @@
-//Generated date 12.01.2019
+//Generated date 07.02.2019
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.math
 
@@ -14,7 +14,7 @@ open external class Spherical(radius: Double = definedExternally, phi: Double = 
 
 
 	/**
-	* Returns a new plane with the same [page:.radius radius], [page:.phi phi] and [page:.theta theta] properties as this one.
+	* Returns a new spherical with the same [page:.radius radius], [page:.phi phi] and [page:.theta theta] properties as this one.
 	*/
 	open fun clone() : ch.viseon.threejs.declarations.math.Spherical
 

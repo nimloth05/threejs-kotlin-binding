@@ -1,4 +1,4 @@
-//Generated date 12.01.2019
+//Generated date 07.02.2019
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.extras.core
 
@@ -10,7 +10,7 @@ open external class CurvePath(): ch.viseon.threejs.declarations.extras.core.Curv
 	/**
 	* The array of [page:Curve Curves].
 	*/
-	open var curves: Array<dynamic>/*array*/  = definedExternally
+	open var curves: Array<dynamic>  = definedExternally
 
 
 	/**
@@ -22,13 +22,13 @@ open external class CurvePath(): ch.viseon.threejs.declarations.extras.core.Curv
 	/**
 	* Add a curve to the [page:.curves] array.
 	*/
-	open fun add(curve: ch.viseon.threejs.declarations.extras.core.Curve = definedExternally) : dynamic/*null*/
+	open fun add(curve: ch.viseon.threejs.declarations.extras.core.Curve = definedExternally) : dynamic
 
 
 	/**
 	* Adds a [page:LineCurve lineCurve] to close the path.
 	*/
-	open fun closePath() : dynamic/*null*/
+	open fun closePath() : dynamic
 
 
 	/**

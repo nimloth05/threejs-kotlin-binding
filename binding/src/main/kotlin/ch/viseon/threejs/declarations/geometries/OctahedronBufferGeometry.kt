@@ -1,4 +1,4 @@
-//Generated date 12.01.2019
+//Generated date 07.02.2019
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.geometries
 
@@ -10,5 +10,5 @@ open external class OctahedronBufferGeometry(radius: Double = definedExternally,
 	/**
 	* An object with a property for each of the constructor parameters. Any modification after instantiation does not change the geometry.
 	*/
-	override var parameters: dynamic/*Object*/ 
+	override var parameters: dynamic 
 }

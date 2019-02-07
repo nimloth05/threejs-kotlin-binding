@@ -1,11 +1,11 @@
-//Generated date 12.01.2019
+//Generated date 07.02.2019
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.core
 
 	/**
 	* An instanced version of [page:InterleavedBuffer].
 	*/
-open external class InstancedInterleavedBuffer(array: Array<dynamic>/*TypedArray*/ = definedExternally, itemSize: Int = definedExternally, meshPerAttribute: Double = definedExternally): ch.viseon.threejs.declarations.core.InterleavedBuffer{
+open external class InstancedInterleavedBuffer(array: Array<dynamic> = definedExternally, itemSize: Int = definedExternally, meshPerAttribute: Double = definedExternally): ch.viseon.threejs.declarations.core.InterleavedBuffer{
 
 	/**
 	* Default is **1**.

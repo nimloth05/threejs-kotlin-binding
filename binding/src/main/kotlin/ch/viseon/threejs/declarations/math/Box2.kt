@@ -1,4 +1,4 @@
-//Generated date 12.01.2019
+//Generated date 07.02.2019
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.math
 
@@ -136,7 +136,7 @@ open external class Box2(min: ch.viseon.threejs.declarations.math.Vector2 = defi
 	/**
 	* [page:Array points] - Array of [page:Vector2 Vector2s] that the resulting box will contain. Sets the upper and lower bounds of this box to include all of the points in [page:Array points].
 	*/
-	open fun setFromPoints(points: Array<dynamic>/*Array*/ = definedExternally) : ch.viseon.threejs.declarations.math.Box2
+	open fun setFromPoints(points: Array<dynamic> = definedExternally) : ch.viseon.threejs.declarations.math.Box2
 
 
 	/**

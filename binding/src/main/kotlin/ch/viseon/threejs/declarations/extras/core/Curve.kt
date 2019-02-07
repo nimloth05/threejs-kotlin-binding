@@ -1,4 +1,4 @@
-//Generated date 12.01.2019
+//Generated date 07.02.2019
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.extras.core
 
@@ -16,25 +16,25 @@ open external class Curve(){
 	/**
 	* [page:Float t] - A position on the curve. Must be in the range [ 0, 1 ]. [page:Vector optionalTarget] — (optional) If specified, the result will be copied into this Vector, otherwise a new Vector will be created. Returns a vector for a given position on the curve.
 	*/
-	open fun getPoint(t: Double = definedExternally, optionalTarget: dynamic/*Vector*/ = definedExternally) : dynamic/*Vector*/
+	open fun getPoint(t: Double = definedExternally, optionalTarget: dynamic = definedExternally) : dynamic
 
 
 	/**
 	* [page:Float u] - A position on the curve according to the arc length. Must be in the range [ 0, 1 ]. [page:Vector optionalTarget] — (optional) If specified, the result will be copied into this Vector, otherwise a new Vector will be created. Returns a vector for a given position on the curve according to the arc length.
 	*/
-	open fun getPointAt(u: Double = definedExternally, optionalTarget: dynamic/*Vector*/ = definedExternally) : dynamic/*Vector*/
+	open fun getPointAt(u: Double = definedExternally, optionalTarget: dynamic = definedExternally) : dynamic
 
 
 	/**
 	* divisions -- number of pieces to divide the curve into. Default is **5**. Returns a set of divisions + 1 points using getPoint( t ).
 	*/
-	open fun getPoints(divisions: Int = definedExternally) : Array<dynamic>/*Array*/
+	open fun getPoints(divisions: Int = definedExternally) : Array<dynamic>
 
 
 	/**
 	* divisions -- number of pieces to divide the curve into. Default is **5**. Returns a set of divisions + 1 equi-spaced points using getPointAt( u ).
 	*/
-	open fun getSpacedPoints(divisions: Int = definedExternally) : Array<dynamic>/*Array*/
+	open fun getSpacedPoints(divisions: Int = definedExternally) : Array<dynamic>
 
 
 	/**
@@ -46,13 +46,13 @@ open external class Curve(){
 	/**
 	* Get list of cumulative segment lengths.
 	*/
-	open fun getLengths(divisions: Int = definedExternally) : Array<dynamic>/*Array*/
+	open fun getLengths(divisions: Int = definedExternally) : Array<dynamic>
 
 
 	/**
 	* Update the cumlative segment distance cache.
 	*/
-	open fun updateArcLengths() : dynamic/*null*/
+	open fun updateArcLengths() : dynamic
 
 
 	/**
@@ -64,19 +64,19 @@ open external class Curve(){
 	/**
 	* Returns a unit vector tangent at t. If the derived curve does not implement its tangent derivation, two points a small delta apart will be used to find its gradient which seems to give a reasonable approximation.
 	*/
-	open fun getTangent(t: Double = definedExternally) : dynamic/*Vector*/
+	open fun getTangent(t: Double = definedExternally) : dynamic
 
 
 	/**
 	* Returns tangent at a point which is equidistant to the ends of the curve from the point given in [page:.getTangent].
 	*/
-	open fun getTangentAt(u: Double = definedExternally) : dynamic/*Vector*/
+	open fun getTangentAt(u: Double = definedExternally) : dynamic
 
 
 	/**
 	* Generates the Frenet Frames. Used in geometries like [page:TubeGeometry] or [page:ExtrudeGeometry].
 	*/
-	open fun computeFrenetFrames(segments: Int = definedExternally, closed: Boolean = definedExternally) : dynamic/*Object*/
+	open fun computeFrenetFrames(segments: Int = definedExternally, closed: Boolean = definedExternally) : dynamic
 
 
 	/**
@@ -94,11 +94,11 @@ open external class Curve(){
 	/**
 	* Returns a JSON object representation of this instance.
 	*/
-	open fun toJSON() : dynamic/*Object*/
+	open fun toJSON() : dynamic
 
 
 	/**
 	* Copies the data from the given JSON object to this instance.
 	*/
-	open fun fromJSON(json: dynamic/*Object*/ = definedExternally) : ch.viseon.threejs.declarations.extras.core.Curve
+	open fun fromJSON(json: dynamic = definedExternally) : ch.viseon.threejs.declarations.extras.core.Curve
 }

@@ -1,4 +1,4 @@
-//Generated date 12.01.2019
+//Generated date 07.02.2019
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.helpers
 
@@ -29,5 +29,5 @@ open external class FaceNormalsHelper(`object`: ch.viseon.threejs.declarations.c
 	/**
 	* Updates the face normal preview based on movement of the object.
 	*/
-	open fun update() : dynamic/*null*/
+	open fun update() : dynamic
 }

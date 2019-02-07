@@ -16,7 +16,11 @@ class KotlinFileGenerator(
         Files.createDirectories(destinationDirectory)
 
         val content = buildString {
-            append("//Generated date ${SimpleDateFormat.getDateInstance(SimpleDateFormat.MEDIUM, Locale.GERMAN).format(Date())}\n")
+            append(
+                "//Generated date ${SimpleDateFormat.getDateInstance(SimpleDateFormat.MEDIUM, Locale.GERMAN).format(
+                    Date()
+                )}\n"
+            )
             append("@file:JsModule(\"three\")\n")
 
             append("package ")
@@ -27,7 +31,7 @@ class KotlinFileGenerator(
             append(generateKotlinDoc(classDeclaration.doc))
             append("open external class ")
             append(classDeclaration.name)
-            append(classDeclaration.constructorDeclaration.toKotlinDeclaration())
+            append(classDeclaration.constructorDeclaration.toKotlinDeclaration(classDeclaration))
             append(classDeclaration.inheritenceDeclaration.toKotlinDeclaration())
             append("{\n")
             append(classDeclaration.members.toKotlinDeclaration(classDeclaration))
@@ -50,12 +54,12 @@ class KotlinFileGenerator(
             .distinct()
             .filter { (!(it as MemberDeclaration).name.contains(".")) }.joinToString(
                 "\n",
-                transform = { it -> it.toKotlinDeclaration(classDeclaration) })
+                transform = { it.toKotlinDeclaration(classDeclaration) })
     }
 
     private fun Declaration.toKotlinDeclaration(classDeclaration: ClassDeclaration): String {
         return when {
-            this is ConstructorDeclaration -> this.toKotlinDeclaration()
+            this is ConstructorDeclaration -> this.toKotlinDeclaration(classDeclaration)
             this is MethodDeclaration -> this.toKotlinDeclaration(classDeclaration)
             this is PropertyDeclaration -> this.toKotlinDeclaration(classDeclaration)
             else -> ""
@@ -71,8 +75,8 @@ class KotlinFileGenerator(
         }
     }
 
-    private fun ConstructorDeclaration.toKotlinDeclaration(): String {
-        return paramToKotlinDeclaration(paramDeclarations, false)
+    private fun ConstructorDeclaration.toKotlinDeclaration(classDeclaration: ClassDeclaration): String {
+        return paramToKotlinDeclaration(classDeclaration, paramDeclarations, false)
     }
 
     private fun PropertyDeclaration.toKotlinDeclaration(classDeclarations: ClassDeclaration): String {
@@ -87,7 +91,7 @@ class KotlinFileGenerator(
                 myName == other.name && myType == otherType
             }
             append(
-                "\t$modifier var ${toKotlinSaveName(this@toKotlinDeclaration)}: ${mapType(type)} ${getDefaultValue(
+                "\t$modifier var ${toKotlinSaveName(this@toKotlinDeclaration)}: $myType ${getDefaultValue(
                     isParentMember
                 )}\n"
             )
@@ -111,7 +115,7 @@ class KotlinFileGenerator(
                 } ?: false
         }
 
-        val params = paramToKotlinDeclaration(paramDeclarations, isParentMember)
+        val params = paramToKotlinDeclaration(classDeclaration, paramDeclarations, isParentMember)
         val returnType = toKotlinType(owningClass).let { if (it.isEmpty()) "" else ": $it" }
         stringBuilder.append("\t$modifier fun $name$params $returnType\n")
         return stringBuilder.toString()
@@ -149,6 +153,7 @@ class KotlinFileGenerator(
     }
 
     private fun paramToKotlinDeclaration(
+        classDeclaration: ClassDeclaration,
         list: List<ParamDeclaration>,
         isParentMember: Boolean
     ): String {
@@ -156,29 +161,34 @@ class KotlinFileGenerator(
             return "()"
         }
         val params =
-            list.joinToString(", ") { toKotlinSaveName(it) + ": " + mapType(it.type) + getDefaultValue(isParentMember) }
+            list.joinToString(", ") { paramDeclaration ->
+                toKotlinSaveName(paramDeclaration) + ": " + paramDeclaration.toKotlinType(classDeclaration) + getDefaultValue(
+                    isParentMember
+                )
+            }
         return "($params)"
     }
 
     private fun TypedDeclaration.toKotlinType(classDeclaration: ClassDeclaration): String {
-        return if (this.type != "this") {
+        val name = if (this.type != "this") {
             mapType(this.type)
         } else {
             classDeclaration.name
         }
+
+        return name + if (acceptNullValue) "?" else ""
     }
 
     private fun mapType(type: String): String {
-        val mappedType = typeMap.getOrDefault(type, type).let {
-            if (it == DYNAMIC || it == DYNAMIC_ARRAY) {
-                "$it/*$type*/"
-            } else {
-                it
-            }
-        }
+        //FIXME: For this feature to work again, we would have to keep the original type from the doc
+//        val mappedType = if (type == DocCorrections.DYNAMIC || type == DocCorrections.DYNAMIC_ARRAY) {
+//            "$type/*$type*/"
+//        } else {
+//            type
+//        }
 
         //toFullReference does return the initial input, if no entry if found
-        return classList.toFullReference(mappedType)
+        return classList.toFullReference(type)
     }
 
     private fun toKotlinSaveName(token: MemberDeclaration): String {
@@ -198,75 +208,12 @@ class KotlinFileGenerator(
     }
 
     private fun toKotlinSaveName(name: String): String {
-        return if (notSaveNames.contains(name)) "`$name`" else name
+        return if (unsafeKotlinNames.contains(name)) "`$name`" else name
     }
 
     companion object {
-        const val DYNAMIC = "dynamic"
-        const val DYNAMIC_ARRAY = "Array<dynamic>"
-        const val FLOAT_TYPE = "Double"
+        val unsafeKotlinNames = hashSetOf("object", "this")
 
-        val notSaveNames = hashSetOf("object", "this")
-
-        val typeMap = mapOf(
-            "object" to DYNAMIC,
-            "Object" to DYNAMIC,
-            "Constant" to "Int",
-            "Float32Array" to "org.khronos.webgl.Float32Array",
-            "Float64Array" to "org.khronos.webgl.Float64Array",
-            "Int8Array" to "org.khronos.webgl.Int8Array",
-            "Int16Array" to "org.khronos.webgl.Int16Array",
-            "Int32Array" to "org.khronos.webgl.Int32Array",
-            "Uint8Array" to "org.khronos.webgl.Uint8Array",
-            "Uint16Array" to "org.khronos.webgl.Uint16Array",
-            "Uint32Array" to "org.khronos.webgl.Uint32Array",
-            "Uint8ClampedArray" to "org.khronos.webgl.Uint8ClampedArray",
-            "Array" to DYNAMIC_ARRAY,
-            "array" to DYNAMIC_ARRAY,
-            "TypedArray" to DYNAMIC_ARRAY,
-            "GainNode" to DYNAMIC, //FIXME: Add to Kotlin-js-stdlib
-            "AudioNode" to DYNAMIC, //FIXME: Add to Kotlin-js-stdlib
-            "AnalyserNode" to DYNAMIC, //FIXME: Add to Kotlin-js-stdlib
-            "AudioContext" to DYNAMIC, //FIXME: Add to Kotlin-js-stdlib
-            "PannerNode" to DYNAMIC, //FIXME: Add to Kotlin-js-stdlib
-            "BiquadFilterNode" to DYNAMIC, //FIXME: Add to Kotlin-js-stdlib
-            "UUID" to DYNAMIC, //FIXME: Add to Kotlin-js-stdlib
-            "Integer" to "Int",
-            "integer" to "Int",
-            "float" to FLOAT_TYPE,
-            "Float" to FLOAT_TYPE,
-            "number" to FLOAT_TYPE,
-            "Number" to FLOAT_TYPE,
-            "Radians" to FLOAT_TYPE,
-            "Hex" to "Int",
-            "hex" to "Int",
-            "Vector" to DYNAMIC, //FIXME Most likely vector2
-            "Image" to DYNAMIC,
-            "Color_Hex_or_String" to DYNAMIC,
-            "boolean" to "Boolean",
-            "Video" to "dynamic",
-            "WebGLShadowMap" to DYNAMIC,
-            "WebGLRenderLists" to DYNAMIC,
-            "WebGLRenderingContext" to "org.khronos.webgl.WebGLRenderingContext",
-            "WebGLProgram" to DYNAMIC,
-            "RenderTarget" to DYNAMIC,
-            "WebGLContextAttributes" to "org.khronos.webgl.WebGLContextAttributes",
-            "DOMElement" to "org.w3c.dom.Element",
-            "HTMLElement" to "org.w3c.dom.HTMLElement",
-            "Function" to DYNAMIC,
-            "function" to DYNAMIC,
-            "null" to DYNAMIC,
-            "string" to "String",
-            "Blending" to "Int",
-            "shaderprogram" to DYNAMIC,  //FIXME Could this be WebGlProgram?
-            "void" to "Unit",  //FIXME Could this be WebGlProgram?
-            "Constructor" to DYNAMIC,
-            //Typos
-            "material" to "Material",
-            "AudioConetxt" to DYNAMIC,
-            "Quaterion" to "Quaternion",
-            "TextureCube" to "CubeTexture"
-        )
     }
 }
 

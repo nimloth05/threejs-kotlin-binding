@@ -1,4 +1,4 @@
-//Generated date 12.01.2019
+//Generated date 07.02.2019
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.objects
 
@@ -34,19 +34,19 @@ open external class Mesh(geometry: ch.viseon.threejs.declarations.core.Geometry 
 	/**
 	* An array of weights typically from 0-1 that specify how much of the morph is applied. Undefined by default, but reset to a blank array by [page:Mesh.updateMorphTargets updateMorphTargets].
 	*/
-	open var morphTargetInfluences: Array<dynamic>/*Array*/  = definedExternally
+	open var morphTargetInfluences: Array<dynamic>  = definedExternally
 
 
 	/**
 	* A dictionary of morphTargets based on the morphTarget.name property. Undefined by default, but rebuilt [page:Mesh.updateMorphTargets updateMorphTargets].
 	*/
-	open var morphTargetDictionary: dynamic/*Object*/  = definedExternally
+	open var morphTargetDictionary: dynamic  = definedExternally
 
 
 	/**
 	* Set the value of [page:.drawMode drawMode].
 	*/
-	open fun setDrawMode(value: Int = definedExternally) : dynamic/*null*/
+	open fun setDrawMode(value: Int = definedExternally) : dynamic
 
 
 	/**
@@ -58,11 +58,11 @@ open external class Mesh(geometry: ch.viseon.threejs.declarations.core.Geometry 
 	/**
 	* Get intersections between a casted ray and this mesh. [page:Raycaster.intersectObject] will call this method.
 	*/
-	override fun raycast(raycaster: ch.viseon.threejs.declarations.core.Raycaster, intersects: Array<dynamic>/*Array*/) : dynamic/*null*/
+	override fun raycast(raycaster: ch.viseon.threejs.declarations.core.Raycaster, intersects: Array<dynamic>) : dynamic
 
 
 	/**
 	* Updates the morphTargets to have no influence on the object. Resets the [page:Mesh.morphTargetInfluences morphTargetInfluences] and [page:Mesh.morphTargetDictionary morphTargetDictionary] properties.
 	*/
-	open fun updateMorphTargets() : dynamic/*null*/
+	open fun updateMorphTargets() : dynamic
 }

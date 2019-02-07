@@ -1,11 +1,11 @@
-//Generated date 12.01.2019
+//Generated date 07.02.2019
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.textures
 
 	/**
 	* Create a texture to apply to a surface or as a reflection or refraction map.
 	*/
-open external class Texture(){
+open external class Texture(image: dynamic = definedExternally, mapping: Int = definedExternally, wrapS: Int = definedExternally, wrapT: Int = definedExternally, magFilter: Int = definedExternally, minFilter: Int = definedExternally, format: Int = definedExternally, anisotropy: Double = definedExternally, encoding: Int = definedExternally){
 
 	/**
 	* Readonly - unique number for this texture instance.
@@ -28,43 +28,43 @@ open external class Texture(){
 	/**
 	* An image object, typically created using the [page:TextureLoader.load] method. This can be any image (e.g., PNG, JPG, GIF, DDS) or video (e.g., MP4, OGG/OGV) type supported by three.js. To use video as a texture you need to have a playing HTML5 video element as a source for your texture image and continuously update this texture as long as video is playing - the [page:VideoTexture VideoTexture] class handles this automatically.
 	*/
-	open var image: dynamic/*Image*/  = definedExternally
+	open var image: dynamic  = definedExternally
 
 
 	/**
 	* Array of user-specified mipmaps (optional).
 	*/
-	open var mipmaps: Array<dynamic>/*array*/  = definedExternally
+	open var mipmaps: Array<dynamic>  = definedExternally
 
 
 	/**
 	* How the image is applied to the object. An object type of [page:Textures THREE.UVMapping] is the default, where the U,V coordinates are used to apply the map. See the [page:Textures texture constants] page for other mapping types.
 	*/
-	open var mapping: Double  = definedExternally
+	open var mapping: Int  = definedExternally
 
 
 	/**
 	* This defines how the texture is wrapped horizontally and corresponds to **U** in UV mapping. The default is [page:Textures THREE.ClampToEdgeWrapping], where the edge is clamped to the outer edge texels. The other two choices are [page:Textures THREE.RepeatWrapping] and [page:Textures THREE.MirroredRepeatWrapping]. See the [page:Textures texture constants] page for details.
 	*/
-	open var wrapS: Double  = definedExternally
+	open var wrapS: Int  = definedExternally
 
 
 	/**
 	* This defines how the texture is wrapped vertically and corresponds to **V** in UV mapping. The same choices are available as for [property:number wrapS]. NOTE: tiling of images in textures only functions if image dimensions are powers of two (2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048, ...) in terms of pixels. Individual dimensions need not be equal, but each must be a power of two. This is a limitation of WebGL, not three.js.
 	*/
-	open var wrapT: Double  = definedExternally
+	open var wrapT: Int  = definedExternally
 
 
 	/**
 	* How the texture is sampled when a texel covers more than one pixel. The default is [page:Textures THREE.LinearFilter], which takes the four closest texels and bilinearly interpolates among them. The other option is [page:Textures THREE.NearestFilter], which uses the value of the closest texel. See the [page:Textures texture constants] page for details.
 	*/
-	open var magFilter: Double  = definedExternally
+	open var magFilter: Int  = definedExternally
 
 
 	/**
 	* How the texture is sampled when a texel covers less than one pixel. The default is [page:Textures THREE.LinearMipMapLinearFilter], which uses mipmapping and a trilinear filter. See the [page:Textures texture constants] page for all possible choices.
 	*/
-	open var minFilter: Double  = definedExternally
+	open var minFilter: Int  = definedExternally
 
 
 	/**
@@ -76,7 +76,7 @@ open external class Texture(){
 	/**
 	* The default is [page:Textures THREE.RGBAFormat], although the [page:TextureLoader TextureLoader] will automatically set this to [page:Textures THREE.RGBFormat] for JPG images. See the [page:Textures texture constants] page for details of other formats.
 	*/
-	open var format: Double  = definedExternally
+	open var format: Int  = definedExternally
 
 
 	/**
@@ -148,7 +148,7 @@ open external class Texture(){
 	/**
 	* [page:Textures THREE.LinearEncoding] is the default. See the [page:Textures texture constants] page for details of other formats. Note that if this value is changed on a texture after the material has been used, it is necessary to trigger a Material.needsUpdate for this value to be realized in the shader.
 	*/
-	open var encoding: Double  = definedExternally
+	open var encoding: Int  = definedExternally
 
 
 	/**
@@ -160,7 +160,7 @@ open external class Texture(){
 	/**
 	* A callback function, called when the texture is updated (e.g., when needsUpdate has been set to true and then the texture is used).
 	*/
-	open var onUpdate: dynamic/*Function*/  = definedExternally
+	open var onUpdate: dynamic  = definedExternally
 
 
 	/**
@@ -172,7 +172,7 @@ open external class Texture(){
 	/**
 	* Update the texture's uv-transform [page:Texture.matrix .matrix] from the texture properties [page:Texture.offset .offset], [page:Texture.repeat .repeat], [page:Texture.rotation .rotation], and [page:Texture.center .center].
 	*/
-	open fun updateMatrix() : dynamic/*null*/
+	open fun updateMatrix() : dynamic
 
 
 	/**
@@ -184,13 +184,13 @@ open external class Texture(){
 	/**
 	* meta -- optional object containing metadata. Convert the material to three.js JSON format.
 	*/
-	open fun toJSON(meta: dynamic/*Object*/ = definedExternally) : ch.viseon.threejs.declarations.textures.Texture
+	open fun toJSON(meta: dynamic = definedExternally) : ch.viseon.threejs.declarations.textures.Texture
 
 
 	/**
 	* Call [page:EventDispatcher EventDispatcher].dispatchEvent with a 'dispose' event type.
 	*/
-	open fun dispose() : dynamic/*null*/
+	open fun dispose() : dynamic
 
 
 	/**

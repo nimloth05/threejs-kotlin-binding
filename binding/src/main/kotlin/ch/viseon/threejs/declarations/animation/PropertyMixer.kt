@@ -1,4 +1,4 @@
-//Generated date 12.01.2019
+//Generated date 07.02.2019
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.animation
 
@@ -16,7 +16,7 @@ open external class PropertyMixer(binding: ch.viseon.threejs.declarations.animat
 	/**
 	* Buffer with size [page:PropertyMixer valueSize] ** 4. This has the layout: [ incoming | accu0 | accu1 | orig ] Interpolators can use .buffer as their .result and the data then goes to 'incoming'. 'accu0' and 'accu1' are used frame-interleaved for the cumulative result and are compared to detect changes. 'orig' stores the original state of the property.
 	*/
-	open var buffer: Array<dynamic>/*TypedArray*/  = definedExternally
+	open var buffer: Array<dynamic>  = definedExternally
 
 
 	/**
@@ -46,23 +46,23 @@ open external class PropertyMixer(binding: ch.viseon.threejs.declarations.animat
 	/**
 	* Accumulate data in [page:PropertyMixer.buffer buffer][accuIndex] 'incoming' region into 'accu[i]'. If weight is **0** this does nothing.
 	*/
-	open fun accumulate(accuIndex: Double = definedExternally, weight: Double = definedExternally) : dynamic/*null*/
+	open fun accumulate(accuIndex: Double = definedExternally, weight: Double = definedExternally) : dynamic
 
 
 	/**
 	* Apply the state of [page:PropertyMixer.buffer buffer] 'accu[i]' to the binding when accus differ.
 	*/
-	open fun apply(accuIndex: Double = definedExternally) : dynamic/*null*/
+	open fun apply(accuIndex: Double = definedExternally) : dynamic
 
 
 	/**
 	* Remember the state of the bound property and copy it to both accus.
 	*/
-	open fun saveOriginalState() : dynamic/*null*/
+	open fun saveOriginalState() : dynamic
 
 
 	/**
 	* Apply the state previously taken via 'saveOriginalState' to the binding.
 	*/
-	open fun restoreOriginalState() : dynamic/*null*/
+	open fun restoreOriginalState() : dynamic
 }

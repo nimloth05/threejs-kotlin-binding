@@ -1,4 +1,4 @@
-//Generated date 12.01.2019
+//Generated date 07.02.2019
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.materials
 
@@ -64,7 +64,7 @@ open external class Material(){
 	/**
 	* User-defined clipping planes specified as THREE.Plane objects in world space. These planes apply to the objects this material is attached to. Points in space whose signed distance to the plane is negative are clipped (not rendered). This requires [page:WebGLRenderer.localClippingEnabled] to be **true**. See the [example:webgl_clipping_intersection WebGL / clipping /intersection] example. Default is **null**.
 	*/
-	open var clippingPlanes: Array<dynamic>/*Array*/  = definedExternally
+	open var clippingPlanes: Array<dynamic>  = definedExternally
 
 
 	/**
@@ -82,7 +82,7 @@ open external class Material(){
 	/**
 	* Custom defines to be injected into the shader. These are passed in form of an object literal, with key/value pairs. { MY_CUSTOM_DEFINE: '' , PI2: Math.PI ** 2 }. The pairs are defined in both vertex and fragment shaders. Default is **undefined**.
 	*/
-	open var defines: dynamic/*Object*/  = definedExternally
+	open var defines: dynamic  = definedExternally
 
 
 	/**
@@ -232,7 +232,7 @@ open external class Material(){
 	/**
 	* An object that can be used to store custom data about the Material. It should not hold references to functions as these will not be cloned.
 	*/
-	open var userData: dynamic/*object*/  = definedExternally
+	open var userData: dynamic  = definedExternally
 
 
 	/**
@@ -250,23 +250,23 @@ open external class Material(){
 	/**
 	* This disposes the material. Textures of a material don't get disposed. These needs to be disposed by [page:Texture Texture].
 	*/
-	open fun dispose() : dynamic/*null*/
+	open fun dispose() : dynamic
 
 
 	/**
 	* An optional callback that is executed immediately before the shader program is compiled. This function is called with the shader source code as a parameter. Useful for the modification of built-in materials.
 	*/
-	open fun onBeforeCompile(shader: dynamic/*Object*/ = definedExternally, renderer: ch.viseon.threejs.declarations.renderers.WebGLRenderer = definedExternally) : dynamic/*null*/
+	open fun onBeforeCompile(shader: dynamic = definedExternally, renderer: ch.viseon.threejs.declarations.renderers.WebGLRenderer = definedExternally) : dynamic
 
 
 	/**
 	* values -- a container with parameters. Sets the properties based on the **values**.
 	*/
-	open fun setValues(values: dynamic/*object*/ = definedExternally) : dynamic/*null*/
+	open fun setValues(values: dynamic = definedExternally) : dynamic
 
 
 	/**
 	* meta -- object containing metadata such as textures or images for the material. Convert the material to three.js JSON format.
 	*/
-	open fun toJSON(meta: dynamic/*object*/ = definedExternally) : dynamic/*null*/
+	open fun toJSON(meta: dynamic = definedExternally) : dynamic
 }

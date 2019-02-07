@@ -1,4 +1,4 @@
-//Generated date 12.01.2019
+//Generated date 07.02.2019
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.extras.objects
 
@@ -11,5 +11,5 @@ open external class ImmediateRenderObject(): ch.viseon.threejs.declarations.core
 	* renderCallback -- A function to render the generated object.
 This function needs to be overridden to start the creation of the object and should call renderCallback when finished.
 	*/
-	open fun render(renderCallback: dynamic/*Function*/ = definedExternally) : dynamic/*null*/
+	open fun render(renderCallback: dynamic = definedExternally) : dynamic
 }

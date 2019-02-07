@@ -1,4 +1,4 @@
-//Generated date 12.01.2019
+//Generated date 07.02.2019
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.math
 
@@ -70,7 +70,7 @@ open external class Quaternion(x: Double = definedExternally, y: Double = define
 	/**
 	* [page:Array array] - array of format (x, y, z, w) used to construct the quaternion. [page:Integer offset] - (optional) an offset into the array. Sets this quaternion's [page:.x x], [page:.y y], [page:.z z] and [page:.w w] properties from an array.
 	*/
-	open fun fromArray(array: Array<dynamic>/*Array*/ = definedExternally, offset: Int = definedExternally) : ch.viseon.threejs.declarations.math.Quaternion
+	open fun fromArray(array: Array<dynamic> = definedExternally, offset: Int = definedExternally) : ch.viseon.threejs.declarations.math.Quaternion
 
 
 	/**
@@ -112,7 +112,7 @@ open external class Quaternion(x: Double = definedExternally, y: Double = define
 	/**
 	* Sets the [page:.onChangeCallback onChangeCallback]() method.
 	*/
-	open fun onChange(onChangeCallback: dynamic/*Function*/ = definedExternally) : ch.viseon.threejs.declarations.math.Quaternion
+	open fun onChange(onChangeCallback: dynamic = definedExternally) : ch.viseon.threejs.declarations.math.Quaternion
 
 
 	/**
@@ -172,7 +172,7 @@ open external class Quaternion(x: Double = definedExternally, y: Double = define
 	/**
 	* [page:Array array] - An optional array to store the quaternion. If not specified, a new array will be created. [page:Integer offset] - (optional) if specified, the result will be copied into this [page:Array]. Returns the numerical elements of this quaternion in an array of format [x, y, z, w].
 	*/
-	open fun toArray(array: Array<dynamic>/*Array*/ = definedExternally, offset: Int = definedExternally) : Array<dynamic>/*Array*/
+	open fun toArray(array: Array<dynamic> = definedExternally, offset: Int = definedExternally) : Array<dynamic>
 	companion object {
 
 	/**
@@ -185,7 +185,7 @@ open external class Quaternion(x: Double = definedExternally, y: Double = define
 	* [page:Array dst] - The output array. [page:Integer dstOffset] - An offset into the output array. [page:Array src0] - The source array of the starting quaternion. [page:Integer srcOffset0] - An offset into the array **src0**. [page:Array src1] - The source array of the target quatnerion. [page:Integer srcOffset1] - An offset into the array **src1**. [page:float t] - Normalized interpolation factor (between 0 and 1).
 Like the static **slerp** method above, but operates directly on flat arrays of numbers.
 	*/
-	open fun slerpFlat(dst: Array<dynamic>/*Array*/ = definedExternally, dstOffset: Int = definedExternally, src0: Array<dynamic>/*Array*/ = definedExternally, srcOffset0: Int = definedExternally, src1: Array<dynamic>/*Array*/ = definedExternally, srcOffset1: Int = definedExternally, t: Double = definedExternally) : dynamic/*null*/
+	open fun slerpFlat(dst: Array<dynamic> = definedExternally, dstOffset: Int = definedExternally, src0: Array<dynamic> = definedExternally, srcOffset0: Int = definedExternally, src1: Array<dynamic> = definedExternally, srcOffset1: Int = definedExternally, t: Double = definedExternally) : dynamic
 	
 }
 }

@@ -1,4 +1,4 @@
-//Generated date 12.01.2019
+//Generated date 07.02.2019
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.cameras
 
@@ -34,5 +34,5 @@ open external class StereoCamera(){
 	/**
 	* Update the stereo cameras based on the camera passed in.
 	*/
-	open fun update(camera: ch.viseon.threejs.declarations.cameras.PerspectiveCamera = definedExternally) : dynamic/*null*/
+	open fun update(camera: ch.viseon.threejs.declarations.cameras.PerspectiveCamera = definedExternally) : dynamic
 }

@@ -1,4 +1,4 @@
-//Generated date 12.01.2019
+//Generated date 07.02.2019
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.objects
 
@@ -32,7 +32,7 @@ open external class SkinnedMesh(geometry: ch.viseon.threejs.declarations.core.Bu
 
 
 	/**
-	* [page:Skeleton] representing the bone hierachy of the skinned mesh.
+	* [page:Skeleton] representing the bone hierarchy of the skinned mesh.
 	*/
 	open var skeleton: ch.viseon.threejs.declarations.objects.Skeleton  = definedExternally
 
@@ -40,7 +40,7 @@ open external class SkinnedMesh(geometry: ch.viseon.threejs.declarations.core.Bu
 	/**
 	* [page:Skeleton skeleton] - [page:Skeleton] created from a [page:Bone Bones] tree. [page:Matrix4 bindMatrix] - [page:Matrix4] that represents the base transform of the skeleton. Bind a skeleton to the skinned mesh. The bindMatrix gets saved to .bindMatrix property and the .bindMatrixInverse gets calculated.
 	*/
-	open fun bind(skeleton: ch.viseon.threejs.declarations.objects.Skeleton = definedExternally, bindMatrix: ch.viseon.threejs.declarations.math.Matrix4 = definedExternally) : dynamic/*null*/
+	open fun bind(skeleton: ch.viseon.threejs.declarations.objects.Skeleton = definedExternally, bindMatrix: ch.viseon.threejs.declarations.math.Matrix4 = definedExternally) : dynamic
 
 
 	/**
@@ -52,17 +52,17 @@ open external class SkinnedMesh(geometry: ch.viseon.threejs.declarations.core.Bu
 	/**
 	* Normalizes the skin weights.
 	*/
-	open fun normalizeSkinWeights() : dynamic/*null*/
+	open fun normalizeSkinWeights() : dynamic
 
 
 	/**
 	* This method sets the skinned mesh in the rest pose (resets the pose).
 	*/
-	open fun pose() : dynamic/*null*/
+	open fun pose() : dynamic
 
 
 	/**
 	* Updates the [page:Matrix4 MatrixWorld].
 	*/
-	override fun updateMatrixWorld(force: Boolean) : dynamic/*null*/
+	override fun updateMatrixWorld(force: Boolean) : dynamic
 }

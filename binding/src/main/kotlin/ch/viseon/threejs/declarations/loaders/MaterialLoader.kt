@@ -1,4 +1,4 @@
-//Generated date 12.01.2019
+//Generated date 07.02.2019
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.loaders
 
@@ -16,19 +16,19 @@ open external class MaterialLoader(manager: ch.viseon.threejs.declarations.loade
 	/**
 	* Object holding any textures used by the material. See [page:.setTextures].
 	*/
-	open var textures: dynamic/*Object*/  = definedExternally
+	open var textures: dynamic  = definedExternally
 
 
 	/**
-	* [page:String url] — the path or URL to the file. This can also be a [link:https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs Data URI]. [page:Function onLoad] — Will be called when load completes. The argument will be the loaded [page:Material]. [page:Function onProgress] — Will be called while load progresses. The argument will be the progress event. [page:Function onError] — Will be called when load errors. Begin loading from url and return the [page:Material] object that will contain the data.
+	* [page:String url] — the path or URL to the file. This can also be a [link:https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs Data URI]. [page:Function onLoad] — Will be called when load completes. The argument will be the loaded [page:Material]. [page:Function onProgress] — Will be called while load progresses. The argument will be the progress event. [page:Function onError] — Will be called when load errors. Begin loading from url.
 	*/
-	open fun load(url: String = definedExternally, onLoad: dynamic/*Function*/ = definedExternally, onProgress: dynamic/*Function*/ = definedExternally, onError: dynamic/*Function*/ = definedExternally) : dynamic/*null*/
+	open fun load(url: String = definedExternally, onLoad: dynamic = definedExternally, onProgress: dynamic = definedExternally, onError: dynamic = definedExternally) : dynamic
 
 
 	/**
 	* [page:Object json] — The json object containing the parameters of the Material. Parse a JSON structure and create a new [page:Material] of the type [page:String json.type] with parameters defined in the json object.
 	*/
-	open fun parse(json: dynamic/*Object*/ = definedExternally) : ch.viseon.threejs.declarations.materials.Material
+	open fun parse(json: dynamic = definedExternally) : ch.viseon.threejs.declarations.materials.Material
 
 
 	/**
@@ -40,5 +40,5 @@ open external class MaterialLoader(manager: ch.viseon.threejs.declarations.loade
 	/**
 	* [page:Object textures] — object containing any textures used by the material.
 	*/
-	open fun setTextures(textures: dynamic/*Object*/ = definedExternally) : ch.viseon.threejs.declarations.loaders.MaterialLoader
+	open fun setTextures(textures: dynamic = definedExternally) : ch.viseon.threejs.declarations.loaders.MaterialLoader
 }

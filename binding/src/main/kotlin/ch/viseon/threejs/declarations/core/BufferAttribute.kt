@@ -1,16 +1,16 @@
-//Generated date 12.01.2019
+//Generated date 07.02.2019
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.core
 
 	/**
 	* This class stores data for an attribute (such as vertex positions, face indices, normals, colors, UVs, and any custom attributes ) associated with a [page:BufferGeometry], which allows for more efficient passing of data to the GPU. See that page for details and a usage example. Data is stored as vectors of any length (defined by [page:BufferAttribute.itemSize itemSize]), and in general in the methods outlined below if passing in an index, this is automatically multiplied by the vector length.
 	*/
-open external class BufferAttribute(array: Array<dynamic>/*TypedArray*/ = definedExternally, itemSize: Int = definedExternally, normalized: Boolean = definedExternally){
+open external class BufferAttribute(array: Array<dynamic> = definedExternally, itemSize: Int = definedExternally, normalized: Boolean = definedExternally){
 
 	/**
 	* The [page:TypedArray array] holding data stored in the buffer.
 	*/
-	open var array: Array<dynamic>/*TypedArray*/  = definedExternally
+	open var array: Array<dynamic>  = definedExternally
 
 
 	/**
@@ -58,13 +58,13 @@ open external class BufferAttribute(array: Array<dynamic>/*TypedArray*/ = define
 	/**
 	* A callback function that is executed after the Renderer has transferred the attribute array data to the GPU.
 	*/
-	open var onUploadCallback: dynamic/*Function*/  = definedExternally
+	open var onUploadCallback: dynamic  = definedExternally
 
 
 	/**
 	* Object containing: [page:Integer offset]: Default is **0**. Position at which to start update. [page:Integer count]: Default is **-1**, which means don't use update ranges. This can be used to only update some components of stored vectors (for example, just the component related to color).
 	*/
-	open var updateRange: dynamic/*Object*/  = definedExternally
+	open var updateRange: dynamic  = definedExternally
 
 
 	/**
@@ -94,31 +94,31 @@ open external class BufferAttribute(array: Array<dynamic>/*TypedArray*/ = define
 	/**
 	* Copy a vector from bufferAttribute[index2] to [page:BufferAttribute.array array][index1].
 	*/
-	open fun copyAt(index1: Int = definedExternally, bufferAttribute: ch.viseon.threejs.declarations.core.BufferAttribute = definedExternally, index2: Int = definedExternally) : dynamic/*null*/
+	open fun copyAt(index1: Int = definedExternally, bufferAttribute: ch.viseon.threejs.declarations.core.BufferAttribute = definedExternally, index2: Int = definedExternally) : dynamic
 
 
 	/**
 	* Copy an array representing RGB color values into [page:BufferAttribute.array array].
 	*/
-	open fun copyColorsArray(colors: Array<dynamic>/*Array*/ = definedExternally) : ch.viseon.threejs.declarations.core.BufferAttribute
+	open fun copyColorsArray(colors: Array<dynamic> = definedExternally) : ch.viseon.threejs.declarations.core.BufferAttribute
 
 
 	/**
 	* Copy an array representing [page:Vector2]s into [page:BufferAttribute.array array].
 	*/
-	open fun copyVector2sArray(vectors: Array<dynamic>/*Array*/ = definedExternally) : ch.viseon.threejs.declarations.core.BufferAttribute
+	open fun copyVector2sArray(vectors: Array<dynamic> = definedExternally) : ch.viseon.threejs.declarations.core.BufferAttribute
 
 
 	/**
 	* Copy an array representing [page:Vector3]s into [page:BufferAttribute.array array].
 	*/
-	open fun copyVector3sArray(vectors: Array<dynamic>/*Array*/ = definedExternally) : ch.viseon.threejs.declarations.core.BufferAttribute
+	open fun copyVector3sArray(vectors: Array<dynamic> = definedExternally) : ch.viseon.threejs.declarations.core.BufferAttribute
 
 
 	/**
 	* Copy an array representing [page:Vector4]s into [page:BufferAttribute.array array].
 	*/
-	open fun copyVector4sArray(vectors: Array<dynamic>/*Array*/ = definedExternally) : ch.viseon.threejs.declarations.core.BufferAttribute
+	open fun copyVector4sArray(vectors: Array<dynamic> = definedExternally) : ch.viseon.threejs.declarations.core.BufferAttribute
 
 
 	/**
@@ -148,19 +148,19 @@ open external class BufferAttribute(array: Array<dynamic>/*TypedArray*/ = define
 	/**
 	* Sets the value of the onUploadCallback property. In the [example:webgl_buffergeometry WebGL / Buffergeometry] this is used to free memory after the buffer has been transferred to the GPU.
 	*/
-	open fun onUpload(callback: dynamic/*Function*/ = definedExternally) : dynamic/*null*/
+	open fun onUpload(callback: dynamic = definedExternally) : dynamic
 
 
 	/**
 	* value -- an [page:Array] or [page:TypedArray] from which to copy values. offset -- (optional) index of the [page:BufferAttribute.array array] at which to start copying. Calls [link:https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/set TypedArray.set]( [page:Array value], [page:Integer offset] ) on the [page:BufferAttribute.array array]. In particular, see that page for requirements on [page:Array value] being a [page:TypedArray].
 	*/
-	open fun set(value: Array<dynamic>/*Array*/ = definedExternally, offset: Int = definedExternally) : ch.viseon.threejs.declarations.core.BufferAttribute
+	open fun set(value: Array<dynamic> = definedExternally, offset: Int = definedExternally) : ch.viseon.threejs.declarations.core.BufferAttribute
 
 
 	/**
 	* [page:BufferAttribute.array array] to the TypedArray passed in here. After setting the array, [page:BufferAttribute.needsUpdate needsUpdate] should be set to true.
 	*/
-	open fun setArray(array: Array<dynamic>/*TypedArray*/ = definedExternally) : ch.viseon.threejs.declarations.core.BufferAttribute
+	open fun setArray(array: Array<dynamic> = definedExternally) : ch.viseon.threejs.declarations.core.BufferAttribute
 
 
 	/**

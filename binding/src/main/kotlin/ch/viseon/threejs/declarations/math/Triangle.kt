@@ -1,4 +1,4 @@
-//Generated date 12.01.2019
+//Generated date 07.02.2019
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.math
 
@@ -100,5 +100,5 @@ open external class Triangle(a: ch.viseon.threejs.declarations.math.Vector3 = de
 	/**
 	* points - [page:Array] of [page:Vector3]s i0 - [page:Integer] index i1 - [page:Integer] index i2 - [page:Integer] index Sets the triangle's vectors to the vectors in the array.
 	*/
-	open fun setFromPointsAndIndices(points: Array<dynamic>/*Array*/ = definedExternally, i0: Int = definedExternally, i1: Int = definedExternally, i2: Int = definedExternally, `this`: ch.viseon.threejs.declarations.math.Triangle = definedExternally) : ch.viseon.threejs.declarations.math.Triangle
+	open fun setFromPointsAndIndices(points: Array<dynamic> = definedExternally, i0: Int = definedExternally, i1: Int = definedExternally, i2: Int = definedExternally, `this`: ch.viseon.threejs.declarations.math.Triangle = definedExternally) : ch.viseon.threejs.declarations.math.Triangle
 }

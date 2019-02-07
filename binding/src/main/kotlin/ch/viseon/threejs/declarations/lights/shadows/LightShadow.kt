@@ -1,4 +1,4 @@
-//Generated date 12.01.2019
+//Generated date 07.02.2019
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.lights.shadows
 
@@ -58,5 +58,5 @@ open external class LightShadow(camera: ch.viseon.threejs.declarations.cameras.C
 	/**
 	* Serialize this LightShadow.
 	*/
-	open fun toJSON() : dynamic/*Object*/
+	open fun toJSON() : dynamic
 }

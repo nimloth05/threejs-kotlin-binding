@@ -1,4 +1,4 @@
-//Generated date 12.01.2019
+//Generated date 07.02.2019
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.math
 
@@ -22,7 +22,7 @@ open external class Matrix4(){
 	/**
 	* [page:BufferAttribute attribute] - An attribute of floats that represent 3D vectors. Multiplies (applies) this matrix to every 3D vector in the [page:BufferAttribute attribute].
 	*/
-	open fun applyToBufferAttribute(attribute: ch.viseon.threejs.declarations.core.BufferAttribute = definedExternally) : Array<dynamic>/*Array*/
+	open fun applyToBufferAttribute(attribute: ch.viseon.threejs.declarations.core.BufferAttribute = definedExternally) : Array<dynamic>
 
 
 	/**
@@ -52,7 +52,7 @@ open external class Matrix4(){
 	/**
 	* Decomposes this matrix into it's [page:Vector3 position], [page:Quaternion quaternion] and [page:Vector3 scale] components.
 	*/
-	open fun decompose(position: ch.viseon.threejs.declarations.math.Vector3 = definedExternally, quaternion: ch.viseon.threejs.declarations.math.Quaternion = definedExternally, scale: ch.viseon.threejs.declarations.math.Vector3 = definedExternally) : dynamic/*null*/
+	open fun decompose(position: ch.viseon.threejs.declarations.math.Vector3 = definedExternally, quaternion: ch.viseon.threejs.declarations.math.Quaternion = definedExternally, scale: ch.viseon.threejs.declarations.math.Vector3 = definedExternally) : dynamic
 
 
 	/**
@@ -82,7 +82,7 @@ open external class Matrix4(){
 	/**
 	* [page:Array array] - the array to read the elements from. [page:Integer offset] - ( optional ) offset into the array. Default is 0. Sets the elements of this matrix based on an [page:Array array] in [link:https://en.wikipedia.org/wiki/Row-_and_column-major_order#Column-major_order column-major] format.
 	*/
-	open fun fromArray(array: Array<dynamic>/*Array*/ = definedExternally, offset: Int = definedExternally) : Matrix4
+	open fun fromArray(array: Array<dynamic> = definedExternally, offset: Int = definedExternally) : Matrix4
 
 
 	/**
@@ -226,7 +226,7 @@ open external class Matrix4(){
 	/**
 	* [page:Array array] - (optional) array to store the resulting vector in. [page:Integer offset] - (optional) offset in the array at which to put the result. Writes the elements of this matrix to an array in [link:https://en.wikipedia.org/wiki/Row-_and_column-major_order#Column-major_order column-major] format.
 	*/
-	open fun toArray(array: Array<dynamic>/*Array*/ = definedExternally, offset: Int = definedExternally) : Array<dynamic>/*Array*/
+	open fun toArray(array: Array<dynamic> = definedExternally, offset: Int = definedExternally) : Array<dynamic>
 
 
 	/**

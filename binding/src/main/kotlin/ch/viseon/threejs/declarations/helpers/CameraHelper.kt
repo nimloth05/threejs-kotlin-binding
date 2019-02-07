@@ -1,4 +1,4 @@
-//Generated date 12.01.2019
+//Generated date 07.02.2019
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.helpers
 
@@ -16,7 +16,7 @@ open external class CameraHelper(camera: ch.viseon.threejs.declarations.cameras.
 	/**
 	* This contains the points used to visualize the camera.
 	*/
-	open var pointMap: dynamic/*object*/  = definedExternally
+	open var pointMap: dynamic  = definedExternally
 
 
 	/**
@@ -34,5 +34,5 @@ open external class CameraHelper(camera: ch.viseon.threejs.declarations.cameras.
 	/**
 	* Updates the helper based on the projectionMatrix of the camera.
 	*/
-	open fun update() : dynamic/*null*/
+	open fun update() : dynamic
 }

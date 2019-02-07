@@ -1,4 +1,4 @@
-//Generated date 12.01.2019
+//Generated date 07.02.2019
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.loaders
 
@@ -28,7 +28,7 @@ open external class FileLoader(manager: ch.viseon.threejs.declarations.loaders.m
 	/**
 	* The [link:https://developer.mozilla.org/en-US/docs/Glossary/Request_header request header] used in HTTP request. See [page:.setRequestHeader]. Default is **undefined**.
 	*/
-	open var requestHeader: dynamic/*object*/  = definedExternally
+	open var requestHeader: dynamic  = definedExternally
 
 
 	/**
@@ -46,7 +46,7 @@ open external class FileLoader(manager: ch.viseon.threejs.declarations.loaders.m
 	/**
 	* [page:String url] — the path or URL to the file. This can also be a [link:https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs Data URI]. [page:Function onLoad] (optional) — Will be called when loading completes. The argument will be the loaded response. [page:Function onProgress] (optional) — Will be called while load progresses. The argument will be the XMLHttpRequest instance, which contains .[page:Integer total] and .[page:Integer loaded] bytes. [page:Function onError] (optional) — Will be called if an error occurs. Load the URL and pass the response to the onLoad function.
 	*/
-	open fun load(url: String = definedExternally, onLoad: dynamic/*Function*/ = definedExternally, onProgress: dynamic/*Function*/ = definedExternally, onError: dynamic/*Function*/ = definedExternally) : dynamic/*null*/
+	open fun load(url: String = definedExternally, onLoad: dynamic = definedExternally, onProgress: dynamic = definedExternally, onError: dynamic = definedExternally) : org.w3c.xhr.XMLHttpRequest
 
 
 	/**
@@ -64,11 +64,11 @@ open external class FileLoader(manager: ch.viseon.threejs.declarations.loaders.m
 	/**
 	* [page:object requestHeader] - key: The name of the header whose value is to be set. value: The value to set as the body of the header. Set the [link:https://developer.mozilla.org/en-US/docs/Glossary/Request_header request header] used in HTTP request.
 	*/
-	open fun setRequestHeader(requestHeader: dynamic/*object*/ = definedExternally) : ch.viseon.threejs.declarations.loaders.FileLoader
+	open fun setRequestHeader(requestHeader: dynamic = definedExternally) : ch.viseon.threejs.declarations.loaders.FileLoader
 
 
 	/**
-	* Change the response type. Valid values are: [page:String text] or empty string (default) - returns the data as [page:String string]. [page:String arraybuffer] - loads the data into a [link:https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer ArrayBuffer] and returns that. [page:String blob] - returns the data as a [link:https://developer.mozilla.org/en/docs/Web/API/Blob Blob]. [page:String document] - parses the file using the [link:https://developer.mozilla.org/en-US/docs/Web/API/DOMParser DOMParser]. [page:String json] - parses the file using [link:https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse JSON.parse].
+	* Change the response type. Valid values are: [page:String text] or empty string (default) - returns the data as [page:String String]. [page:String arraybuffer] - loads the data into a [link:https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer ArrayBuffer] and returns that. [page:String blob] - returns the data as a [link:https://developer.mozilla.org/en/docs/Web/API/Blob Blob]. [page:String document] - parses the file using the [link:https://developer.mozilla.org/en-US/docs/Web/API/DOMParser DOMParser]. [page:String json] - parses the file using [link:https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse JSON.parse].
 	*/
 	open fun setResponseType(responseType: String = definedExternally) : ch.viseon.threejs.declarations.loaders.FileLoader
 

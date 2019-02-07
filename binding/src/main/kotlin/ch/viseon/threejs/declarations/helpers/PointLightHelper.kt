@@ -1,4 +1,4 @@
-//Generated date 12.01.2019
+//Generated date 07.02.2019
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.helpers
 
@@ -34,11 +34,11 @@ open external class PointLightHelper(light: ch.viseon.threejs.declarations.light
 	/**
 	* Dispose of the pointLightHelper.
 	*/
-	open fun dispose() : dynamic/*null*/
+	open fun dispose() : dynamic
 
 
 	/**
 	* Updates the helper to match the position of the [page:.light].
 	*/
-	open fun update() : dynamic/*null*/
+	open fun update() : dynamic
 }

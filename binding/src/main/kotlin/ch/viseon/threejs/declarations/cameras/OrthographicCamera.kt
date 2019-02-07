@@ -1,4 +1,4 @@
-//Generated date 12.01.2019
+//Generated date 07.02.2019
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.cameras
 
@@ -52,7 +52,7 @@ open external class OrthographicCamera(left: Double = definedExternally, right: 
 	/**
 	* Set by [page:OrthographicCamera.setViewOffset setViewOffset]. Default is **null**.
 	*/
-	open var view: dynamic/*Object*/  = definedExternally
+	open var view: dynamic  = definedExternally
 
 
 	/**
@@ -64,19 +64,19 @@ open external class OrthographicCamera(left: Double = definedExternally, right: 
 	/**
 	* fullWidth — full width of multiview setup fullHeight — full height of multiview setup x — horizontal offset of subcamera y — vertical offset of subcamera width — width of subcamera height — height of subcamera Sets an offset in a larger [link:https://en.wikipedia.org/wiki/Viewing_frustum viewing frustum]. This is useful for multi-window or multi-monitor/multi-machine setups. For an example on how to use it see [page:PerspectiveCamera.setViewOffset PerspectiveCamera].
 	*/
-	open fun setViewOffset(fullWidth: Double = definedExternally, fullHeight: Double = definedExternally, x: Double = definedExternally, y: Double = definedExternally, width: Double = definedExternally, height: Double = definedExternally) : dynamic/*null*/
+	open fun setViewOffset(fullWidth: Double = definedExternally, fullHeight: Double = definedExternally, x: Double = definedExternally, y: Double = definedExternally, width: Double = definedExternally, height: Double = definedExternally) : dynamic
 
 
 	/**
 	* Removes any offset set by the .setViewOffset method.
 	*/
-	open fun clearViewOffset() : dynamic/*null*/
+	open fun clearViewOffset() : dynamic
 
 
 	/**
 	* Updates the camera projection matrix. Must be called after any change of parameters.
 	*/
-	open fun updateProjectionMatrix() : dynamic/*null*/
+	open fun updateProjectionMatrix() : dynamic
 
 
 	/**

@@ -1,4 +1,4 @@
-//Generated date 12.01.2019
+//Generated date 07.02.2019
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.audio
 
@@ -16,7 +16,7 @@ open external class Audio(listener: ch.viseon.threejs.declarations.audio.AudioLi
 	/**
 	* The [link:https://developer.mozilla.org/en-US/docs/Web/API/AudioContext AudioContext] of the [page:AudioListener listener] given in the constructor.
 	*/
-	open var context: dynamic/*AudioContext*/  = definedExternally
+	open var context: dynamic  = definedExternally
 
 
 	/**
@@ -28,13 +28,13 @@ open external class Audio(listener: ch.viseon.threejs.declarations.audio.AudioLi
 	/**
 	* Represents an array of [link:https://developer.mozilla.org/en-US/docs/Web/API/BiquadFilterNode BiquadFilterNodes]. Can be used to apply a variety of low-order filters to create more complex sound effects. Filters are set via [page:Audio.setFilter] or [page:Audio.setFilters].
 	*/
-	open var filters: Array<dynamic>/*Array*/  = definedExternally
+	open var filters: Array<dynamic>  = definedExternally
 
 
 	/**
 	* A [link:https://developer.mozilla.org/en-US/docs/Web/API/GainNode GainNode] created using [link:https://developer.mozilla.org/en-US/docs/Web/API/AudioContext/createGain AudioContext.createGain]().
 	*/
-	open var gain: dynamic/*GainNode*/  = definedExternally
+	open var gain: dynamic  = definedExternally
 
 
 	/**
@@ -106,13 +106,13 @@ open external class Audio(listener: ch.viseon.threejs.declarations.audio.AudioLi
 	/**
 	* Returns the first element of the [page:Audio.filters filters] array.
 	*/
-	open fun getFilter() : dynamic/*BiquadFilterNode*/
+	open fun getFilter() : dynamic
 
 
 	/**
 	* Returns the [page:Audio.filters filters] array.
 	*/
-	open fun getFilters() : Array<dynamic>/*Array*/
+	open fun getFilters() : Array<dynamic>
 
 
 	/**
@@ -124,7 +124,7 @@ open external class Audio(listener: ch.viseon.threejs.declarations.audio.AudioLi
 	/**
 	* Return the [page:Audio.gain gainNode].
 	*/
-	open fun getOutput() : dynamic/*GainNode*/
+	open fun getOutput() : dynamic
 
 
 	/**
@@ -154,7 +154,7 @@ open external class Audio(listener: ch.viseon.threejs.declarations.audio.AudioLi
 	/**
 	* Called automatically when playback finished. Sets If [page:Audio.isPlaying isPlaying] to false.
 	*/
-	open fun onEnded() : dynamic/*null*/
+	open fun onEnded() : dynamic
 
 
 	/**
@@ -172,7 +172,7 @@ open external class Audio(listener: ch.viseon.threejs.declarations.audio.AudioLi
 	/**
 	* value - arrays of filters. Applies an array of [link:https://developer.mozilla.org/en-US/docs/Web/API/BiquadFilterNode BiquadFilterNodes] to the audio.
 	*/
-	open fun setFilters(value: Array<dynamic>/*Array*/ = definedExternally) : ch.viseon.threejs.declarations.audio.Audio
+	open fun setFilters(value: Array<dynamic> = definedExternally) : ch.viseon.threejs.declarations.audio.Audio
 
 
 	/**

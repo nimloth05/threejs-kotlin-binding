@@ -6,7 +6,7 @@ import java.util.concurrent.ConcurrentHashMap
 
 object DeclarationFactory {
 
-    fun fromStream(stream: List<Token>, htmlDoc: String = ""): Declaration {
+    fun fromStream(owningClassName: String, stream: List<Token>, htmlDoc: String): Declaration {
         if (stream.isEmpty()) {
             throw IllegalArgumentException("Empty stream received")
         }
@@ -15,14 +15,17 @@ object DeclarationFactory {
         return when (first.tokenType) {
             TokenType.method -> {
                 val rest = stream.subList(1, stream.size)
-                MethodDeclaration(first.name, rest.toParamDeclarations(), first.type, htmlDoc)
+                val (name, type, acceptNullValue) = extractNameAndType(owningClassName, first)
+                MethodDeclaration(name, rest.toParamDeclarations(), type, htmlDoc, acceptNullValue)
             }
             TokenType.property -> {
-                PropertyDeclaration(first.name, first.type, htmlDoc)
+                val (name, type, acceptNullValue) = extractNameAndType(owningClassName, first)
+                PropertyDeclaration(name, type, htmlDoc, acceptNullValue)
             }
             TokenType.constructor -> {
                 val rest = stream.subList(1, stream.size)
-                ConstructorDeclaration(rest.toParamDeclarations(), htmlDoc)
+                val params = DocCorrections.className2CtorParameters.getOrDefault(owningClassName, rest.toParamDeclarations())
+                ConstructorDeclaration(params, htmlDoc)
             }
             TokenType.page -> {
                 EmptyDeclaration
@@ -31,18 +34,32 @@ object DeclarationFactory {
         }
     }
 
+    private fun extractNameAndType(owningClassName: String, token: Token): Triple<String, String, Boolean> {
+        val docName = token.name
+        val docType = token.type
+
+        val correspondingKotlinType = DocCorrections.docType2KotlinType.getOrDefault(docType, docType)
+
+        val finalName = DocCorrections.correctMemberName(owningClassName, docName)
+        val fullMemberName = "$owningClassName.$finalName"
+        val finalType = DocCorrections.fullMemberName2Type.getOrDefault(fullMemberName, correspondingKotlinType)
+        val acceptNullValue = DocCorrections.declarationsAcceptingNullValues.contains(fullMemberName)
+        return Triple(finalName, finalType, acceptNullValue)
+    }
+
     private fun List<Token>.toParamDeclarations(): List<ParamDeclaration> {
         return this.map { token ->
-            ParamDeclaration(token.name, token.type)
+            val correspondingKotlinType = DocCorrections.docType2KotlinType.getOrDefault(token.type, token.type)
+            ParamDeclaration(token.name, correspondingKotlinType)
         }
     }
 
-    fun createInheritence(inheritenceToken: List<Token>): InheritenceDeclaration {
-        return if (inheritenceToken.isEmpty()) {
+    fun createInheritance(inheritanceToken: List<Token>): InheritenceDeclaration {
+        return if (inheritanceToken.isEmpty()) {
             InheritenceDeclaration("")
         } else {
             //Token is a pageToken, and pageTokens have their name in store as type. (given by threejs doc)
-            InheritenceDeclaration(inheritenceToken.last().type)
+            InheritenceDeclaration(inheritanceToken.last().type)
         }
     }
 }
@@ -50,11 +67,11 @@ object DeclarationFactory {
 sealed class Declaration
 
 interface TypedDeclaration {
+    val acceptNullValue: Boolean
     val type: String
 }
 
 abstract class MemberDeclaration : Declaration(), TypedDeclaration {
-    abstract fun correctIfDifferent(newName: String, newType: String): MemberDeclaration
 
     abstract val name: String
     lateinit var owningClass: ClassDeclaration
@@ -74,9 +91,9 @@ data class ClassDeclaration(
         staticMembers.forEach { it.owningClass = this }
     }
 
-    val isDerived get() = inheritenceDeclaration.parentClass.isNotBlank()
+    private val isDerived get() = inheritenceDeclaration.parentClass.isNotBlank()
 
-    fun hasMember(comparator: (MemberDeclaration) -> Boolean): Boolean {
+    private fun hasMember(comparator: (MemberDeclaration) -> Boolean): Boolean {
         return members.find(comparator)?.let { true } ?: false
     }
 
@@ -96,22 +113,18 @@ data class ClassDeclaration(
     }
 }
 
-data class ParamDeclaration(val name: String, override val type: String) : Declaration(), TypedDeclaration
+data class ParamDeclaration(val name: String, override val type: String, override val acceptNullValue: Boolean = false) : Declaration(), TypedDeclaration
 
 class MethodDeclaration(
     override val name: String,
     val paramDeclarations: List<ParamDeclaration>,
     override val type: String, //returnType
-    val doc: String = ""
+    val doc: String,
+    /**
+     * Indicates if the return value can be null or not
+     */
+    override val acceptNullValue: Boolean
 ) : MemberDeclaration() {
-
-    override fun correctIfDifferent(newName: String, newType: String): MemberDeclaration {
-        return if (newName != name || newType != type) {
-            MethodDeclaration(newName, paramDeclarations, newType, doc)
-        } else {
-            this
-        }
-    }
 
     override fun equals(other: Any?): Boolean {
         if (this === other) return true
@@ -122,6 +135,7 @@ class MethodDeclaration(
         if (name != other.name) return false
         if (paramDeclarations != other.paramDeclarations) return false
         if (type != other.type) return false
+        if (acceptNullValue != other.acceptNullValue) return false
 
         return true
     }
@@ -134,16 +148,13 @@ class MethodDeclaration(
     }
 }
 
-class PropertyDeclaration(override val name: String, override val type: String, val doc: String = "") :
+class PropertyDeclaration(
+    override val name: String,
+    override val type: String,
+    val doc: String,
+    override val acceptNullValue: Boolean
+) :
     MemberDeclaration() {
-
-    override fun correctIfDifferent(newName: String, newType: String): MemberDeclaration {
-        return if (newName != name || newType != type) {
-            PropertyDeclaration(newName, newType, doc)
-        } else {
-            this
-        }
-    }
 
     override fun equals(other: Any?): Boolean {
         if (this === other) return true
@@ -153,6 +164,7 @@ class PropertyDeclaration(override val name: String, override val type: String, 
 
         if (name != other.name) return false
         if (type != other.type) return false
+        if (acceptNullValue != other.acceptNullValue) return false
 
         return true
     }
@@ -197,25 +209,19 @@ class ClassDeclarationsCollector {
     }
 }
 
-class ClassDeclarationBuilder(private val name: String) {
+class ClassDeclarationBuilder(val name: String) {
     var classDoc: String = ""
     var ctorDeclaration = ConstructorDeclaration(emptyList(), "")
     private val members = mutableListOf<MemberDeclaration>()
     private val staticMembers = mutableListOf<MemberDeclaration>()
-    lateinit var inheritence: InheritenceDeclaration
+    lateinit var inheritance: InheritenceDeclaration
 
     fun addMember(staticMember: Boolean, declaration: MemberDeclaration) {
-
-        val finalName = DocCorrections.correctMemberName(name, declaration.name)
-        val finalType = DocCorrections.types.getOrDefault("$name.${declaration.name}", declaration.type)
-        val finalDeclaration = declaration.correctIfDifferent(finalName, finalType)
-
-        (if (staticMember) staticMembers else members).add(finalDeclaration)
+        (if (staticMember) staticMembers else members).add(declaration)
     }
 
     fun build(): ClassDeclaration {
-        //check if some of the declrations need some correction
-        return ClassDeclaration(name, inheritence, ctorDeclaration, members, staticMembers, classDoc)
+        return ClassDeclaration(name, inheritance, ctorDeclaration, members, staticMembers, classDoc)
     }
 }
 

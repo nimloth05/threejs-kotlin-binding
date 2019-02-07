@@ -1,4 +1,4 @@
-//Generated date 12.01.2019
+//Generated date 07.02.2019
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.core
 
@@ -40,13 +40,13 @@ open external class Clock(autoStart: Boolean = definedExternally){
 	/**
 	* Starts clock. Also sets the [page:Clock.startTime startTime] and [page:Clock.oldTime oldTime] to the current time, sets [page:Clock.elapsedTime elapsedTime] to **0** and [page:Clock.running running] to **true**.
 	*/
-	open fun start() : dynamic/*null*/
+	open fun start() : dynamic
 
 
 	/**
 	* Stops clock and sets [page:Clock.oldTime oldTime] to the current time.
 	*/
-	open fun stop() : dynamic/*null*/
+	open fun stop() : dynamic
 
 
 	/**

@@ -1,4 +1,4 @@
-//Generated date 12.01.2019
+//Generated date 07.02.2019
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.core
 
@@ -22,61 +22,61 @@ open external class DirectGeometry(){
 	/**
 	* String 'DirectGeometry'.
 	*/
-	open var type: Array<dynamic>/*Array*/  = definedExternally
+	open var type: Array<dynamic>  = definedExternally
 
 
 	/**
 	* Initialiased as an empty array, this is populated by [page:.fromGeometry]().
 	*/
-	open var vertices: Array<dynamic>/*Array*/  = definedExternally
+	open var vertices: Array<dynamic>  = definedExternally
 
 
 	/**
 	* Initialiased as an empty array, this is populated by [page:.fromGeometry]().
 	*/
-	open var normals: Array<dynamic>/*Array*/  = definedExternally
+	open var normals: Array<dynamic>  = definedExternally
 
 
 	/**
 	* Initialiased as an empty array, this is populated by [page:.fromGeometry]().
 	*/
-	open var colors: Array<dynamic>/*Array*/  = definedExternally
+	open var colors: Array<dynamic>  = definedExternally
 
 
 	/**
 	* Initialiased as an empty array, this is populated by [page:.fromGeometry]().
 	*/
-	open var uvs: Array<dynamic>/*Array*/  = definedExternally
+	open var uvs: Array<dynamic>  = definedExternally
 
 
 	/**
 	* Initialiased as an empty array, this is populated by [page:.fromGeometry]().
 	*/
-	open var uvs2: Array<dynamic>/*Array*/  = definedExternally
+	open var uvs2: Array<dynamic>  = definedExternally
 
 
 	/**
 	* Initialiased as an empty array, this is populated by [page:.fromGeometry]().
 	*/
-	open var groups: Array<dynamic>/*Array*/  = definedExternally
+	open var groups: Array<dynamic>  = definedExternally
 
 
 	/**
 	* Initialiased as an empty array, this is populated by [page:.fromGeometry]().
 	*/
-	open var morphTargets: Array<dynamic>/*Array*/  = definedExternally
+	open var morphTargets: Array<dynamic>  = definedExternally
 
 
 	/**
 	* Initialiased as an empty array, this is populated by [page:.fromGeometry]().
 	*/
-	open var skinWeights: Array<dynamic>/*Array*/  = definedExternally
+	open var skinWeights: Array<dynamic>  = definedExternally
 
 
 	/**
 	* Initialiased as an empty array, this is populated by [page:.fromGeometry]().
 	*/
-	open var skinIndices: Array<dynamic>/*Array*/  = definedExternally
+	open var skinIndices: Array<dynamic>  = definedExternally
 
 
 	/**
@@ -124,11 +124,11 @@ open external class DirectGeometry(){
 	/**
 	* Compute the parts of the geometry that have different materialIndex. See [page:BufferGeometry.groups].
 	*/
-	open var computeGroups: dynamic/*null*/  = definedExternally
+	open var computeGroups: dynamic  = definedExternally
 
 
 	/**
 	* Pass in a [page:Geometry] instance for conversion.
 	*/
-	open var fromGeometry: dynamic/*null*/  = definedExternally
+	open var fromGeometry: dynamic  = definedExternally
 }
