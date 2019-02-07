@@ -1,21 +1,84 @@
 # threejs-kotlin-binding
-This project provides an update to date binding of three.js. This binding was generated out of the threejs doc.
+This project provides an update to date binding of three.js. (r101)
+This binding was generated out of the threejs doc. This means, that most classes/methods/properties contains documentation.
 
-This projects consists of the actual binding and parser, which generates the binding from the three.js doc.
-
-Please report any bug or type problem you encounter.
-
-## Maven dependency
-
+##setup
 The binding is available at the maven central repository.
 
-Gradle:
+Reference this library in your build.gradle file:
 
     dependencies {
-        compile "ch.viseon.threejs:binding:98.0.2"
+        implementation "ch.viseon.threejs:binding:101.0.0"
+    }
+
+Threejs needs to be loaded via npm (use kotlinFrontend Plugin)
+
+    kotlinFrontend {
+        npm {
+            dependency("three", "0.101.0")
+        }
     }
     
-# threejs-kotlin-parser
+##Example
+
+Example code for rotating cube:
+
+
+    fun main(args: Array<String>) {
+    //  require("three")
+
+      window.onload = {
+        CubeExample.init()
+        CubeExample.animate()
+      }
+    }
+
+    object CubeExample {
+
+      lateinit var camera: PerspectiveCamera
+      lateinit var scene: Scene
+      lateinit var renderer: WebGLRenderer
+      lateinit var mesh: Mesh
+
+      fun init() {
+        camera = PerspectiveCamera(70.0, (window.innerWidth / window.innerHeight).toNumber(), 1.0, 1000.0)
+        camera.position.z = 400.0
+        scene = Scene()
+        val texture = TextureLoader().load("textures/crate.gif")
+        val geometry = BoxBufferGeometry(200.0, 200.0, 200.0)
+        val material = MeshBasicMaterial(MeshBasisMaterialParameter().apply { map = texture })
+        mesh = Mesh(geometry.asDynamic(), material)
+        scene.add(mesh)
+        renderer = WebGLRenderer(WebGlRendererParams(true))
+        renderer.setPixelRatio(window.devicePixelRatio)
+        renderer.setSize(window.innerWidth, window.innerHeight)
+
+        document.body?.appendChild(renderer.domElement)
+
+        window.addEventListener("resize", ::onWindowResize, false)
+      }
+
+      fun onWindowResize(event: Event) {
+        camera.aspect = (window.innerWidth / window.innerHeight).toNumber()
+        camera.updateProjectionMatrix()
+        renderer.setSize(window.innerWidth, window.innerHeight)
+      }
+
+      fun animate() {
+        window.requestAnimationFrame {
+          animate()
+        }
+        mesh.rotation.x += 0.005f
+        mesh.rotation.y += 0.01f
+        renderer.render(scene, camera);
+      }
+    }
+    
+
+    
+
+    
+## threejs-kotlin-parser (details)
 A Parser which parses threeJs doc to generate Kotlin bindings
 
 The process works as follows:

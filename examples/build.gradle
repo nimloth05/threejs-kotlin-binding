@@ -1,0 +1,48 @@
+plugins {
+    id 'kotlin2js'
+    id 'org.jetbrains.kotlin.frontend' version '0.0.37'
+}
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+    maven { url "https://kotlin.bintray.com/js-externals" }
+}
+
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-js"
+    implementation "ch.viseon.threejs:binding:101.0.0"
+}
+
+// configure kotlin compiler
+compileKotlin2Js {
+    kotlinOptions.metaInfo = true
+    kotlinOptions.outputFile = "$project.buildDir.path/js/${project.name}.js"
+    kotlinOptions.sourceMap = true
+    kotlinOptions.sourceMapEmbedSources = "always"
+    kotlinOptions.moduleKind = 'commonjs'
+    kotlinOptions.main = "call"
+}
+
+compileTestKotlin2Js {
+    kotlinOptions.metaInfo = true
+    kotlinOptions.moduleKind = 'commonjs'
+}
+
+kotlinFrontend {
+    npm {
+        dependency("three", "0.101.0")
+        dependency("three-obj-mtl-loader", "1.0.3")
+        dependency("kotlin", "1.3.10")
+//        dependency("kotlinx-coroutines-core", "1.0.1")
+
+        devDependency("css-loader")
+        devDependency("style-loader")
+    }
+
+    webpackBundle {
+        bundleName = "main"
+        sourceMapEnabled = true
+        contentPath = file('src/main/web')
+    }
+}
