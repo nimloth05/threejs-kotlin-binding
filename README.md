@@ -74,8 +74,11 @@ Example code for rotating cube:
       }
     }
     
+The complete example is in the `example` project.
 
-    
+#Future
+Next thing I'd like to implement is coroutine based loading of assets. Threejs uses a callback based mechanism.
+ This would be a separate project.
 
     
 ## threejs-kotlin-parser (details)
