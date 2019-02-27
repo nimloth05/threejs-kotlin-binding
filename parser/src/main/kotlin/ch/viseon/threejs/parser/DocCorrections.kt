@@ -108,7 +108,12 @@ object DocCorrections {
         "MeshPhongMaterial.map",
         "MeshPhongMaterial.lightMap",
         "MeshPhongMaterial.emissiveMap",
-        "MeshPhongMaterial.displacementMap"
+        "MeshPhongMaterial.displacementMap",
+        "MeshStandardMaterial.map",
+        "MeshStandardMaterial.lightMap",
+        "MeshStandardMaterial.emissiveMap",
+        "MeshStandardMaterial.displacementMap",
+        "Object3D.parent"
     )
 
     val className2CtorParameters = mapOf(
@@ -125,6 +130,18 @@ object DocCorrections {
         )
     )
 
+    val className2OverloadCtor = mapOf(
+        "Mesh" to listOf(
+            ConstructorDeclaration(
+                listOf(
+                    ParamDeclaration("geometry", "BufferGeometry", true),
+                    ParamDeclaration("material", "Material", false)
+                )
+            )
+        )
+    )
+
+
     fun correctMemberName(className: String, name: String): String {
         val result = names.getOrDefault("$className.$name", name)
         return if (result.startsWith(".")) {
@@ -132,6 +149,11 @@ object DocCorrections {
         } else {
             result
         }
+    }
+
+    fun getOverloadedConstructors(className: String): List<ConstructorDeclaration> {
+        println("accessing: $className")
+        return className2OverloadCtor.getOrDefault(className, listOf())
     }
 
 }

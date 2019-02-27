@@ -24,7 +24,8 @@ object DeclarationFactory {
             }
             TokenType.constructor -> {
                 val rest = stream.subList(1, stream.size)
-                val params = DocCorrections.className2CtorParameters.getOrDefault(owningClassName, rest.toParamDeclarations())
+                val params =
+                    DocCorrections.className2CtorParameters.getOrDefault(owningClassName, rest.toParamDeclarations())
                 ConstructorDeclaration(params, htmlDoc)
             }
             TokenType.page -> {
@@ -81,6 +82,7 @@ data class ClassDeclaration(
     val name: String,
     val inheritenceDeclaration: InheritenceDeclaration,
     val constructorDeclaration: ConstructorDeclaration,
+    val overloadedConstructors: List<ConstructorDeclaration>,
     val members: List<MemberDeclaration>,
     val staticMembers: List<MemberDeclaration>,
     val doc: String = ""
@@ -113,7 +115,11 @@ data class ClassDeclaration(
     }
 }
 
-data class ParamDeclaration(val name: String, override val type: String, override val acceptNullValue: Boolean = false) : Declaration(), TypedDeclaration
+data class ParamDeclaration(
+    val name: String,
+    override val type: String,
+    override val acceptNullValue: Boolean = false
+) : Declaration(), TypedDeclaration
 
 class MethodDeclaration(
     override val name: String,
@@ -221,7 +227,7 @@ class ClassDeclarationBuilder(val name: String) {
     }
 
     fun build(): ClassDeclaration {
-        return ClassDeclaration(name, inheritance, ctorDeclaration, members, staticMembers, classDoc)
+        return ClassDeclaration(name, inheritance, ctorDeclaration, DocCorrections.getOverloadedConstructors(name), members, staticMembers, classDoc)
     }
 }
 

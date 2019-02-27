@@ -34,6 +34,7 @@ class KotlinFileGenerator(
             append(classDeclaration.constructorDeclaration.toKotlinDeclaration(classDeclaration))
             append(classDeclaration.inheritenceDeclaration.toKotlinDeclaration())
             append("{\n")
+            append(classDeclaration.overloadedConstructors.toKotlinOverloadConstructorDeclaration(classDeclaration))
             append(classDeclaration.members.toKotlinDeclaration(classDeclaration))
             if (classDeclaration.staticMembers.isNotEmpty()) {
                 append("\tcompanion object {\n")
@@ -77,6 +78,12 @@ class KotlinFileGenerator(
 
     private fun ConstructorDeclaration.toKotlinDeclaration(classDeclaration: ClassDeclaration): String {
         return paramToKotlinDeclaration(classDeclaration, paramDeclarations, false)
+    }
+
+    private fun List<ConstructorDeclaration>.toKotlinOverloadConstructorDeclaration(classDeclaration: ClassDeclaration): String {
+        return joinToString(separator = "\n") {
+            "\n\tconstructor${paramToKotlinDeclaration(classDeclaration, it.paramDeclarations, false)}"
+        }
     }
 
     private fun PropertyDeclaration.toKotlinDeclaration(classDeclarations: ClassDeclaration): String {
