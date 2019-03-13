@@ -12,7 +12,7 @@ dependencies {
 }
 
 group 'ch.viseon.threejs'
-version = '101.0.1'
+version = '102.0.0' //!!!Not uploaded to maven central!!!
 
 compileKotlin2Js.kotlinOptions.moduleKind = "commonjs"
 

@@ -1,4 +1,4 @@
-//Generated date 07.02.2019
+//Generated date 13.03.2019
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.materials
 
@@ -52,7 +52,7 @@ open external class MeshStandardMaterial(parameters: dynamic = definedExternally
 	/**
 	* The displacement map affects the position of the mesh's vertices. Unlike other maps which only affect the light and shade of the material the displaced vertices can cast shadows, block other objects, and otherwise act as real geometry. The displacement texture is an image where the value of each pixel (white being the highest) is mapped against, and repositions, the vertices of the mesh.
 	*/
-	open var displacementMap: ch.viseon.threejs.declarations.textures.Texture  = definedExternally
+	open var displacementMap: ch.viseon.threejs.declarations.textures.Texture?  = definedExternally
 
 
 	/**
@@ -76,7 +76,7 @@ open external class MeshStandardMaterial(parameters: dynamic = definedExternally
 	/**
 	* Set emisssive (glow) map. Default is null. The emissive map color is modulated by the emissive color and the emissive intensity. If you have an emissive map, be sure to set the emissive color to something other than black.
 	*/
-	open var emissiveMap: ch.viseon.threejs.declarations.textures.Texture  = definedExternally
+	open var emissiveMap: ch.viseon.threejs.declarations.textures.Texture?  = definedExternally
 
 
 	/**
@@ -107,7 +107,7 @@ Note: only [link:https://threejs.org/docs/#api/textures/CubeTexture cube environ
 	/**
 	* The light map. Default is null. The lightMap requires a second set of UVs, and consequently will ignore the [page:Texture repeat] and [page:Texture offset] Texture properties.
 	*/
-	open var lightMap: ch.viseon.threejs.declarations.textures.Texture  = definedExternally
+	open var lightMap: ch.viseon.threejs.declarations.textures.Texture?  = definedExternally
 
 
 	/**
@@ -119,7 +119,7 @@ Note: only [link:https://threejs.org/docs/#api/textures/CubeTexture cube environ
 	/**
 	* The color map. Default is null. The texture map color is modulated by the diffuse [page:.color].
 	*/
-	open var map: ch.viseon.threejs.declarations.textures.Texture  = definedExternally
+	open var map: ch.viseon.threejs.declarations.textures.Texture?  = definedExternally
 
 
 	/**

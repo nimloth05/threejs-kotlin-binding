@@ -25,7 +25,7 @@ object DeclarationFactory {
             TokenType.constructor -> {
                 val rest = stream.subList(1, stream.size)
                 val params =
-                    DocCorrections.className2CtorParameters.getOrDefault(owningClassName, rest.toParamDeclarations())
+                    DocCorrections.constructorDeclarationCorrections.getOrDefault(owningClassName, rest.toParamDeclarations())
                 ConstructorDeclaration(params, htmlDoc)
             }
             TokenType.page -> {

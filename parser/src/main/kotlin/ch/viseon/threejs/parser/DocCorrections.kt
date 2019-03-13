@@ -2,6 +2,12 @@ package ch.viseon.threejs.parser
 
 /**
  * This class is for correcting doc mistakes. For example a base class has a matrix: Matrix4 property which a base class defines as matrix: object
+ *
+ *
+ * - Additional declarations, where threejs returns an Object, can be placed inside AdditionalDeclarations.kt. Add a type mapping to
+ * fullMember2Type hashmap
+ * - fullMember2Type hashmap can be used to map members of a class (properties or methods) to another type (return values or property declarations)
+ * - docType2KotlinType can be used to generally map specific types to antoher type.
  */
 object DocCorrections {
 
@@ -101,7 +107,9 @@ object DocCorrections {
         "Texture.magFilter" to "Int",
         "Texture.minFilter" to "Int",
         "Texture.format" to "Int",
-        "Texture.encoding" to "Int"
+        "Texture.encoding" to "Int",
+        "Raycaster.intersectObject" to "Array<ch.viseon.threejs.declarations.Intersection>",
+        "Raycaster.intersectObjects" to "Array<ch.viseon.threejs.declarations.Intersection>"
     )
 
     val declarationsAcceptingNullValues = hashSetOf(
@@ -116,7 +124,7 @@ object DocCorrections {
         "Object3D.parent"
     )
 
-    val className2CtorParameters = mapOf(
+    val constructorDeclarationCorrections = mapOf(
         "Texture" to listOf(
             ParamDeclaration("image", "dynamic", false),
             ParamDeclaration("mapping", "Int", false),
@@ -130,7 +138,7 @@ object DocCorrections {
         )
     )
 
-    val className2OverloadCtor = mapOf(
+    private val classesWithAdditionalConstructors = mapOf(
         "Mesh" to listOf(
             ConstructorDeclaration(
                 listOf(
@@ -153,7 +161,7 @@ object DocCorrections {
 
     fun getOverloadedConstructors(className: String): List<ConstructorDeclaration> {
         println("accessing: $className")
-        return className2OverloadCtor.getOrDefault(className, listOf())
+        return classesWithAdditionalConstructors.getOrDefault(className, listOf())
     }
 
 }

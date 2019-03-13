@@ -1,4 +1,4 @@
-//Generated date 07.02.2019
+//Generated date 13.03.2019
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.extras.core
 
@@ -17,6 +17,12 @@ open external class ShapePath(): ch.viseon.threejs.declarations.extras.core.Curv
 	* The current [page:Path] that is being generated.
 	*/
 	open var currentPath: Array<dynamic>  = definedExternally
+
+
+	/**
+	* [page:Color] of the shape, by default set to white (0xffffff).
+	*/
+	open var color: ch.viseon.threejs.declarations.math.Color  = definedExternally
 
 
 	/**

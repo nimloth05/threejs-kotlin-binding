@@ -1,4 +1,4 @@
-//Generated date 07.02.2019
+//Generated date 13.03.2019
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.core
 
@@ -55,12 +55,12 @@ Updates the ray with a new origin and direction.
 	* [page:Object3D object] — The object to check for intersection with the ray. [page:Boolean recursive] — If true, it also checks all descendants. Otherwise it only checks intersection with the object. Default is false. [page:Array optionalTarget] — (optional) target to set the result. Otherwise a new [page:Array] is instantiated. If set, you must clear this array prior to each call (i.e., array.length = 0;).
 Checks all intersection between the ray and the object with or without the descendants. Intersections are returned sorted by distance, closest first. An array of intersections is returned...
 	*/
-	open fun intersectObject(`object`: ch.viseon.threejs.declarations.core.Object3D = definedExternally, recursive: Boolean = definedExternally, optionalTarget: Array<dynamic> = definedExternally) : Array<dynamic>
+	open fun intersectObject(`object`: ch.viseon.threejs.declarations.core.Object3D = definedExternally, recursive: Boolean = definedExternally, optionalTarget: Array<dynamic> = definedExternally) : Array<ch.viseon.threejs.declarations.Intersection>
 
 
 	/**
 	* [page:Array objects] — The objects to check for intersection with the ray. [page:Boolean recursive] — If true, it also checks all descendants of the objects. Otherwise it only checks intersection with the objects. Default is false. [page:Array optionalTarget] — (optional) target to set the result. Otherwise a new [page:Array] is instantiated. If set, you must clear this array prior to each call (i.e., array.length = 0;).
 Checks all intersection between the ray and the objects with or without the descendants. Intersections are returned sorted by distance, closest first. Intersections are of the same form as those returned by [page:.intersectObject].
 	*/
-	open fun intersectObjects(objects: Array<dynamic> = definedExternally, recursive: Boolean = definedExternally, optionalTarget: Array<dynamic> = definedExternally) : Array<dynamic>
+	open fun intersectObjects(objects: Array<dynamic> = definedExternally, recursive: Boolean = definedExternally, optionalTarget: Array<dynamic> = definedExternally) : Array<ch.viseon.threejs.declarations.Intersection>
 }

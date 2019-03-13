@@ -1,4 +1,4 @@
-//Generated date 07.02.2019
+//Generated date 13.03.2019
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.renderers
 
@@ -249,15 +249,15 @@ open external class WebGLRenderer(parameters: dynamic = definedExternally){
 
 
 	/**
-	* Returns the current viewport.
+	* [page:Vector4 target] — the result will be copied into this Vector4. Returns the current viewport.
 	*/
-	open fun getCurrentViewport() : dynamic
+	open fun getCurrentViewport(target: ch.viseon.threejs.declarations.math.Vector4 = definedExternally) : ch.viseon.threejs.declarations.math.Vector4
 
 
 	/**
-	* Returns an object containing the width and height of the renderer's drawing buffer, in pixels.
+	* [page:Vector2 target] — the result will be copied into this Vector2. Returns the width and height of the renderer's drawing buffer, in pixels.
 	*/
-	open fun getDrawingBufferSize() : dynamic
+	open fun getDrawingBufferSize(target: ch.viseon.threejs.declarations.math.Vector2 = definedExternally) : ch.viseon.threejs.declarations.math.Vector2
 
 
 	/**
@@ -267,9 +267,27 @@ open external class WebGLRenderer(parameters: dynamic = definedExternally){
 
 
 	/**
-	* Returns an object containing the width and height of the renderer's output canvas, in pixels.
+	* [page:Vector4 target] — the result will be copied into this Vector4. Returns the scissor region.
 	*/
-	open fun getSize() : dynamic
+	open fun getScissor(target: ch.viseon.threejs.declarations.math.Vector4 = definedExternally) : ch.viseon.threejs.declarations.math.Vector4
+
+
+	/**
+	* Returns **true** if scissor test is enabled; returns **false** otherwise.
+	*/
+	open fun getScissorTest() : Boolean
+
+
+	/**
+	* [page:Vector2 target] — the result will be copied into this Vector2. Returns the width and height of the renderer's output canvas, in pixels.
+	*/
+	open fun getSize(target: ch.viseon.threejs.declarations.math.Vector2 = definedExternally) : ch.viseon.threejs.declarations.math.Vector2
+
+
+	/**
+	* [page:Vector4 target] — the result will be copied into this Vector4. Returns the viewport.
+	*/
+	open fun getViewport(target: ch.viseon.threejs.declarations.math.Vector4 = definedExternally) : ch.viseon.threejs.declarations.math.Vector4
 
 
 	/**
@@ -279,15 +297,17 @@ open external class WebGLRenderer(parameters: dynamic = definedExternally){
 
 
 	/**
-	* Reads the pixel data from the renderTarget into the buffer you pass in. This is a wrapper around [link:https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/readPixels WebGLRenderingContext.readPixels](). See the [example:webgl_interactive_cubes_gpu interactive / cubes / gpu] example.
+	* buffer - Uint8Array is the only destination type supported in all cases, other types are renderTarget and platform dependent. See [link:https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.12 WebGL spec] for details.
+Reads the pixel data from the renderTarget into the buffer you pass in. This is a wrapper around [link:https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/readPixels WebGLRenderingContext.readPixels]().
+See the [example:webgl_interactive_cubes_gpu interactive / cubes / gpu] example.
 	*/
-	open fun readRenderTargetPixels(renderTarget: ch.viseon.threejs.declarations.renderers.WebGLRenderTarget = definedExternally, x: Double = definedExternally, y: Double = definedExternally, width: Double = definedExternally, height: Double = definedExternally) : dynamic
+	open fun readRenderTargetPixels(renderTarget: ch.viseon.threejs.declarations.renderers.WebGLRenderTarget = definedExternally, x: Double = definedExternally, y: Double = definedExternally, width: Double = definedExternally, height: Double = definedExternally, buffer: Array<dynamic> = definedExternally) : dynamic
 
 
 	/**
-	* Render a [page:Scene scene] using a [page:Camera camera]. The render is done to the [page:WebGLRenderTarget renderTarget] (if specified) or to the canvas as usual. If [page:Boolean forceClear] is **true**, the depth, stencil and color buffers will be cleared before rendering even if the renderer's [page:WebGLRenderer.autoClear autoClear] property is false. Even with forceClear set to true you can prevent certain buffers being cleared by setting either the [page:WebGLRenderer.autoClearColor autoClearColor], [page:WebGLRenderer.autoClearStencil autoClearStencil] or [page:WebGLRenderer.autoClearDepth autoClearDepth] properties to false.
+	* Render a [page:Scene scene] using a [page:Camera camera]. The render is done to a previously specified [page:WebGLRenderTarget renderTarget] set by calling [page:WebGLRenderer.setRenderTarget .setRenderTarget] or to the canvas as usual. By default render buffers are cleared before rendering but you can prevent this by setting the property [page:WebGLRenderer.autoClear autoClear] to false. If you want to prevent only certain buffers being cleared you can set either the [page:WebGLRenderer.autoClearColor autoClearColor], [page:WebGLRenderer.autoClearStencil autoClearStencil] or [page:WebGLRenderer.autoClearDepth autoClearDepth] properties to false. To forcibly clear one ore more buffers call [page:WebGLRenderer.clear .clear].
 	*/
-	open fun render(scene: ch.viseon.threejs.declarations.scenes.Scene = definedExternally, camera: ch.viseon.threejs.declarations.cameras.Camera = definedExternally, renderTarget: ch.viseon.threejs.declarations.renderers.WebGLRenderTarget = definedExternally, forceClear: Boolean = definedExternally) : dynamic
+	open fun render(scene: ch.viseon.threejs.declarations.scenes.Scene = definedExternally, camera: ch.viseon.threejs.declarations.cameras.Camera = definedExternally) : dynamic
 
 
 	/**
@@ -328,15 +348,15 @@ A build in function that can be used instead of [link:https://developer.mozilla.
 
 
 	/**
-	* renderTarget -- The [page:WebGLRenderTarget renderTarget] that needs to be activated (optional). This method sets the active rendertarget. If the parameter is omitted the canvas is set as the active rendertarget.
+	* renderTarget -- The [page:WebGLRenderTarget renderTarget] that needs to be activated (optional). activeCubeFace -- Specifies the active cube side (PX 0, NX 1, PY 2, NY 3, PZ 4, NZ 5) of [page:WebGLRenderTargetCube] (optional). activeMipMapLevel -- Specifies the active mipmap level (optional). This method sets the active rendertarget. If the parameter is omitted the canvas is set as the active rendertarget.
 	*/
-	open fun setRenderTarget(renderTarget: ch.viseon.threejs.declarations.renderers.WebGLRenderTarget = definedExternally) : dynamic
+	open fun setRenderTarget(renderTarget: ch.viseon.threejs.declarations.renderers.WebGLRenderTarget = definedExternally, activeCubeFace: Int = definedExternally, activeMipMapLevel: Int = definedExternally) : dynamic
 
 
 	/**
-	* Sets the scissor area from (x, y) to (x + width, y + height)
+	* The x, y, width, and height parameters of the scissor region. Optionally, a 4-component vector specifying the parameters of the region. Sets the scissor region from (x, y) to (x + width, y + height). (x, y) is the lower-left corner of the scissor region.
 	*/
-	open fun setScissor(x: Int = definedExternally, y: Int = definedExternally, width: Int = definedExternally, height: Int = definedExternally) : dynamic
+	open fun setScissor(x: Int = definedExternally, y: Int = definedExternally, width: Int = definedExternally, height: Int = definedExternally, setScissor: dynamic = definedExternally, vector: ch.viseon.threejs.declarations.math.Vector4 = definedExternally) : dynamic
 
 
 	/**
@@ -364,7 +384,7 @@ A build in function that can be used instead of [link:https://developer.mozilla.
 
 
 	/**
-	* Sets the viewport to render from (x, y) to (x + width, y + height).
+	* The x, y, width, and height parameters of the viewport. Optionally, a 4-component vector specifying the parameters of a viewport. Sets the viewport to render from (x, y) to (x + width, y + height). (x, y) is the lower-left corner of the region.
 	*/
-	open fun setViewport(x: Int = definedExternally, y: Int = definedExternally, width: Int = definedExternally, height: Int = definedExternally) : dynamic
+	open fun setViewport(x: Int = definedExternally, y: Int = definedExternally, width: Int = definedExternally, height: Int = definedExternally, setViewport: dynamic = definedExternally, vector: ch.viseon.threejs.declarations.math.Vector4 = definedExternally) : dynamic
 }
