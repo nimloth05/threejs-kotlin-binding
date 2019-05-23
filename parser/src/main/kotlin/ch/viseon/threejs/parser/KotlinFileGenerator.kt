@@ -16,11 +16,6 @@ class KotlinFileGenerator(
         Files.createDirectories(destinationDirectory)
 
         val content = buildString {
-            append(
-                "//Generated date ${SimpleDateFormat.getDateInstance(SimpleDateFormat.MEDIUM, Locale.GERMAN).format(
-                    Date()
-                )}\n"
-            )
             append("@file:JsModule(\"three\")\n")
 
             append("package ")
