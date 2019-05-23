@@ -1,4 +1,4 @@
-//Generated date 13.03.2019
+//Generated date 23.05.2019
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.objects
 
@@ -16,7 +16,7 @@ open external class LOD(): ch.viseon.threejs.declarations.core.Object3D{
 	/**
 	* [page:Object3D object] - The [page:Object3D] to display at this level. [page:Float distance] - The distance at which to display this level of detail. Adds a mesh that will display at a certain distance and greater. Typically the further away the distance, the lower the detail on the mesh.
 	*/
-	open fun addLevel(`object`: ch.viseon.threejs.declarations.core.Object3D = definedExternally, distance: Double = definedExternally) : dynamic
+	open fun addLevel(`object`: ch.viseon.threejs.declarations.core.Object3D = definedExternally, distance: Double = definedExternally) : LOD
 
 
 	/**

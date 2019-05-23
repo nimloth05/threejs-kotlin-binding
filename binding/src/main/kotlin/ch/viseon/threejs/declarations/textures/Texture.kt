@@ -1,4 +1,4 @@
-//Generated date 13.03.2019
+//Generated date 23.05.2019
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.textures
 
@@ -29,6 +29,12 @@ open external class Texture(image: dynamic = definedExternally, mapping: Int = d
 	* An image object, typically created using the [page:TextureLoader.load] method. This can be any image (e.g., PNG, JPG, GIF, DDS) or video (e.g., MP4, OGG/OGV) type supported by three.js. To use video as a texture you need to have a playing HTML5 video element as a source for your texture image and continuously update this texture as long as video is playing - the [page:VideoTexture VideoTexture] class handles this automatically.
 	*/
 	open var image: dynamic  = definedExternally
+
+
+	/**
+	* Used to check whether this or derived classes are Textures. Default is **true**. You should not change this, as it is used internally for optimisation.
+	*/
+	open var isTexture: Boolean  = definedExternally
 
 
 	/**
@@ -128,13 +134,13 @@ open external class Texture(image: dynamic = definedExternally, mapping: Int = d
 
 
 	/**
-	* False by default, which is the norm for PNG images. Set to true if the RGB values have been stored premultiplied by alpha.
+	* If set to **true**, the alpha channel, if present, is multiplied into the color channels when the texture is uploaded to the GPU. Defaut is **false**. Note that this property has no effect for [link:https://developer.mozilla.org/de/docs/Web/API/ImageBitmap ImageBitmap]. You need to configure on bitmap creation instead. See [page:ImageBitmapLoader].
 	*/
 	open var premultiplyAlpha: Boolean  = definedExternally
 
 
 	/**
-	* True by default. Flips the image's Y axis to match the WebGL texture coordinate space.
+	* If set to **true**, the texture is flipped along the vertical axis when uploaded to the GPU. Default is **true**. Note that this property has no effect for [link:https://developer.mozilla.org/de/docs/Web/API/ImageBitmap ImageBitmap]. You need to configure on bitmap creation instead. See [page:ImageBitmapLoader].
 	*/
 	open var flipY: Boolean  = definedExternally
 

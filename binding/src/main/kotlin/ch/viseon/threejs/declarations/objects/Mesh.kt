@@ -1,4 +1,4 @@
-//Generated date 13.03.2019
+//Generated date 23.05.2019
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.objects
 
@@ -57,7 +57,7 @@ open external class Mesh(geometry: ch.viseon.threejs.declarations.core.Geometry 
 
 
 	/**
-	* Get intersections between a casted ray and this mesh. [page:Raycaster.intersectObject] will call this method.
+	* Get intersections between a casted ray and this mesh. [page:Raycaster.intersectObject] will call this method, but the results are not ordered.
 	*/
 	override fun raycast(raycaster: ch.viseon.threejs.declarations.core.Raycaster, intersects: Array<dynamic>) : dynamic
 

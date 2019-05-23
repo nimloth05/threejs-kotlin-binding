@@ -3,9 +3,15 @@
 package ch.viseon.threejs.declarations.materials
 
 	/**
-	* A material that maps the normal vectors to RGB colors.
+	* [name] is defined by a MatCap (or Lit Sphere) texture, which encodes the material color and shading. [name] does not respond to lights since the matcap image file encodes baked lighting. It will cast a shadow onto an object that receives shadows (and shadow clipping works), but it will not self-shadow or receive shadows.
 	*/
-open external class MeshNormalMaterial(parameters: dynamic = definedExternally): ch.viseon.threejs.declarations.materials.Material{
+open external class MeshMatcapMaterial(parameters: dynamic = definedExternally): ch.viseon.threejs.declarations.materials.Material{
+
+	/**
+	* The alpha map is a grayscale texture that controls the opacity across the surface (black: fully transparent; white: fully opaque). Default is null. Only the color of the texture is used, ignoring the alpha channel if one exists. For RGB and RGBA textures, the [page:WebGLRenderer WebGL] renderer will use the green channel when sampling this texture due to the extra bit of precision provided for green in DXT-compressed and uncompressed RGB 565 formats. Luminance-only and luminance/alpha textures will also still work as expected.
+	*/
+	open var alphaMap: ch.viseon.threejs.declarations.textures.Texture  = definedExternally
+
 
 	/**
 	* The texture to create a bump map. The black and white values map to the perceived depth in relation to the lights. Bump doesn't actually affect the geometry of the object, only the lighting. If a normal map is defined this will be ignored.
@@ -17,6 +23,12 @@ open external class MeshNormalMaterial(parameters: dynamic = definedExternally):
 	* How much the bump map affects the material. Typical ranges are 0-1. Default is 1.
 	*/
 	open var bumpScale: Double  = definedExternally
+
+
+	/**
+	* [page:Color] of the material, by default set to white (0xffffff).
+	*/
+	open var color: ch.viseon.threejs.declarations.math.Color  = definedExternally
 
 
 	/**
@@ -38,21 +50,21 @@ open external class MeshNormalMaterial(parameters: dynamic = definedExternally):
 
 
 	/**
-	* Whether the material is affected by fog. Default is **false**.
+	* Used to check whether this or derived classes are mesh Matcap materials. Default is **true**. You should not change this, as it used internally for optimisation.
 	*/
-	override var fog: Boolean 
+	open var isMeshMatcapMaterial: Boolean  = definedExternally
 
 
 	/**
-	* Used to check whether this or derived classes are mesh normal materials. Default is **true**. You should not change this, as it used internally for optimisation.
+	* The color map. Default is null. The texture map color is modulated by the diffuse [page:.color].
 	*/
-	open var isMeshNormalMaterial: Boolean  = definedExternally
+	open var map: ch.viseon.threejs.declarations.textures.Texture  = definedExternally
 
 
 	/**
-	* Whether the material is affected by lights. Default is **false**.
+	* The matcap map. Default is null.
 	*/
-	override var lights: Boolean 
+	open var matcap: ch.viseon.threejs.declarations.textures.Texture  = definedExternally
 
 
 	/**
@@ -89,16 +101,4 @@ open external class MeshNormalMaterial(parameters: dynamic = definedExternally):
 	* Define whether the material uses skinning. Default is false.
 	*/
 	open var skinning: Boolean  = definedExternally
-
-
-	/**
-	* Render geometry as wireframe. Default is false (i.e. render as smooth shaded).
-	*/
-	open var wireframe: Boolean  = definedExternally
-
-
-	/**
-	* Controls wireframe thickness. Default is 1. Due to limitations of the [link:https://www.khronos.org/registry/OpenGL/specs/gl/glspec46.core.pdf OpenGL Core Profile] with the [page:WebGLRenderer WebGL] renderer on most platforms linewidth will always be 1 regardless of the set value.
-	*/
-	open var wireframeLinewidth: Double  = definedExternally
 }

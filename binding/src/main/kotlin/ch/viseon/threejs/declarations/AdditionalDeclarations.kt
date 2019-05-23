@@ -1,3 +1,4 @@
+@file:JsModule("three")
 package ch.viseon.threejs.declarations
 
 import ch.viseon.threejs.declarations.core.Face3
@@ -15,4 +16,10 @@ external interface Intersection {
     var faceIndex: Number? get() = definedExternally; set(value) = definedExternally
     var `object`: Object3D
     var uv: Vector2? get() = definedExternally; set(value) = definedExternally
+}
+
+external interface Shader {
+    var uniforms: dynamic //{ [uniform: string]: IUniform };
+    var vertexShader: String
+    var fragmentShader: String
 }

@@ -1,9 +1,9 @@
-//Generated date 13.03.2019
+//Generated date 23.05.2019
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.loaders
 
 	/**
-	* A loader for loading an [page:Image]. This uses the [page:FileLoader] internally for loading files, and is used internally by the [page:CubeTextureLoader], [page:ObjectLoader] and [page:TextureLoader].
+	* A loader for loading an [page:Image]. This is used internally by the [page:CubeTextureLoader], [page:ObjectLoader] and [page:TextureLoader].
 	*/
 open external class ImageLoader(manager: ch.viseon.threejs.declarations.loaders.managers.LoadingManager = definedExternally){
 

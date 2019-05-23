@@ -194,7 +194,7 @@ class KotlinFileGenerator(
 //            type
 //        }
 
-        //toFullReference does return the initial input, if no entry if found
+        //toFullReference does return the initial input, if no entry is found
         return classList.toFullReference(type)
     }
 

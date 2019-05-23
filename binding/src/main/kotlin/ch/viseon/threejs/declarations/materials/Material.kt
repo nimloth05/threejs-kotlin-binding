@@ -1,4 +1,4 @@
-//Generated date 13.03.2019
+//Generated date 23.05.2019
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.materials
 
@@ -262,7 +262,7 @@ open external class Material(){
 	/**
 	* An optional callback that is executed immediately before the shader program is compiled. This function is called with the shader source code as a parameter. Useful for the modification of built-in materials.
 	*/
-	open fun onBeforeCompile(shader: dynamic = definedExternally, renderer: ch.viseon.threejs.declarations.renderers.WebGLRenderer = definedExternally) : dynamic
+	open fun onBeforeCompile(shader: ch.viseon.threejs.declarations.Shader = definedExternally, renderer: ch.viseon.threejs.declarations.renderers.WebGLRenderer = definedExternally) : dynamic
 
 
 	/**

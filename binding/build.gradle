@@ -12,9 +12,10 @@ dependencies {
 }
 
 group 'ch.viseon.threejs'
-version = '102.0.0' //!!!Not uploaded to maven central!!!
+version = '104.0.0'
 
 compileKotlin2Js.kotlinOptions.moduleKind = "commonjs"
+compileKotlin2Js.kotlinOptions.outputFile = "$project.buildDir.path/js/threejs-binding.js"
 
 task sourcesJar(type: Jar) {
     from sourceSets.main.allSource

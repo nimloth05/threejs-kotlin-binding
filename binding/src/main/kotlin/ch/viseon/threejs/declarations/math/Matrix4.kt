@@ -1,4 +1,4 @@
-//Generated date 13.03.2019
+//Generated date 23.05.2019
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.math
 
@@ -10,7 +10,7 @@ open external class Matrix4(){
 	/**
 	* A [link:https://en.wikipedia.org/wiki/Row-_and_column-major_order#Column-major_order column-major] list of matrix values.
 	*/
-	open var elements: org.khronos.webgl.Float32Array  = definedExternally
+	open var elements: Array<dynamic>  = definedExternally
 
 
 	/**

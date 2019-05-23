@@ -1,4 +1,4 @@
-//Generated date 13.03.2019
+//Generated date 23.05.2019
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.renderers
 
@@ -159,12 +159,6 @@ open external class WebGLRenderer(parameters: dynamic = definedExternally){
 
 
 	/**
-	* Attempt to allocate a texture unit for use by a shader. Will warn if trying to allocate more texture units than the GPU supports. This is mainly used internally. See [page:WebGLRenderer.capabilities capabilities.maxTextures].
-	*/
-	open fun allocTextureUnit() : Int
-
-
-	/**
 	* Tells the renderer to clear its color, depth or stencil drawing buffer(s). This method initializes the color buffer to the current clear color value. Arguments default to **true**.
 	*/
 	open fun clear(color: Boolean = definedExternally, depth: Boolean = definedExternally, stencil: Boolean = definedExternally) : dynamic
@@ -243,7 +237,7 @@ open external class WebGLRenderer(parameters: dynamic = definedExternally){
 
 
 	/**
-	* Returns the current RenderTarget, if any.
+	* Returns the current [page:RenderTarget RenderTarget] if there are; returns **null** otherwise.
 	*/
 	open fun getRenderTarget() : dynamic
 
@@ -348,7 +342,7 @@ A build in function that can be used instead of [link:https://developer.mozilla.
 
 
 	/**
-	* renderTarget -- The [page:WebGLRenderTarget renderTarget] that needs to be activated (optional). activeCubeFace -- Specifies the active cube side (PX 0, NX 1, PY 2, NY 3, PZ 4, NZ 5) of [page:WebGLRenderTargetCube] (optional). activeMipMapLevel -- Specifies the active mipmap level (optional). This method sets the active rendertarget. If the parameter is omitted the canvas is set as the active rendertarget.
+	* renderTarget -- The [page:WebGLRenderTarget renderTarget] that needs to be activated. When **null** is given, the canvas is set as the active render target instead. activeCubeFace -- Specifies the active cube side (PX 0, NX 1, PY 2, NY 3, PZ 4, NZ 5) of [page:WebGLRenderTargetCube] (optional). activeMipMapLevel -- Specifies the active mipmap level (optional). This method sets the active rendertarget.
 	*/
 	open fun setRenderTarget(renderTarget: ch.viseon.threejs.declarations.renderers.WebGLRenderTarget = definedExternally, activeCubeFace: Int = definedExternally, activeMipMapLevel: Int = definedExternally) : dynamic
 
@@ -369,18 +363,6 @@ A build in function that can be used instead of [link:https://developer.mozilla.
 	* Resizes the output canvas to (width, height) with device pixel ratio taken into account, and also sets the viewport to fit that size, starting in (0, 0). Setting [page:Boolean updateStyle] to false prevents any style changes to the output canvas.
 	*/
 	open fun setSize(width: Int = definedExternally, height: Int = definedExternally, updateStyle: Boolean = definedExternally) : dynamic
-
-
-	/**
-	* texture -- The [page:Texture texture] that needs to be set. slot -- The number indicating which slot should be used by the texture. This method sets the correct texture to the correct slot for the WebGL shader. The slot number can be found as a value of the uniform of the sampler. Note: This method replaces the older [method:null setTexture] method.
-	*/
-	open fun setTexture2D(texture: ch.viseon.threejs.declarations.textures.Texture = definedExternally, slot: Double = definedExternally) : dynamic
-
-
-	/**
-	* texture -- The [page:CubeTexture cubeTexture] that needs to be set. slot -- The number indicating which slot should be used by the texture. This method sets the correct texture to the correct slot for the WebGL shader. The slot number can be found as a value of the uniform of the sampler.
-	*/
-	open fun setTextureCube(cubeTexture: ch.viseon.threejs.declarations.textures.CubeTexture = definedExternally, slot: Double = definedExternally) : dynamic
 
 
 	/**

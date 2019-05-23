@@ -1,4 +1,4 @@
-//Generated date 13.03.2019
+//Generated date 23.05.2019
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.core
 
@@ -26,7 +26,7 @@ open external class Object3D(){
 
 
 	/**
-	* Same as customDepthMaterial, but used with [page:PointLight]. Default is **undefined**.
+	* Same as [page:.customDepthMaterial customDepthMaterial], but used with [page:PointLight]. Default is **undefined**.
 	*/
 	open var customDistanceMaterial: ch.viseon.threejs.declarations.materials.Material  = definedExternally
 
@@ -212,7 +212,7 @@ open external class Object3D(){
 
 
 	/**
-	* recursive -- if true, descendants of the object are also copied. Default is true. Copy the given object into this object.
+	* recursive -- if true, descendants of the object are also copied. Default is true. Copy the given object into this object. Note: event listeners and user-defined callbacks ([page:.onAfterRender] and [page:.onBeforeRender]) are not copied.
 	*/
 	open fun copy(`object`: ch.viseon.threejs.declarations.core.Object3D = definedExternally, recursive: Boolean = definedExternally) : Object3D
 

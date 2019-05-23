@@ -79,7 +79,8 @@ object DocCorrections {
         "Quaterion" to "Quaternion",
         "TextureCube" to "CubeTexture",
         "XMLHttpRequest" to "org.w3c.xhr.XMLHttpRequest",
-        "HTMLImageElement" to "org.w3c.dom.HTMLImageElement"
+        "HTMLImageElement" to "org.w3c.dom.HTMLImageElement",
+        "Shader" to "ch.viseon.threejs.declarations.Shader"
     )
 
     /**

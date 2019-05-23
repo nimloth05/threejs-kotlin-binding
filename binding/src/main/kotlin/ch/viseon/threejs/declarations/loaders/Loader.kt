@@ -1,4 +1,4 @@
-//Generated date 13.03.2019
+//Generated date 23.05.2019
 @file:JsModule("three")
 package ch.viseon.threejs.declarations.loaders
 
@@ -46,4 +46,18 @@ Creates the Material based on the parameters m.
 Creates an array of [page:Material] based on the array of parameters m. The index of the parameters decide the correct index of the materials.
 	*/
 	open fun initMaterials(materials: Array<dynamic> = definedExternally, texturePath: String = definedExternally) : Array<dynamic>
+
+
+	/**
+	* [page:Object regex] — A regular expression. [page:Loader loader] — The loader.
+Registers a loader with the given regular expression.
+	*/
+	open fun add(regex: dynamic = definedExternally, loader: ch.viseon.threejs.declarations.loaders.Loader = definedExternally) : dynamic
+
+
+	/**
+	* [page:String file] — The file path.
+Can be used to retrieve the registered loader for the given file path.
+	*/
+	open fun get(file: String = definedExternally) : dynamic
 }
