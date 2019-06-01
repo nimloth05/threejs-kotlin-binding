@@ -2,6 +2,13 @@
 This project provides an update to date binding of three.js. (r101)
 This binding was generated out of the threejs doc. This means, that most classes/methods/properties contains documentation.
 
+ATTENTION: With version 105 I changed the maven coordinates to "wrapper" instead of "binding".
+
+# Extensions
+
+With release 105 there is also an additional project, "extension" which provides (basic) coroutine support for some loaders.
+Maven coordinates: ch.viseon.threejs:extensions:105.0.0
+
 ## setup
 
 The binding is available at the maven central repository.
@@ -9,14 +16,14 @@ The binding is available at the maven central repository.
 Reference this library in your build.gradle file:
 
     dependencies {
-        implementation "ch.viseon.threejs:binding:101.0.0"
+        implementation "ch.viseon.threejs:wrapper:105.0.0"
     }
 
 Threejs needs to be loaded via npm (use kotlinFrontend Plugin)
 
     kotlinFrontend {
         npm {
-            dependency("three", "0.101.0")
+            dependency("three", "0.105.0")
         }
     }
     

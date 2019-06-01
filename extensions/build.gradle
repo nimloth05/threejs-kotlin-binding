@@ -8,14 +8,16 @@ repositories {
 }
 
 dependencies {
-    compile "org.jetbrains.kotlin:kotlin-stdlib-js"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-js"
+    implementation project(":wrapper")
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core-js:${coroutine_version}"
 }
 
 group "ch.viseon.threejs"
 version = "105.0.0"
 
 compileKotlin2Js.kotlinOptions.moduleKind = "commonjs"
-compileKotlin2Js.kotlinOptions.outputFile = "$project.buildDir.path/js/threejs-wrapper.js"
+compileKotlin2Js.kotlinOptions.outputFile = "$project.buildDir.path/js/threejs-extensions.js"
 
 task sourcesJar(type: Jar) {
     from sourceSets.main.allSource
@@ -29,8 +31,8 @@ publishing {
             artifact sourcesJar
 //            artifact javadocJar
             pom {
-                name = "ThreeJs Wrapper"
-                description = "Kotlin wrapper for ThreeJs, javascript library for 3d rendering"
+                name = "ThreeJs Extensions"
+                description = "Kotlin extensions for ThreeJs"
                 url = "https://github.com/nimloth05/threejs-kotlin-parser"
                 licenses {
                     license {

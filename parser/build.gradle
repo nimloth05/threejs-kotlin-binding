@@ -1,5 +1,5 @@
-group 'ch.viseon.threejs'
-version '1.0-SNAPSHOT'
+group "ch.viseon.threejs"
+version "1.0-SNAPSHOT"
 
 apply plugin: "kotlin"
 
