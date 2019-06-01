@@ -10,7 +10,7 @@ import java.nio.file.Paths
 
 fun main(args: Array<String>) {
     val classList = ClassList.compile(URL("https://threejs.org/docs/list.js"), "ch.viseon.threejs.declarations")
-    val targetDirectory = Paths.get("binding/src/main/kotlin")
+    val targetDirectory = Paths.get("wrapper/src/main/kotlin")
 
     val classDeclarations = collectClassInformation(targetDirectory, classList)
     generateKotlinFiles(targetDirectory, classList, classDeclarations)

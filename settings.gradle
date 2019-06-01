@@ -15,7 +15,7 @@ pluginManagement {
         maven { url 'https://dl.bintray.com/kotlin/kotlin-eap' }
     }
 }
-rootProject.name = 'threejs-kotlin-binding'
+rootProject.name = 'threejs-kotlin-wrapper'
 
-include 'parser', 'binding', "examples"
+include 'parser', 'wrapper', "examples"
 
