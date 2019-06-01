@@ -15,7 +15,7 @@ group 'ch.viseon.threejs'
 version = '105.0.0'
 
 compileKotlin2Js.kotlinOptions.moduleKind = "commonjs"
-compileKotlin2Js.kotlinOptions.outputFile = "$project.buildDir.path/js/threejs-binding.js"
+compileKotlin2Js.kotlinOptions.outputFile = "$project.buildDir.path/js/threejs-wrapper.js"
 
 task sourcesJar(type: Jar) {
     from sourceSets.main.allSource
