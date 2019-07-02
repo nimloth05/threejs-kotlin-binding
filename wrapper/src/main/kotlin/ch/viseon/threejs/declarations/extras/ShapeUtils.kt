@@ -7,7 +7,7 @@ package ch.viseon.threejs.declarations.extras
 open external class ShapeUtils(){
 
 	/**
-	* contour -- 2D polygon. Calculate area of a ( 2D ) contour polygon.
+	* contour -- 2D polygon. An array of THREE.Vector2() Calculate area of a ( 2D ) contour polygon.
 	*/
 	open fun area() : Double
 

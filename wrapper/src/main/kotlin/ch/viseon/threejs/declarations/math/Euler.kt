@@ -13,25 +13,25 @@ open external class Euler(x: Double = definedExternally, y: Double = definedExte
 
 
 	/**
-	* The order in which to apply rotations. Default is 'XYZ', which means that the object will first be rotated around its X axis, then its Y axis and finally its Z axis. Other possibilities are: 'YZX', 'ZXY', 'XZY', 'YXZ' and 'ZYX'. These must be in upper case. Three.js uses intrinsic Tait-Bryan angles. This means that rotations are performed with respect to the local coordinate system. That is, for order 'XYZ', the rotation is first around the local-X axis (which is the same as the world-X axis), then around local-Y (which may now be different from the world Y-axis), then local-Z (which may be different from the world Z-axis). If the order is changed, [page:.onChangeCallback onChangeCallback] will be called.
+	* The order in which to apply rotations. Default is 'XYZ', which means that the object will first be rotated around its X axis, then its Y axis and finally its Z axis. Other possibilities are: 'YZX', 'ZXY', 'XZY', 'YXZ' and 'ZYX'. These must be in upper case. Three.js uses intrinsic Tait-Bryan angles. This means that rotations are performed with respect to the local coordinate system. That is, for order 'XYZ', the rotation is first around the local-X axis (which is the same as the world-X axis), then around local-Y (which may now be different from the world Y-axis), then local-Z (which may be different from the world Z-axis).
 	*/
 	open var order: String  = definedExternally
 
 
 	/**
-	* The current value of the x component. If this is changed, [page:.onChangeCallback onChangeCallback] will be called.
+	* The current value of the x component.
 	*/
 	open var x: Double  = definedExternally
 
 
 	/**
-	* The current value of the y component. If this is changed, [page:.onChangeCallback onChangeCallback] will be called.
+	* The current value of the y component.
 	*/
 	open var y: Double  = definedExternally
 
 
 	/**
-	* The current value of the z component. If this is changed, [page:.onChangeCallback onChangeCallback] will be called.
+	* The current value of the z component.
 	*/
 	open var z: Double  = definedExternally
 
@@ -61,43 +61,31 @@ open external class Euler(x: Double = definedExternally, y: Double = definedExte
 
 
 	/**
-	* [page:Function onChangeCallback] - set the value of the onChangeCallback() function.
-	*/
-	open fun onChange(onChangeCallback: dynamic = definedExternally) : ch.viseon.threejs.declarations.math.Euler
-
-
-	/**
-	* By default this is an empty function, however it can be set via [page:.onChange onChange](). It gets called after changing the [page:.x x], [page:.y y], [page:.z z] or [page:.order order] properties, and also after calling most setter functions (see those for details).
-	*/
-	open fun onChangeCallback() : ch.viseon.threejs.declarations.math.Euler
-
-
-	/**
 	* Resets the euler angle with a new order by creating a quaternion from this euler angle and then setting this euler angle with the quaternion and the new order. WARNING: this discards revolution information.
 	*/
 	open fun reorder(newOrder: String = definedExternally) : ch.viseon.threejs.declarations.math.Euler
 
 
 	/**
-	* [page:.x x] - the angle of the x axis in radians. [page:.y y] - the angle of the y axis in radians. [page:.z z] - the angle of the z axis in radians. [page:.order order] - (optional) a string representing the order that the rotations are applied. Sets the angles of this euler transform and optionally the [page:.order order] and then call [page:.onChangeCallback onChangeCallback]().
+	* [page:.x x] - the angle of the x axis in radians. [page:.y y] - the angle of the y axis in radians. [page:.z z] - the angle of the z axis in radians. [page:.order order] - (optional) a string representing the order that the rotations are applied. Sets the angles of this euler transform and optionally the [page:.order order].
 	*/
 	open fun set(x: Double = definedExternally, y: Double = definedExternally, z: Double = definedExternally, order: String = definedExternally) : ch.viseon.threejs.declarations.math.Euler
 
 
 	/**
-	* [page:Matrix4 m] - a [page:Matrix4] of which the upper 3x3 of matrix is a pure [link:https://en.wikipedia.org/wiki/Rotation_matrix rotation matrix] (i.e. unscaled). [page:.order order] - (optional) a string representing the order that the rotations are applied. [page:Boolean update] - (optional) whether to call [page:.onChangeCallback onChangeCallback]() after applying the matrix. Sets the angles of this euler transform from a pure rotation matrix based on the orientation specified by order.
+	* [page:Matrix4 m] - a [page:Matrix4] of which the upper 3x3 of matrix is a pure [link:https://en.wikipedia.org/wiki/Rotation_matrix rotation matrix] (i.e. unscaled). [page:.order order] - (optional) a string representing the order that the rotations are applied. Sets the angles of this euler transform from a pure rotation matrix based on the orientation specified by order.
 	*/
-	open fun setFromRotationMatrix(m: ch.viseon.threejs.declarations.math.Matrix4 = definedExternally, order: String = definedExternally, update: Boolean = definedExternally) : ch.viseon.threejs.declarations.math.Euler
+	open fun setFromRotationMatrix(m: ch.viseon.threejs.declarations.math.Matrix4 = definedExternally, order: String = definedExternally) : ch.viseon.threejs.declarations.math.Euler
 
 
 	/**
-	* [page:Quaternion q] - a normalized quaternion. [page:.order order] - (optional) a string representing the order that the rotations are applied. [page:Boolean update] - (optional) whether to call [page:.onChangeCallback onChangeCallback]() after applying the matrix. Sets the angles of this euler transform from a normalized quaternion based on the orientation specified by [page:.order order].
+	* [page:Quaternion q] - a normalized quaternion. [page:.order order] - (optional) a string representing the order that the rotations are applied. Sets the angles of this euler transform from a normalized quaternion based on the orientation specified by [page:.order order].
 	*/
-	open fun setFromQuaternion(q: ch.viseon.threejs.declarations.math.Quaternion = definedExternally, order: String = definedExternally, update: Boolean = definedExternally) : ch.viseon.threejs.declarations.math.Euler
+	open fun setFromQuaternion(q: ch.viseon.threejs.declarations.math.Quaternion = definedExternally, order: String = definedExternally) : ch.viseon.threejs.declarations.math.Euler
 
 
 	/**
-	* [page:Vector3 vector] - [page:Vector3]. [page:.order order] - (optional) a string representing the order that the rotations are applied. Set the [page:.x x], [page:.y y] and [page:.z z], and optionally update the [page:.order order]. [page:.onChangeCallback onChangeCallback]() is called after these changes are made.
+	* [page:Vector3 vector] - [page:Vector3]. [page:.order order] - (optional) a string representing the order that the rotations are applied. Set the [page:.x x], [page:.y y] and [page:.z z], and optionally update the [page:.order order].
 	*/
 	open fun setFromVector3(vector: ch.viseon.threejs.declarations.math.Vector3 = definedExternally, order: String = definedExternally) : ch.viseon.threejs.declarations.math.Euler
 

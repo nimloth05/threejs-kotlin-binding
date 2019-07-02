@@ -17,8 +17,10 @@ class ClassList(val class2PackageName: Map<String, ClassListEntry>) {
                 .readText()
                 .replace("var list = ", "")
                 .replace("/extras/objects/ImmediateRenderObject\",", "/extras/objects/ImmediateRenderObject\"")
-                .replace("\"examples/objects/Lensflare\",", "\"examples/objects/Lensflare\"")
-                .replace("\"examples/Lut\",", "\"examples/Lut\"")
+                .replace("\"examples/en/objects/Lensflare\",", "\"examples/en/objects/Lensflare\"")
+                .replace("\"examples/zh/objects/Lensflare\",", "\"examples/zh/objects/Lensflare\"")
+                .replace("\"examples/en/Lut\",", "\"examples/en/Lut\"")
+                .replace("\"examples/zh/Lut\",", "\"examples/zh/Lut\"")
 
             return compile(jsonString, packagePrefix)
         }

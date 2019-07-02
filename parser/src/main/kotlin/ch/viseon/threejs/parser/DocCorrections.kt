@@ -147,6 +147,14 @@ object DocCorrections {
                     ParamDeclaration("material", "Material", false)
                 )
             )
+        ),
+        "LineSegments" to listOf(
+            ConstructorDeclaration(
+                listOf(
+                    ParamDeclaration("geometry", "BufferGeometry", true),
+                    ParamDeclaration("material", "Material", false)
+                )
+            )
         )
     )
 

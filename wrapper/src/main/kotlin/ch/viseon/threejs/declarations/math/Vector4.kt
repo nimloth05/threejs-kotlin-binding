@@ -21,6 +21,18 @@ open external class Vector4(x: Double = definedExternally, y: Double = definedEx
 
 
 	/**
+	* Alias for [page:.z z].
+	*/
+	open var width: Double  = definedExternally
+
+
+	/**
+	* Alias for [page:.w w].
+	*/
+	open var height: Double  = definedExternally
+
+
+	/**
 	* Adds [page:Vector4 v] to this vector.
 	*/
 	open fun add(v: ch.viseon.threejs.declarations.math.Vector4 = definedExternally) : Vector4

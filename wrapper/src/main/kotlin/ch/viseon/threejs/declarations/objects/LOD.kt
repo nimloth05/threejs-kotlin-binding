@@ -7,6 +7,12 @@ package ch.viseon.threejs.declarations.objects
 open external class LOD(): ch.viseon.threejs.declarations.core.Object3D{
 
 	/**
+	* Whether the LOD object is updated automatically by the renderer per frame or not. If set to false, you have to call [page:LOD.update]() in the render loop by yourself. Default is true.
+	*/
+	open var autoUpdate: Boolean  = definedExternally
+
+
+	/**
 	* An array of [page:object level] objects Each level is an object with two properties: [page:Object3D object] - The [page:Object3D] to display at this level. [page:Float distance] - The distance at which to display this level of detail.
 	*/
 	open var levels: Array<dynamic>  = definedExternally
@@ -43,7 +49,7 @@ open external class LOD(): ch.viseon.threejs.declarations.core.Object3D{
 
 
 	/**
-	* Set the visibility of each [page:levels level]'s [page:Object3D object] based on distance from the [page:Camera camera]. This needs to be called in the render loop for levels of detail to be updated dynamically.
+	* Set the visibility of each [page:levels level]'s [page:Object3D object] based on distance from the [page:Camera camera].
 	*/
 	open fun update(camera: ch.viseon.threejs.declarations.cameras.Camera = definedExternally) : dynamic
 }

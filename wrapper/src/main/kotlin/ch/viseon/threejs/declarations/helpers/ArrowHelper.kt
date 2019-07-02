@@ -19,9 +19,9 @@ open external class ArrowHelper(dir: ch.viseon.threejs.declarations.math.Vector3
 
 
 	/**
-	* hex -- The hexadecimal value of the color. Sets the color of the arrowHelper.
+	* color -- The desired color. Sets the color of the arrowHelper.
 	*/
-	open fun setColor(hex: Double = definedExternally) : dynamic
+	open fun setColor(color: ch.viseon.threejs.declarations.math.Color = definedExternally) : dynamic
 
 
 	/**

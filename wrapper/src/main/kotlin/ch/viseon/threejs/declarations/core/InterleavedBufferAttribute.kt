@@ -37,7 +37,7 @@ open external class InterleavedBufferAttribute(interleavedBuffer: ch.viseon.thre
 
 
 	/**
-	* Default is **true**.
+	* Default is **false**.
 	*/
 	open var normalized: Boolean  = definedExternally
 

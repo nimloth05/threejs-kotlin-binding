@@ -11,28 +11,12 @@ open external class Quaternion(x: Double = definedExternally, y: Double = define
 	*/
 	open var isQuaternion: Boolean  = definedExternally
 
-
-	/**
-	* Changing this property will result in [page:.onChangeCallback onChangeCallback] being called.
-	*/
 	open var x: Double  = definedExternally
 
-
-	/**
-	* Changing this property will result in [page:.onChangeCallback onChangeCallback] being called.
-	*/
 	open var y: Double  = definedExternally
 
-
-	/**
-	* Changing this property will result in [page:.onChangeCallback onChangeCallback] being called.
-	*/
 	open var z: Double  = definedExternally
 
-
-	/**
-	* Changing this property will result in [page:.onChangeCallback onChangeCallback] being called.
-	*/
 	open var w: Double  = definedExternally
 
 
@@ -79,7 +63,7 @@ open external class Quaternion(x: Double = definedExternally, y: Double = define
 
 
 	/**
-	* Inverts this quaternion - calculate the [page:.conjugate conjugate] and then [page:.normalize normalizes] the result.
+	* Inverts this quaternion - calculates the [page:.conjugate conjugate]. The quaternion is assumed to have unit length.
 	*/
 	open fun inverse() : ch.viseon.threejs.declarations.math.Quaternion
 
@@ -112,18 +96,6 @@ open external class Quaternion(x: Double = definedExternally, y: Double = define
 	* Sets this quaternion to [page:Quaternion a] x [page:Quaternion b]. Adapted from the method outlined [link:http://www.euclideanspace.com/maths/algebra/realNormedAlgebra/quaternions/code/index.htm here].
 	*/
 	open fun multiplyQuaternions(a: ch.viseon.threejs.declarations.math.Quaternion = definedExternally, b: ch.viseon.threejs.declarations.math.Quaternion = definedExternally) : ch.viseon.threejs.declarations.math.Quaternion
-
-
-	/**
-	* Sets the [page:.onChangeCallback onChangeCallback]() method.
-	*/
-	open fun onChange(onChangeCallback: dynamic = definedExternally) : ch.viseon.threejs.declarations.math.Quaternion
-
-
-	/**
-	* This function is called whenever any of the following occurs:
-	*/
-	open fun onChangeCallback() : ch.viseon.threejs.declarations.math.Quaternion
 
 
 	/**
