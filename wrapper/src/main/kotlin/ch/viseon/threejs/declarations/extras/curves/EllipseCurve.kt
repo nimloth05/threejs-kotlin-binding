@@ -7,12 +7,6 @@ package ch.viseon.threejs.declarations.extras.curves
 open external class EllipseCurve(aX: Double = definedExternally, aY: Double = definedExternally, xRadius: Double = definedExternally, yRadius: Double = definedExternally, aStartAngle: Double = definedExternally, aEndAngle: Double = definedExternally, aClockwise: Boolean = definedExternally, aRotation: Double = definedExternally): ch.viseon.threejs.declarations.extras.core.Curve{
 
 	/**
-	* Used to check whether this or derived classes are EllipseCurves. Default is **true**. You should not change this, as it used internally for optimisation.
-	*/
-	open var isEllipseCurve: Boolean  = definedExternally
-
-
-	/**
 	* The X center of the ellipse.
 	*/
 	open var aX: Double  = definedExternally

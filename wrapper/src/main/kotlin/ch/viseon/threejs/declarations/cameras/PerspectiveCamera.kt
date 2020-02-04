@@ -43,12 +43,6 @@ open external class PerspectiveCamera(fov: Double = definedExternally, aspect: D
 
 
 	/**
-	* Used to test whether this or derived classes are PerspectiveCameras. Default is **true**. This should not be changed as it is used internally by the renderer for optimisation.
-	*/
-	open var isPerspectiveCamera: Boolean  = definedExternally
-
-
-	/**
 	* Camera frustum near plane. Default is **0.1**. The valid range is greater than 0 and less than the current value of the [page:.far far] plane. Note that, unlike for the [page:OrthographicCamera], **0** is not a valid value for a PerspectiveCamera's near plane.
 	*/
 	open var near: Double  = definedExternally
@@ -119,5 +113,5 @@ For example, if you have 3x2 monitors and each monitor is 1920x1080 and the moni
 	/**
 	* meta -- object containing metadata such as textures or images in objects' descendants. Convert the camera to three.js [link:https://github.com/mrdoob/three.js/wiki/JSON-Object-Scene-format-4 JSON Object/Scene format].
 	*/
-	open fun toJSON() : dynamic
+	override fun toJSON(meta: dynamic) : dynamic
 }

@@ -95,7 +95,7 @@ open external class Plane(normal: ch.viseon.threejs.declarations.math.Vector3 = 
 
 
 	/**
-	* [page:Vector3 normal] - a unit length [page:Vector3] defining the normal of the plane. [page:Float constant] - the signed distance from the origin to the plane. Default is **0**. Sets the plane's [page:.normal normal] and [page:.constant constant] properties.
+	* [page:Vector3 normal] - a unit length [page:Vector3] defining the normal of the plane. [page:Float constant] - the signed distance from the origin to the plane. Default is **0**. Sets this plane's [page:.normal normal] and [page:.constant constant] properties by copying the values from the given normal.
 	*/
 	open fun set(normal: ch.viseon.threejs.declarations.math.Vector3 = definedExternally, constant: Double = definedExternally) : ch.viseon.threejs.declarations.math.Plane
 

@@ -80,7 +80,10 @@ object DocCorrections {
         "TextureCube" to "CubeTexture",
         "XMLHttpRequest" to "org.w3c.xhr.XMLHttpRequest",
         "HTMLImageElement" to "org.w3c.dom.HTMLImageElement",
-        "Shader" to "ch.viseon.threejs.declarations.Shader"
+        "ImageBitmap" to "org.w3c.dom.ImageBitmap",
+        "HTMLCanvasElement" to "org.w3c.dom.HTMLCanvasElement",
+        "Shader" to "ch.viseon.threejs.declarations.Shader",
+        "Usage" to "Int"
     )
 
     /**

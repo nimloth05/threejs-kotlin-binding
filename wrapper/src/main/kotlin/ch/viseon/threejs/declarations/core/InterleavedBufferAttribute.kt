@@ -43,9 +43,9 @@ open external class InterleavedBufferAttribute(interleavedBuffer: ch.viseon.thre
 
 
 	/**
-	* Default is **true**.
+	* Applies matrix [page:Matrix4 m] to every Vector3 element of this InterleavedBufferAttribute.
 	*/
-	open var isInterleavedBufferAttribute: Boolean  = definedExternally
+	open fun applyMatrix4(m: ch.viseon.threejs.declarations.math.Matrix4 = definedExternally) : InterleavedBufferAttribute
 
 
 	/**

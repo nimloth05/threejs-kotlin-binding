@@ -43,12 +43,6 @@ open external class WebGLRenderer(parameters: dynamic = definedExternally){
 
 
 	/**
-	* The renderer obtains a [link:https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext RenderingContext] context from its [page:WebGLRenderer.domElement domElement] by default, using [link:https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/getContext HTMLCanvasElement.getContext](). You can create this manually, however it must correspond to the [page:WebGLRenderer.domElement domElement] in order to render to the screen.
-	*/
-	open var context: org.khronos.webgl.WebGLRenderingContext  = definedExternally
-
-
-	/**
 	* A [link:https://developer.mozilla.org/en-US/docs/Web/HTML/Element/canvas canvas] where the renderer draws its output. This is automatically created by the renderer in the constructor (if not provided already); you just need to add it to your page like so: document.body.appendChild( renderer.domElement );
 	*/
 	open var domElement: org.w3c.dom.Element  = definedExternally
@@ -67,15 +61,10 @@ open external class WebGLRenderer(parameters: dynamic = definedExternally){
 
 
 	/**
-	* If set, then it expects that all textures and colors are premultiplied gamma. Default is **false**.
+	* Defines the output encoding of the renderer. Default is [page:Textures THREE.LinearEncoding].
+See the [page:Textures texture constants] page for details of other formats.
 	*/
-	open var gammaInput: Boolean  = definedExternally
-
-
-	/**
-	* If set, then it expects that all textures and colors need to be outputted in premultiplied gamma. Default is **false**.
-	*/
-	open var gammaOutput: Boolean  = definedExternally
+	open var outputEncoding: Double  = definedExternally
 
 
 	/**
@@ -155,6 +144,12 @@ open external class WebGLRenderer(parameters: dynamic = definedExternally){
 	* Tone mapping white point. Default is **1**.
 	*/
 	open var toneMappingWhitePoint: Double  = definedExternally
+
+
+	/**
+	* Provides access to the WebXR related interface of the renderer.
+	*/
+	open var xr: dynamic  = definedExternally
 
 
 	/**
@@ -244,7 +239,7 @@ open external class WebGLRenderer(parameters: dynamic = definedExternally){
 	/**
 	* Returns the current active mipmap level.
 	*/
-	open fun getActiveMipMapLevel() : Int
+	open fun getActiveMipmapLevel() : Int
 
 
 	/**
@@ -296,6 +291,12 @@ open external class WebGLRenderer(parameters: dynamic = definedExternally){
 
 
 	/**
+	* Initializes the given texture. Useful for preloading a texture rather than waiting until first render (which can cause noticeable lags due to decode and GPU upload overhead).
+	*/
+	open fun initTexture(texture: ch.viseon.threejs.declarations.textures.Texture = definedExternally) : dynamic
+
+
+	/**
 	* Reset the GL state to default. Called internally if the WebGL context is lost.
 	*/
 	open fun resetGLState() : dynamic
@@ -305,7 +306,7 @@ open external class WebGLRenderer(parameters: dynamic = definedExternally){
 	* buffer - Uint8Array is the only destination type supported in all cases, other types are renderTarget and platform dependent. See [link:https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.12 WebGL spec] for details.
 Reads the pixel data from the renderTarget into the buffer you pass in. This is a wrapper around [link:https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/readPixels WebGLRenderingContext.readPixels]().
 See the [example:webgl_interactive_cubes_gpu interactive / cubes / gpu] example.
-For reading out a [page:WebGLRenderTargetCube WebGLRenderTargetCube] use the optional parameter activeCubeFaceIndex to determine which face should be read.
+For reading out a [page:WebGLCubeRenderTarget WebGLCubeRenderTarget] use the optional parameter activeCubeFaceIndex to determine which face should be read.
 	*/
 	open fun readRenderTargetPixels(renderTarget: ch.viseon.threejs.declarations.renderers.WebGLRenderTarget = definedExternally, x: Double = definedExternally, y: Double = definedExternally, width: Double = definedExternally, height: Double = definedExternally, buffer: Array<dynamic> = definedExternally, activeCubeFaceIndex: Int = definedExternally) : dynamic
 
@@ -330,7 +331,7 @@ For reading out a [page:WebGLRenderTargetCube WebGLRenderTargetCube] use the opt
 
 	/**
 	* [page:Function callback] — The function will be called every available frame. If `null` is passed it will stop any already ongoing animation.
-A built in function that can be used instead of [link:https://developer.mozilla.org/en-US/docs/Web/API/window/requestAnimationFrame requestAnimationFrame]. For WebVR projects this function must be used.
+A built in function that can be used instead of [link:https://developer.mozilla.org/en-US/docs/Web/API/window/requestAnimationFrame requestAnimationFrame]. For WebXR projects this function must be used.
 	*/
 	open fun setAnimationLoop(callback: dynamic = definedExternally) : dynamic
 
@@ -354,9 +355,9 @@ A built in function that can be used instead of [link:https://developer.mozilla.
 
 
 	/**
-	* renderTarget -- The [page:WebGLRenderTarget renderTarget] that needs to be activated. When **null** is given, the canvas is set as the active render target instead. activeCubeFace -- Specifies the active cube side (PX 0, NX 1, PY 2, NY 3, PZ 4, NZ 5) of [page:WebGLRenderTargetCube] (optional). activeMipMapLevel -- Specifies the active mipmap level (optional). This method sets the active rendertarget.
+	* renderTarget -- The [page:WebGLRenderTarget renderTarget] that needs to be activated. When **null** is given, the canvas is set as the active render target instead. activeCubeFace -- Specifies the active cube side (PX 0, NX 1, PY 2, NY 3, PZ 4, NZ 5) of [page:WebGLCubeRenderTarget] (optional). activeMipmapLevel -- Specifies the active mipmap level (optional). This method sets the active rendertarget.
 	*/
-	open fun setRenderTarget(renderTarget: ch.viseon.threejs.declarations.renderers.WebGLRenderTarget = definedExternally, activeCubeFace: Int = definedExternally, activeMipMapLevel: Int = definedExternally) : dynamic
+	open fun setRenderTarget(renderTarget: ch.viseon.threejs.declarations.renderers.WebGLRenderTarget = definedExternally, activeCubeFace: Int = definedExternally, activeMipmapLevel: Int = definedExternally) : dynamic
 
 
 	/**
@@ -369,6 +370,18 @@ A built in function that can be used instead of [link:https://developer.mozilla.
 	* Enable or disable the scissor test. When this is enabled, only the pixels within the defined scissor area will be affected by further renderer actions.
 	*/
 	open fun setScissorTest(boolean: Boolean = definedExternally) : dynamic
+
+
+	/**
+	* Sets the custom opaque sort function for the WebGLRenderLists. Pass null to use the default painterSortStable function.
+	*/
+	open fun setOpaqueSort(method: dynamic = definedExternally) : dynamic
+
+
+	/**
+	* Sets the custom transparent sort function for the WebGLRenderLists. Pass null to use the default reversePainterSortStable function.
+	*/
+	open fun setTransparentSort(method: dynamic = definedExternally) : dynamic
 
 
 	/**

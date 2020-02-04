@@ -49,6 +49,12 @@ open external class AnimationMixer(rootObject: ch.viseon.threejs.declarations.co
 
 
 	/**
+	* Sets the global mixer to a specific time and updates the animation accordingly. This is useful when you need to jump to an exact time in an animation. The input parameter will be scaled by the mixer's [page:.timeScale timeScale].
+	*/
+	open fun setTime(timeInSeconds: Double = definedExternally) : ch.viseon.threejs.declarations.animation.AnimationMixer
+
+
+	/**
 	* Deallocates all memory resources for a clip.
 	*/
 	open fun uncacheClip(clip: ch.viseon.threejs.declarations.animation.AnimationClip = definedExternally) : dynamic

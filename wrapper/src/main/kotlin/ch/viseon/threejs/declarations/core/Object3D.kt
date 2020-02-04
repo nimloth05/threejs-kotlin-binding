@@ -43,12 +43,6 @@ open external class Object3D(){
 
 
 	/**
-	* Used to check whether this or derived classes are Object3Ds. Default is **true**. You should not change this, as it is used internally for optimisation.
-	*/
-	open var isObject3D: Boolean  = definedExternally
-
-
-	/**
 	* The layer membership of the object. The object is only visible if it has at least one layer in common with the [page:Camera] in use.
 	*/
 	open var layers: ch.viseon.threejs.declarations.core.Layers  = definedExternally
@@ -183,7 +177,7 @@ open external class Object3D(){
 	/**
 	* The default setting for [page:.matrixAutoUpdate matrixAutoUpdate] for newly created Object3Ds.
 	*/
-	open var DefaultMatrixAutoUpdate: ch.viseon.threejs.declarations.math.Vector3  = definedExternally
+	open var DefaultMatrixAutoUpdate: Boolean  = definedExternally
 
 
 	/**
@@ -195,7 +189,7 @@ open external class Object3D(){
 	/**
 	* Applies the matrix transform to the object and updates the object's position, rotation and scale.
 	*/
-	open fun applyMatrix(matrix: ch.viseon.threejs.declarations.math.Matrix4 = definedExternally) : dynamic
+	open fun applyMatrix4(matrix: ch.viseon.threejs.declarations.math.Matrix4 = definedExternally) : dynamic
 
 
 	/**
@@ -223,19 +217,19 @@ open external class Object3D(){
 
 
 	/**
-	* id -- Unique number of the object instance Searches through the object's children and returns the first with a matching id. Note that ids are assigned in chronological order: 1, 2, 3, ..., incrementing by one for each new object.
+	* id -- Unique number of the object instance Searches through an object and its children, starting with the object itself, and returns the first with a matching id. Note that ids are assigned in chronological order: 1, 2, 3, ..., incrementing by one for each new object.
 	*/
 	open fun getObjectById(id: Int = definedExternally) : ch.viseon.threejs.declarations.core.Object3D
 
 
 	/**
-	* name -- String to match to the children's Object3D.name property. Searches through the object's children and returns the first with a matching name. Note that for most objects the name is an empty string by default. You will have to set it manually to make use of this method.
+	* name -- String to match to the children's Object3D.name property. Searches through an object and its children, starting with the object itself, and returns the first with a matching name. Note that for most objects the name is an empty string by default. You will have to set it manually to make use of this method.
 	*/
 	open fun getObjectByName(name: String = definedExternally) : ch.viseon.threejs.declarations.core.Object3D
 
 
 	/**
-	* name -- the property name to search for. value -- value of the given property. Searches through the object's children and returns the first with a property that matches the value given.
+	* name -- the property name to search for. value -- value of the given property. Searches through an object and its children, starting with the object itself, and returns the first with a property that matches the value given.
 	*/
 	open fun getObjectByProperty(name: String = definedExternally, value: Double = definedExternally) : ch.viseon.threejs.declarations.core.Object3D
 
@@ -391,15 +385,21 @@ open external class Object3D(){
 
 
 	/**
-	* Update the local transform.
+	* Updates the local transform.
 	*/
 	open fun updateMatrix() : dynamic
 
 
 	/**
-	* Update the global transform of the object and its children.
+	* Updates the global transform of the object and its descendants.
 	*/
 	open fun updateMatrixWorld(force: Boolean = definedExternally) : dynamic
+
+
+	/**
+	* updateParents - recursively updates global transform of ancestors. updateChildren - recursively updates global transform of descendants. Updates the global transform of the object.
+	*/
+	open fun updateWorldMatrix(updateParents: Boolean = definedExternally, updateChildren: Boolean = definedExternally) : dynamic
 
 
 	/**

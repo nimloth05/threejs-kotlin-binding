@@ -4,24 +4,12 @@ package ch.viseon.threejs.declarations.loaders
 	/**
 	* A low level class for loading resources with XMLHttpRequest, used internaly by most loaders. It can also be used directly to load any file type that does not have a loader.
 	*/
-open external class FileLoader(manager: ch.viseon.threejs.declarations.loaders.managers.LoadingManager = definedExternally){
-
-	/**
-	* The [page:LoadingManager loadingManager] the loader is using. Default is [page:DefaultLoadingManager].
-	*/
-	open var manager: ch.viseon.threejs.declarations.loaders.managers.LoadingManager  = definedExternally
-
+open external class FileLoader(manager: ch.viseon.threejs.declarations.loaders.managers.LoadingManager = definedExternally): ch.viseon.threejs.declarations.loaders.Loader{
 
 	/**
 	* The expected [link:https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types mimeType]. See [page:.setMimeType]. Default is **undefined**.
 	*/
 	open var mimeType: String  = definedExternally
-
-
-	/**
-	* The base path from which files will be loaded. See [page:.setPath]. Default is **undefined**.
-	*/
-	open var path: String  = definedExternally
 
 
 	/**
@@ -52,12 +40,6 @@ open external class FileLoader(manager: ch.viseon.threejs.declarations.loaders.m
 	* Set the expected [link:https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types mimeType] of the file being loaded. Note that in many cases this will be determined automatically, so by default it is **undefined**.
 	*/
 	open fun setMimeType(mimeType: String = definedExternally) : ch.viseon.threejs.declarations.loaders.FileLoader
-
-
-	/**
-	* Set the base path or URL from which to load files. This can be useful if you are loading many models from the same directory.
-	*/
-	open fun setPath(path: String = definedExternally) : ch.viseon.threejs.declarations.loaders.FileLoader
 
 
 	/**

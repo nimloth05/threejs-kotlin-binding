@@ -25,18 +25,6 @@ open external class LineDashedMaterial(parameters: dynamic = definedExternally):
 
 
 	/**
-	* Used to check whether this or derived classes are line dashed materials. Default is **true**. You should not change this, as it used internally for optimisation.
-	*/
-	open var isLineDashedMaterial: Boolean  = definedExternally
-
-
-	/**
-	* Whether the material is affected by lights. Default is **false**.
-	*/
-	override var lights: Boolean 
-
-
-	/**
 	* Controls line thickness. Default is **1**. Due to limitations of the [link:https://www.khronos.org/registry/OpenGL/specs/gl/glspec46.core.pdf OpenGL Core Profile] with the [page:WebGLRenderer WebGL] renderer on most platforms linewidth will always be 1 regardless of the set value.
 	*/
 	open var linewidth: Double  = definedExternally

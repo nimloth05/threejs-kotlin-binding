@@ -7,12 +7,6 @@ package ch.viseon.threejs.declarations.math
 open external class Color(r: dynamic = definedExternally, g: Double = definedExternally, b: Double = definedExternally){
 
 	/**
-	* Used to check whether this or derived classes are Colors. Default is **true**. You should not change this, as it used internally for optimisation.
-	*/
-	open var isColor: Boolean  = definedExternally
-
-
-	/**
 	* Red channel value between 0 and 1. Default is 1.
 	*/
 	open var r: Double  = definedExternally
@@ -208,6 +202,12 @@ open external class Color(r: dynamic = definedExternally, g: Double = definedExt
 	* [page:String style] — color as a CSS-style string. Sets this color from a CSS-style string. For example, "rgb(250, 0,0)", "rgb(100%, 0%, 0%)", "hsl(0, 100%, 50%)", "#ff0000", "#f00", or "red" ( or any [link:https://en.wikipedia.org/wiki/X11_color_names#Color_name_chart X11 color name] - all 140 color names are supported ). Translucent colors such as "rgba(255, 0, 0, 0.5)" and "hsla(0, 100%, 50%, 0.5)" are also accepted, but the alpha-channel coordinate will be discarded. Note that for X11 color names, multiple words such as Dark Orange become the string 'darkorange' (all lowercase).
 	*/
 	open fun setStyle(style: String = definedExternally) : ch.viseon.threejs.declarations.math.Color
+
+
+	/**
+	* [page:String style] — color name ( from [link:https://en.wikipedia.org/wiki/X11_color_names#Color_name_chart X11 color names] ). Sets this color from a color name. Faster than [page:.setStyle] method if you don't need the other CSS-style formats. For convenience, the list of names is exposed in Color.NAMES as a hash: Color.NAMES.aliceblue // returns 0xF0F8FF
+	*/
+	open fun setColorName(style: String = definedExternally) : ch.viseon.threejs.declarations.math.Color
 
 
 	/**

@@ -13,7 +13,7 @@ open external class MeshBasicMaterial(parameters: dynamic = definedExternally): 
 
 
 	/**
-	* The red channel of this texture is used as the ambient occlusion map. Default is null. The aoMap requires a second set of UVs, and consequently will ignore the [page:Texture repeat] and [page:Texture offset] Texture properties.
+	* The red channel of this texture is used as the ambient occlusion map. Default is null. The aoMap requires a second set of UVs.
 	*/
 	open var aoMap: ch.viseon.threejs.declarations.textures.Texture  = definedExternally
 
@@ -37,19 +37,13 @@ open external class MeshBasicMaterial(parameters: dynamic = definedExternally): 
 
 
 	/**
-	* Used to check whether this or derived classes are mesh basic materials. Default is **true**. You should not change this, as it used internally for optimisation.
-	*/
-	open var isMeshBasicMaterial: Boolean  = definedExternally
-
-
-	/**
 	* The environment map. Default is null.
 	*/
 	open var envMap: ch.viseon.threejs.declarations.textures.CubeTexture  = definedExternally
 
 
 	/**
-	* The light map. Default is null. The lightMap requires a second set of UVs, and consequently will ignore the [page:Texture repeat] and [page:Texture offset] Texture properties.
+	* The light map. Default is null. The lightMap requires a second set of UVs.
 	*/
 	open var lightMap: ch.viseon.threejs.declarations.textures.Texture  = definedExternally
 
@@ -58,12 +52,6 @@ open external class MeshBasicMaterial(parameters: dynamic = definedExternally): 
 	* Intensity of the baked light. Default is 1.
 	*/
 	open var lightMapIntensity: Double  = definedExternally
-
-
-	/**
-	* Whether the material is affected by lights. Default is **false**.
-	*/
-	override var lights: Boolean 
 
 
 	/**

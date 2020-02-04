@@ -13,12 +13,6 @@ open external class DirectionalLight(color: Int = definedExternally, intensity: 
 
 
 	/**
-	* Used to check whether this or derived classes are directional lights. Default is **true**. You should not change this, as it is used internally for optimisation.
-	*/
-	open var isDirectionalLight: Boolean  = definedExternally
-
-
-	/**
 	* This is set equal to [page:Object3D.DefaultUp] (0, 1, 0), so that the light shines from the top down.
 	*/
 	override var position: ch.viseon.threejs.declarations.math.Vector3 

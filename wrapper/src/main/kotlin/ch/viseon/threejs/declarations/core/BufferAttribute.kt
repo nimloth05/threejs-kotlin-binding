@@ -19,18 +19,6 @@ open external class BufferAttribute(array: Array<dynamic> = definedExternally, i
 
 
 	/**
-	* Whether the buffer is dynamic or not. Default is **false**. If false, the GPU is informed that contents of the buffer are likely to be used often and not change often. This corresponds to the [link:https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferData gl.STATIC_DRAW] flag. if true, the GPU is informed that contents of the buffer are likely to be used often and change often. This corresponds to the [link:https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferData gl.DYNAMIC_DRAW] flag.
-	*/
-	open var dynamic: Boolean  = definedExternally
-
-
-	/**
-	* Used to check whether this or derived classes are BufferAttributes. Default is **true**. You should not change this, as it used internally for optimisation.
-	*/
-	open var isBufferAttribute: Boolean  = definedExternally
-
-
-	/**
 	* The length of vectors that are being stored in the [page:BufferAttribute.array array].
 	*/
 	open var itemSize: Int  = definedExternally
@@ -67,9 +55,39 @@ open external class BufferAttribute(array: Array<dynamic> = definedExternally, i
 
 
 	/**
+	* Defines the intended usage pattern of the data store for optimization purposes. Corresponds to the **usage** parameter of [link:https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferData WebGLRenderingContext.bufferData](). Default is **THREE.StaticDrawUsage**.
+	*/
+	open var usage: Int  = definedExternally
+
+
+	/**
 	* A version number, incremented every time the [page:BufferAttribute.needsUpdate needsUpdate] property is set to true.
 	*/
 	open var version: Int  = definedExternally
+
+
+	/**
+	* Applies matrix [page:Matrix3 m] to every Vector3 element of this BufferAttribute.
+	*/
+	open fun applyMatrix3(m: ch.viseon.threejs.declarations.math.Matrix3 = definedExternally) : BufferAttribute
+
+
+	/**
+	* Applies matrix [page:Matrix4 m] to every Vector3 element of this BufferAttribute.
+	*/
+	open fun applyMatrix4(m: ch.viseon.threejs.declarations.math.Matrix4 = definedExternally) : BufferAttribute
+
+
+	/**
+	* Applies normal matrix [page:Matrix3 m] to every Vector3 element of this BufferAttribute.
+	*/
+	open fun applyNormalMatrix(m: ch.viseon.threejs.declarations.math.Matrix3 = definedExternally) : BufferAttribute
+
+
+	/**
+	* Applies matrix [page:Matrix4 m] to every Vector3 element of this BufferAttribute, interpreting the elements as a direction vectors.
+	*/
+	open fun transformDirection(m: ch.viseon.threejs.declarations.math.Matrix4 = definedExternally) : BufferAttribute
 
 
 	/**
@@ -157,15 +175,9 @@ open external class BufferAttribute(array: Array<dynamic> = definedExternally, i
 
 
 	/**
-	* [page:BufferAttribute.array array] to the TypedArray passed in here. After setting the array, [page:BufferAttribute.needsUpdate needsUpdate] should be set to true.
+	* Set [page:BufferAttribute.usage usage] to value.
 	*/
-	open fun setArray(array: Array<dynamic> = definedExternally) : ch.viseon.threejs.declarations.core.BufferAttribute
-
-
-	/**
-	* Set [page:BufferAttribute.dynamic dynamic] to value.
-	*/
-	open fun setDynamic(value: Boolean = definedExternally) : ch.viseon.threejs.declarations.core.BufferAttribute
+	open fun setUsage(value: Int = definedExternally) : ch.viseon.threejs.declarations.core.BufferAttribute
 
 
 	/**

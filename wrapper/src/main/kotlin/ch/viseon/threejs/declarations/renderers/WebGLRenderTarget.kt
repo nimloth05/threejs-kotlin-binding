@@ -2,7 +2,7 @@
 package ch.viseon.threejs.declarations.renderers
 
 	/**
-	* A [link:https://msdn.microsoft.com/en-us/library/ff604997.aspx render target] is a buffer where the video card draws pixels for a scene that is being rendered in the background. It is used in different effects, such as applying postprocessing to a rendered image before displaying it on the screen.
+	* A [link:https://webglfundamentals.org/webgl/lessons/webgl-render-to-texture.html render target] is a buffer where the video card draws pixels for a scene that is being rendered in the background. It is used in different effects, such as applying postprocessing to a rendered image before displaying it on the screen.
 	*/
 open external class WebGLRenderTarget(width: Double = definedExternally, height: Double = definedExternally, options: dynamic = definedExternally){
 

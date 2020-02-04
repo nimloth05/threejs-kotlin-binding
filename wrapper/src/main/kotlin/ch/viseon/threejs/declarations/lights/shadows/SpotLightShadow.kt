@@ -13,12 +13,6 @@ open external class SpotLightShadow(): ch.viseon.threejs.declarations.lights.sha
 
 
 	/**
-	* Used to check whether this or derived classes are spot light shadows. Default is **true**. You should not change this, as it used internally for optimisation.
-	*/
-	open var isSpotLightShadow: Boolean  = definedExternally
-
-
-	/**
 	* Updates the internal perspective [page:.camera camera] based on the passed in [page:SpotLight light].
 	*/
 	open fun update(light: ch.viseon.threejs.declarations.lights.SpotLight = definedExternally) : ch.viseon.threejs.declarations.lights.shadows.SpotLightShadow

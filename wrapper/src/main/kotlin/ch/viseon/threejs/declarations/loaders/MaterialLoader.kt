@@ -4,13 +4,7 @@ package ch.viseon.threejs.declarations.loaders
 	/**
 	* A loader for loading a [page:Material] in JSON format. This uses the [page:FileLoader] internally for loading files.
 	*/
-open external class MaterialLoader(manager: ch.viseon.threejs.declarations.loaders.managers.LoadingManager = definedExternally){
-
-	/**
-	* The [page:LoadingManager loadingManager] the loader is using. Default is [page:DefaultLoadingManager].
-	*/
-	open var manager: ch.viseon.threejs.declarations.loaders.managers.LoadingManager  = definedExternally
-
+open external class MaterialLoader(manager: ch.viseon.threejs.declarations.loaders.managers.LoadingManager = definedExternally): ch.viseon.threejs.declarations.loaders.Loader{
 
 	/**
 	* Object holding any textures used by the material. See [page:.setTextures].
@@ -28,12 +22,6 @@ open external class MaterialLoader(manager: ch.viseon.threejs.declarations.loade
 	* [page:Object json] — The json object containing the parameters of the Material. Parse a JSON structure and create a new [page:Material] of the type [page:String json.type] with parameters defined in the json object.
 	*/
 	open fun parse(json: dynamic = definedExternally) : ch.viseon.threejs.declarations.materials.Material
-
-
-	/**
-	* [page:String path] — Base path of the file to load. Sets the base path or URL from which to load files. This can be useful if you are loading many materials from the same directory.
-	*/
-	open fun setPath(path: String = definedExternally) : ch.viseon.threejs.declarations.loaders.MaterialLoader
 
 
 	/**

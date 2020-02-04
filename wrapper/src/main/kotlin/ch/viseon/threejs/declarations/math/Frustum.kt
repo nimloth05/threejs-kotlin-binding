@@ -55,13 +55,13 @@ open external class Frustum(p0: ch.viseon.threejs.declarations.math.Plane = defi
 
 
 	/**
-	* Sets the current frustum from the passed planes. No plane order is implicitely implied.
+	* Sets the frustum from the passed planes. No plane order is implied. Note that this method only copies the values from the given objects.
 	*/
-	open fun set(p0: ch.viseon.threejs.declarations.math.Plane = definedExternally, p1: ch.viseon.threejs.declarations.math.Plane = definedExternally, p2: ch.viseon.threejs.declarations.math.Plane = definedExternally, p3: ch.viseon.threejs.declarations.math.Plane = definedExternally, p4: ch.viseon.threejs.declarations.math.Plane = definedExternally, p5: ch.viseon.threejs.declarations.math.Plane = definedExternally) : ch.viseon.threejs.declarations.math.Frustum
+	open fun set(p0: ch.viseon.threejs.declarations.math.Plane = definedExternally, p1: ch.viseon.threejs.declarations.math.Plane = definedExternally, p2: ch.viseon.threejs.declarations.math.Plane = definedExternally, p3: ch.viseon.threejs.declarations.math.Plane = definedExternally, p4: ch.viseon.threejs.declarations.math.Plane = definedExternally, p5: ch.viseon.threejs.declarations.math.Plane = definedExternally) : Frustum
 
 
 	/**
-	* [page:Matrix4 matrix] - [page:Matrix4] used to set the [page:.planes planes] This is used by the [page:WebGLRenderer] to set up the Frustum from a [page:Camera Camera]'s [page:Camera.projectionMatrix projectionMatrix] and [page:Camera.matrixWorldInverse matrixWorldInverse].
+	* [page:Matrix4 matrix] - Projection [page:Matrix4] used to set the [page:.planes planes] Sets the frustum planes from the projection matrix.
 	*/
-	open fun setFromMatrix(matrix: ch.viseon.threejs.declarations.math.Matrix4 = definedExternally) : ch.viseon.threejs.declarations.math.Frustum
+	open fun setFromProjectionMatrix(matrix: ch.viseon.threejs.declarations.math.Matrix4 = definedExternally) : Frustum
 }

@@ -13,12 +13,6 @@ open external class Font(){
 
 
 	/**
-	* Used to check whether this or derived classes are fonts. Default is **true**. You should not change this, as it used internally by the renderer for optimisation.
-	*/
-	open var isFont: Boolean  = definedExternally
-
-
-	/**
 	* [page:String text] -- string of text. [page:Float size] -- (optional) scale for the [page:Shape Shapes]. Default is **100**. Creates an array of [page:Shape Shapes] representing the text in the font.
 	*/
 	open fun generateShapes(text: String = definedExternally, size: Double = definedExternally) : dynamic

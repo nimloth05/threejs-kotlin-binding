@@ -25,12 +25,6 @@ open external class InterleavedBuffer(array: Array<dynamic> = definedExternally,
 
 
 	/**
-	* Default is **false**.
-	*/
-	open var dynamic: Boolean  = definedExternally
-
-
-	/**
 	* Object containing offset and count.
 	*/
 	open var updateRange: dynamic  = definedExternally
@@ -43,27 +37,15 @@ open external class InterleavedBuffer(array: Array<dynamic> = definedExternally,
 
 
 	/**
-	* Default is **true**.
-	*/
-	open var isInterleavedBuffer: Boolean  = definedExternally
-
-
-	/**
 	* Default is **false**. Setting this to true increments [page:InterleavedBuffer.version version].
 	*/
 	open var needsUpdate: Boolean  = definedExternally
 
 
 	/**
-	* array - must be a Typed Array.
+	* Defines the intended usage pattern of the data store for optimization purposes. Corresponds to the **usage** parameter of [link:https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferData WebGLRenderingContext.bufferData]().
 	*/
-	open fun setArray(array: Array<dynamic> = definedExternally) : ch.viseon.threejs.declarations.core.InterleavedBuffer
-
-
-	/**
-	* Set [page:InterleavedBuffer.dynamic dynamic] to value.
-	*/
-	open fun setDynamic(value: Boolean = definedExternally) : ch.viseon.threejs.declarations.core.InterleavedBuffer
+	open var usage: Int  = definedExternally
 
 
 	/**
@@ -88,4 +70,10 @@ open external class InterleavedBuffer(array: Array<dynamic> = definedExternally,
 	* Creates a clone of this [name].
 	*/
 	open fun clone() : ch.viseon.threejs.declarations.core.InterleavedBuffer
+
+
+	/**
+	* Set [page:BufferAttribute.usage usage] to value.
+	*/
+	open fun setUsage(value: Int = definedExternally) : ch.viseon.threejs.declarations.core.BufferAttribute
 }

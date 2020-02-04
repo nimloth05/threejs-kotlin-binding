@@ -9,7 +9,7 @@ For a less efficient but easier-to-use representation of geometry, see [page:Geo
 open external class BufferGeometry(){
 
 	/**
-	* This hashmap has as id the name of the attribute to be set and as value the [page:BufferAttribute buffer] to set it to. Rather than accessing this property directly, use [page:.addAttribute] and [page:.getAttribute] to access attributes of this geometry.
+	* This hashmap has as id the name of the attribute to be set and as value the [page:BufferAttribute buffer] to set it to. Rather than accessing this property directly, use [page:.setAttribute] and [page:.getAttribute] to access attributes of this geometry.
 	*/
 	open var attributes: dynamic  = definedExternally
 
@@ -51,15 +51,15 @@ open external class BufferGeometry(){
 
 
 	/**
-	* Used to check whether this or derived classes are BufferGeometries. Default is **true**. You should not change this, as it used internally for optimisation.
-	*/
-	open var isBufferGeometry: Boolean  = definedExternally
-
-
-	/**
 	* Hashmap of [page:BufferAttribute]s holding details of the geometry's [page:Geometry.morphTargets morphTargets].
 	*/
 	open var morphAttributes: dynamic  = definedExternally
+
+
+	/**
+	* Used to control the morph target behavior; when set to true, the morph target data is treated as relative offsets, rather than as absolute positions/normals. Default is **false**.
+	*/
+	open var morphTargetsRelative: Boolean  = definedExternally
 
 
 	/**
@@ -81,9 +81,9 @@ open external class BufferGeometry(){
 
 
 	/**
-	* Adds an attribute to this geometry. Use this rather than the attributes property, because an internal hashmap of [page:.attributes] is maintained to speed up iterating over attributes.
+	* Sets an attribute to this geometry. Use this rather than the attributes property, because an internal hashmap of [page:.attributes] is maintained to speed up iterating over attributes.
 	*/
-	open fun addAttribute(name: String = definedExternally, attribute: ch.viseon.threejs.declarations.core.BufferAttribute = definedExternally) : ch.viseon.threejs.declarations.core.BufferGeometry
+	open fun setAttribute(name: String = definedExternally, attribute: ch.viseon.threejs.declarations.core.BufferAttribute = definedExternally) : ch.viseon.threejs.declarations.core.BufferGeometry
 
 
 	/**
@@ -95,7 +95,7 @@ open external class BufferGeometry(){
 	/**
 	* Bakes matrix transform directly into vertex coordinates.
 	*/
-	open fun applyMatrix(matrix: ch.viseon.threejs.declarations.math.Matrix4 = definedExternally) : dynamic
+	open fun applyMatrix4(matrix: ch.viseon.threejs.declarations.math.Matrix4 = definedExternally) : dynamic
 
 
 	/**
@@ -189,9 +189,9 @@ open external class BufferGeometry(){
 
 
 	/**
-	* Removes the [page:BufferAttribute attribute] with the specified name.
+	* Deletes the [page:BufferAttribute attribute] with the specified name.
 	*/
-	open fun removeAttribute(name: String = definedExternally) : ch.viseon.threejs.declarations.core.BufferAttribute
+	open fun deleteAttribute(name: String = definedExternally) : ch.viseon.threejs.declarations.core.BufferAttribute
 
 
 	/**

@@ -2,15 +2,9 @@
 package ch.viseon.threejs.declarations.math
 
 	/**
-	* Represents a box or cube in 3D space. The main purpose of this is to represent the world-axis-aligned bounding boxes for objects.
+	* Represents an axis-aligned bounding box (AABB) in 3D space.
 	*/
 open external class Box3(min: ch.viseon.threejs.declarations.math.Vector3 = definedExternally, max: ch.viseon.threejs.declarations.math.Vector3 = definedExternally){
-
-	/**
-	* Used to check whether this or derived classes are Box3s. Default is **true**. You should not change this, as it used internally for optimisation.
-	*/
-	open var isBox3: Boolean  = definedExternally
-
 
 	/**
 	* [page:Vector3] representing the lower (x, y, z) boundary of the box. Default is ( + Infinity, + Infinity, + Infinity ).
@@ -73,7 +67,7 @@ open external class Box3(min: ch.viseon.threejs.declarations.math.Vector3 = defi
 
 
 	/**
-	* [page:Object3D object] - [page:Object3D] to expand the box by. Expands the boundaries of this box to include [page:Object3D object] and its children, accounting for the object's, and children's, world transforms.
+	* [page:Object3D object] - [page:Object3D] to expand the box by. Expands the boundaries of this box to include [page:Object3D object] and its children, accounting for the object's, and children's, world transforms. The function may result in a larger box than strictly necessary.
 	*/
 	open fun expandByObject(`object`: ch.viseon.threejs.declarations.core.Object3D = definedExternally) : ch.viseon.threejs.declarations.math.Box3
 
@@ -163,7 +157,7 @@ open external class Box3(min: ch.viseon.threejs.declarations.math.Vector3 = defi
 
 
 	/**
-	* [page:Vector3 min] - [page:Vector3] representing the lower (x, y, z) boundary of the box. [page:Vector3 max] - [page:Vector3] representing the lower upper (x, y, z) boundary of the box. Sets the lower and upper (x, y, z) boundaries of this box.
+	* [page:Vector3 min] - [page:Vector3] representing the lower (x, y, z) boundary of the box. [page:Vector3 max] - [page:Vector3] representing the lower upper (x, y, z) boundary of the box. Sets the lower and upper (x, y, z) boundaries of this box. Please note that this method only copies the values from the given objects.
 	*/
 	open fun set(min: ch.viseon.threejs.declarations.math.Vector3 = definedExternally, max: ch.viseon.threejs.declarations.math.Vector3 = definedExternally) : ch.viseon.threejs.declarations.math.Box3
 
@@ -187,7 +181,7 @@ open external class Box3(min: ch.viseon.threejs.declarations.math.Vector3 = defi
 
 
 	/**
-	* [page:Object3D object] - [page:Object3D] to compute the bounding box of. Computes the world-axis-aligned bounding box of an [page:Object3D] (including its children), accounting for the object's, and children's, world transforms.
+	* [page:Object3D object] - [page:Object3D] to compute the bounding box of. Computes the world-axis-aligned bounding box of an [page:Object3D] (including its children), accounting for the object's, and children's, world transforms. The function may result in a larger box than strictly necessary.
 	*/
 	open fun setFromObject(`object`: ch.viseon.threejs.declarations.core.Object3D = definedExternally) : ch.viseon.threejs.declarations.math.Box3
 

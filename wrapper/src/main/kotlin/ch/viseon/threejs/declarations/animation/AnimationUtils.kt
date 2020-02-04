@@ -40,4 +40,10 @@ open external class AnimationUtils(){
 	* Sorts the array previously returned by [page:AnimationUtils.getKeyframeOrder getKeyframeOrder].
 	*/
 	open fun sortedArray() : Array<dynamic>
+
+
+	/**
+	* Creates a new clip, containing only the segment of the original clip between the given frames.
+	*/
+	open fun subclip(clip: ch.viseon.threejs.declarations.animation.AnimationClip = definedExternally, name: String = definedExternally, startFrame: Double = definedExternally, endFrame: Double = definedExternally, fps: Double = definedExternally) : ch.viseon.threejs.declarations.animation.AnimationClip
 }

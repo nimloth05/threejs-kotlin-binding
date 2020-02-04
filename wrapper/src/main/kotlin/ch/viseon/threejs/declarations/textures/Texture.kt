@@ -31,12 +31,6 @@ open external class Texture(image: dynamic = definedExternally, mapping: Int = d
 
 
 	/**
-	* Used to check whether this or derived classes are Textures. Default is **true**. You should not change this, as it is used internally for optimisation.
-	*/
-	open var isTexture: Boolean  = definedExternally
-
-
-	/**
 	* Array of user-specified mipmaps (optional).
 	*/
 	open var mipmaps: Array<dynamic>  = definedExternally
@@ -67,7 +61,7 @@ open external class Texture(image: dynamic = definedExternally, mapping: Int = d
 
 
 	/**
-	* How the texture is sampled when a texel covers less than one pixel. The default is [page:Textures THREE.LinearMipMapLinearFilter], which uses mipmapping and a trilinear filter. See the [page:Textures texture constants] page for all possible choices.
+	* How the texture is sampled when a texel covers less than one pixel. The default is [page:Textures THREE.LinearMipmapLinearFilter], which uses mipmapping and a trilinear filter. See the [page:Textures texture constants] page for all possible choices.
 	*/
 	open var minFilter: Int  = definedExternally
 
@@ -82,6 +76,12 @@ open external class Texture(image: dynamic = definedExternally, mapping: Int = d
 	* The default is [page:Textures THREE.RGBAFormat], although the [page:TextureLoader TextureLoader] will automatically set this to [page:Textures THREE.RGBFormat] for JPG images. See the [page:Textures texture constants] page for details of other formats.
 	*/
 	open var format: Int  = definedExternally
+
+
+	/**
+	* The default value is obtained using a combination of [page:Texture.format .format] and [page:Texture.type .type]. The GPU format allows the developer to specify how the data is going to be stored on the GPU. See the [page:Textures texture constants] page for details regarding all supported internal formats.
+	*/
+	open var internalFormat: String  = definedExternally
 
 
 	/**

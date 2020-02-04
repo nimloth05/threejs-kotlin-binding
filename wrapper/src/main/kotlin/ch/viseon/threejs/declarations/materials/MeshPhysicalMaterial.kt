@@ -7,25 +7,19 @@ package ch.viseon.threejs.declarations.materials
 open external class MeshPhysicalMaterial(parameters: dynamic = definedExternally): ch.viseon.threejs.declarations.materials.MeshStandardMaterial{
 
 	/**
-	* ClearCoat level, from **0.0** to **1.0**. Default is **0.0**.
+	* Clearcoat level, from **0.0** to **1.0**. Default is **0.0**.
 	*/
-	open var clearCoat: Double  = definedExternally
+	open var clearcoat: Double  = definedExternally
 
 
 	/**
-	* How rough the clearCoat appears, from **0.0** to **1.0**. Default is **0.0**.
+	* How rough the clearcoat appears, from **0.0** to **1.0**. Default is **0.0**.
 	*/
-	open var clearCoatRoughness: Double  = definedExternally
+	open var clearcoatRoughness: Double  = definedExternally
 
 
 	/**
-	* Used to check whether this or derived classes are mesh physical materials. Default is **true**. You should not change this, as it used internally for optimisation.
-	*/
-	open var isMeshPhysicalMaterial: Boolean  = definedExternally
-
-
-	/**
-	* An object of the form: { 'PHYSICAL': '' }; This is used by the [page:WebGLRenderer] for selecting shaders.
+	* An object of the form: { 'STANDARD': '' 'PHYSICAL': '', }; This is used by the [page:WebGLRenderer] for selecting shaders.
 	*/
 	override var defines: dynamic 
 

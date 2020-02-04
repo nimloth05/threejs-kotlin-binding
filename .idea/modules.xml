@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/binding/binding.iml" filepath="$PROJECT_DIR$/.idea/modules/binding/binding.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/binding/binding_main.iml" filepath="$PROJECT_DIR$/.idea/modules/binding/binding_main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/binding/binding_test.iml" filepath="$PROJECT_DIR$/.idea/modules/binding/binding_test.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/threejs-kotlin-binding_main.iml" filepath="$PROJECT_DIR$/.idea/modules/threejs-kotlin-binding_main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/threejs-kotlin-binding_test.iml" filepath="$PROJECT_DIR$/.idea/modules/threejs-kotlin-binding_test.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/threejsdoc-parser.iml" filepath="$PROJECT_DIR$/.idea/threejsdoc-parser.iml" />
     </modules>
   </component>
 </project>

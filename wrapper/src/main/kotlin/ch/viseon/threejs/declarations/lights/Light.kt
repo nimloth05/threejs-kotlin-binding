@@ -19,12 +19,6 @@ open external class Light(color: Int = definedExternally, intensity: Double = de
 
 
 	/**
-	* Used to check whether this or derived classes are lights. Default is **true**. You should not change this, as it used internally for optimisation.
-	*/
-	open var isLight: Boolean  = definedExternally
-
-
-	/**
 	* Copies the value of [page:.color color] and [page:.intensity intensity] from the [page:Light source] light into this one.
 	*/
 	open fun copy(source: ch.viseon.threejs.declarations.lights.Light = definedExternally) : ch.viseon.threejs.declarations.lights.Light

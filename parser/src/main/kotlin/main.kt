@@ -152,7 +152,10 @@ fun generateDecl(name: String, elements: List<Node>): ClassDeclaration {
             //member found
             val stream = TokenStream.parse(element.text())
             if (stream.isEmpty()) {
-                throw java.lang.IllegalStateException("Empty stream in $name tagName: ${element.tagName()} text: ${element.text()}")
+                System.err.println("WARNING: Empty h3 found: $name tagName: ${element.tagName()} text: ${element.text()}")
+                ++i
+                continue
+//                throw java.lang.IllegalStateException("Empty stream in $name tagName: ${element.tagName()} text: ${element.text()}")
             }
             if (stream.first().tokenType == TokenType.page) {
                 ++i

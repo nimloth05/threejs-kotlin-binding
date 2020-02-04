@@ -103,6 +103,54 @@ open external class Material(){
 
 
 	/**
+	* Whether rendering this material has any effect on the stencil buffer. Default is **false**.
+	*/
+	open var stencilWrite: Boolean  = definedExternally
+
+
+	/**
+	* The bit mask to use when writing to the stencil buffer. Default is **0xFF**.
+	*/
+	open var stencilWriteMask: Int  = definedExternally
+
+
+	/**
+	* The stencil comparison function to use. Default is [page:Materials AlwaysStencilFunc]. See stencil function [page:Materials constants] for all possible values.
+	*/
+	open var stencilFunc: Int  = definedExternally
+
+
+	/**
+	* The value to use when performing stencil comparisons or stencil operations. Default is **0**.
+	*/
+	open var stencilRef: Int  = definedExternally
+
+
+	/**
+	* The bit mask to use when comparing against the stencil buffer. Default is **0xFF**.
+	*/
+	open var stencilFuncMask: Int  = definedExternally
+
+
+	/**
+	* Which stencil operation to perform when the comparison function returns false. Default is [page:Materials KeepStencilOp]. See the stencil operations [page:Materials constants] for all possible values.
+	*/
+	open var stencilFail: Int  = definedExternally
+
+
+	/**
+	* Which stencil operation to perform when the comparison function returns true but the depth test fails. Default is [page:Materials KeepStencilOp]. See the stencil operations [page:Materials constants] for all possible values.
+	*/
+	open var stencilZFail: Int  = definedExternally
+
+
+	/**
+	* Which stencil operation to perform when the comparison function returns true and the depth test passes. Default is [page:Materials KeepStencilOp]. See the stencil operations [page:Materials constants] for all possible values.
+	*/
+	open var stencilZPass: Int  = definedExternally
+
+
+	/**
 	* Define whether the material is rendered with flat shading. Default is false.
 	*/
 	open var flatShading: Boolean  = definedExternally
@@ -121,25 +169,13 @@ open external class Material(){
 
 
 	/**
-	* Used to check whether this or derived classes are materials. Default is **true**. You should not change this, as it used internally for optimisation.
-	*/
-	open var isMaterial: Boolean  = definedExternally
-
-
-	/**
-	* Whether the material is affected by lights. Default is **true**.
-	*/
-	open var lights: Boolean  = definedExternally
-
-
-	/**
 	* Optional name of the object (doesn't need to be unique). Default is an empty string.
 	*/
 	open var name: String  = definedExternally
 
 
 	/**
-	* Specifies that the material needs to be recompiled. This property is automatically set to **true** when instancing a new material.
+	* Specifies that the material needs to be recompiled.
 	*/
 	open var needsUpdate: Boolean  = definedExternally
 
@@ -199,7 +235,13 @@ open external class Material(){
 
 
 	/**
-	* Defines whether this material is transparent. This has an effect on rendering as transparent objects need special treatment and are rendered after non-transparent objects. When set to true, the extent to which the material is transparent is controlled by setting it's [page:Float opacity] property. Default is **false**.
+	* Defines whether this material is tone mapped according to the renderer's [page:WebGLRenderer.toneMapping toneMapping] setting. Default is **true**.
+	*/
+	open var toneMapped: Boolean  = definedExternally
+
+
+	/**
+	* Defines whether this material is transparent. This has an effect on rendering as transparent objects need special treatment and are rendered after non-transparent objects. When set to true, the extent to which the material is transparent is controlled by setting its [page:Float opacity] property. Default is **false**.
 	*/
 	open var transparent: Boolean  = definedExternally
 
@@ -214,6 +256,12 @@ open external class Material(){
 	* [link:http://en.wikipedia.org/wiki/Universally_unique_identifier UUID] of this material instance. This gets automatically assigned, so this shouldn't be edited.
 	*/
 	open var uuid: String  = definedExternally
+
+
+	/**
+	* This starts at **0** and counts how many times [property:Boolean needsUpdate] is set to **true**.
+	*/
+	open var version: Int  = definedExternally
 
 
 	/**
@@ -260,6 +308,7 @@ open external class Material(){
 
 	/**
 	* An optional callback that is executed immediately before the shader program is compiled. This function is called with the shader source code as a parameter. Useful for the modification of built-in materials.
+Unlike properties, the callback is not supported by [page:Material.clone .clone](), [page:Material.copy .copy]() and [page:Material.toJSON .toJSON]().
 	*/
 	open fun onBeforeCompile(shader: ch.viseon.threejs.declarations.Shader = definedExternally, renderer: ch.viseon.threejs.declarations.renderers.WebGLRenderer = definedExternally) : dynamic
 

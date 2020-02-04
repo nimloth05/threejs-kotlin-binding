@@ -7,6 +7,24 @@ package ch.viseon.threejs.declarations.scenes
 open external class Scene(): ch.viseon.threejs.declarations.core.Object3D{
 
 	/**
+	* Default is true. If set, then the renderer checks every frame if the scene and its objects needs matrix updates. When it isn't, then you have to maintain all matrices in the scene yourself.
+	*/
+	open var autoUpdate: Boolean  = definedExternally
+
+
+	/**
+	* If not null, sets the background used when rendering the scene, and is always rendered first. Can be set to a [page:Color] which sets the clear color, a [page:Texture] covering the canvas, or a cubemap as a [page:CubeTexture] or [page:WebGLCubeRenderTarget]. Default is null.
+	*/
+	open var background: dynamic  = definedExternally
+
+
+	/**
+	* If not null, this texture is set as the environment map for all physical materials in the scene. However, it's not possible to overwrite an existing texture assigned to [page:MeshStandardMaterial.envmap]. Default is null.
+	*/
+	open var environment: ch.viseon.threejs.declarations.textures.Texture  = definedExternally
+
+
+	/**
 	* A [page:Fog fog] instance defining the type of fog that affects everything rendered in the scene. Default is null.
 	*/
 	open var fog: ch.viseon.threejs.declarations.scenes.Fog  = definedExternally
@@ -19,25 +37,13 @@ open external class Scene(): ch.viseon.threejs.declarations.core.Object3D{
 
 
 	/**
-	* Default is true. If set, then the renderer checks every frame if the scene and its objects needs matrix updates. When it isn't, then you have to maintain all matrices in the scene yourself.
+	* Clears scene related data internally cached by [page:WebGLRenderer].
 	*/
-	open var autoUpdate: Boolean  = definedExternally
-
-
-	/**
-	* If not null, sets the background used when rendering the scene, and is always rendered first. Can be set to a [page:Color] which sets the clear color, a [page:Texture] covering the canvas, or a cubemap as a [page:CubeTexture] or [page:WebGLRenderTargetCube]. Default is null.
-	*/
-	open var background: dynamic  = definedExternally
+	open fun dispose() : dynamic
 
 
 	/**
 	* meta -- object containing metadata such as textures or images for the scene. Convert the scene to three.js [link:https://github.com/mrdoob/three.js/wiki/JSON-Object-Scene-format-4 JSON Object/Scene format].
 	*/
 	open fun toJSON() : dynamic
-
-
-	/**
-	* Clears scene related data internally cached by [page:WebGLRenderer].
-	*/
-	open fun dispose() : dynamic
 }

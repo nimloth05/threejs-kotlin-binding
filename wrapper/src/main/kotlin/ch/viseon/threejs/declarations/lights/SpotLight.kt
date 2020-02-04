@@ -33,12 +33,6 @@ Default is **0.0**.
 
 
 	/**
-	* Used to check whether this or derived classes are spot lights. Default is **true**. You should not change this, as it used internally for optimisation.
-	*/
-	open var isSpotLight: Boolean  = definedExternally
-
-
-	/**
 	* Percent of the spotlight cone that is attenuated due to penumbra. Takes values between zero and 1. The default is **0.0**.
 	*/
 	open var penumbra: Double  = definedExternally
@@ -70,6 +64,7 @@ Default is **0.0**.
 
 	/**
 	* Copies value of all the properties from the [page:SpotLight source] to this SpotLight.
+[link:https://github.com/mrdoob/three.js/blob/master/src/[path].js src/[path].js]
 	*/
 	open fun copy(source: ch.viseon.threejs.declarations.lights.SpotLight = definedExternally) : ch.viseon.threejs.declarations.lights.SpotLight
 }

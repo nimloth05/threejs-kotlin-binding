@@ -7,12 +7,6 @@ package ch.viseon.threejs.declarations.extras.curves
 open external class CubicBezierCurve(v0: ch.viseon.threejs.declarations.math.Vector2 = definedExternally, v1: ch.viseon.threejs.declarations.math.Vector2 = definedExternally, v2: ch.viseon.threejs.declarations.math.Vector2 = definedExternally, v3: ch.viseon.threejs.declarations.math.Vector2 = definedExternally): ch.viseon.threejs.declarations.extras.core.Curve{
 
 	/**
-	* Used to check whether this or derived classes are CubicBezierCurves. Default is **true**. You should not change this, as it used internally for optimisation.
-	*/
-	open var isCubicBezierCurve: Boolean  = definedExternally
-
-
-	/**
 	* The starting point.
 	*/
 	open var v0: ch.viseon.threejs.declarations.math.Vector2  = definedExternally

@@ -7,12 +7,6 @@ package ch.viseon.threejs.declarations.objects
 open external class Line(geometry: ch.viseon.threejs.declarations.core.Geometry = definedExternally, material: ch.viseon.threejs.declarations.materials.Material = definedExternally): ch.viseon.threejs.declarations.core.Object3D{
 
 	/**
-	* Used to check whether this or derived classes are lines. Default is **true**. You should not change this, as it used internally for optimisation.
-	*/
-	open var isLine: Boolean  = definedExternally
-
-
-	/**
 	* Vertices representing the line segment(s).
 	*/
 	open var geometry: ch.viseon.threejs.declarations.core.Geometry  = definedExternally

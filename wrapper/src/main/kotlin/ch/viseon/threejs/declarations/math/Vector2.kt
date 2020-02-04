@@ -7,12 +7,6 @@ package ch.viseon.threejs.declarations.math
 open external class Vector2(x: Double = definedExternally, y: Double = definedExternally){
 
 	/**
-	* Used to check whether this or derived classes are Vector2s. Default is **true**. You should not change this, as it is used internally for optimisation.
-	*/
-	open var isVector2: Boolean  = definedExternally
-
-
-	/**
 	* Alias for [page:.y y].
 	*/
 	open var height: Double  = definedExternally
@@ -191,13 +185,13 @@ open external class Vector2(x: Double = definedExternally, y: Double = definedEx
 
 
 	/**
-	* [page:Vector2 v] - [page:Vector2] to interpolate towards. alpha - interpolation factor in the closed interval [0, 1]. Linearly interpolates between this vector and [page:Vector2 v], where alpha is the distance along the line - alpha = 0 will be this vector, and alpha = 1 will be [page:Vector2 v].
+	* [page:Vector2 v] - [page:Vector2] to interpolate towards. [page:Float alpha] - interpolation factor, typically in the closed interval [0, 1]. Linearly interpolates between this vector and [page:Vector2 v], where alpha is the percent distance along the line - alpha = 0 will be this vector, and alpha = 1 will be [page:Vector2 v].
 	*/
 	open fun lerp(v: ch.viseon.threejs.declarations.math.Vector2 = definedExternally, alpha: Double = definedExternally) : Vector2
 
 
 	/**
-	* [page:Vector2 v1] - the starting [page:Vector2]. [page:Vector2 v2] - [page:Vector2] to interpolate towards. [page:Float alpha] - interpolation factor in the closed interval [0, 1]. Sets this vector to be the vector linearly interpolated between [page:Vector2 v1] and [page:Vector2 v2] where alpha is the distance along the line connecting the two vectors - alpha = 0 will be [page:Vector2 v1], and alpha = 1 will be [page:Vector2 v2].
+	* [page:Vector2 v1] - the starting [page:Vector2]. [page:Vector2 v2] - [page:Vector2] to interpolate towards. [page:Float alpha] - interpolation factor, typically in the closed interval [0, 1]. Sets this vector to be the vector linearly interpolated between [page:Vector2 v1] and [page:Vector2 v2] where alpha is the percent distance along the line connecting the two vectors - alpha = 0 will be [page:Vector2 v1], and alpha = 1 will be [page:Vector2 v2].
 	*/
 	open fun lerpVectors(v1: ch.viseon.threejs.declarations.math.Vector2 = definedExternally, v2: ch.viseon.threejs.declarations.math.Vector2 = definedExternally, alpha: Double = definedExternally) : Vector2
 

@@ -10,10 +10,4 @@ open external class AmbientLight(color: Int = definedExternally, intensity: Doub
 	* This is set to **undefined** in the constructor as ambient lights cannot cast shadows.
 	*/
 	override var castShadow: Boolean 
-
-
-	/**
-	* Used to check whether this or derived classes are ambient lights. Default is **true**. You should not change this, as it used internally for optimisation.
-	*/
-	open var isAmbientLight: Boolean  = definedExternally
 }

@@ -5,12 +5,6 @@ package ch.viseon.threejs.declarations.math
 	* Class representing a 3D [link:https://en.wikipedia.org/wiki/Vector_space vector]. A 3D vector is an ordered triplet of numbers (labeled x, y, and z), which can be used to represent a number of things, such as:
 	*/
 open external class Vector3(x: Double = definedExternally, y: Double = definedExternally, z: Double = definedExternally){
-
-	/**
-	* Used to check whether this or derived classes are Vector3s. Default is **true**. You should not change this, as it is used internally for optimisation.
-	*/
-	open var isVector3: Boolean  = definedExternally
-
 	open var x: Double  = definedExternally
 
 	open var y: Double  = definedExternally
@@ -64,6 +58,12 @@ open external class Vector3(x: Double = definedExternally, y: Double = definedEx
 	* Multiplies this vector (with an implicit 1 in the 4th dimension) and m, and divides by perspective.
 	*/
 	open fun applyMatrix4(m: ch.viseon.threejs.declarations.math.Matrix4 = definedExternally) : Vector3
+
+
+	/**
+	* Multiplies this vector by normal matrix [page:Matrix3 m] and normalizes the result.
+	*/
+	open fun applyNormalMatrix(m: ch.viseon.threejs.declarations.math.Matrix3 = definedExternally) : Vector3
 
 
 	/**
@@ -211,13 +211,13 @@ open external class Vector3(x: Double = definedExternally, y: Double = definedEx
 
 
 	/**
-	* [page:Vector3 v] - [page:Vector3] to interpolate towards. alpha - interpolation factor in the closed interval [0, 1]. Linearly interpolate between this vector and [page:Vector3 v], where alpha is the distance along the line - alpha = 0 will be this vector, and alpha = 1 will be [page:Vector3 v].
+	* [page:Vector3 v] - [page:Vector3] to interpolate towards. [page:Float alpha] - interpolation factor, typically in the closed interval [0, 1]. Linearly interpolate between this vector and [page:Vector3 v], where alpha is the percent distance along the line - alpha = 0 will be this vector, and alpha = 1 will be [page:Vector3 v].
 	*/
 	open fun lerp(v: ch.viseon.threejs.declarations.math.Vector3 = definedExternally, alpha: Double = definedExternally) : Vector3
 
 
 	/**
-	* [page:Vector3 v1] - the starting [page:Vector3]. [page:Vector3 v2] - [page:Vector3] to interpolate towards. [page:Float alpha] - interpolation factor in the closed interval [0, 1]. Sets this vector to be the vector linearly interpolated between [page:Vector3 v1] and [page:Vector3 v2] where alpha is the distance along the line connecting the two vectors - alpha = 0 will be [page:Vector3 v1], and alpha = 1 will be [page:Vector3 v2].
+	* [page:Vector3 v1] - the starting [page:Vector3]. [page:Vector3 v2] - [page:Vector3] to interpolate towards. [page:Float alpha] - interpolation factor, typically in the closed interval [0, 1]. Sets this vector to be the vector linearly interpolated between [page:Vector3 v1] and [page:Vector3 v2] where alpha is the percent distance along the line connecting the two vectors - alpha = 0 will be [page:Vector3 v1], and alpha = 1 will be [page:Vector3 v2].
 	*/
 	open fun lerpVectors(v1: ch.viseon.threejs.declarations.math.Vector3 = definedExternally, v2: ch.viseon.threejs.declarations.math.Vector3 = definedExternally, alpha: Double = definedExternally) : Vector3
 
@@ -265,7 +265,7 @@ open external class Vector3(x: Double = definedExternally, y: Double = definedEx
 
 
 	/**
-	* [page:Camera camera] — camera to use in the projection. [link:https://en.wikipedia.org/wiki/Vector_projection Projects] the vector with the camera.
+	* [page:Camera camera] — camera to use in the projection. Projects this vector from world space into the camera's normalized device coordinate (NDC) space.
 	*/
 	open fun project(camera: ch.viseon.threejs.declarations.cameras.Camera = definedExternally) : Vector3
 
@@ -277,9 +277,9 @@ open external class Vector3(x: Double = definedExternally, y: Double = definedEx
 
 
 	/**
-	* [link:https://en.wikipedia.org/wiki/Vector_projection Projects] this vector onto another vector.
+	* [link:https://en.wikipedia.org/wiki/Vector_projection Projects] this vector onto [page:Vector3 v].
 	*/
-	open fun projectOnVector(Vector3: ch.viseon.threejs.declarations.math.Vector3 = definedExternally) : Vector3
+	open fun projectOnVector(v: ch.viseon.threejs.declarations.math.Vector3 = definedExternally) : Vector3
 
 
 	/**
@@ -325,9 +325,15 @@ open external class Vector3(x: Double = definedExternally, y: Double = definedEx
 
 
 	/**
-	* Sets this vector's [page:.x x], [page:.y y] and [page:.z z] equal to the column of the [page:Matrix4 matrix] specified by the [page:Integer index].
+	* Sets this vector's [page:.x x], [page:.y y] and [page:.z z] components from [page:Integer index] column of [page:Matrix4 matrix].
 	*/
 	open fun setFromMatrixColumn(matrix: ch.viseon.threejs.declarations.math.Matrix4 = definedExternally, index: Int = definedExternally) : Vector3
+
+
+	/**
+	* Sets this vector's [page:.x x], [page:.y y] and [page:.z z] components from [page:Integer index] column of [page:Matrix3 matrix].
+	*/
+	open fun setFromMatrix3Column(matrix: ch.viseon.threejs.declarations.math.Matrix3 = definedExternally, index: Int = definedExternally) : Vector3
 
 
 	/**
@@ -415,7 +421,7 @@ open external class Vector3(x: Double = definedExternally, y: Double = definedEx
 
 
 	/**
-	* [page:Camera camera] — camera to use in the projection. [link:https://en.wikipedia.org/wiki/Vector_projection Unprojects] the vector with the camera's projection matrix.
+	* [page:Camera camera] — camera to use in the projection. Projects this vector from the camera's normalized device coordinate (NDC) space into world space.
 	*/
 	open fun unproject(camera: ch.viseon.threejs.declarations.cameras.Camera = definedExternally) : Vector3
 }

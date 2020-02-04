@@ -91,7 +91,7 @@ open external class Sphere(center: ch.viseon.threejs.declarations.math.Vector3 =
 
 
 	/**
-	* [page:Vector3 center] - center of the sphere. [page:Float radius] - radius of the sphere. Sets the [page:.center center] and [page:.radius radius] properties of this sphere.
+	* [page:Vector3 center] - center of the sphere. [page:Float radius] - radius of the sphere. Sets the [page:.center center] and [page:.radius radius] properties of this sphere. Please note that this method only copies the values from the given center.
 	*/
 	open fun set(center: ch.viseon.threejs.declarations.math.Vector3 = definedExternally, radius: Double = definedExternally) : ch.viseon.threejs.declarations.math.Sphere
 

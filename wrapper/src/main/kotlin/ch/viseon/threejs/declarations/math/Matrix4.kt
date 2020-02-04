@@ -13,18 +13,6 @@ open external class Matrix4(){
 
 
 	/**
-	* Used to check whether this or derived classes are Matrix4s. Default is **true**. You should not change this, as it used internally for optimisation.
-	*/
-	open var isMatrix4: Boolean  = definedExternally
-
-
-	/**
-	* [page:BufferAttribute attribute] - An attribute of floats that represent 3D vectors. Multiplies (applies) this matrix to every 3D vector in the [page:BufferAttribute attribute].
-	*/
-	open fun applyToBufferAttribute(attribute: ch.viseon.threejs.declarations.core.BufferAttribute = definedExternally) : Array<dynamic>
-
-
-	/**
 	* Creates a new Matrix4 with identical [page:.elements elements] to this one.
 	*/
 	open fun clone() : ch.viseon.threejs.declarations.math.Matrix4
@@ -109,7 +97,7 @@ open external class Matrix4(){
 
 
 	/**
-	* [page:Vector3 axis] — Rotation axis, should be normalized. [page:Float theta] — Rotation angle in radians. Sets this matrix as rotation transform around [page:Vector3 axis] by [page:Float theta] radians. This is a somewhat controversial but mathematically sound alternative to rotating via [page:Quaternions]. See the discussion [link:http://www.gamedev.net/reference/articles/article1199.asp here].
+	* [page:Vector3 axis] — Rotation axis, should be normalized. [page:Float theta] — Rotation angle in radians. Sets this matrix as rotation transform around [page:Vector3 axis] by [page:Float theta] radians. This is a somewhat controversial but mathematically sound alternative to rotating via [page:Quaternions]. See the discussion [link:https://www.gamedev.net/articles/programming/math-and-physics/do-we-really-need-quaternions-r1199 here].
 	*/
 	open fun makeRotationAxis(axis: ch.viseon.threejs.declarations.math.Vector3 = definedExternally, theta: Double = definedExternally) : Matrix4
 

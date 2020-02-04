@@ -7,12 +7,6 @@ package ch.viseon.threejs.declarations.objects
 open external class Sprite(material: ch.viseon.threejs.declarations.materials.Material = definedExternally): ch.viseon.threejs.declarations.core.Object3D{
 
 	/**
-	* Used to check whether this or derived classes are sprites. Default is **true**. You should not change this, as it used internally for optimisation.
-	*/
-	open var isSprite: Boolean  = definedExternally
-
-
-	/**
 	* An instance of [page:SpriteMaterial], defining the object's appearance. Default is a white [page:SpriteMaterial].
 	*/
 	open var material: ch.viseon.threejs.declarations.materials.SpriteMaterial  = definedExternally
@@ -37,7 +31,7 @@ open external class Sprite(material: ch.viseon.threejs.declarations.materials.Ma
 
 
 	/**
-	* Get intersections between a casted ray and this sprite. [page:Raycaster.intersectObject] will call this method.
+	* Get intersections between a casted ray and this sprite. [page:Raycaster.intersectObject]() will call this method. The raycaster must be initialized by calling [page:Raycaster.setFromCamera]() before raycasting against sprites.
 	*/
 	override fun raycast(raycaster: ch.viseon.threejs.declarations.core.Raycaster, intersects: Array<dynamic>) : dynamic
 }

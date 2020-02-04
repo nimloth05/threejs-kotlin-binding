@@ -13,7 +13,7 @@ open external class MeshLambertMaterial(parameters: dynamic = definedExternally)
 
 
 	/**
-	* The red channel of this texture is used as the ambient occlusion map. Default is null. The aoMap requires a second set of UVs, and consequently will ignore the [page:Texture repeat] and [page:Texture offset] Texture properties.
+	* The red channel of this texture is used as the ambient occlusion map. Default is null. The aoMap requires a second set of UVs.
 	*/
 	open var aoMap: ch.viseon.threejs.declarations.textures.Texture  = definedExternally
 
@@ -61,13 +61,7 @@ open external class MeshLambertMaterial(parameters: dynamic = definedExternally)
 
 
 	/**
-	* Used to check whether this or derived classes are mesh Lambert materials. Default is **true**. You should not change this, as it used internally for optimisation.
-	*/
-	open var isMeshLambertMaterial: Boolean  = definedExternally
-
-
-	/**
-	* The light map. Default is null. The lightMap requires a second set of UVs, and consequently will ignore the [page:Texture repeat] and [page:Texture offset] Texture properties.
+	* The light map. Default is null. The lightMap requires a second set of UVs.
 	*/
 	open var lightMap: ch.viseon.threejs.declarations.textures.Texture  = definedExternally
 

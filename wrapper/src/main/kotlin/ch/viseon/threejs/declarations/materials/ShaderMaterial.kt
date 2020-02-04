@@ -49,15 +49,9 @@ open external class ShaderMaterial(parameters: dynamic = definedExternally): ch.
 
 
 	/**
-	* Used to check whether this or derived classes are shader materials. Default is **true**. You should not change this, as it used internally for optimisation.
-	*/
-	open var isShaderMaterial: Boolean  = definedExternally
-
-
-	/**
 	* Defines whether this material uses lighting; true to pass uniform data related to lighting to this shader. Default is false.
 	*/
-	override var lights: Boolean 
+	open var lights: Boolean  = definedExternally
 
 
 	/**
@@ -67,13 +61,13 @@ open external class ShaderMaterial(parameters: dynamic = definedExternally): ch.
 
 
 	/**
-	* Defines whether the material uses morphTargets; true morphTarget attributes to this shader
+	* When set to true, morph target attributes are available in the vertex shader. Default is **false**.
 	*/
 	open var morphTargets: Boolean  = definedExternally
 
 
 	/**
-	* Defines whether the material uses morphNormals. Set as true to pass morphNormal attributes from the [page:Geometry] to the shader. Default is **false**.
+	* When set to true, morph normal attributes are available in the vertex shader. Default is **false**.
 	*/
 	open var morphNormals: Boolean  = definedExternally
 

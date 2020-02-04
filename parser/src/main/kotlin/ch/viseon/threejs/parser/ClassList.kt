@@ -19,8 +19,11 @@ class ClassList(val class2PackageName: Map<String, ClassListEntry>) {
                 .replace("/extras/objects/ImmediateRenderObject\",", "/extras/objects/ImmediateRenderObject\"")
                 .replace("\"examples/en/objects/Lensflare\",", "\"examples/en/objects/Lensflare\"")
                 .replace("\"examples/zh/objects/Lensflare\",", "\"examples/zh/objects/Lensflare\"")
-                .replace("\"examples/en/Lut\",", "\"examples/en/Lut\"")
-                .replace("\"examples/zh/Lut\",", "\"examples/zh/Lut\"")
+//                .replace("\"examples/en/Lut\",", "\"examples/en/Lut\"")
+//                .replace("\"examples/zh/Lut\",", "\"examples/zh/Lut\"")
+                .replace("\"api/en/extras/ShapeUtils\",", "\"api/en/extras/ShapeUtils\"")
+                .replace("\"examples/en/math/MeshSurfaceSampler\",", "\"examples/en/math/MeshSurfaceSampler\"")
+                .replace("\"examples/zh/math/MeshSurfaceSampler\",", "\"examples/zh/math/MeshSurfaceSampler\"")
 
             return compile(jsonString, packagePrefix)
         }

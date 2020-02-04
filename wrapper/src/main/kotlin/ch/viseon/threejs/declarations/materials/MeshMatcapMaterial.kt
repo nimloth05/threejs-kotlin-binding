@@ -49,12 +49,6 @@ open external class MeshMatcapMaterial(parameters: dynamic = definedExternally):
 
 
 	/**
-	* Used to check whether this or derived classes are mesh Matcap materials. Default is **true**. You should not change this, as it used internally for optimisation.
-	*/
-	open var isMeshMatcapMaterial: Boolean  = definedExternally
-
-
-	/**
 	* The color map. Default is null. The texture map color is modulated by the diffuse [page:.color].
 	*/
 	open var map: ch.viseon.threejs.declarations.textures.Texture  = definedExternally

@@ -7,12 +7,6 @@ package ch.viseon.threejs.declarations.extras.curves
 open external class CatmullRomCurve3(points: Array<dynamic> = definedExternally, closed: Boolean = definedExternally, curveType: String = definedExternally, tension: Double = definedExternally): ch.viseon.threejs.declarations.extras.core.Curve{
 
 	/**
-	* Used to check whether this or derived classes are CatmullRomCurve3s. Default is **true**. You should not change this, as it used internally for optimisation.
-	*/
-	open var isCatmullRomCurve3: Boolean  = definedExternally
-
-
-	/**
 	* The array of [page:Vector3] points that define the curve. It needs at least two entries.
 	*/
 	open var points: Array<dynamic>  = definedExternally

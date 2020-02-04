@@ -10,10 +10,4 @@ open external class InstancedBufferAttribute(array: Array<dynamic> = definedExte
 	* Default is **1**.
 	*/
 	open var meshPerAttribute: Double  = definedExternally
-
-
-	/**
-	* Default is **true**.
-	*/
-	open var isInstancedBufferAttribute: Boolean  = definedExternally
 }

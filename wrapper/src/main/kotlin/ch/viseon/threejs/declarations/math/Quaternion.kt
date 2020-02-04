@@ -5,12 +5,6 @@ package ch.viseon.threejs.declarations.math
 	* Implementation of a [link:http://en.wikipedia.org/wiki/Quaternion quaternion]. This is used for [link:https://en.wikipedia.org/wiki/Quaternions_and_spatial_rotation rotating things] without encountering the dreaded [link:http://en.wikipedia.org/wiki/Gimbal_lock gimbal lock] issue, amongst other advantages.
 	*/
 open external class Quaternion(x: Double = definedExternally, y: Double = definedExternally, z: Double = definedExternally, w: Double = definedExternally){
-
-	/**
-	* Used to check whether this or derived classes are Quaternions. Default is **true**. You should not change this, as it is used internally for optimisation.
-	*/
-	open var isQuaternion: Boolean  = definedExternally
-
 	open var x: Double  = definedExternally
 
 	open var y: Double  = definedExternally

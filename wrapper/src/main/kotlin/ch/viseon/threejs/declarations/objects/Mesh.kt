@@ -8,25 +8,13 @@ open external class Mesh(geometry: ch.viseon.threejs.declarations.core.Geometry 
 
 	constructor(geometry: ch.viseon.threejs.declarations.core.BufferGeometry? = definedExternally, material: ch.viseon.threejs.declarations.materials.Material = definedExternally)
 	/**
-	* Determines how the mesh triangles are constructed from the vertices. See the draw mode [page:DrawModes constants] for all possible values. Default is [page:DrawModes TrianglesDrawMode].
-	*/
-	open var drawMode: Int  = definedExternally
-
-
-	/**
-	* Used to check whether this or derived classes are meshes. Default is **true**. You should not change this, as it is used internally for optimisation.
-	*/
-	open var isMesh: Boolean  = definedExternally
-
-
-	/**
 	* An instance of [page:Geometry] or [page:BufferGeometry] (or derived classes), defining the object's structure. It's recommended to always use a [page:BufferGeometry] if possible for best performance.
 	*/
 	open var geometry: ch.viseon.threejs.declarations.core.Geometry  = definedExternally
 
 
 	/**
-	* An instance of material derived from the [page:Material] base class or an array of materials, defining the object's appearance. Default is a [page:MeshBasicMaterial] with a random color.
+	* An instance of material derived from the [page:Material] base class or an array of materials, defining the object's appearance. Default is a [page:MeshBasicMaterial].
 	*/
 	open var material: ch.viseon.threejs.declarations.materials.Material  = definedExternally
 
@@ -41,12 +29,6 @@ open external class Mesh(geometry: ch.viseon.threejs.declarations.core.Geometry 
 	* A dictionary of morphTargets based on the morphTarget.name property. Undefined by default, but rebuilt [page:Mesh.updateMorphTargets updateMorphTargets].
 	*/
 	open var morphTargetDictionary: dynamic  = definedExternally
-
-
-	/**
-	* Set the value of [page:.drawMode drawMode].
-	*/
-	open fun setDrawMode(value: Int = definedExternally) : dynamic
 
 
 	/**

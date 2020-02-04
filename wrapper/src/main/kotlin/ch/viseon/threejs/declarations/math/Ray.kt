@@ -13,7 +13,7 @@ open external class Ray(origin: ch.viseon.threejs.declarations.math.Vector3 = de
 
 
 	/**
-	* The direction of the [page:Ray]. This must be normalized (with [page:Vector3.normalize]) for the methods to operate properly. Default is a [page:Vector3] at (0, 0, 0).
+	* The direction of the [page:Ray]. This must be normalized (with [page:Vector3.normalize]) for the methods to operate properly. Default is a [page:Vector3] at (0, 0, -1).
 	*/
 	open var direction: ch.viseon.threejs.declarations.math.Vector3  = definedExternally
 
@@ -133,7 +133,7 @@ open external class Ray(origin: ch.viseon.threejs.declarations.math.Vector3 = de
 
 
 	/**
-	* [page:Vector3 origin] - the [page:.origin origin] of the [page:Ray]. [page:Vector3 origin] - the [page:.direction direction] of the [page:Ray]. This must be normalized (with [page:Vector3.normalize]) for the methods to operate properly. Copy the parameters to the [page:.origin origin] and [page:.direction direction] properties of this ray.
+	* [page:Vector3 origin] - the [page:.origin origin] of the [page:Ray]. [page:Vector3 origin] - the [page:.direction direction] of the [page:Ray]. This must be normalized (with [page:Vector3.normalize]) for the methods to operate properly. Sets this ray's [page:.origin origin] and [page:.direction direction] properties by copying the values from the given objects.
 	*/
 	open fun set(origin: ch.viseon.threejs.declarations.math.Vector3 = definedExternally, direction: ch.viseon.threejs.declarations.math.Vector3 = definedExternally) : ch.viseon.threejs.declarations.math.Ray
 }

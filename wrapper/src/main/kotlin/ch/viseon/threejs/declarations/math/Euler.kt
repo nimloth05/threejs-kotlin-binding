@@ -7,12 +7,6 @@ package ch.viseon.threejs.declarations.math
 open external class Euler(x: Double = definedExternally, y: Double = definedExternally, z: Double = definedExternally, order: String = definedExternally){
 
 	/**
-	* Used to check whether this or derived classes are Eulers. Default is **true**. You should not change this, as it used internally for optimisation.
-	*/
-	open var isEuler: Boolean  = definedExternally
-
-
-	/**
 	* The order in which to apply rotations. Default is 'XYZ', which means that the object will first be rotated around its X axis, then its Y axis and finally its Z axis. Other possibilities are: 'YZX', 'ZXY', 'XZY', 'YXZ' and 'ZYX'. These must be in upper case. Three.js uses intrinsic Tait-Bryan angles. This means that rotations are performed with respect to the local coordinate system. That is, for order 'XYZ', the rotation is first around the local-X axis (which is the same as the world-X axis), then around local-Y (which may now be different from the world Y-axis), then local-Z (which may be different from the world Z-axis).
 	*/
 	open var order: String  = definedExternally

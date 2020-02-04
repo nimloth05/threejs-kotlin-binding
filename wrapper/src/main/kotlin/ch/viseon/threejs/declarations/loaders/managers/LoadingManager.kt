@@ -31,16 +31,37 @@ open external class LoadingManager(onLoad: dynamic = definedExternally, onProgre
 
 
 	/**
-	* [page:Function callback] — URL modifier callback. Called with [page:String url] argument, and must return [page:String resolvedURL]. If provided, the callback will be passed each resource URL before a request is sent. The callback may return the original URL, or a new URL to override loading behavior. This behavior can be used to load assets from .ZIP files, drag-and-drop APIs, and Data URIs.
+	* [page:Object regex] — A regular expression. [page:Loader loader] — The loader.
+Registers a loader with the given regular expression. Can be used to define what loader should be used in order to load specific files. A typical use case is to overwrite the default loader for textures.
 	*/
-	open fun setURLModifier(callback: dynamic = definedExternally) : dynamic
+	open fun addHandler(regex: dynamic = definedExternally, loader: ch.viseon.threejs.declarations.loaders.Loader = definedExternally) : ch.viseon.threejs.declarations.loaders.managers.LoadingManager
+
+
+	/**
+	* [page:String file] — The file path.
+Can be used to retrieve the registered loader for the given file path.
+	*/
+	open fun getHandler(file: String = definedExternally) : dynamic
+
+
+	/**
+	* [page:Object regex] — A regular expression.
+Removes the loader for the given regular expression.
+	*/
+	open fun removeHandler(regex: dynamic = definedExternally) : ch.viseon.threejs.declarations.loaders.managers.LoadingManager
 
 
 	/**
 	* [page:String url] — the url to load Given a URL, uses the URL modifier callback (if any) and returns a resolved URL. If no URL modifier is set, returns the original URL.
-Note: The following methods are designed to be called internally by loaders. You shouldn't call them directly.
 	*/
 	open fun resolveURL(url: String = definedExternally) : String
+
+
+	/**
+	* [page:Function callback] — URL modifier callback. Called with [page:String url] argument, and must return [page:String resolvedURL]. If provided, the callback will be passed each resource URL before a request is sent. The callback may return the original URL, or a new URL to override loading behavior. This behavior can be used to load assets from .ZIP files, drag-and-drop APIs, and Data URIs.
+Note: The following methods are designed to be called internally by loaders. You shouldn't call them directly.
+	*/
+	open fun setURLModifier(callback: dynamic = definedExternally) : dynamic
 
 
 	/**

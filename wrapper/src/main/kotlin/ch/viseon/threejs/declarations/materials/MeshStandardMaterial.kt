@@ -13,7 +13,7 @@ open external class MeshStandardMaterial(parameters: dynamic = definedExternally
 
 
 	/**
-	* The red channel of this texture is used as the ambient occlusion map. Default is null. The aoMap requires a second set of UVs, and consequently will ignore the [page:Texture repeat] and [page:Texture offset] Texture properties.
+	* The red channel of this texture is used as the ambient occlusion map. Default is null. The aoMap requires a second set of UVs.
 	*/
 	open var aoMap: ch.viseon.threejs.declarations.textures.Texture  = definedExternally
 
@@ -86,7 +86,7 @@ open external class MeshStandardMaterial(parameters: dynamic = definedExternally
 
 	/**
 	* The environment map. Default is null. Note that in order for the material roughness property to correctly blur out the environment map, the shader must have access to mipmaps of the env texture. TextureCubes created with default settings are correctly configured; if adjusting texture parameters manually, ensure minFilter is set to one of the MipMap options, and that mip maps have not been otherwise forcibly disabled.
-Note: only [link:https://threejs.org/docs/#api/textures/CubeTexture cube environment maps] are supported for MeshStandardMaterial. If you want to use an equirectangular map you will need to use the [link:https://github.com/mrdoob/three.js/blob/dev/examples/js/loaders/EquirectangularToCubeGenerator.js EquirectangularToCubeGenerator]. See this [link:https://threejs.org/examples/webgl_materials_envmaps_exr.html example] for details.
+Note: only [link:https://threejs.org/docs/#api/textures/CubeTexture cube environment maps] are supported for MeshStandardMaterial. If you want to use an equirectangular map you will need to use [page:WebGLCubeRenderTarget.fromEquirectangularTexture WebGLCubeRenderTarget.fromEquirectangularTexture](). See this [link:https://threejs.org/examples/webgl_materials_envmaps_exr.html example] for details.
 	*/
 	open var envMap: ch.viseon.threejs.declarations.textures.CubeTexture  = definedExternally
 
@@ -98,13 +98,7 @@ Note: only [link:https://threejs.org/docs/#api/textures/CubeTexture cube environ
 
 
 	/**
-	* Used to check whether this or derived classes are mesh standard materials. Default is **true**. You should not change this, as it used internally for optimisation.
-	*/
-	open var isMeshStandardMaterial: Boolean  = definedExternally
-
-
-	/**
-	* The light map. Default is null. The lightMap requires a second set of UVs, and consequently will ignore the [page:Texture repeat] and [page:Texture offset] Texture properties.
+	* The light map. Default is null. The lightMap requires a second set of UVs.
 	*/
 	open var lightMap: ch.viseon.threejs.declarations.textures.Texture?  = definedExternally
 
@@ -122,7 +116,7 @@ Note: only [link:https://threejs.org/docs/#api/textures/CubeTexture cube environ
 
 
 	/**
-	* How much the material is like a metal. Non-metallic materials such as wood or stone use 0.0, metallic use 1.0, with nothing (usually) in between. Default is 0.5. A value between 0.0 and 1.0 could be used for a rusty metal look. If metalnessMap is also provided, both values are multiplied.
+	* How much the material is like a metal. Non-metallic materials such as wood or stone use 0.0, metallic use 1.0, with nothing (usually) in between. Default is 0.0. A value between 0.0 and 1.0 could be used for a rusty metal look. If metalnessMap is also provided, both values are multiplied.
 	*/
 	open var metalness: Double  = definedExternally
 
@@ -170,7 +164,7 @@ Note: only [link:https://threejs.org/docs/#api/textures/CubeTexture cube environ
 
 
 	/**
-	* How rough the material appears. 0.0 means a smooth mirror reflection, 1.0 means fully diffuse. Default is 0.5. If roughnessMap is also provided, both values are multiplied.
+	* How rough the material appears. 0.0 means a smooth mirror reflection, 1.0 means fully diffuse. Default is 1.0. If roughnessMap is also provided, both values are multiplied.
 	*/
 	open var roughness: Double  = definedExternally
 

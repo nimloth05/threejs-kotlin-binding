@@ -25,7 +25,7 @@ open external class ArrowHelper(dir: ch.viseon.threejs.declarations.math.Vector3
 
 
 	/**
-	* length -- The desired length. headLength -- The length of the head of the arrow. headWidth -- The length of the width of the arrow. Sets the length of the arrowhelper.
+	* length -- The desired length. headLength -- The length of the head of the arrow. headWidth -- The width of the head of the arrow. Sets the length of the arrowhelper.
 	*/
 	open fun setLength(length: Double = definedExternally, headLength: Double = definedExternally, headWidth: Double = definedExternally) : dynamic
 

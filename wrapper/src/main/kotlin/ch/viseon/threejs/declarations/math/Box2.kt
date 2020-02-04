@@ -2,7 +2,7 @@
 package ch.viseon.threejs.declarations.math
 
 	/**
-	* Represents a box in 2D space.
+	* Represents an axis-aligned bounding box (AABB) in 2D space.
 	*/
 open external class Box2(min: ch.viseon.threejs.declarations.math.Vector2 = definedExternally, max: ch.viseon.threejs.declarations.math.Vector2 = definedExternally){
 
@@ -121,7 +121,7 @@ open external class Box2(min: ch.viseon.threejs.declarations.math.Vector2 = defi
 
 
 	/**
-	* [page:Vector2 min] - (required ) [page:Vector2] representing the lower (x, y) boundary of the box. [page:Vector2 max] - (required) [page:Vector2] representing the upper (x, y) boundary of the box. Sets the lower and upper (x, y) boundaries of this box.
+	* [page:Vector2 min] - (required ) [page:Vector2] representing the lower (x, y) boundary of the box. [page:Vector2 max] - (required) [page:Vector2] representing the upper (x, y) boundary of the box. Sets the lower and upper (x, y) boundaries of this box. Please note that this method only copies the values from the given objects.
 	*/
 	open fun set(min: ch.viseon.threejs.declarations.math.Vector2 = definedExternally, max: ch.viseon.threejs.declarations.math.Vector2 = definedExternally) : ch.viseon.threejs.declarations.math.Box2
 

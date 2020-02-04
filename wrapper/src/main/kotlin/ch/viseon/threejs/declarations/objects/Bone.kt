@@ -7,12 +7,6 @@ package ch.viseon.threejs.declarations.objects
 open external class Bone(): ch.viseon.threejs.declarations.core.Object3D{
 
 	/**
-	* Used to check whether this or derived classes are bones. Default is **true**. You should not change this, as it used internally for optimisation.
-	*/
-	open var isBone: Boolean  = definedExternally
-
-
-	/**
 	* Set to 'Bone', this can be used to find all Bones in a scene.
 	*/
 	open var type: String  = definedExternally

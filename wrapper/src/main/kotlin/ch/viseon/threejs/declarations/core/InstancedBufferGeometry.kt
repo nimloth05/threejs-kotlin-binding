@@ -13,12 +13,6 @@ open external class InstancedBufferGeometry(): ch.viseon.threejs.declarations.co
 
 
 	/**
-	* Default is **true**.
-	*/
-	open var isInstancedBufferGeometry: Boolean  = definedExternally
-
-
-	/**
 	* 
 	*/
 	open var addGroup: Double  = definedExternally

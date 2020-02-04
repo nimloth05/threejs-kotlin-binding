@@ -13,15 +13,21 @@ open external class Points(geometry: ch.viseon.threejs.declarations.core.Geometr
 
 
 	/**
-	* Used to check whether this or derived classes are points. Default is **true**. You should not change this, as it used internally for optimisation.
+	* An instance of [page:Material], defining the object's appearance. Default is a [page:PointsMaterial].
 	*/
-	open var isPoints: Boolean  = definedExternally
+	open var material: ch.viseon.threejs.declarations.materials.Material  = definedExternally
 
 
 	/**
-	* An instance of [page:Material], defining the object's appearance. Default is a [page:PointsMaterial] with a random color.
+	* An array of weights typically from 0-1 that specify how much of the morph is applied. Undefined by default, but reset to a blank array by [page:Points.updateMorphTargets updateMorphTargets].
 	*/
-	open var material: ch.viseon.threejs.declarations.materials.Material  = definedExternally
+	open var morphTargetInfluences: Array<dynamic>  = definedExternally
+
+
+	/**
+	* A dictionary of morphTargets based on the morphTarget.name property. Undefined by default, but rebuilt [page:Points.updateMorphTargets updateMorphTargets].
+	*/
+	open var morphTargetDictionary: dynamic  = definedExternally
 
 
 	/**
@@ -34,4 +40,10 @@ open external class Points(geometry: ch.viseon.threejs.declarations.core.Geometr
 	* Returns a clone of this Points object and its descendants.
 	*/
 	open fun clone() : ch.viseon.threejs.declarations.objects.Points
+
+
+	/**
+	* Updates the morphTargets to have no influence on the object. Resets the [page:Points.morphTargetInfluences morphTargetInfluences] and [page:Points.morphTargetDictionary morphTargetDictionary] properties.
+	*/
+	open fun updateMorphTargets() : dynamic
 }

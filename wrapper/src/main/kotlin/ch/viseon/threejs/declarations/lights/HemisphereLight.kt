@@ -25,12 +25,6 @@ open external class HemisphereLight(skyColor: Int = definedExternally, groundCol
 
 
 	/**
-	* Used to check whether this or derived classes are hemisphere lights. Default is **true**. You should not change this, as it used internally for optimisation.
-	*/
-	open var isHemisphereLight: Boolean  = definedExternally
-
-
-	/**
 	* This is set equal to [page:Object3D.DefaultUp] (0, 1, 0), so that the light shines from the top down.
 	*/
 	override var position: ch.viseon.threejs.declarations.math.Vector3 

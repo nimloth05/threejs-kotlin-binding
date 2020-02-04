@@ -25,12 +25,6 @@ open external class SkinnedMesh(geometry: ch.viseon.threejs.declarations.core.Bu
 
 
 	/**
-	* Used to check whether this or derived classes are skinned meshes. Default is **true**. You should not change this, as it used internally for optimisation.
-	*/
-	open var isSkinnedMesh: Boolean  = definedExternally
-
-
-	/**
 	* [page:Skeleton] representing the bone hierarchy of the skinned mesh.
 	*/
 	open var skeleton: ch.viseon.threejs.declarations.objects.Skeleton  = definedExternally

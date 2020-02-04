@@ -43,18 +43,6 @@ open external class MeshNormalMaterial(parameters: dynamic = definedExternally):
 
 
 	/**
-	* Used to check whether this or derived classes are mesh normal materials. Default is **true**. You should not change this, as it used internally for optimisation.
-	*/
-	open var isMeshNormalMaterial: Boolean  = definedExternally
-
-
-	/**
-	* Whether the material is affected by lights. Default is **false**.
-	*/
-	override var lights: Boolean 
-
-
-	/**
 	* Defines whether the material uses morphNormals. Set as true to pass morphNormal attributes from the [page:Geometry] to the shader. Default is **false**.
 	*/
 	open var morphNormals: Boolean  = definedExternally

@@ -13,18 +13,6 @@ open external class Matrix3(){
 
 
 	/**
-	* Used to check whether this or derived classes are Matrix3s. Default is **true**. You should not change this, as it used internally for optimisation.
-	*/
-	open var isMatrix3: Boolean  = definedExternally
-
-
-	/**
-	* [page:BufferAttribute attribute] - An attribute of floats that represent 3D vectors. Multiplies (applies) this matrix to every 3D vector in the [page:BufferAttribute attribute].
-	*/
-	open fun applyToBufferAttribute(attribute: ch.viseon.threejs.declarations.core.BufferAttribute = definedExternally) : Array<dynamic>
-
-
-	/**
 	* Creates a new Matrix3 and with identical elements to this one.
 	*/
 	open fun clone() : ch.viseon.threejs.declarations.math.Matrix3

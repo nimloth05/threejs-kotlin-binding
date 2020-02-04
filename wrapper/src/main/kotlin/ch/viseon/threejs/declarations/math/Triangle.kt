@@ -79,7 +79,7 @@ open external class Triangle(a: ch.viseon.threejs.declarations.math.Vector3 = de
 
 
 	/**
-	* [page:Vector3 target] — the result will be copied into this Plane. Calculate a [page:Plane plane] based on the triangle. .
+	* [page:Plane target] — the result will be copied into this Plane. Calculate a [page:Plane plane] based on the triangle. .
 	*/
 	open fun getPlane(target: ch.viseon.threejs.declarations.math.Plane = definedExternally) : ch.viseon.threejs.declarations.math.Plane
 
@@ -91,7 +91,7 @@ open external class Triangle(a: ch.viseon.threejs.declarations.math.Vector3 = de
 
 
 	/**
-	* Sets the triangle's [page:.a a], [page:.b b] and [page:.c c] properties to the passed [page:vector3 vector3s].
+	* Sets the triangle's [page:.a a], [page:.b b] and [page:.c c] properties to the passed [page:vector3 vector3s]. Please note that this method only copies the values from the given objects.
 	*/
 	open fun set(a: ch.viseon.threejs.declarations.math.Vector3 = definedExternally, b: ch.viseon.threejs.declarations.math.Vector3 = definedExternally, c: ch.viseon.threejs.declarations.math.Vector3 = definedExternally, `this`: ch.viseon.threejs.declarations.math.Triangle = definedExternally) : ch.viseon.threejs.declarations.math.Triangle
 

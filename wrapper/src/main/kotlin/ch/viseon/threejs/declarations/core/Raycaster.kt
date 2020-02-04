@@ -25,6 +25,12 @@ open external class Raycaster(origin: ch.viseon.threejs.declarations.math.Vector
 
 
 	/**
+	* The camera to use when raycasting against view-dependent objects such as billboarded objects like [page:Sprites]. This field can be set manually or is set when calling "setFromCamera". Defaults to null.
+	*/
+	open var camera: ch.viseon.threejs.declarations.cameras.Camera  = definedExternally
+
+
+	/**
 	* An object with the following properties: { Mesh: {}, Line: {}, LOD: {}, Points: { threshold: 1 }, Sprite: {} }
 	*/
 	open var params: dynamic  = definedExternally

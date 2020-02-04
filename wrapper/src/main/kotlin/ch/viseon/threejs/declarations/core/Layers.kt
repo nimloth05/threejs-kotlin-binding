@@ -40,4 +40,16 @@ open external class Layers(){
 	* layer - an integer from 0 to 31. Toggle membership of **layer**.
 	*/
 	open fun toggle(layer: Int = definedExternally) : dynamic
+
+
+	/**
+	* Add membership to all layers.
+	*/
+	open fun enableAll() : dynamic
+
+
+	/**
+	* Remove membership from all layers.
+	*/
+	open fun disableAll() : dynamic
 }

@@ -19,12 +19,6 @@ open external class OrthographicCamera(left: Double = definedExternally, right: 
 
 
 	/**
-	* Used to test whether this or derived classes are OrthographicCameras. Default is **true**. This should not be changed as it is used internally by the renderer for optimisation.
-	*/
-	open var isOrthographicCamera: Boolean  = definedExternally
-
-
-	/**
 	* Camera frustum left plane.
 	*/
 	open var left: Double  = definedExternally
@@ -81,5 +75,5 @@ open external class OrthographicCamera(left: Double = definedExternally, right: 
 	/**
 	* meta -- object containing metadata such as textures or images in objects' descendants. Convert the camera to three.js [link:https://github.com/mrdoob/three.js/wiki/JSON-Object-Scene-format-4 JSON Object/Scene format].
 	*/
-	open fun toJSON() : dynamic
+	override fun toJSON(meta: dynamic) : dynamic
 }

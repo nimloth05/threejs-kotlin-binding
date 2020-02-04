@@ -15,7 +15,7 @@ open external class ShapeUtils(){
 	/**
 	* pts -- points defining a 2D polygon Note that this is a linear function so it is neccessary to calculate separately for x, y components of a polygon. Used internally by [page:Path Path], [page:ExtrudeGeometry ExtrudeGeometry] and [page:ShapeGeometry ShapeGeometry].
 	*/
-	open fun isClockwise() : Boolean
+	open fun isClockWise() : Boolean
 
 
 	/**

@@ -61,15 +61,15 @@ open external class Audio(listener: ch.viseon.threejs.declarations.audio.AudioLi
 
 
 	/**
-	* The time at which the sound should begin to play. Same as the **when** paramter of [link:https://developer.mozilla.org/en-US/docs/Web/API/AudioBufferSourceNode/start AudioBufferSourceNode.start](). Default is **0**.
+	* An offset to the time within the audio buffer that playback should begin. Same as the **offset** parameter of [link:https://developer.mozilla.org/en-US/docs/Web/API/AudioBufferSourceNode/start AudioBufferSourceNode.start](). Default is **0**.
 	*/
-	open var startTime: Double  = definedExternally
+	open var offset: Double  = definedExternally
 
 
 	/**
-	* An offset to the time within the audio buffer that playback should begin. Same as the **offset** paramter of [link:https://developer.mozilla.org/en-US/docs/Web/API/AudioBufferSourceNode/start AudioBufferSourceNode.start](). Default is **0**.
+	* Overrides the duration of the audio. Same as the **duration** parameter of [link:https://developer.mozilla.org/en-US/docs/Web/API/AudioBufferSourceNode/start AudioBufferSourceNode.start](). Default is **undefined** to play the whole buffer.
 	*/
-	open var offset: Double  = definedExternally
+	open var duration: Double  = definedExternally
 
 
 	/**
@@ -151,7 +151,7 @@ open external class Audio(listener: ch.viseon.threejs.declarations.audio.AudioLi
 
 
 	/**
-	* Called automatically when playback finished. Sets If [page:Audio.isPlaying isPlaying] to false.
+	* Called automatically when playback finished.
 	*/
 	open fun onEnded() : dynamic
 
@@ -181,9 +181,27 @@ open external class Audio(listener: ch.viseon.threejs.declarations.audio.AudioLi
 
 
 	/**
+	* Set [link:https://developer.mozilla.org/en-US/docs/Web/API/AudioBufferSourceNode/loopStart source.loopStart] to **value**.
+	*/
+	open fun setLoopStart(value: Double = definedExternally) : ch.viseon.threejs.declarations.audio.Audio
+
+
+	/**
+	* Set [link:https://developer.mozilla.org/en-US/docs/Web/API/AudioBufferSourceNode/loopEnd source.loopEnd] to **value**.
+	*/
+	open fun setLoopEnd(value: Double = definedExternally) : ch.viseon.threejs.declarations.audio.Audio
+
+
+	/**
 	* Applies the given object of type [link:https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement HTMLMediaElement] as the source of this audio. Also sets [page:Audio.hasPlaybackControl hasPlaybackControl] to false.
 	*/
 	open fun setMediaElementSource() : ch.viseon.threejs.declarations.audio.Audio
+
+
+	/**
+	* Applies the given object of type [link:https://developer.mozilla.org/en-US/docs/Web/API/MediaStream MediaStream] as the source of this audio. Also sets [page:Audio.hasPlaybackControl hasPlaybackControl] to false.
+	*/
+	open fun setMediaStreamSource() : ch.viseon.threejs.declarations.audio.Audio
 
 
 	/**
@@ -205,7 +223,7 @@ open external class Audio(listener: ch.viseon.threejs.declarations.audio.AudioLi
 
 
 	/**
-	* If [page:Audio.hasPlaybackControl hasPlaybackControl] is enabled, stops playback, resets [page:Audio.startTime startTime] to **0** and sets [page:Audio.isPlaying isPlaying] to false.
+	* If [page:Audio.hasPlaybackControl hasPlaybackControl] is enabled, stops playback.
 	*/
 	open fun stop() : ch.viseon.threejs.declarations.audio.Audio
 }

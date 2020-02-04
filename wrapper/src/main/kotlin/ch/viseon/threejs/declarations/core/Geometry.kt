@@ -43,12 +43,6 @@ open external class Geometry(){
 
 
 	/**
-	* Used to check whether this or derived classes are Geometries. Default is **true**. You should not change this, as it used internally for optimisation.
-	*/
-	open var isGeometry: Boolean  = definedExternally
-
-
-	/**
 	* An array containing distances between vertices for Line geometries. This is required for [page:LineDashedMaterial] to render correctly.
 	*/
 	open var lineDistances: Array<dynamic>  = definedExternally
@@ -143,7 +137,7 @@ In code another example could look like this: // e.g. geometry.skinIndices[15] =
 	/**
 	* Bakes matrix transform directly into vertex coordinates.
 	*/
-	open fun applyMatrix(matrix: ch.viseon.threejs.declarations.math.Matrix4 = definedExternally) : dynamic
+	open fun applyMatrix4(matrix: ch.viseon.threejs.declarations.math.Matrix4 = definedExternally) : dynamic
 
 
 	/**

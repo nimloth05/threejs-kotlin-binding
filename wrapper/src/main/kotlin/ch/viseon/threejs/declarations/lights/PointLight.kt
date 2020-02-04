@@ -21,12 +21,6 @@ Default is **0.0**.
 
 
 	/**
-	* Used to check whether this or derived classes are point lights. Default is **true**. You should not change this, as it used internally for optimisation.
-	*/
-	open var isPointLight: Boolean  = definedExternally
-
-
-	/**
 	* The light's power. In [page:WebGLRenderer.physicallyCorrectLights physically correct] mode, the luminous power of the light measured in lumens. Default is **4Math.PI**. This is directly related to the [page:.intensity intensity] in the ratio power = intensity ** 4π and changing this will also change the intensity.
 	*/
 	open var power: Double  = definedExternally

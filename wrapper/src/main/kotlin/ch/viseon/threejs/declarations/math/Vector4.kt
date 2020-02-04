@@ -5,12 +5,6 @@ package ch.viseon.threejs.declarations.math
 	* Class representing a 4D [link:https://en.wikipedia.org/wiki/Vector_space vector]. A 4D vector is an ordered quadruplet of numbers (labeled x, y, z, and w), which can be used to represent a number of things, such as:
 	*/
 open external class Vector4(x: Double = definedExternally, y: Double = definedExternally, z: Double = definedExternally, w: Double = definedExternally){
-
-	/**
-	* Used to check whether this or derived classes are Vector4s. Default is **true**. You should not change this, as it is used internally for optimisation.
-	*/
-	open var isVector4: Boolean  = definedExternally
-
 	open var x: Double  = definedExternally
 
 	open var y: Double  = definedExternally
@@ -159,13 +153,13 @@ open external class Vector4(x: Double = definedExternally, y: Double = definedEx
 
 
 	/**
-	* [page:Vector4 v] - [page:Vector4] to interpolate towards. alpha - interpolation factor in the closed interval [0, 1]. Linearly interpolates between this vector and [page:Vector4 v], where alpha is the distance along the line - alpha = 0 will be this vector, and alpha = 1 will be [page:Vector4 v].
+	* [page:Vector4 v] - [page:Vector4] to interpolate towards. [page:Float alpha] - interpolation factor, typically in the closed interval [0, 1]. Linearly interpolates between this vector and [page:Vector4 v], where alpha is the percent distance along the line - alpha = 0 will be this vector, and alpha = 1 will be [page:Vector4 v].
 	*/
 	open fun lerp(v: ch.viseon.threejs.declarations.math.Vector4 = definedExternally, alpha: Double = definedExternally) : Vector4
 
 
 	/**
-	* [page:Vector4 v1] - the starting [page:Vector4]. [page:Vector4 v2] - [page:Vector4] to interpolate towards. [page:Float alpha] - interpolation factor in the closed interval [0, 1]. Sets this vector to be the vector linearly interpolated between [page:Vector4 v1] and [page:Vector4 v2] where alpha is the distance along the line connecting the two vectors - alpha = 0 will be [page:Vector4 v1], and alpha = 1 will be [page:Vector4 v2].
+	* [page:Vector4 v1] - the starting [page:Vector4]. [page:Vector4 v2] - [page:Vector4] to interpolate towards. [page:Float alpha] - interpolation factor, typically in the closed interval [0, 1]. Sets this vector to be the vector linearly interpolated between [page:Vector4 v1] and [page:Vector4 v2] where alpha is the percent distance along the line connecting the two vectors - alpha = 0 will be [page:Vector4 v1], and alpha = 1 will be [page:Vector4 v2].
 	*/
 	open fun lerpVectors(v1: ch.viseon.threejs.declarations.math.Vector4 = definedExternally, v2: ch.viseon.threejs.declarations.math.Vector4 = definedExternally, alpha: Double = definedExternally) : Vector4
 

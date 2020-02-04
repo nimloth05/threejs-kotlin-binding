@@ -43,18 +43,6 @@ open external class MeshDepthMaterial(parameters: dynamic = definedExternally): 
 
 
 	/**
-	* Used to check whether this or derived classes are mesh depth materials. Default is **true**. You should not change this, as it used internally for optimisation.
-	*/
-	open var isMeshDepthMaterial: Boolean  = definedExternally
-
-
-	/**
-	* Whether the material is affected by lights. Default is **false**.
-	*/
-	override var lights: Boolean 
-
-
-	/**
 	* The color map. Default is null.
 	*/
 	open var map: ch.viseon.threejs.declarations.textures.Texture  = definedExternally

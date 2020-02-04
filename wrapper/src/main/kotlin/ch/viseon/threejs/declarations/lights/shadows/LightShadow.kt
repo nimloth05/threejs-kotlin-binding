@@ -2,7 +2,7 @@
 package ch.viseon.threejs.declarations.lights.shadows
 
 	/**
-	* This is used internally by [page:PointLight PointLights] for calculating shadows, and also serves as a base class for the other shadow classes.
+	* Serves as a base class for the other shadow classes.
 	*/
 open external class LightShadow(camera: ch.viseon.threejs.declarations.cameras.Camera = definedExternally){
 
@@ -25,6 +25,12 @@ open external class LightShadow(camera: ch.viseon.threejs.declarations.cameras.C
 
 
 	/**
+	* The distribution map generated using the internal camera; an occlusion is calculated based on the distribution of depths. Computed internally during rendering.
+	*/
+	open var mapPass: ch.viseon.threejs.declarations.renderers.WebGLRenderTarget  = definedExternally
+
+
+	/**
 	* A [Page:Vector2] defining the width and height of the shadow map. Higher values give better quality shadows at the cost of computation time. Values must be powers of 2, up to the [page:WebGLRenderer.capabilities].maxTextureSize for a given device, although the width and height don't have to be the same (so, for example, (512, 1024) is valid). The default is **( 512, 512 )**.
 	*/
 	open var mapSize: ch.viseon.threejs.declarations.math.Vector2  = definedExternally
@@ -37,13 +43,37 @@ open external class LightShadow(camera: ch.viseon.threejs.declarations.cameras.C
 
 
 	/**
-	* Setting this to values greater than 1 will blur the edges of the shadow. High values will cause unwanted banding effects in the shadows - a greater [page:.mapSize mapSize] will allow for a higher value to be used here before these effects become visible. Note that this has no effect if the [page:WebGLRenderer.shadowMap.type] is set to [page:Renderer BasicShadowMap].
+	* Setting this to values greater than 1 will blur the edges of the shadow. High values will cause unwanted banding effects in the shadows - a greater [page:.mapSize mapSize] will allow for a higher value to be used here before these effects become visible. If [page:WebGLRenderer.shadowMap.type] is set to [page:Renderer PCFSoftShadowMap], radius has no effect and it is recommended to increase softness by decreasing [page:.mapSize mapSize] instead. Note that this has no effect if the [page:WebGLRenderer.shadowMap.type] is set to [page:Renderer BasicShadowMap].
 	*/
 	open var radius: Double  = definedExternally
 
 
 	/**
-	* Copies value of all the properties from the [page:LightShadow source] to this SpotLight.
+	* Used internally by the renderer to extend the shadow map to contain all viewports
+	*/
+	open fun getFrameExtents() : ch.viseon.threejs.declarations.math.Vector2
+
+
+	/**
+	* Update the matrices for the camera and shadow, used internally by the renderer. light -- the light for which the shadow is being rendered.
+	*/
+	open fun updateMatrices(light: ch.viseon.threejs.declarations.lights.Light = definedExternally) : dynamic
+
+
+	/**
+	* Gets the shadow cameras frustum. Used internally by the renderer to cull objects.
+	*/
+	open fun getFrustum() : ch.viseon.threejs.declarations.math.Frustum
+
+
+	/**
+	* Used internally by the renderer to get the number of viewports that need to be rendered for this shadow.
+	*/
+	open fun getViewportCount() : Double
+
+
+	/**
+	* Copies value of all the properties from the [page:LightShadow source] to this Light.
 	*/
 	open fun copy(source: ch.viseon.threejs.declarations.lights.shadows.LightShadow = definedExternally) : ch.viseon.threejs.declarations.lights.shadows.LightShadow
 

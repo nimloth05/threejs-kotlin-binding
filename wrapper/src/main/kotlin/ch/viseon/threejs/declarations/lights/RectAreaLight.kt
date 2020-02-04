@@ -7,13 +7,8 @@ package ch.viseon.threejs.declarations.lights
 open external class RectAreaLight(color: Int = definedExternally, intensity: Double = definedExternally, width: Double = definedExternally, height: Double = definedExternally): ch.viseon.threejs.declarations.lights.Light{
 
 	/**
-	* Used to check whether this or derived classes are RectAreaLights. Default is **true**. You should not change this, as it used internally for optimisation.
-	*/
-	open var isRectAreaLight: Boolean  = definedExternally
-
-
-	/**
 	* Copies value of all the properties from the [page:RectAreaLight source] to this RectAreaLight.
+[link:https://github.com/mrdoob/three.js/blob/master/src/[path].js src/[path].js]
 	*/
 	open fun copy(source: ch.viseon.threejs.declarations.lights.RectAreaLight = definedExternally) : ch.viseon.threejs.declarations.lights.RectAreaLight
 }
