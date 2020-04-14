@@ -31,6 +31,12 @@ open external class LOD(): ch.viseon.threejs.declarations.core.Object3D{
 
 
 	/**
+	* Get the currently active LOD level. As index of the levels array.
+	*/
+	open fun getCurrentLevel() : Int
+
+
+	/**
 	* Get a reference to the first [page:Object3D] (mesh) that is greater than [page:Float distance].
 	*/
 	open fun getObjectForDistance(distance: Double = definedExternally) : ch.viseon.threejs.declarations.core.Object3D

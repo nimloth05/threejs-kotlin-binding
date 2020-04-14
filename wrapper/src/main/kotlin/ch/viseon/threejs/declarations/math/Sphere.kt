@@ -25,7 +25,7 @@ open external class Sphere(center: ch.viseon.threejs.declarations.math.Vector3 =
 
 
 	/**
-	* [page:Vector3 point] - [page:Vector3] The point to clamp. [page:Vector3 target] — the result will be copied into this Vector3. Clamps a point within the sphere. If the point is is outside the sphere, it will clamp it to the closets point on the edge of the sphere. Points already inside the sphere will not be affected.
+	* [page:Vector3 point] - [page:Vector3] The point to clamp. [page:Vector3 target] — the result will be copied into this Vector3. Clamps a point within the sphere. If the point is outside the sphere, it will clamp it to the closest point on the edge of the sphere. Points already inside the sphere will not be affected.
 	*/
 	open fun clampPoint(point: ch.viseon.threejs.declarations.math.Vector3 = definedExternally, target: ch.viseon.threejs.declarations.math.Vector3 = definedExternally) : ch.viseon.threejs.declarations.math.Vector3
 

@@ -12,7 +12,7 @@ dependencies {
 }
 
 group "ch.viseon.threejs"
-version = "113.0.0"
+version = "115.0.0"
 
 compileKotlin2Js.kotlinOptions.moduleKind = "commonjs"
 compileKotlin2Js.kotlinOptions.outputFile = "$project.buildDir.path/js/threejs-wrapper.js"

@@ -37,15 +37,21 @@ open external class Matrix3(){
 
 
 	/**
+	* Extracts the [link:https://en.wikipedia.org/wiki/Basis_(linear_algebra) basis] of this matrix into the three axis vectors provided. If this matrix is: a, b, c, d, e, f, g, h, i then the [page:Vector3 xAxis], [page:Vector3 yAxis], [page:Vector3 zAxis] will be set to: xAxis = (a, d, g) yAxis = (b, e, h) zAxis = (c, f, i)
+	*/
+	open fun extractBasis(xAxis: ch.viseon.threejs.declarations.math.Vector3 = definedExternally, yAxis: ch.viseon.threejs.declarations.math.Vector3 = definedExternally, zAxis: ch.viseon.threejs.declarations.math.Vector3 = definedExternally) : Matrix3
+
+
+	/**
 	* [page:Array array] - the array to read the elements from. [page:Integer offset] - (optional) index of first element in the array. Default is 0. Sets the elements of this matrix based on an array in [link:https://en.wikipedia.org/wiki/Row-_and_column-major_order#Column-major_order column-major] format.
 	*/
 	open fun fromArray(array: Array<dynamic> = definedExternally, offset: Int = definedExternally) : Matrix3
 
 
 	/**
-	* [page:Matrix3 m] - the matrix to take the inverse of. [page:Boolean throwOnDegenerate] - (optional) If true, throw an error if the matrix is degenerate (not invertible). Set this matrix to the [link:https://en.wikipedia.org/wiki/Invertible_matrix inverse] of the passed matrix [page:Matrix3 m], using the [link:https://en.wikipedia.org/wiki/Invertible_matrix#Analytic_solution analytic method]. If [page:Boolean throwOnDegenerate] is not set and the matrix is not invertible, set this to the 3x3 identity matrix.
+	* [page:Matrix3 m] - the matrix to take the inverse of. Set this matrix to the [link:https://en.wikipedia.org/wiki/Invertible_matrix inverse] of the passed matrix [page:Matrix3 m], using the [link:https://en.wikipedia.org/wiki/Invertible_matrix#Analytic_solution analytic method]. You can not invert a matrix with a determinant of zero. If you attempt this, the method returns a zero matrix instead.
 	*/
-	open fun getInverse(m: ch.viseon.threejs.declarations.math.Matrix3 = definedExternally, throwOnDegenerate: Boolean = definedExternally) : Matrix3
+	open fun getInverse(m: ch.viseon.threejs.declarations.math.Matrix3 = definedExternally) : Matrix3
 
 
 	/**

@@ -2,7 +2,7 @@
 package ch.viseon.threejs.declarations.math
 
 	/**
-	* Implementation of a [link:http://en.wikipedia.org/wiki/Quaternion quaternion]. This is used for [link:https://en.wikipedia.org/wiki/Quaternions_and_spatial_rotation rotating things] without encountering the dreaded [link:http://en.wikipedia.org/wiki/Gimbal_lock gimbal lock] issue, amongst other advantages.
+	* Implementation of a [link:http://en.wikipedia.org/wiki/Quaternion quaternion]. Quaternions are used in three.js to represent [link:https://en.wikipedia.org/wiki/Quaternions_and_spatial_rotation rotations].
 	*/
 open external class Quaternion(x: Double = definedExternally, y: Double = definedExternally, z: Double = definedExternally, w: Double = definedExternally){
 	open var x: Double  = definedExternally
@@ -144,6 +144,12 @@ open external class Quaternion(x: Double = definedExternally, y: Double = define
 	* [page:Array array] - An optional array to store the quaternion. If not specified, a new array will be created. [page:Integer offset] - (optional) if specified, the result will be copied into this [page:Array]. Returns the numerical elements of this quaternion in an array of format [x, y, z, w].
 	*/
 	open fun toArray(array: Array<dynamic> = definedExternally, offset: Int = definedExternally) : Array<dynamic>
+
+
+	/**
+	* [page:BufferAttribute attribute] - the source attribute. [page:Integer index] - index in the attribute. Sets [page:.x x], [page:.y y], [page:.z z], [page:.w w] properties of this quaternion from the [page:BufferAttribute attribute].
+	*/
+	open fun fromBufferAttribute(attribute: ch.viseon.threejs.declarations.core.BufferAttribute = definedExternally, index: Int = definedExternally) : Quaternion
 	companion object {
 
 	/**

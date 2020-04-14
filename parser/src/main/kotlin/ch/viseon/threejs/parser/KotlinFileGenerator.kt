@@ -162,8 +162,18 @@ class KotlinFileGenerator(
         if (list.isEmpty()) {
             return "()"
         }
+        val correctParamList = list
+            .groupBy { it.name }
+            .map { (key, value) ->
+                if (value.size > 1) {
+                    ParamDeclaration(key, "dynamic", false)
+                } else {
+                    value.first()
+                }
+            }
+
         val params =
-            list.joinToString(", ") { paramDeclaration ->
+            correctParamList.joinToString(", ") { paramDeclaration ->
                 toKotlinSaveName(paramDeclaration) + ": " + paramDeclaration.toKotlinType(classDeclaration) + getDefaultValue(
                     isParentMember
                 )

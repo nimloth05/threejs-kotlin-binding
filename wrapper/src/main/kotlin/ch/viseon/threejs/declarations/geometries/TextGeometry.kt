@@ -2,7 +2,7 @@
 package ch.viseon.threejs.declarations.geometries
 
 	/**
-	* A class for generating text as a single geometry. It is constructed by providing a string of text, and a hash of parameters consisting of a loaded [page:Font] and settings for the geometry's parent [page:ExtrudeGeometry]. See the [page:Font], [page:FontLoader] and [page:Creating_Text] pages for additional details.
+	* A class for generating text as a single geometry. It is constructed by providing a string of text, and a hash of parameters consisting of a loaded [page:Font] and settings for the geometry's parent [page:ExtrudeGeometry]. See the [page:Font], [page:FontLoader] and [page:Creating-Text] pages for additional details.
 	*/
 open external class TextGeometry(text: String = definedExternally, parameters: dynamic = definedExternally): ch.viseon.threejs.declarations.geometries.ExtrudeGeometry{
 

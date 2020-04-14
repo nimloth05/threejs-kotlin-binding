@@ -16,9 +16,9 @@ object DocCorrections {
         "StringKeyframeTrack.ValueBufferType" to "_bufferData"
     )
 
-    const val DYNAMIC = "dynamic"
-    const val DYNAMIC_ARRAY = "Array<dynamic>"
-    const val FLOAT_TYPE = "Double"
+    private const val DYNAMIC = "dynamic"
+    private const val DYNAMIC_ARRAY = "Array<dynamic>"
+    private const val FLOAT_TYPE = "Double"
 
     val docType2KotlinType = mapOf(
         "object" to DYNAMIC,
@@ -60,9 +60,10 @@ object DocCorrections {
         "WebGLShadowMap" to DYNAMIC,
         "WebGLRenderLists" to DYNAMIC,
         "WebGLRenderingContext" to "org.khronos.webgl.WebGLRenderingContext",
-        "WebGLProgram" to DYNAMIC,
+        "WebGLProgram" to " org.khronos.webgl.WebGLProgram",
         "RenderTarget" to DYNAMIC,
         "WebGLContextAttributes" to "org.khronos.webgl.WebGLContextAttributes",
+        "WebGLFramebuffer" to "org.khronos.webgl.WebGLFramebuffer",
         "DOMElement" to "org.w3c.dom.Element",
         "HTMLElement" to "org.w3c.dom.HTMLElement",
         "Function" to DYNAMIC,
@@ -87,7 +88,7 @@ object DocCorrections {
     )
 
     /**
-     * The names used in this list, must be the corrected one, not the original from the doc
+     * The names in this list must be the corrected one, not the original from the doc
      */
     val fullMemberName2Type = mapOf(
         "CameraHelper.matrix" to "Matrix4",
@@ -103,7 +104,7 @@ object DocCorrections {
         "SpotLightHelper.matrix" to "Matrix4",
         "SpotLightHelper.matrixAutoUpdate" to "Boolean",
         "VertexNormalsHelper.matrixAutoUpdate" to "Boolean",
-        "ShaderMaterial.vertexColors" to "Int",
+//        "ShaderMaterial.vertexColors" to "Int",
         "Object3D.children" to "Array<Object3D>",
         "Texture.wrapS" to "Int",
         "Texture.wrapT" to "Int",

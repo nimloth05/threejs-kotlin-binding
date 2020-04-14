@@ -73,9 +73,9 @@ open external class Matrix4(){
 
 
 	/**
-	* [page:Matrix4 m] - the matrix to take the inverse of. [page:Boolean throwOnDegenerate] - (optional) If true, throw an error if the matrix is degenerate (not invertible). Set this matrix to the [link:https://en.wikipedia.org/wiki/Invertible_matrix inverse] of the passed matrix [page:Matrix4 m], using the method outlined [link:http://www.euclideanspace.com/maths/algebra/matrix/functions/inverse/fourD/index.htm here]. If [page:Boolean throwOnDegenerate] is not set and the matrix is not invertible, set this to the 4x4 identity matrix.
+	* [page:Matrix4 m] - the matrix to take the inverse of. Set this matrix to the [link:https://en.wikipedia.org/wiki/Invertible_matrix inverse] of the passed matrix [page:Matrix4 m], using the method outlined [link:http://www.euclideanspace.com/maths/algebra/matrix/functions/inverse/fourD/index.htm here]. You can not invert a matrix with a determinant of zero. If you attempt this, the method returns a zero matrix instead.
 	*/
-	open fun getInverse(m: ch.viseon.threejs.declarations.math.Matrix4 = definedExternally, throwOnDegenerate: Boolean = definedExternally) : Matrix4
+	open fun getInverse(m: ch.viseon.threejs.declarations.math.Matrix4 = definedExternally) : Matrix4
 
 
 	/**

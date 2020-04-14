@@ -13,7 +13,7 @@ open external class Uniform(value: dynamic = definedExternally){
 
 
 	/**
-	* Returns a clone of this uniform. If the uniform's value property is an [page:Object] with a clone() method, this is used, otherwise the value is copied by assignment. Array values are shared between cloned [page:Uniform]s. See [example:webgldeferred_animation WebGL deferred animation] for an example of this method in use.
+	* Returns a clone of this uniform. If the uniform's value property is an [page:Object] with a clone() method, this is used, otherwise the value is copied by assignment. Array values are shared between cloned [page:Uniform]s.
 	*/
 	open fun clone() : ch.viseon.threejs.declarations.core.Uniform
 }

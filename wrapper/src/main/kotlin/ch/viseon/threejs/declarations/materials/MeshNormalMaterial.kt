@@ -55,7 +55,7 @@ open external class MeshNormalMaterial(parameters: dynamic = definedExternally):
 
 
 	/**
-	* The texture to create a normal map. The RGB values affect the surface normal for each pixel fragment and change the way the color is lit. Normal maps do not change the actual shape of the surface, only the lighting.
+	* The texture to create a normal map. The RGB values affect the surface normal for each pixel fragment and change the way the color is lit. Normal maps do not change the actual shape of the surface, only the lighting. In case the material has a normal map authored using the left handed convention, the y component of normalScale should be negated to compensate for the different handedness.
 	*/
 	open var normalMap: ch.viseon.threejs.declarations.textures.Texture  = definedExternally
 

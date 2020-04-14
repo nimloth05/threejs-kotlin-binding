@@ -140,7 +140,7 @@ Note: only [link:https://threejs.org/docs/#api/textures/CubeTexture cube environ
 
 
 	/**
-	* The texture to create a normal map. The RGB values affect the surface normal for each pixel fragment and change the way the color is lit. Normal maps do not change the actual shape of the surface, only the lighting.
+	* The texture to create a normal map. The RGB values affect the surface normal for each pixel fragment and change the way the color is lit. Normal maps do not change the actual shape of the surface, only the lighting. In case the material has a normal map authored using the left handed convention, the y component of normalScale should be negated to compensate for the different handedness.
 	*/
 	open var normalMap: ch.viseon.threejs.declarations.textures.Texture  = definedExternally
 
@@ -179,6 +179,12 @@ Note: only [link:https://threejs.org/docs/#api/textures/CubeTexture cube environ
 	* Define whether the material uses skinning. Default is false.
 	*/
 	open var skinning: Boolean  = definedExternally
+
+
+	/**
+	* Defines whether precomputed vertex tangents, which must be provided in a vec4 "tangent" attribute, are used. When disabled, tangents are derived automatically. Using precomputed tangents will give more accurate normal map details in some cases, such as with mirrored UVs. Default is false.
+	*/
+	open var vertexTangents: Boolean  = definedExternally
 
 
 	/**

@@ -31,7 +31,7 @@ open external class Face3(a: Int = definedExternally, b: Int = definedExternally
 
 
 	/**
-	* Face color - for this to be used a material's [page:Material.vertexColors vertexColors] property must be set to [page:Materials THREE.FaceColors].
+	* Face color - for this to be used a material's [page:Material.vertexColors vertexColors] property must be set to **true**.
 	*/
 	open var color: ch.viseon.threejs.declarations.math.Color  = definedExternally
 
@@ -43,7 +43,7 @@ open external class Face3(a: Int = definedExternally, b: Int = definedExternally
 
 
 	/**
-	* Array of 3 vertex colors - for these to be used a material's [page:Material.vertexColors vertexColors] property must be set to [page:Materials THREE.VertexColors].
+	* Array of 3 vertex colors - for these to be used a material's [page:Material.vertexColors vertexColors] property must be set to **true**.
 	*/
 	open var vertexColors: Array<dynamic>  = definedExternally
 

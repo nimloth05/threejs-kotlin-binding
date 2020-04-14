@@ -10,10 +10,4 @@ open external class InstancedBufferGeometry(): ch.viseon.threejs.declarations.co
 	* Default is **undefined**.
 	*/
 	open var maxInstancedCount: Double  = definedExternally
-
-
-	/**
-	* 
-	*/
-	open var addGroup: Double  = definedExternally
 }

@@ -2,7 +2,7 @@
 package ch.viseon.threejs.declarations.lights
 
 	/**
-	* A light that gets emitted from a single point in all directions. A common use case for this is to replicate the light emitted from a bare lightbulb. This light can cast shadows - see [page:LightShadow] page for details.
+	* A light that gets emitted from a single point in all directions. A common use case for this is to replicate the light emitted from a bare lightbulb. This light can cast shadows - see [page:PointLightShadow] page for details.
 	*/
 open external class PointLight(color: Int = definedExternally, intensity: Double = definedExternally, distance: Double = definedExternally, decay: Double = definedExternally): ch.viseon.threejs.declarations.lights.Light{
 
@@ -27,9 +27,9 @@ Default is **0.0**.
 
 
 	/**
-	* A [page:LightShadow] used to calculate shadows for this light. The lightShadow's [page:LightShadow.camera camera] is set to a [page:PerspectiveCamera] with [page:PerspectiveCamera.fov fov] of 90, [page:PerspectiveCamera.aspect aspect] of 1, [page:PerspectiveCamera.near near] clipping plane at 0.5 and [page:PerspectiveCamera.far far] clipping plane at 500.
+	* A [page:PointLightShadow] used to calculate shadows for this light. The lightShadow's [page:LightShadow.camera camera] is set to a [page:PerspectiveCamera] with [page:PerspectiveCamera.fov fov] of 90, [page:PerspectiveCamera.aspect aspect] of 1, [page:PerspectiveCamera.near near] clipping plane at 0.5 and [page:PerspectiveCamera.far far] clipping plane at 500.
 	*/
-	open var shadow: ch.viseon.threejs.declarations.lights.shadows.LightShadow  = definedExternally
+	open var shadow: ch.viseon.threejs.declarations.lights.shadows.PointLightShadow  = definedExternally
 
 
 	/**

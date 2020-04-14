@@ -34,4 +34,22 @@ open external class CurvePath(): ch.viseon.threejs.declarations.extras.core.Curv
 	* Adds together the lengths of the curves in the [page:.curves] array.
 	*/
 	open fun getCurveLengths() : Double
+
+
+	/**
+	* [page:Float t] - A position on the curve. Must be in the range [ 0, 1 ]. Returns a vector for a given position on the curve path.
+	*/
+	open fun getPoint(t: Double = definedExternally) : dynamic
+
+
+	/**
+	* divisions -- number of pieces to divide the curve into. Default is **12**. Returns a set of divisions + 1 points using getPoint( t ).
+	*/
+	override fun getPoints(divisions: Int) : Array<dynamic>
+
+
+	/**
+	* divisions -- number of pieces to divide the curve into. Default is **40**. Returns a set of divisions + 1 equi-spaced points using getPointAt( u ).
+	*/
+	override fun getSpacedPoints(divisions: Int) : Array<dynamic>
 }

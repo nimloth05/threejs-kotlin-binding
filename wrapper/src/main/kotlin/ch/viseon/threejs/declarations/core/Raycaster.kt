@@ -13,12 +13,6 @@ open external class Raycaster(origin: ch.viseon.threejs.declarations.math.Vector
 
 
 	/**
-	* The precision factor of the raycaster when intersecting [page:Line] objects.
-	*/
-	open var linePrecision: Double  = definedExternally
-
-
-	/**
 	* The near factor of the raycaster. This value indicates which objects can be discarded based on the distance. This value shouldn't be negative and should be smaller than the far property.
 	*/
 	open var near: Double  = definedExternally
@@ -31,7 +25,13 @@ open external class Raycaster(origin: ch.viseon.threejs.declarations.math.Vector
 
 
 	/**
-	* An object with the following properties: { Mesh: {}, Line: {}, LOD: {}, Points: { threshold: 1 }, Sprite: {} }
+	* Used by [name] to selectively ignore 3D objects when performing intersection tests. The following code example ensures that only 3D objects on layer **1** will be honored by the instance of [name]. raycaster.layers.set( 1 ); object.layers.enable( 1 );
+	*/
+	open var layers: ch.viseon.threejs.declarations.core.Layers  = definedExternally
+
+
+	/**
+	* An object with the following properties: { Mesh: {}, Line: { threshold: 1 }, LOD: {}, Points: { threshold: 1 }, Sprite: {} } Where threshold is the precision of the raycaster when intersecting objects, in world units.
 	*/
 	open var params: dynamic  = definedExternally
 

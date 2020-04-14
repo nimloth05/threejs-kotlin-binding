@@ -31,6 +31,11 @@ object DeclarationFactory {
             TokenType.page -> {
                 EmptyDeclaration
             }
+            TokenType.param -> {
+                //stray params
+                val (name, type, acceptNullValue) = extractNameAndType(owningClassName, first)
+                ParamDeclaration(name, type, acceptNullValue)
+            }
             else -> throw IllegalArgumentException("Unknown tokenType ${first.tokenType}")
         }
     }

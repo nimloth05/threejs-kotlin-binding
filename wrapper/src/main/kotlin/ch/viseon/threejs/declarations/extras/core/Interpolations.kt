@@ -2,7 +2,7 @@
 package ch.viseon.threejs.declarations.extras.core
 
 	/**
-	* TODO
+	* [name] contains spline and Bézier functions internally used by concrete curve classes.
 	*/
 open external class Interpolations(){
 

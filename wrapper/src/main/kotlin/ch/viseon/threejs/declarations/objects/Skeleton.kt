@@ -58,4 +58,10 @@ open external class Skeleton(bones: Array<dynamic> = definedExternally, boneInve
 	* name -- String to match to the Bone's .name property. Searches through the skeleton's bone array and returns the first with a matching name.
 	*/
 	open fun getBoneByName(name: String = definedExternally) : ch.viseon.threejs.declarations.objects.Bone
+
+
+	/**
+	* Can be used if an instance of [name] becomes obsolete in an application. The method will free internal resources.
+	*/
+	open fun dispose() : dynamic
 }

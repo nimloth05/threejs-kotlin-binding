@@ -139,11 +139,17 @@ fun generateDecl(name: String, elements: List<Node>): ClassDeclaration {
             } else {
                 val docNode = collectPs() //skips current element
 
-                classBuilder.ctorDeclaration = DeclarationFactory.fromStream(
+                 val tempDeclaration = DeclarationFactory.fromStream(
                     classBuilder.name,
                     TokenStream.parse(ctorNode.text()),
                     docNode
-                ) as ConstructorDeclaration
+                )
+
+                if (tempDeclaration is ParamDeclaration) {
+                    classBuilder.ctorDeclaration = ConstructorDeclaration(listOf(tempDeclaration))
+                } else {
+                    classBuilder.ctorDeclaration = tempDeclaration as ConstructorDeclaration
+                }
             }
             continue
         } else if (element.tagName() == "h2" && element.text() == "Static Methods") {

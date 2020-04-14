@@ -265,15 +265,9 @@ open external class Material(){
 
 
 	/**
-	* Defines whether vertex coloring is used. Default is [page:Materials THREE.NoColors]. Other options are [page:Materials THREE.VertexColors] and [page:Materials THREE.FaceColors].
+	* Defines whether vertex coloring is used. Default is **false**.
 	*/
-	open var vertexColors: Int  = definedExternally
-
-
-	/**
-	* Defines whether precomputed vertex tangents, which must be provided in a vec4 "tangent" attribute, are used. When disabled, tangents are derived automatically. Using precomputed tangents will give more accurate normal map details in some cases, such as with mirrored UVs. Default is false.
-	*/
-	open var vertexTangents: Boolean  = definedExternally
+	open var vertexColors: Boolean  = definedExternally
 
 
 	/**

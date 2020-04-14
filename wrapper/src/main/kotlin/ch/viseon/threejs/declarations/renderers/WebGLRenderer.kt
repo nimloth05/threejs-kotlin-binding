@@ -324,9 +324,9 @@ For reading out a [page:WebGLCubeRenderTarget WebGLCubeRenderTarget] use the opt
 
 
 	/**
-	* object - an instance of [page:Object3D] program - an instance of shaderProgram shading - an instance of Material Render an immediate buffer. Gets called by renderImmediateObject.
+	* object - an instance of [page:Object3D] program - an instance of [page:WebGLProgram] Renders an instance of [page:ImmediateRenderObject]. Gets called by renderObjectImmediate().
 	*/
-	open fun renderBufferImmediate(`object`: ch.viseon.threejs.declarations.core.Object3D = definedExternally, program: dynamic = definedExternally, shading: ch.viseon.threejs.declarations.materials.Material = definedExternally) : dynamic
+	open fun renderBufferImmediate(`object`: ch.viseon.threejs.declarations.core.Object3D = definedExternally, program:  org.khronos.webgl.WebGLProgram = definedExternally) : dynamic
 
 
 	/**
@@ -346,6 +346,12 @@ A built in function that can be used instead of [link:https://developer.mozilla.
 	* Sets the clear color and opacity.
 	*/
 	open fun setClearColor(color: ch.viseon.threejs.declarations.math.Color = definedExternally, alpha: Double = definedExternally) : dynamic
+
+
+	/**
+	* Sets the given WebGLFramebuffer. This method can only be used if no render target is set via [page:WebGLRenderer.setRenderTarget .setRenderTarget]().
+	*/
+	open fun setFramebuffer(value: org.khronos.webgl.WebGLFramebuffer = definedExternally) : dynamic
 
 
 	/**

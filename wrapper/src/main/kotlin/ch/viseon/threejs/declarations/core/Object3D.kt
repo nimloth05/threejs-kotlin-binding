@@ -43,7 +43,7 @@ open external class Object3D(){
 
 
 	/**
-	* The layer membership of the object. The object is only visible if it has at least one layer in common with the [page:Camera] in use.
+	* The layer membership of the object. The object is only visible if it has at least one layer in common with the [page:Camera] in use. This property can also be used to filter out unwanted objects in ray-intersection tests when using [page:Raycaster].
 	*/
 	open var layers: ch.viseon.threejs.declarations.core.Layers  = definedExternally
 
