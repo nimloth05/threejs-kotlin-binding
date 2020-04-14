@@ -129,6 +129,10 @@ object DocCorrections {
         "Object3D.parent"
     )
 
+    val classesWhichShouldBeObjects = hashSetOf(
+        "MathUtils"
+    )
+
     val constructorDeclarationCorrections = mapOf(
         "Texture" to listOf(
             ParamDeclaration("image", "dynamic", false),

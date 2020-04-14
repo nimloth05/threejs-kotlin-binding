@@ -4,7 +4,7 @@ package ch.viseon.threejs.declarations.scenes
 	/**
 	* Scenes allow you to set up what and where is to be rendered by three.js. This is where you place objects, lights and cameras.
 	*/
-open external class Scene(): ch.viseon.threejs.declarations.core.Object3D{
+open external class Scene: ch.viseon.threejs.declarations.core.Object3D{
 
 	/**
 	* Default is true. If set, then the renderer checks every frame if the scene and its objects needs matrix updates. When it isn't, then you have to maintain all matrices in the scene yourself.

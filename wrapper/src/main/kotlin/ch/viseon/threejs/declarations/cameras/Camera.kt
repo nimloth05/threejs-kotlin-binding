@@ -4,7 +4,7 @@ package ch.viseon.threejs.declarations.cameras
 	/**
 	* Abstract base class for cameras. This class should always be inherited when you build a new camera.
 	*/
-open external class Camera(): ch.viseon.threejs.declarations.core.Object3D{
+open external class Camera: ch.viseon.threejs.declarations.core.Object3D{
 
 	/**
 	* The [page:Layers layers] that the camera is a member of. This is an inherited property from [page:Object3D]. Objects must share at least one layer with the camera to be seen when the camera's viewpoint is rendered.

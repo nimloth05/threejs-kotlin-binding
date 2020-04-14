@@ -6,7 +6,7 @@ package ch.viseon.threejs.declarations.core
 To read and edit data in BufferGeometry attributes, see [page:BufferAttribute] documentation.
 For a less efficient but easier-to-use representation of geometry, see [page:Geometry].
 	*/
-open external class BufferGeometry(){
+open external class BufferGeometry{
 
 	/**
 	* This hashmap has as id the name of the attribute to be set and as value the [page:BufferAttribute buffer] to set it to. Rather than accessing this property directly, use [page:.setAttribute] and [page:.getAttribute] to access attributes of this geometry.

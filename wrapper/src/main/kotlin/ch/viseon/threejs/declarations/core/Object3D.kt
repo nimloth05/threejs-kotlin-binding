@@ -4,7 +4,7 @@ package ch.viseon.threejs.declarations.core
 	/**
 	* This is the base class for most objects in three.js and provides a set of properties and methods for manipulating objects in 3D space. Note that this can be used for grouping objects via the [page:.add]( object ) method which adds the object as a child, however it is better to use [page:Group] for this.
 	*/
-open external class Object3D(){
+open external class Object3D{
 
 	/**
 	* Whether the object gets rendered into shadow map. Default is **false**.

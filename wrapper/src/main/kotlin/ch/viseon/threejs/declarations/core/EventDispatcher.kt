@@ -4,7 +4,7 @@ package ch.viseon.threejs.declarations.core
 	/**
 	* JavaScript events for custom objects. [link:https://github.com/mrdoob/eventdispatcher.js Eventdispatcher on GitHub]
 	*/
-open external class EventDispatcher(){
+open external class EventDispatcher{
 
 	/**
 	* type - The type of event to listen to. listener - The function that gets called when the event is fired.

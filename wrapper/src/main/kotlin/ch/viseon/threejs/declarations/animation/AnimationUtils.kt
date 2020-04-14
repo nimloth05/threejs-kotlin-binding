@@ -4,7 +4,7 @@ package ch.viseon.threejs.declarations.animation
 	/**
 	* An object with various functions to assist with animations, used internally.
 	*/
-open external class AnimationUtils(){
+open external class AnimationUtils{
 
 	/**
 	* This is the same as Array.prototype.slice, but also works on typed arrays.

@@ -4,7 +4,7 @@ package ch.viseon.threejs.declarations.cameras
 	/**
 	* Dual [page:PerspectiveCamera PerspectiveCamera]s used for effects such as [link:https://en.wikipedia.org/wiki/Anaglyph_3D 3D Anaglyph] or [link:https://en.wikipedia.org/wiki/parallax_barrier Parallax Barrier].
 	*/
-open external class StereoCamera(){
+open external class StereoCamera{
 
 	/**
 	* Default is **1**.

@@ -4,7 +4,7 @@ package ch.viseon.threejs.declarations.math
 	/**
 	* A class representing a 4x4 [link:https://en.wikipedia.org/wiki/Matrix_(mathematics) matrix]. The most common use of a 4x4 matrix in 3D computer graphics is as a [link:https://en.wikipedia.org/wiki/Transformation_matrix Transformation Matrix]. For an introduction to transformation matrices as used in WebGL, check out [link:http://www.opengl-tutorial.org/beginners-tutorials/tutorial-3-matrices this tutorial]. This allows a [page:Vector3] representing a point in 3D space to undergo transformations such as translation, rotation, shear, scale, reflection, orthogonal or perspective projection and so on, by being multiplied by the matrix. This is known as applying the matrix to the vector. Every [page:Object3D] has three associated Matrix4s:
 	*/
-open external class Matrix4(){
+open external class Matrix4{
 
 	/**
 	* A [link:https://en.wikipedia.org/wiki/Row-_and_column-major_order#Column-major_order column-major] list of matrix values.

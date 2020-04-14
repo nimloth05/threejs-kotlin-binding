@@ -4,7 +4,7 @@ package ch.viseon.threejs.declarations.extras.core
 	/**
 	* Create a set of [page:Shape Shapes] representing a font loaded in JSON format. This is used internally by the [page:FontLoader].
 	*/
-open external class Font(){
+open external class Font{
 
 	/**
 	* The JSON data passed in the constructor.

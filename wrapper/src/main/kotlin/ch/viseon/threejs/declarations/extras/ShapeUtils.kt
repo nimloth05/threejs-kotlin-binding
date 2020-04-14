@@ -4,7 +4,7 @@ package ch.viseon.threejs.declarations.extras
 	/**
 	* A class containing utility functions for shapes. Note that these are all linear functions so it is neccessary to calculate separately for x, y (and z, w if present) components of a vector.
 	*/
-open external class ShapeUtils(){
+open external class ShapeUtils{
 
 	/**
 	* contour -- 2D polygon. An array of THREE.Vector2() Calculate area of a ( 2D ) contour polygon.

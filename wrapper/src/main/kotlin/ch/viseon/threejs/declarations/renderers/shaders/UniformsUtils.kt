@@ -4,7 +4,7 @@ package ch.viseon.threejs.declarations.renderers.shaders
 	/**
 	* Provides utility functions for managing uniforms.
 	*/
-open external class UniformsUtils(){
+open external class UniformsUtils{
 
 	/**
 	* src -- An object representing uniform definitions. Clones the given uniform definitions by performing a deep-copy. That means if the [page:Uniform.value value] of a uniform refers to an object like a [page:Vector3] or [page:Texture], the cloned uniform will refer to a new object reference.

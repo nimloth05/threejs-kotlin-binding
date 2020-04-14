@@ -4,5 +4,5 @@ package ch.viseon.threejs.declarations.renderers.shaders
 	/**
 	* Uniforms library for shared webgl shaders
 	*/
-open external class UniformsLib(){
+open external class UniformsLib{
 }

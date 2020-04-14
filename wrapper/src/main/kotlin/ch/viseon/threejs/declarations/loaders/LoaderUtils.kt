@@ -4,7 +4,7 @@ package ch.viseon.threejs.declarations.loaders
 	/**
 	* An object with several loader utility functions.
 	*/
-open external class LoaderUtils(){
+open external class LoaderUtils{
 
 	/**
 	* [page:TypedArray array] — A stream of bytes as a typed array.

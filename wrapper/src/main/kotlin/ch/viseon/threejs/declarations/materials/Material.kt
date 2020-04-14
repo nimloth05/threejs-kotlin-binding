@@ -4,7 +4,7 @@ package ch.viseon.threejs.declarations.materials
 	/**
 	* Abstract base class for materials. Materials describe the appearance of [page:Object objects]. They are defined in a (mostly) renderer-independent way, so you don't have to rewrite materials if you decide to use a different renderer. The following properties and methods are inherited by all other material types (although they may have different defaults).
 	*/
-open external class Material(){
+open external class Material{
 
 	/**
 	* Sets the alpha value to be used when running an alpha test. The material will not be renderered if the opacity is lower than this value. Default is **0**.

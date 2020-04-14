@@ -4,7 +4,7 @@ package ch.viseon.threejs.declarations.extras.core
 	/**
 	* An abstract base class extending [page:Curve]. A CurvePath is simply an array of connected curves, but retains the api of a curve.
 	*/
-open external class CurvePath(): ch.viseon.threejs.declarations.extras.core.Curve{
+open external class CurvePath: ch.viseon.threejs.declarations.extras.core.Curve{
 
 	/**
 	* The array of [page:Curve Curves].

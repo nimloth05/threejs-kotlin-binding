@@ -4,7 +4,7 @@ package ch.viseon.threejs.declarations.math
 	/**
 	* A class representing a 3x3 [link:https://en.wikipedia.org/wiki/Matrix_(mathematics) matrix].
 	*/
-open external class Matrix3(){
+open external class Matrix3{
 
 	/**
 	* A [link:https://en.wikipedia.org/wiki/Row-_and_column-major_order column-major] list of matrix values.

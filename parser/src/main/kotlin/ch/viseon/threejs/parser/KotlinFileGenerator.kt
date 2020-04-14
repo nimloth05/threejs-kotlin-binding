@@ -24,7 +24,7 @@ class KotlinFileGenerator(
 
             //class Decl
             append(generateKotlinDoc(classDeclaration.doc))
-            append("open external class ")
+            append("${getClassModifier(classDeclaration)} ")
             append(classDeclaration.name)
             append(classDeclaration.constructorDeclaration.toKotlinDeclaration(classDeclaration))
             append(classDeclaration.inheritenceDeclaration.toKotlinDeclaration())
@@ -43,6 +43,15 @@ class KotlinFileGenerator(
         Files.newBufferedWriter(destinationDirectory.resolve("${classDeclaration.name}.kt")).use {
             it.write(content)
         }
+    }
+
+    private val ClassDeclaration.isObject get() = DocCorrections.classesWhichShouldBeObjects.contains(name)
+
+    /**
+     * Returns the modifier for this class: `object` or `class`
+     */
+    private fun getClassModifier(classDeclaration: ClassDeclaration): String {
+        return if (classDeclaration.isObject) "external object" else "open external class"
     }
 
     private fun List<Declaration>.toKotlinDeclaration(classDeclaration: ClassDeclaration): String {
@@ -72,12 +81,12 @@ class KotlinFileGenerator(
     }
 
     private fun ConstructorDeclaration.toKotlinDeclaration(classDeclaration: ClassDeclaration): String {
-        return paramToKotlinDeclaration(classDeclaration, paramDeclarations, false)
+        return paramToKotlinDeclaration(classDeclaration, paramDeclarations, false, true)
     }
 
     private fun List<ConstructorDeclaration>.toKotlinOverloadConstructorDeclaration(classDeclaration: ClassDeclaration): String {
         return joinToString(separator = "\n") {
-            "\n\tconstructor${paramToKotlinDeclaration(classDeclaration, it.paramDeclarations, false)}"
+            "\n\tconstructor${paramToKotlinDeclaration(classDeclaration, it.paramDeclarations, false, false)}"
         }
     }
 
@@ -117,7 +126,7 @@ class KotlinFileGenerator(
                 } ?: false
         }
 
-        val params = paramToKotlinDeclaration(classDeclaration, paramDeclarations, isParentMember)
+        val params = paramToKotlinDeclaration(classDeclaration, paramDeclarations, isParentMember, false)
         val returnType = toKotlinType(owningClass).let { if (it.isEmpty()) "" else ": $it" }
         stringBuilder.append("\t$modifier fun $name$params $returnType\n")
         return stringBuilder.toString()
@@ -154,13 +163,17 @@ class KotlinFileGenerator(
         return if (!isParentMember) " = definedExternally" else ""
     }
 
+    /**
+     * @param usedInCtor Specifies if this declartion is used in the class constructor declaration.
+     */
     private fun paramToKotlinDeclaration(
         classDeclaration: ClassDeclaration,
         list: List<ParamDeclaration>,
-        isParentMember: Boolean
+        isParentMember: Boolean,
+        usedInCtor: Boolean
     ): String {
         if (list.isEmpty()) {
-            return "()"
+            return if (usedInCtor) "" else "()"
         }
         val correctParamList = list
             .groupBy { it.name }

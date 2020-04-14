@@ -4,7 +4,7 @@ package ch.viseon.threejs.declarations.loaders
 	/**
 	* A simple caching system, used internally by [page:FileLoader].
 	*/
-open external class Cache(){
+open external class Cache{
 
 	/**
 	* Whether caching is enabled. Default is **false**.

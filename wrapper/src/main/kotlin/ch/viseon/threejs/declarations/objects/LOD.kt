@@ -4,7 +4,7 @@ package ch.viseon.threejs.declarations.objects
 	/**
 	* Level of Detail - show meshes with more or less geometry based on distance from the camera. Every level is associated with an object, and rendering can be switched between them at the distances specified. Typically you would create, say, three meshes, one for far away (low detail), one for mid range (medium detail) and one for close up (high detail).
 	*/
-open external class LOD(): ch.viseon.threejs.declarations.core.Object3D{
+open external class LOD: ch.viseon.threejs.declarations.core.Object3D{
 
 	/**
 	* Whether the LOD object is updated automatically by the renderer per frame or not. If set to false, you have to call [page:LOD.update]() in the render loop by yourself. Default is true.

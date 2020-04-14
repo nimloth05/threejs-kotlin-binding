@@ -4,7 +4,7 @@ package ch.viseon.threejs.declarations.extras.core
 	/**
 	* An abstract base class for creating a [name] object that contains methods for interpolation. For an array of [name]s see [page:CurvePath].
 	*/
-open external class Curve(){
+open external class Curve{
 
 	/**
 	* This value determines the amount of divisions when calculating the cumulative segment lengths of a curve via [page:.getLengths]. To ensure precision when using methods like [page:.getSpacedPoints], it is recommended to increase [page:.arcLengthDivisions] if the curve is very large. Default is 200.

@@ -4,7 +4,7 @@ package ch.viseon.threejs.declarations.core
 	/**
 	* Geometry is a user-friendly alternative to [page:BufferGeometry]. Geometries store attributes (vertex positions, faces, colors, etc.) using objects like [page:Vector3] or [page:Color] that are easier to read and edit, but less efficient than typed arrays. Prefer [page:BufferGeometry] for large or serious projects.
 	*/
-open external class Geometry(){
+open external class Geometry{
 
 	/**
 	* Bounding box for the Geometry, which can be calculated with [page:.computeBoundingBox](). Default is **null**.

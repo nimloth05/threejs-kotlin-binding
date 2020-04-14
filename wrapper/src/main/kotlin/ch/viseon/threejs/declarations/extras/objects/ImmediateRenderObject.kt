@@ -4,7 +4,7 @@ package ch.viseon.threejs.declarations.extras.objects
 	/**
 	* base class for immediate rendering objects.
 	*/
-open external class ImmediateRenderObject(): ch.viseon.threejs.declarations.core.Object3D{
+open external class ImmediateRenderObject: ch.viseon.threejs.declarations.core.Object3D{
 
 	/**
 	* renderCallback -- A function to render the generated object.

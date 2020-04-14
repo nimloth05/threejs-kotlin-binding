@@ -4,7 +4,7 @@ package ch.viseon.threejs.declarations.core
 	/**
 	* This class is used internally to convert from [page:Geometry] to [page:BufferGeometry].
 	*/
-open external class DirectGeometry(){
+open external class DirectGeometry{
 
 	/**
 	* Unique number for this [name] instance.

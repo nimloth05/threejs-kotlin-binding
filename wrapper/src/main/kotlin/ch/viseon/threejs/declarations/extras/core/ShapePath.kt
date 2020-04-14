@@ -4,7 +4,7 @@ package ch.viseon.threejs.declarations.extras.core
 	/**
 	* This class is used to convert a series of shapes to an array of [page:Path]s, for example an SVG shape to a path (see the example below). It is used internally by [page:Font] to convert a font in JSON format to a series of paths.
 	*/
-open external class ShapePath(){
+open external class ShapePath{
 
 	/**
 	* Array of [page:Path]s.

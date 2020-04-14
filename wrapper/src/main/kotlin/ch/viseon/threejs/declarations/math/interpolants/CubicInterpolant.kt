@@ -4,7 +4,7 @@ package ch.viseon.threejs.declarations.math.interpolants
 	/**
 	* 
 	*/
-open external class CubicInterpolant(): ch.viseon.threejs.declarations.math.Interpolant{
+open external class CubicInterpolant: ch.viseon.threejs.declarations.math.Interpolant{
 
 	/**
 	* 

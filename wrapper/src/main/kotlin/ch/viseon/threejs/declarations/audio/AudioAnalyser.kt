@@ -4,7 +4,7 @@ package ch.viseon.threejs.declarations.audio
 	/**
 	* Create a AudioAnalyser object, which uses an [link:https://developer.mozilla.org/en-US/docs/Web/API/AnalyserNode AnalyserNode] to analyse audio data. This uses the [link:https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API Web Audio API].
 	*/
-open external class AudioAnalyser(){
+open external class AudioAnalyser{
 
 	/**
 	* An [link:https://developer.mozilla.org/en-US/docs/Web/API/AnalyserNode AnalyserNode] used to analyze audio.

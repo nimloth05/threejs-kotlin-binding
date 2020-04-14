@@ -4,7 +4,7 @@ package ch.viseon.threejs.declarations.lights.shadows
 	/**
 	* This is used internally by [page:PointLight PointLights] for calculating shadows.
 	*/
-open external class PointLightShadow(){
+open external class PointLightShadow{
 
 	/**
 	* Update the matrices for the camera and shadow, used internally by the renderer. light -- the light for which the shadow is being rendered. viewportIndex -- calculates the matrix for this viewport

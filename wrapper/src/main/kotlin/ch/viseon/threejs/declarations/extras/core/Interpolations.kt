@@ -4,7 +4,7 @@ package ch.viseon.threejs.declarations.extras.core
 	/**
 	* [name] contains spline and Bézier functions internally used by concrete curve classes.
 	*/
-open external class Interpolations(){
+open external class Interpolations{
 
 	/**
 	* t -- interpolation weight. p0, p1, p2, p3 -- the points defining the spline curve. Used internally by [page:SplineCurve SplineCurve].
