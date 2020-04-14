@@ -37,7 +37,11 @@ private fun collectClassInformation(targetDirectory: Path, classList: ClassList)
     return resultCollector.build()
 }
 
-fun createClassDescription(targetDirectory: Path, classListEntry: ClassListEntry, declarationCollector: ClassDeclarationsCollector) {
+fun createClassDescription(
+    targetDirectory: Path,
+    classListEntry: ClassListEntry,
+    declarationCollector: ClassDeclarationsCollector
+) {
     val directory = classListEntry.packageName.split(".").fold(targetDirectory) { p, s -> p.resolve(s) }
 
     //Check if the file already exists, if so skip.
@@ -62,13 +66,14 @@ fun generateDecl(name: String, elements: List<Node>): ClassDeclaration {
     val inheritenceToken: List<Token> = elements[i]
         .takeIf { it is TextNode }
         ?.let {
-            if (it is TextNode) {
+            val textNode = it as TextNode
+            if (textNode.text().isNotBlank()) {
                 TokenStream.parse(it.text())
             } else {
-                emptyList()
+                DocCorrections.class2BaseClass.getOrDefault(classBuilder.name, emptyList())
             }
         }
-        ?: emptyList()
+        ?: DocCorrections.class2BaseClass.getOrDefault(classBuilder.name, emptyList())
 
     classBuilder.inheritance = DeclarationFactory.createInheritance(inheritenceToken)
 
@@ -139,7 +144,7 @@ fun generateDecl(name: String, elements: List<Node>): ClassDeclaration {
             } else {
                 val docNode = collectPs() //skips current element
 
-                 val tempDeclaration = DeclarationFactory.fromStream(
+                val tempDeclaration = DeclarationFactory.fromStream(
                     classBuilder.name,
                     TokenStream.parse(ctorNode.text()),
                     docNode

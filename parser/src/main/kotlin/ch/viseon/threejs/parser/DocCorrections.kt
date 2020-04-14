@@ -104,7 +104,6 @@ object DocCorrections {
         "SpotLightHelper.matrix" to "Matrix4",
         "SpotLightHelper.matrixAutoUpdate" to "Boolean",
         "VertexNormalsHelper.matrixAutoUpdate" to "Boolean",
-//        "ShaderMaterial.vertexColors" to "Int",
         "Object3D.children" to "Array<Object3D>",
         "Texture.wrapS" to "Int",
         "Texture.wrapT" to "Int",
@@ -145,6 +144,10 @@ object DocCorrections {
             ParamDeclaration("anisotropy", "Double", false),
             ParamDeclaration("encoding", "Int", false)
         )
+    )
+
+    val class2BaseClass = mapOf(
+        "PointLightShadow" to listOf(Token(TokenType.page, "LightShadow", ""))
     )
 
     private val classesWithAdditionalConstructors = mapOf(
