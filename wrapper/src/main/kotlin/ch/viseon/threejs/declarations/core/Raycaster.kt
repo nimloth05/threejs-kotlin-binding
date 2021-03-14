@@ -44,7 +44,7 @@ open external class Raycaster(origin: ch.viseon.threejs.declarations.math.Vector
 
 	/**
 	* [page:Vector3 origin] — The origin vector where the ray casts from. [page:Vector3 direction] — The normalized direction vector that gives direction to the ray.
-Updates the ray with a new origin and direction.
+Updates the ray with a new origin and direction. Please note that this method only copies the values from the arguments.
 	*/
 	open fun set(origin: ch.viseon.threejs.declarations.math.Vector3 = definedExternally, direction: ch.viseon.threejs.declarations.math.Vector3 = definedExternally) : dynamic
 

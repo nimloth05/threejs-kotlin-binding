@@ -57,7 +57,7 @@ Default is **0.0**.
 
 
 	/**
-	* The Spotlight points from its [page:.position position] to target.position. The default position of the target is **(0, 0, 0)**. **Note**: For the target's position to be changed to anything other than the default, it must be added to the [page:Scene scene] using scene.add( light.target ); This is so that the target's [page:Object3D.matrixWorld matrixWorld] gets automatically updated each frame. It is also possible to set the target to be another object in the scene (anything with a [page:Object3D.position position] property), like so: var targetObject = new THREE.Object3D(); scene.add(targetObject); light.target = targetObject; The spotlight will now track the target object.
+	* The Spotlight points from its [page:.position position] to target.position. The default position of the target is **(0, 0, 0)**. **Note**: For the target's position to be changed to anything other than the default, it must be added to the [page:Scene scene] using scene.add( light.target ); This is so that the target's [page:Object3D.matrixWorld matrixWorld] gets automatically updated each frame. It is also possible to set the target to be another object in the scene (anything with a [page:Object3D.position position] property), like so: const targetObject = new THREE.Object3D(); scene.add(targetObject); light.target = targetObject; The spotlight will now track the target object.
 	*/
 	open var target: ch.viseon.threejs.declarations.core.Object3D  = definedExternally
 

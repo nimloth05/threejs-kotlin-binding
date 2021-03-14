@@ -31,6 +31,12 @@ open external class Skeleton(bones: Array<dynamic> = definedExternally, boneInve
 
 
 	/**
+	* The size of the [page:.boneTexture].
+	*/
+	open var boneTextureSize: Int  = definedExternally
+
+
+	/**
 	* Returns a clone of this Skeleton object.
 	*/
 	open fun clone() : ch.viseon.threejs.declarations.objects.Skeleton

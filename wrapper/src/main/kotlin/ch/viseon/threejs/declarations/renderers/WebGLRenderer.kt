@@ -62,6 +62,7 @@ open external class WebGLRenderer(parameters: dynamic = definedExternally){
 
 	/**
 	* Defines the output encoding of the renderer. Default is [page:Textures THREE.LinearEncoding].
+If a render target has been set using [page:WebGLRenderer.setRenderTarget .setRenderTarget] then renderTarget.texture.encoding will be used instead.
 See the [page:Textures texture constants] page for details of other formats.
 	*/
 	open var outputEncoding: Double  = definedExternally
@@ -129,7 +130,7 @@ See the [page:Textures texture constants] page for details of other formats.
 
 
 	/**
-	* Default is [page:Renderer LinearToneMapping]. See the [page:Renderer Renderer constants] for other choices.
+	* Default is [page:Renderer NoToneMapping]. See the [page:Renderer Renderer constants] for other choices.
 	*/
 	open var toneMapping: Int  = definedExternally
 
@@ -141,15 +142,9 @@ See the [page:Textures texture constants] page for details of other formats.
 
 
 	/**
-	* Tone mapping white point. Default is **1**.
+	* Provides access to the WebXR related [page:WebXRManager interface] of the renderer.
 	*/
-	open var toneMappingWhitePoint: Double  = definedExternally
-
-
-	/**
-	* Provides access to the WebXR related interface of the renderer.
-	*/
-	open var xr: dynamic  = definedExternally
+	open var xr: ch.viseon.threejs.declarations.renderers.webxr.WebXRManager  = definedExternally
 
 
 	/**
@@ -179,7 +174,7 @@ See the [page:Textures texture constants] page for details of other formats.
 	/**
 	* Compiles all materials in the scene with the camera. This is useful to precompile shaders before the first rendering.
 	*/
-	open fun compile(scene: ch.viseon.threejs.declarations.scenes.Scene = definedExternally, camera: ch.viseon.threejs.declarations.cameras.Camera = definedExternally) : dynamic
+	open fun compile(scene: ch.viseon.threejs.declarations.core.Object3D = definedExternally, camera: ch.viseon.threejs.declarations.cameras.Camera = definedExternally) : dynamic
 
 
 	/**
@@ -192,6 +187,12 @@ See the [page:Textures texture constants] page for details of other formats.
 	* Copies all pixels of a texture to an existing texture starting from the given position. Enables access to [link:https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texSubImage2D WebGLRenderingContext.texSubImage2D].
 	*/
 	open fun copyTextureToTexture(position: ch.viseon.threejs.declarations.math.Vector2 = definedExternally, srcTexture: ch.viseon.threejs.declarations.textures.Texture = definedExternally, dstTexture: ch.viseon.threejs.declarations.textures.Texture = definedExternally, level: Double = definedExternally) : dynamic
+
+
+	/**
+	* Copies the pixels of a texture in the bounds '[page:Box3 sourceBox]' in the desination texture starting from the given position. Enables access to [link:https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/texSubImage3D WebGL2RenderingContext.texSubImage3D].
+	*/
+	open fun copyTextureToTexture3D(sourceBox: ch.viseon.threejs.declarations.math.Box3 = definedExternally, position: ch.viseon.threejs.declarations.math.Vector2 = definedExternally, srcTexture: ch.viseon.threejs.declarations.textures.Texture = definedExternally, dstTexture: ch.viseon.threejs.declarations.textures.Texture = definedExternally, level: Double = definedExternally) : dynamic
 
 
 	/**
@@ -215,7 +216,7 @@ See the [page:Textures texture constants] page for details of other formats.
 	/**
 	* Returns a [page:Color THREE.Color] instance with the current clear color.
 	*/
-	open fun getClearColor() : ch.viseon.threejs.declarations.math.Color
+	open fun getClearColor(target: ch.viseon.threejs.declarations.math.Color = definedExternally) : ch.viseon.threejs.declarations.math.Color
 
 
 	/**
@@ -312,21 +313,27 @@ For reading out a [page:WebGLCubeRenderTarget WebGLCubeRenderTarget] use the opt
 
 
 	/**
-	* Render a [page:Scene scene] using a [page:Camera camera]. The render is done to a previously specified [page:WebGLRenderTarget renderTarget] set by calling [page:WebGLRenderer.setRenderTarget .setRenderTarget] or to the canvas as usual. By default render buffers are cleared before rendering but you can prevent this by setting the property [page:WebGLRenderer.autoClear autoClear] to false. If you want to prevent only certain buffers being cleared you can set either the [page:WebGLRenderer.autoClearColor autoClearColor], [page:WebGLRenderer.autoClearStencil autoClearStencil] or [page:WebGLRenderer.autoClearDepth autoClearDepth] properties to false. To forcibly clear one ore more buffers call [page:WebGLRenderer.clear .clear].
+	* Render a [page:Scene scene] or another type of [page:Object3D object] using a [page:Camera camera]. The render is done to a previously specified [page:WebGLRenderTarget renderTarget] set by calling [page:WebGLRenderer.setRenderTarget .setRenderTarget] or to the canvas as usual. By default render buffers are cleared before rendering but you can prevent this by setting the property [page:WebGLRenderer.autoClear autoClear] to false. If you want to prevent only certain buffers being cleared you can set either the [page:WebGLRenderer.autoClearColor autoClearColor], [page:WebGLRenderer.autoClearStencil autoClearStencil] or [page:WebGLRenderer.autoClearDepth autoClearDepth] properties to false. To forcibly clear one ore more buffers call [page:WebGLRenderer.clear .clear].
 	*/
-	open fun render(scene: ch.viseon.threejs.declarations.scenes.Scene = definedExternally, camera: ch.viseon.threejs.declarations.cameras.Camera = definedExternally) : dynamic
+	open fun render(scene: ch.viseon.threejs.declarations.core.Object3D = definedExternally, camera: ch.viseon.threejs.declarations.cameras.Camera = definedExternally) : dynamic
 
 
 	/**
 	* Render a buffer geometry group using the camera and with the specified material.
 	*/
-	open fun renderBufferDirect(camera: ch.viseon.threejs.declarations.cameras.Camera = definedExternally, fog: ch.viseon.threejs.declarations.scenes.Fog = definedExternally, geometry: ch.viseon.threejs.declarations.core.Geometry = definedExternally, material: ch.viseon.threejs.declarations.materials.Material = definedExternally, `object`: ch.viseon.threejs.declarations.core.Object3D = definedExternally, group: dynamic = definedExternally) : dynamic
+	open fun renderBufferDirect(camera: ch.viseon.threejs.declarations.cameras.Camera = definedExternally, fog: ch.viseon.threejs.declarations.scenes.Fog = definedExternally, geometry: ch.viseon.threejs.declarations.core.BufferGeometry = definedExternally, material: ch.viseon.threejs.declarations.materials.Material = definedExternally, `object`: ch.viseon.threejs.declarations.core.Object3D = definedExternally, group: dynamic = definedExternally) : dynamic
 
 
 	/**
 	* object - an instance of [page:Object3D] program - an instance of [page:WebGLProgram] Renders an instance of [page:ImmediateRenderObject]. Gets called by renderObjectImmediate().
 	*/
 	open fun renderBufferImmediate(`object`: ch.viseon.threejs.declarations.core.Object3D = definedExternally, program:  org.khronos.webgl.WebGLProgram = definedExternally) : dynamic
+
+
+	/**
+	* Can be used to reset the internal WebGL state. This method is mostly relevant for applications which share a single WebGL context across multiple WebGL libraries.
+	*/
+	open fun resetState() : dynamic
 
 
 	/**

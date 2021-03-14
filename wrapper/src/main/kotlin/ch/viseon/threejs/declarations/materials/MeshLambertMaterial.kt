@@ -57,7 +57,7 @@ open external class MeshLambertMaterial(parameters: dynamic = definedExternally)
 	/**
 	* The environment map. Default is null.
 	*/
-	open var envMap: ch.viseon.threejs.declarations.textures.CubeTexture  = definedExternally
+	open var envMap: ch.viseon.threejs.declarations.textures.Texture  = definedExternally
 
 
 	/**
@@ -79,7 +79,7 @@ open external class MeshLambertMaterial(parameters: dynamic = definedExternally)
 
 
 	/**
-	* Defines whether the material uses morphNormals. Set as true to pass morphNormal attributes from the [page:Geometry] to the shader. Default is **false**.
+	* Defines whether the material uses morphNormals. Set as true to pass morphNormal attributes from the geometry to the shader. Default is **false**.
 	*/
 	open var morphNormals: Boolean  = definedExternally
 

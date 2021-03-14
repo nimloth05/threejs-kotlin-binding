@@ -19,7 +19,7 @@ open external class Matrix4{
 
 
 	/**
-	* Sets this matrix to the transformation composed of [page:Vector3 position], [page:Quaternion quaternion] and [page:Vector3 scale]. Internally this calls [page:.makeRotationFromQuaternion makeRotationFromQuaternion]( [page:Quaternion quaternion] ) followed by [page:.scale scale]( [page:Vector3 scale] ), then finally [page:.setPosition setPosition]( [page:Vector3 position] ).
+	* Sets this matrix to the transformation composed of [page:Vector3 position], [page:Quaternion quaternion] and [page:Vector3 scale].
 	*/
 	open fun compose(position: ch.viseon.threejs.declarations.math.Vector3 = definedExternally, quaternion: ch.viseon.threejs.declarations.math.Quaternion = definedExternally, scale: ch.viseon.threejs.declarations.math.Vector3 = definedExternally) : Matrix4
 
@@ -37,7 +37,7 @@ open external class Matrix4{
 
 
 	/**
-	* Decomposes this matrix into it's [page:Vector3 position], [page:Quaternion quaternion] and [page:Vector3 scale] components.
+	* Decomposes this matrix into it's [page:Vector3 position], [page:Quaternion quaternion] and [page:Vector3 scale] components. Note: Not all matrices are decomposable in this way. For example, if an object has a non-uniformly scaled parent, then the object's world matrix may not be decomposable, and this method may not be appropriate.
 	*/
 	open fun decompose(position: ch.viseon.threejs.declarations.math.Vector3 = definedExternally, quaternion: ch.viseon.threejs.declarations.math.Quaternion = definedExternally, scale: ch.viseon.threejs.declarations.math.Vector3 = definedExternally) : dynamic
 
@@ -73,9 +73,9 @@ open external class Matrix4{
 
 
 	/**
-	* [page:Matrix4 m] - the matrix to take the inverse of. Set this matrix to the [link:https://en.wikipedia.org/wiki/Invertible_matrix inverse] of the passed matrix [page:Matrix4 m], using the method outlined [link:http://www.euclideanspace.com/maths/algebra/matrix/functions/inverse/fourD/index.htm here]. You can not invert a matrix with a determinant of zero. If you attempt this, the method returns a zero matrix instead.
+	* Inverts this matrix, using the [link:https://en.wikipedia.org/wiki/Invertible_matrix#Analytic_solution analytic method]. You can not invert with a determinant of zero. If you attempt this, the method produces a zero matrix instead.
 	*/
-	open fun getInverse(m: ch.viseon.threejs.declarations.math.Matrix4 = definedExternally) : Matrix4
+	open fun invert() : Matrix4
 
 
 	/**
@@ -202,6 +202,12 @@ open external class Matrix4{
 	* Set the [page:.elements elements] of this matrix to the supplied row-major values [page:Float n11], [page:Float n12], ... [page:Float n44].
 	*/
 	open fun set(n11: Double = definedExternally, n12: Double = definedExternally, n13: Double = definedExternally, n14: Double = definedExternally, n21: Double = definedExternally, n22: Double = definedExternally, n23: Double = definedExternally, n24: Double = definedExternally, n31: Double = definedExternally, n32: Double = definedExternally, n33: Double = definedExternally, n34: Double = definedExternally, n41: Double = definedExternally, n42: Double = definedExternally, n43: Double = definedExternally, n44: Double = definedExternally) : Matrix4
+
+
+	/**
+	* Set the upper 3x3 elements of this matrix to the values of the Matrix3 [page:Matrix3 m].
+	*/
+	open fun setFromMatrix3(m: ch.viseon.threejs.declarations.math.Matrix3 = definedExternally) : Matrix4
 
 	open fun setPosition(v: ch.viseon.threejs.declarations.math.Vector3 = definedExternally) : Matrix4
 

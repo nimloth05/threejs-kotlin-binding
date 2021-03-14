@@ -13,7 +13,7 @@ open external class VideoTexture(video: dynamic = definedExternally, mapping: In
 
 
 	/**
-	* This is called automatically and sets [property:boolean needsUpdate] to **true** every time a new frame is available.
+	* This is called automatically and sets [property:Boolean needsUpdate] to **true** every time a new frame is available.
 	*/
 	open fun update() : dynamic
 }

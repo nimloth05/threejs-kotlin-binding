@@ -4,13 +4,13 @@ package ch.viseon.threejs.declarations.objects
 	/**
 	* Class representing triangular [link:https://en.wikipedia.org/wiki/Polygon_mesh polygon mesh] based objects. Also serves as a base for other classes such as [page:SkinnedMesh].
 	*/
-open external class Mesh(geometry: ch.viseon.threejs.declarations.core.Geometry = definedExternally, material: ch.viseon.threejs.declarations.materials.Material = definedExternally): ch.viseon.threejs.declarations.core.Object3D{
+open external class Mesh(geometry: ch.viseon.threejs.declarations.core.BufferGeometry = definedExternally, material: ch.viseon.threejs.declarations.materials.Material = definedExternally): ch.viseon.threejs.declarations.core.Object3D{
 
 	constructor(geometry: ch.viseon.threejs.declarations.core.BufferGeometry? = definedExternally, material: ch.viseon.threejs.declarations.materials.Material = definedExternally)
 	/**
-	* An instance of [page:Geometry] or [page:BufferGeometry] (or derived classes), defining the object's structure. It's recommended to always use a [page:BufferGeometry] if possible for best performance.
+	* An instance of [page:BufferGeometry] (or derived classes), defining the object's structure.
 	*/
-	open var geometry: ch.viseon.threejs.declarations.core.Geometry  = definedExternally
+	open var geometry: ch.viseon.threejs.declarations.core.BufferGeometry  = definedExternally
 
 
 	/**

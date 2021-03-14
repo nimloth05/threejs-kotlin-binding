@@ -19,6 +19,7 @@ object DocCorrections {
     private const val DYNAMIC = "dynamic"
     private const val DYNAMIC_ARRAY = "Array<dynamic>"
     private const val FLOAT_TYPE = "Double"
+    private const val LONG_TYPE = "Long"
 
     val docType2KotlinType = mapOf(
         "object" to DYNAMIC,
@@ -33,6 +34,7 @@ object DocCorrections {
         "Uint16Array" to "org.khronos.webgl.Uint16Array",
         "Uint32Array" to "org.khronos.webgl.Uint32Array",
         "Uint8ClampedArray" to "org.khronos.webgl.Uint8ClampedArray",
+        "WebGLBuffer" to "org.khronos.webgl.WebGLBuffer",
         "Array" to DYNAMIC_ARRAY,
         "array" to DYNAMIC_ARRAY,
         "TypedArray" to DYNAMIC_ARRAY,
@@ -84,7 +86,8 @@ object DocCorrections {
         "ImageBitmap" to "org.w3c.dom.ImageBitmap",
         "HTMLCanvasElement" to "org.w3c.dom.HTMLCanvasElement",
         "Shader" to "ch.viseon.threejs.declarations.Shader",
-        "Usage" to "Int"
+        "Usage" to "Int",
+        "GLenum" to LONG_TYPE
     )
 
     /**

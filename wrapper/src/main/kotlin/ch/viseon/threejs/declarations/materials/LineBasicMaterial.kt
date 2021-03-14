@@ -28,4 +28,10 @@ open external class LineBasicMaterial(parameters: dynamic = definedExternally): 
 	* Define appearance of line joints. Possible values are 'round', 'bevel' and 'miter'. Default is 'round'. This corresponds to the [link:https://developer.mozilla.org/en/docs/Web/API/CanvasRenderingContext2D/lineJoin 2D Canvas lineJoin] property and it is ignored by the [page:WebGLRenderer WebGL] renderer.
 	*/
 	open var linejoin: String  = definedExternally
+
+
+	/**
+	* Define whether the material uses morphTargets. Default is false.
+	*/
+	open var morphTargets: Boolean  = definedExternally
 }

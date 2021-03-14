@@ -115,6 +115,12 @@ open external class Color(r: dynamic = definedExternally, g: Double = definedExt
 
 
 	/**
+	* [page:BufferAttribute attribute] - the source attribute. [page:Integer index] - index in the attribute. Sets this color's components from the [page:BufferAttribute attribute].
+	*/
+	open fun fromBufferAttribute(attribute: ch.viseon.threejs.declarations.core.BufferAttribute = definedExternally, index: Int = definedExternally) : Color
+
+
+	/**
 	* Returns the hexadecimal value of this color.
 	*/
 	open fun getHex() : Int
@@ -142,6 +148,12 @@ open external class Color(r: dynamic = definedExternally, g: Double = definedExt
 	* [page:Color color] - color to converge on. [page:Float alpha] - interpolation factor in the closed interval [0, 1]. Linearly interpolates this color's RGB values toward the RGB values of the passed argument. The alpha argument can be thought of as the ratio between the two colors, where 0.0 is this color and 1.0 is the first argument.
 	*/
 	open fun lerp(color: ch.viseon.threejs.declarations.math.Color = definedExternally, alpha: Double = definedExternally) : ch.viseon.threejs.declarations.math.Color
+
+
+	/**
+	* [page:Color color1] - the starting [page:Color]. [page:Color color2] - [page:Color] to interpolate towards. [page:Float alpha] - interpolation factor, typically in the closed interval [0, 1]. Sets this color to be the color linearly interpolated between [page:Color color1] and [page:Color color2] where alpha is the percent distance along the line connecting the two colors - alpha = 0 will be [page:Color color1], and alpha = 1 will be [page:Color color2].
+	*/
+	open fun lerpColors(color1: ch.viseon.threejs.declarations.math.Color = definedExternally, color2: ch.viseon.threejs.declarations.math.Color = definedExternally, alpha: Double = definedExternally) : Color
 
 
 	/**

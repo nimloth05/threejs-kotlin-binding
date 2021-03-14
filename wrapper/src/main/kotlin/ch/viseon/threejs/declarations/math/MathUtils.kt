@@ -43,9 +43,21 @@ external object MathUtils{
 
 
 	/**
+	* [page:Float x] - Current point. [page:Float y] - Target point. [page:Float lambda] - A higher lambda value will make the movement more sudden, and a lower value will make the movement more gradual. [page:Float dt] - Delta time in seconds. Smoothly interpolate a number from [page:Float x] toward [page:Float y] in a spring-like manner using the [page:Float dt] to maintain frame rate independent movement. For details, see [link:http://www.rorydriscoll.com/2016/03/07/frame-rate-independent-damping-using-lerp/ Frame rate independent damping using lerp].
+	*/
+	open fun damp(x: Double = definedExternally, y: Double = definedExternally, lambda: Double = definedExternally, dt: Double = definedExternally) : Double
+
+
+	/**
 	* [page:Float x] — Value to be mapped. [page:Float a1] — Minimum value for range A. [page:Float a2] — Maximum value for range A. [page:Float b1] — Minimum value for range B. [page:Float b2] — Maximum value for range B. Linear mapping of [page:Float x] from range [[page:Float a1], [page:Float a2]] to range [[page:Float b1], [page:Float b2]].
 	*/
 	open fun mapLinear(x: Double = definedExternally, a1: Double = definedExternally, a2: Double = definedExternally, b1: Double = definedExternally, b2: Double = definedExternally) : Double
+
+
+	/**
+	* [page:Float x] — The value to pingpong. [page:Float length] — The positive value the function will pingpong to. Default is 1. Returns a value that alternates between 0 and [param:Float length].
+	*/
+	open fun pingpong(x: Double = definedExternally, length: Double = definedExternally) : Double
 
 
 	/**
@@ -67,21 +79,27 @@ external object MathUtils{
 
 
 	/**
-	* Random float in the interval [page:Float low] to [page:Float high].
+	* Random float in the interval [[page:Float low], [page:Float high]].
 	*/
 	open fun randFloat(low: Double = definedExternally, high: Double = definedExternally) : Double
 
 
 	/**
-	* Random float in the interval **- [page:Float range] / 2** to **[page:Float range] / 2**.
+	* Random float in the interval [- [page:Float range] / 2, [page:Float range] / 2].
 	*/
 	open fun randFloatSpread(range: Double = definedExternally) : Double
 
 
 	/**
-	* Random integer in the interval [page:Float low] to [page:Float high].
+	* Random integer in the interval [[page:Float low], [page:Float high]].
 	*/
 	open fun randInt(low: Int = definedExternally, high: Int = definedExternally) : Int
+
+
+	/**
+	* Deterministic pseudo-random float in the interval [0, 1]. The integer [page:Integer seed] is optional.
+	*/
+	open fun seededRandom(seed: Int = definedExternally) : Double
 
 
 	/**

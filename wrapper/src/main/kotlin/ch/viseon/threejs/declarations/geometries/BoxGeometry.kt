@@ -2,9 +2,9 @@
 package ch.viseon.threejs.declarations.geometries
 
 	/**
-	* BoxGeometry is a geometry class for a [link:https://en.wikipedia.org/wiki/Cuboid rectangular cuboid] with a given 'width', 'height', and 'depth'. On creation, the cuboid is centred on the origin, with each edge parallel to one of the axes.
+	* [name] is a geometry class for a rectangular cuboid with a given 'width', 'height', and 'depth'. On creation, the cuboid is centred on the origin, with each edge parallel to one of the axes.
 	*/
-open external class BoxGeometry(width: Double = definedExternally, height: Double = definedExternally, depth: Double = definedExternally, widthSegments: Int = definedExternally, heightSegments: Int = definedExternally, depthSegments: Int = definedExternally): ch.viseon.threejs.declarations.core.Geometry{
+open external class BoxGeometry(width: Double = definedExternally, height: Double = definedExternally, depth: Double = definedExternally, widthSegments: Int = definedExternally, heightSegments: Int = definedExternally, depthSegments: Int = definedExternally): ch.viseon.threejs.declarations.core.BufferGeometry{
 
 	/**
 	* An object with a property for each of the constructor parameters. Any modification after instantiation does not change the geometry.

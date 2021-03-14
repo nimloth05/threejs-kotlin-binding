@@ -49,9 +49,9 @@ open external class Matrix3{
 
 
 	/**
-	* [page:Matrix3 m] - the matrix to take the inverse of. Set this matrix to the [link:https://en.wikipedia.org/wiki/Invertible_matrix inverse] of the passed matrix [page:Matrix3 m], using the [link:https://en.wikipedia.org/wiki/Invertible_matrix#Analytic_solution analytic method]. You can not invert a matrix with a determinant of zero. If you attempt this, the method returns a zero matrix instead.
+	* Inverts this matrix, using the [link:https://en.wikipedia.org/wiki/Invertible_matrix#Analytic_solution analytic method]. You can not invert with a determinant of zero. If you attempt this, the method produces a zero matrix instead.
 	*/
-	open fun getInverse(m: ch.viseon.threejs.declarations.math.Matrix3 = definedExternally) : Matrix3
+	open fun invert() : Matrix3
 
 
 	/**
@@ -97,7 +97,7 @@ open external class Matrix3{
 
 
 	/**
-	* Set this matrx to the upper 3x3 matrix of the Matrix4 [page:Matrix4 m].
+	* Set this matrix to the upper 3x3 matrix of the Matrix4 [page:Matrix4 m].
 	*/
 	open fun setFromMatrix4(m: ch.viseon.threejs.declarations.math.Matrix4 = definedExternally) : Matrix3
 

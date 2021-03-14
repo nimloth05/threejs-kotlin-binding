@@ -59,7 +59,7 @@ open external class Vector2(x: Double = definedExternally, y: Double = definedEx
 
 
 	/**
-	* The [page:.x x] and [page:.y y] components of the vector are rounded up to the nearest integer value.
+	* The [page:.x x] and [page:.y y] components of this vector are rounded up to the nearest integer value.
 	*/
 	open fun ceil() : Vector2
 
@@ -143,7 +143,7 @@ open external class Vector2(x: Double = definedExternally, y: Double = definedEx
 
 
 	/**
-	* The components of the vector are rounded down to the nearest integer value.
+	* The components of this vector are rounded down to the nearest integer value.
 	*/
 	open fun floor() : Vector2
 
@@ -203,7 +203,7 @@ open external class Vector2(x: Double = definedExternally, y: Double = definedEx
 
 
 	/**
-	* Converts this vector to a [link:https://en.wikipedia.org/wiki/Unit_vector unit vector] - that is, sets it equal to the vector with the same direction as this one, but [page:.length length] 1.
+	* Converts this vector to a [link:https://en.wikipedia.org/wiki/Unit_vector unit vector] - that is, sets it equal to a vector with the same direction as this one, but [page:.length length] 1.
 	*/
 	open fun normalize() : Vector2
 
@@ -233,19 +233,19 @@ open external class Vector2(x: Double = definedExternally, y: Double = definedEx
 
 
 	/**
-	* [page:Vector2 center] - the point around which to rotate. [page:float angle] - the angle to rotate, in radians. Rotates the vector around [page:Vector2 center] by [page:float angle] radians.
+	* [page:Vector2 center] - the point around which to rotate. [page:Float angle] - the angle to rotate, in radians. Rotates this vector around [page:Vector2 center] by [page:Float angle] radians.
 	*/
 	open fun rotateAround(center: ch.viseon.threejs.declarations.math.Vector2 = definedExternally, angle: Double = definedExternally) : Vector2
 
 
 	/**
-	* The components of the vector are rounded to the nearest integer value.
+	* The components of this vector are rounded to the nearest integer value.
 	*/
 	open fun round() : Vector2
 
 
 	/**
-	* The components of the vector are rounded towards zero (up if negative, down if positive) to an integer value.
+	* The components of this vector are rounded towards zero (up if negative, down if positive) to an integer value.
 	*/
 	open fun roundToZero() : Vector2
 
@@ -263,7 +263,7 @@ open external class Vector2(x: Double = definedExternally, y: Double = definedEx
 
 
 	/**
-	* Sets this vector to the vector with the same direction as this one, but [page:.length length] [page:Float l].
+	* Sets this vector to a vector with the same direction as this one, but [page:.length length] [page:Float l].
 	*/
 	open fun setLength(l: Double = definedExternally) : Vector2
 
@@ -305,7 +305,13 @@ open external class Vector2(x: Double = definedExternally, y: Double = definedEx
 
 
 	/**
-	* [page:Array array] - (optional) array to store the vector to. If this is not provided, a new array will be created. [page:Integer offset] - (optional) optional offset into the array. Returns an array [x, y], or copies x and y into the provided [page:Array array].
+	* [page:Array array] - (optional) array to store this vector to. If this is not provided, a new array will be created. [page:Integer offset] - (optional) optional offset into the array. Returns an array [x, y], or copies x and y into the provided [page:Array array].
 	*/
 	open fun toArray(array: Array<dynamic> = definedExternally, offset: Int = definedExternally) : Array<dynamic>
+
+
+	/**
+	* Sets each component of this vector to a pseudo-random value between 0 and 1, excluding 1.
+	*/
+	open fun random() : Vector2
 }

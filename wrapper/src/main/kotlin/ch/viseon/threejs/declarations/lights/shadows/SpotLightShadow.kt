@@ -13,7 +13,7 @@ open external class SpotLightShadow(PerspectiveCamera: ch.viseon.threejs.declara
 
 
 	/**
-	* Updates the internal perspective [page:.camera camera] based on the passed in [page:SpotLight light].
+	* Used to focus the shadow camera. The camera's field of view is set as a percentage of the spotlight's field-of-view. Range is [0, 1]. Default is 1.0.
 	*/
-	open fun update(light: ch.viseon.threejs.declarations.lights.SpotLight = definedExternally) : ch.viseon.threejs.declarations.lights.shadows.SpotLightShadow
+	open var focus: Double  = definedExternally
 }

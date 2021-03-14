@@ -25,7 +25,7 @@ open external class CatmullRomCurve3(points: Array<dynamic> = definedExternally,
 
 
 	/**
-	* When [page:.type] is **catmullrom**, defines catmullrom's tension.
+	* When [page:.curveType] is **catmullrom**, defines catmullrom's tension.
 	*/
 	open var tension: Double  = definedExternally
 }

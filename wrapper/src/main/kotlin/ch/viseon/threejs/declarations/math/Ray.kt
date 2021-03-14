@@ -73,7 +73,7 @@ open external class Ray(origin: ch.viseon.threejs.declarations.math.Vector3 = de
 
 
 	/**
-	* [page:Ray ray] - the [page:Ray] to compare to. Returns true if this and the other [page:Ray ray] have equal [page:.offset offset] and [page:.direction direction].
+	* [page:Ray ray] - the [page:Ray] to compare to. Returns true if this and the other [page:Ray ray] have equal [page:.origin origin] and [page:.direction direction].
 	*/
 	open fun equals(ray: ch.viseon.threejs.declarations.math.Ray = definedExternally) : Boolean
 

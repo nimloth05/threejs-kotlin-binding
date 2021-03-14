@@ -49,7 +49,7 @@ open external class WebGLRenderTarget(width: Double = definedExternally, height:
 
 
 	/**
-	* Renders to the stencil buffer. Default is true.
+	* Renders to the stencil buffer. Default is false.
 	*/
 	open var stencilBuffer: Boolean  = definedExternally
 

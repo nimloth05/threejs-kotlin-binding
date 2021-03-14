@@ -61,19 +61,19 @@ open external class Curve{
 
 
 	/**
-	* Returns a unit vector tangent at t. If the derived curve does not implement its tangent derivation, two points a small delta apart will be used to find its gradient which seems to give a reasonable approximation.
+	* [page:Float t] - A position on the curve. Must be in the range [ 0, 1 ]. [page:Vector optionalTarget] — (optional) If specified, the result will be copied into this Vector, otherwise a new Vector will be created. Returns a unit vector tangent at t. If the derived curve does not implement its tangent derivation, two points a small delta apart will be used to find its gradient which seems to give a reasonable approximation.
 	*/
-	open fun getTangent(t: Double = definedExternally) : dynamic
+	open fun getTangent(t: Double = definedExternally, optionalTarget: dynamic = definedExternally) : dynamic
 
 
 	/**
-	* Returns tangent at a point which is equidistant to the ends of the curve from the point given in [page:.getTangent].
+	* [page:Float u] - A position on the curve according to the arc length. Must be in the range [ 0, 1 ]. [page:Vector optionalTarget] — (optional) If specified, the result will be copied into this Vector, otherwise a new Vector will be created. Returns tangent at a point which is equidistant to the ends of the curve from the point given in [page:.getTangent].
 	*/
-	open fun getTangentAt(u: Double = definedExternally) : dynamic
+	open fun getTangentAt(u: Double = definedExternally, optionalTarget: dynamic = definedExternally) : dynamic
 
 
 	/**
-	* Generates the Frenet Frames. Used in geometries like [page:TubeGeometry] or [page:ExtrudeGeometry].
+	* Generates the Frenet Frames. Requires a curve definition in 3D space. Used in geometries like [page:TubeGeometry] or [page:ExtrudeGeometry].
 	*/
 	open fun computeFrenetFrames(segments: Int = definedExternally, closed: Boolean = definedExternally) : dynamic
 

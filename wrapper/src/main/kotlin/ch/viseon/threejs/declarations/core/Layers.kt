@@ -31,7 +31,7 @@ open external class Layers{
 
 
 	/**
-	* layers - a Layers object Returns true if this and the passed **layers** object are members of the same set of layers.
+	* layers - a Layers object Returns true if this and the passed **layers** object have at least one layer in common.
 	*/
 	open fun test(layers: ch.viseon.threejs.declarations.core.Layers = definedExternally) : Boolean
 

@@ -2,9 +2,9 @@
 package ch.viseon.threejs.declarations.geometries
 
 	/**
-	* This can be used as a helper object to view the edges of a [page:Geometry Geometry] object.
+	* This can be used as a helper object to view the edges of a [page:BufferGeometry geometry].
 	*/
-open external class EdgesGeometry(geometry: ch.viseon.threejs.declarations.core.Geometry = definedExternally, thresholdAngle: Int = definedExternally): ch.viseon.threejs.declarations.core.BufferGeometry{
+open external class EdgesGeometry(geometry: ch.viseon.threejs.declarations.core.BufferGeometry = definedExternally, thresholdAngle: Int = definedExternally): ch.viseon.threejs.declarations.core.BufferGeometry{
 
 	/**
 	* An object with a property for each of the constructor parameters. Any modification after instantiation does not change the geometry.

@@ -7,12 +7,6 @@ package ch.viseon.threejs.declarations.lights
 open external class HemisphereLight(skyColor: Int = definedExternally, groundColor: Int = definedExternally, intensity: Double = definedExternally): ch.viseon.threejs.declarations.lights.Light{
 
 	/**
-	* This is set to **undefined** in the constructor as hemisphere lights cannot cast shadows.
-	*/
-	override var castShadow: Boolean 
-
-
-	/**
 	* The light's sky color, as passed in the constructor. Default is a new [page:Color] set to white (0xffffff).
 	*/
 	override var color: ch.viseon.threejs.declarations.math.Color 

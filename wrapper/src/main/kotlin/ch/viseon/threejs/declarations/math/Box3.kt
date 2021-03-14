@@ -21,7 +21,7 @@ open external class Box3(min: ch.viseon.threejs.declarations.math.Vector3 = defi
 	/**
 	* [page:Matrix4 matrix] - The [page:Matrix4] to apply Transforms this Box3 with the supplied matrix.
 	*/
-	open fun applyMatrix4(matrix: ch.viseon.threejs.declarations.math.Matrix4 = definedExternally) : ch.viseon.threejs.declarations.math.Box3
+	open fun applyMatrix4(matrix: ch.viseon.threejs.declarations.math.Matrix4 = definedExternally) : Box3
 
 
 	/**
@@ -51,7 +51,7 @@ open external class Box3(min: ch.viseon.threejs.declarations.math.Vector3 = defi
 	/**
 	* [page:Box3 box] - [page:Box3] to copy. Copies the [page:.min min] and [page:.max max] from [page:Box3 box] to this box.
 	*/
-	open fun copy(box: ch.viseon.threejs.declarations.math.Box3 = definedExternally) : ch.viseon.threejs.declarations.math.Box3
+	open fun copy(box: ch.viseon.threejs.declarations.math.Box3 = definedExternally) : Box3
 
 
 	/**
@@ -69,25 +69,25 @@ open external class Box3(min: ch.viseon.threejs.declarations.math.Vector3 = defi
 	/**
 	* [page:Object3D object] - [page:Object3D] to expand the box by. Expands the boundaries of this box to include [page:Object3D object] and its children, accounting for the object's, and children's, world transforms. The function may result in a larger box than strictly necessary.
 	*/
-	open fun expandByObject(`object`: ch.viseon.threejs.declarations.core.Object3D = definedExternally) : ch.viseon.threejs.declarations.math.Box3
+	open fun expandByObject(`object`: ch.viseon.threejs.declarations.core.Object3D = definedExternally) : Box3
 
 
 	/**
 	* [page:Vector3 point] - [page:Vector3] that should be included in the box. Expands the boundaries of this box to include [page:Vector3 point].
 	*/
-	open fun expandByPoint(point: ch.viseon.threejs.declarations.math.Vector3 = definedExternally) : ch.viseon.threejs.declarations.math.Box3
+	open fun expandByPoint(point: ch.viseon.threejs.declarations.math.Vector3 = definedExternally) : Box3
 
 
 	/**
-	* [page:float scalar] - Distance to expand the box by. Expands each dimension of the box by [page:float scalar]. If negative, the dimensions of the box will be contracted.
+	* [page:Float scalar] - Distance to expand the box by. Expands each dimension of the box by [page:Float scalar]. If negative, the dimensions of the box will be contracted.
 	*/
-	open fun expandByScalar(scalar: Double = definedExternally) : ch.viseon.threejs.declarations.math.Box3
+	open fun expandByScalar(scalar: Double = definedExternally) : Box3
 
 
 	/**
 	* [page:Vector3 vector] - [page:Vector3] to expand the box by. Expands this box equilaterally by [page:Vector3 vector]. The width of this box will be expanded by the x component of [page:Vector3 vector] in both directions. The height of this box will be expanded by the y component of [page:Vector3 vector] in both directions. The depth of this box will be expanded by the z component of **vector** in both directions.
 	*/
-	open fun expandByVector(vector: ch.viseon.threejs.declarations.math.Vector3 = definedExternally) : ch.viseon.threejs.declarations.math.Box3
+	open fun expandByVector(vector: ch.viseon.threejs.declarations.math.Vector3 = definedExternally) : Box3
 
 
 	/**
@@ -115,9 +115,9 @@ open external class Box3(min: ch.viseon.threejs.declarations.math.Vector3 = defi
 
 
 	/**
-	* [page:Box3 box] - Box to intersect with. Returns the intersection of this and [page:Box3 box], setting the upper bound of this box to the lesser of the two boxes' upper bounds and the lower bound of this box to the greater of the two boxes' lower bounds.
+	* [page:Box3 box] - Box to intersect with. Computes the intersection of this and [page:Box3 box], setting the upper bound of this box to the lesser of the two boxes' upper bounds and the lower bound of this box to the greater of the two boxes' lower bounds. If there's no overlap, makes this box empty.
 	*/
-	open fun intersect(box: ch.viseon.threejs.declarations.math.Box3 = definedExternally) : ch.viseon.threejs.declarations.math.Box3
+	open fun intersect(box: ch.viseon.threejs.declarations.math.Box3 = definedExternally) : Box3
 
 
 	/**
@@ -153,53 +153,53 @@ open external class Box3(min: ch.viseon.threejs.declarations.math.Vector3 = defi
 	/**
 	* Makes this box empty.
 	*/
-	open fun makeEmpty() : ch.viseon.threejs.declarations.math.Box3
+	open fun makeEmpty() : Box3
 
 
 	/**
 	* [page:Vector3 min] - [page:Vector3] representing the lower (x, y, z) boundary of the box. [page:Vector3 max] - [page:Vector3] representing the lower upper (x, y, z) boundary of the box. Sets the lower and upper (x, y, z) boundaries of this box. Please note that this method only copies the values from the given objects.
 	*/
-	open fun set(min: ch.viseon.threejs.declarations.math.Vector3 = definedExternally, max: ch.viseon.threejs.declarations.math.Vector3 = definedExternally) : ch.viseon.threejs.declarations.math.Box3
+	open fun set(min: ch.viseon.threejs.declarations.math.Vector3 = definedExternally, max: ch.viseon.threejs.declarations.math.Vector3 = definedExternally) : Box3
 
 
 	/**
 	* array -- An array of position data that the resulting box will envelop. Sets the upper and lower bounds of this box to include all of the data in **array**.
 	*/
-	open fun setFromArray(array: Array<dynamic> = definedExternally, `this`: ch.viseon.threejs.declarations.math.Box3 = definedExternally) : ch.viseon.threejs.declarations.math.Box3
+	open fun setFromArray(array: Array<dynamic> = definedExternally) : Box3
 
 
 	/**
 	* [page:BufferAttribute attribute] - A buffer attribute of position data that the resulting box will envelop. Sets the upper and lower bounds of this box to include all of the data in [page:BufferAttribute attribute].
 	*/
-	open fun setFromBufferAttribute(attribute: ch.viseon.threejs.declarations.core.BufferAttribute = definedExternally, `this`: ch.viseon.threejs.declarations.math.Box3 = definedExternally) : ch.viseon.threejs.declarations.math.Box3
+	open fun setFromBufferAttribute(attribute: ch.viseon.threejs.declarations.core.BufferAttribute = definedExternally) : Box3
 
 
 	/**
 	* [page:Vector3 center], - Desired center position of the box. [page:Vector3 size] - Desired x, y and z dimensions of the box. Centers this box on [page:Vector3 center] and sets this box's width, height and depth to the values specified in [page:Vector3 size]
 	*/
-	open fun setFromCenterAndSize(center: ch.viseon.threejs.declarations.math.Vector3 = definedExternally, size: ch.viseon.threejs.declarations.math.Vector3 = definedExternally, `this`: ch.viseon.threejs.declarations.math.Box3 = definedExternally) : ch.viseon.threejs.declarations.math.Box3
+	open fun setFromCenterAndSize(center: ch.viseon.threejs.declarations.math.Vector3 = definedExternally, size: ch.viseon.threejs.declarations.math.Vector3 = definedExternally) : Box3
 
 
 	/**
 	* [page:Object3D object] - [page:Object3D] to compute the bounding box of. Computes the world-axis-aligned bounding box of an [page:Object3D] (including its children), accounting for the object's, and children's, world transforms. The function may result in a larger box than strictly necessary.
 	*/
-	open fun setFromObject(`object`: ch.viseon.threejs.declarations.core.Object3D = definedExternally) : ch.viseon.threejs.declarations.math.Box3
+	open fun setFromObject(`object`: ch.viseon.threejs.declarations.core.Object3D = definedExternally) : Box3
 
 
 	/**
 	* [page:Array points] - Array of [page:Vector3 Vector3s] that the resulting box will contain. Sets the upper and lower bounds of this box to include all of the points in [page:Array points].
 	*/
-	open fun setFromPoints(points: Array<dynamic> = definedExternally) : ch.viseon.threejs.declarations.math.Box3
+	open fun setFromPoints(points: Array<dynamic> = definedExternally) : Box3
 
 
 	/**
 	* [page:Vector3 offset] - Direction and distance of offset. Adds [page:Vector3 offset] to both the upper and lower bounds of this box, effectively moving this box [page:Vector3 offset] units in 3D space.
 	*/
-	open fun translate(offset: ch.viseon.threejs.declarations.math.Vector3 = definedExternally) : ch.viseon.threejs.declarations.math.Box3
+	open fun translate(offset: ch.viseon.threejs.declarations.math.Vector3 = definedExternally) : Box3
 
 
 	/**
-	* [page:Box3 box] - Box that will be unioned with this box. Unions this box with [page:Box3 box], setting the upper bound of this box to the greater of the two boxes' upper bounds and the lower bound of this box to the lesser of the two boxes' lower bounds.
+	* [page:Box3 box] - Box that will be unioned with this box. Computes the union of this box and [page:Box3 box], setting the upper bound of this box to the greater of the two boxes' upper bounds and the lower bound of this box to the lesser of the two boxes' lower bounds.
 	*/
-	open fun union(box: ch.viseon.threejs.declarations.math.Box3 = definedExternally) : ch.viseon.threejs.declarations.math.Box3
+	open fun union(box: ch.viseon.threejs.declarations.math.Box3 = definedExternally) : Box3
 }

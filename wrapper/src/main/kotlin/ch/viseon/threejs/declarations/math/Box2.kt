@@ -67,7 +67,7 @@ open external class Box2(min: ch.viseon.threejs.declarations.math.Vector2 = defi
 
 
 	/**
-	* [page:float scalar] - Distance to expand the box by. Expands each dimension of the box by [page:float scalar]. If negative, the dimensions of the box will be contracted.
+	* [page:Float scalar] - Distance to expand the box by. Expands each dimension of the box by [page:Float scalar]. If negative, the dimensions of the box will be contracted.
 	*/
 	open fun expandByScalar(scalar: Double = definedExternally) : ch.viseon.threejs.declarations.math.Box2
 

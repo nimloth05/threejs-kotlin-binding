@@ -79,7 +79,7 @@ open external class Vector3(x: Double = definedExternally, y: Double = definedEx
 
 
 	/**
-	* The [page:.x x], [page:.y y] and [page:.z z] components of the vector are rounded up to the nearest integer value.
+	* The [page:.x x], [page:.y y] and [page:.z z] components of this vector are rounded up to the nearest integer value.
 	*/
 	open fun ceil() : Vector3
 
@@ -91,7 +91,7 @@ open external class Vector3(x: Double = definedExternally, y: Double = definedEx
 
 
 	/**
-	* [page:Float min] - the minimum value the length will be clamped to [page:Float max] - the maximum value the length will be clamped to If this vector's length is greater than the max value, it is replaced by the max value. If this vector's length is less than the min value, it is replaced by the min value.
+	* [page:Float min] - the minimum value the length will be clamped to [page:Float max] - the maximum value the length will be clamped to If this vector's length is greater than the max value, the vector will be scaled down so its length is the max value. If this vector's length is less than the min value, the vector will be scaled up so its length is the min value.
 	*/
 	open fun clampLength(min: Double = definedExternally, max: Double = definedExternally) : Vector3
 
@@ -169,7 +169,7 @@ open external class Vector3(x: Double = definedExternally, y: Double = definedEx
 
 
 	/**
-	* The components of the vector are rounded down to the nearest integer value.
+	* The components of this vector are rounded down to the nearest integer value.
 	*/
 	open fun floor() : Vector3
 
@@ -259,7 +259,7 @@ open external class Vector3(x: Double = definedExternally, y: Double = definedEx
 
 
 	/**
-	* Convert this vector to a [link:https://en.wikipedia.org/wiki/Unit_vector unit vector] - that is, sets it equal to the vector with the same direction as this one, but [page:.length length] 1.
+	* Convert this vector to a [link:https://en.wikipedia.org/wiki/Unit_vector unit vector] - that is, sets it equal to a vector with the same direction as this one, but [page:.length length] 1.
 	*/
 	open fun normalize() : Vector3
 
@@ -283,19 +283,19 @@ open external class Vector3(x: Double = definedExternally, y: Double = definedEx
 
 
 	/**
-	* [page:Vector3 normal] - the normal to the reflecting plane Reflect the vector off of plane orthogonal to [page:Vector3 normal]. Normal is assumed to have unit length.
+	* [page:Vector3 normal] - the normal to the reflecting plane Reflect this vector off of plane orthogonal to [page:Vector3 normal]. Normal is assumed to have unit length.
 	*/
 	open fun reflect(normal: ch.viseon.threejs.declarations.math.Vector3 = definedExternally) : Vector3
 
 
 	/**
-	* The components of the vector are rounded to the nearest integer value.
+	* The components of this vector are rounded to the nearest integer value.
 	*/
 	open fun round() : Vector3
 
 
 	/**
-	* The components of the vector are rounded towards zero (up if negative, down if positive) to an integer value.
+	* The components of this vector are rounded towards zero (up if negative, down if positive) to an integer value.
 	*/
 	open fun roundToZero() : Vector3
 
@@ -361,7 +361,7 @@ open external class Vector3(x: Double = definedExternally, y: Double = definedEx
 
 
 	/**
-	* Set this vector to the vector with the same direction as this one, but [page:.length length] [page:Float l].
+	* Set this vector to a vector with the same direction as this one, but [page:.length length] [page:Float l].
 	*/
 	open fun setLength(l: Double = definedExternally) : Vector3
 
@@ -409,7 +409,7 @@ open external class Vector3(x: Double = definedExternally, y: Double = definedEx
 
 
 	/**
-	* [page:Array array] - (optional) array to store the vector to. If this is not provided a new array will be created. [page:Integer offset] - (optional) optional offset into the array. Returns an array [x, y, z], or copies x, y and z into the provided [page:Array array].
+	* [page:Array array] - (optional) array to store this vector to. If this is not provided a new array will be created. [page:Integer offset] - (optional) optional offset into the array. Returns an array [x, y, z], or copies x, y and z into the provided [page:Array array].
 	*/
 	open fun toArray(array: Array<dynamic> = definedExternally, offset: Int = definedExternally) : Array<dynamic>
 
@@ -424,4 +424,10 @@ open external class Vector3(x: Double = definedExternally, y: Double = definedEx
 	* [page:Camera camera] — camera to use in the projection. Projects this vector from the camera's normalized device coordinate (NDC) space into world space.
 	*/
 	open fun unproject(camera: ch.viseon.threejs.declarations.cameras.Camera = definedExternally) : Vector3
+
+
+	/**
+	* Sets each component of this vector to a pseudo-random value between 0 and 1, excluding 1.
+	*/
+	open fun random() : Vector3
 }

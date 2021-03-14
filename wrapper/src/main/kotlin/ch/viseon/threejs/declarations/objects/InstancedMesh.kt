@@ -15,9 +15,29 @@ If you need more instances than the original count value, you have to create a n
 
 
 	/**
-	* Represents the local transformation of all instances. For internal use only.
+	* Represents the colors of all instances. **null** by default. You have to set its [page:BufferAttribute.needsUpdate needsUpdate] flag to true if you modify instanced data via [page:.setColorAt]().
+	*/
+	open var instanceColor: ch.viseon.threejs.declarations.core.BufferAttribute  = definedExternally
+
+
+	/**
+	* Represents the local transformation of all instances. You have to set its [page:BufferAttribute.needsUpdate needsUpdate] flag to true if you modify instanced data via [page:.setMatrixAt]().
 	*/
 	open var instanceMatrix: ch.viseon.threejs.declarations.core.BufferAttribute  = definedExternally
+
+
+	/**
+	* Frees the internal resources of this instance.
+	*/
+	open fun dispose() : dynamic
+
+
+	/**
+	* [page:Integer index]: The index of an instance. Values have to be in the range [0, count].
+[page:Color color]: This color object will be set to the color of the defined instance.
+Get the color of the defined instance.
+	*/
+	open fun getColorAt(index: Int = definedExternally, color: ch.viseon.threejs.declarations.math.Color = definedExternally) : dynamic
 
 
 	/**
@@ -30,8 +50,16 @@ Get the local transformation matrix of the defined instance.
 
 	/**
 	* [page:Integer index]: The index of an instance. Values have to be in the range [0, count].
+[page:Color color]: The color of a single instance.
+Sets the given color to the defined instance. Make sure you set [page:.instanceColor][page:BufferAttribute.needsUpdate .needsUpdate] to true after updating all the colors.
+	*/
+	open fun setColorAt(index: Int = definedExternally, color: ch.viseon.threejs.declarations.math.Color = definedExternally) : dynamic
+
+
+	/**
+	* [page:Integer index]: The index of an instance. Values have to be in the range [0, count].
 [page:Matrix4 matrix]: A 4x4 matrix representing the local transformation of a single instance.
-Sets the given local transformation matrix to the defined instance.
+Sets the given local transformation matrix to the defined instance. Make sure you set [page:.instanceMatrix][page:BufferAttribute.needsUpdate .needsUpdate] to true after updating all the matrices.
 	*/
 	open fun setMatrixAt(index: Int = definedExternally, matrix: ch.viseon.threejs.declarations.math.Matrix4 = definedExternally) : dynamic
 }

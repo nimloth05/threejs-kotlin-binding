@@ -7,7 +7,7 @@ package ch.viseon.threejs.declarations.extras
 open external class Earcut{
 
 	/**
-	* data -- A flat array of vertice coordinates. holeIndices -- An array of hole indices if any. dim -- The number of coordinates per vertice in the input array.
+	* data -- A flat array of vertex coordinates. holeIndices -- An array of hole indices if any. dim -- The number of coordinates per vertex in the input array. Triangulates the given shape definition by returning an array of triangles. A triangle is defined by three consecutive integers representing vertex indices.
 	*/
 	open fun triangulate() : Array<dynamic>
 }

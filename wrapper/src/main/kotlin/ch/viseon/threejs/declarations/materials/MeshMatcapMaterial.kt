@@ -49,6 +49,12 @@ open external class MeshMatcapMaterial(parameters: dynamic = definedExternally):
 
 
 	/**
+	* Define whether the material is rendered with flat shading. Default is false.
+	*/
+	open var flatShading: Boolean  = definedExternally
+
+
+	/**
 	* The color map. Default is null. The texture map color is modulated by the diffuse [page:.color].
 	*/
 	open var map: ch.viseon.threejs.declarations.textures.Texture  = definedExternally
@@ -61,7 +67,7 @@ open external class MeshMatcapMaterial(parameters: dynamic = definedExternally):
 
 
 	/**
-	* Defines whether the material uses morphNormals. Set as true to pass morphNormal attributes from the [page:Geometry] to the shader. Default is **false**.
+	* Defines whether the material uses morphNormals. Set as true to pass morphNormal attributes from the geometry to the shader. Default is **false**.
 	*/
 	open var morphNormals: Boolean  = definedExternally
 

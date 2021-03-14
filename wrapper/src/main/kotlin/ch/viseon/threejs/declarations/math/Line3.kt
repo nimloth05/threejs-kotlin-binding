@@ -73,7 +73,7 @@ open external class Line3(start: ch.viseon.threejs.declarations.math.Vector3 = d
 
 
 	/**
-	* [page:Line3 line] - [page:Line3] to compare with this one. Returns true if both line's [page:.start start] and [page:.end en] points are equal.
+	* [page:Line3 line] - [page:Line3] to compare with this one. Returns true if both line's [page:.start start] and [page:.end end] points are equal.
 	*/
 	open fun equals(line: ch.viseon.threejs.declarations.math.Line3 = definedExternally) : Boolean
 

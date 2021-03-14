@@ -19,12 +19,6 @@ open external class SpriteMaterial(parameters: dynamic = definedExternally): ch.
 
 
 	/**
-	* Whether or not this material affected by the scene's fog. Default is false
-	*/
-	override var fog: Boolean 
-
-
-	/**
 	* The texture map. Default is null.
 	*/
 	open var map: ch.viseon.threejs.declarations.textures.Texture  = definedExternally

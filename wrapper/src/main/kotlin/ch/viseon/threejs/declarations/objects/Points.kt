@@ -4,12 +4,12 @@ package ch.viseon.threejs.declarations.objects
 	/**
 	* A class for displaying points. The points are rendered by the [page:WebGLRenderer] using [link:https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/drawElements gl.POINTS].
 	*/
-open external class Points(geometry: ch.viseon.threejs.declarations.core.Geometry = definedExternally, material: ch.viseon.threejs.declarations.materials.Material = definedExternally): ch.viseon.threejs.declarations.core.Object3D{
+open external class Points(geometry: ch.viseon.threejs.declarations.core.BufferGeometry = definedExternally, material: ch.viseon.threejs.declarations.materials.Material = definedExternally): ch.viseon.threejs.declarations.core.Object3D{
 
 	/**
-	* An instance of [page:Geometry] or [page:BufferGeometry] (or derived classes), defining the object's structure. Its recommended to always use a [page:BufferGeometry] if possible for best performance.
+	* An instance of [page:BufferGeometry] (or derived classes), defining the object's structure.
 	*/
-	open var geometry: ch.viseon.threejs.declarations.core.Geometry  = definedExternally
+	open var geometry: ch.viseon.threejs.declarations.core.BufferGeometry  = definedExternally
 
 
 	/**

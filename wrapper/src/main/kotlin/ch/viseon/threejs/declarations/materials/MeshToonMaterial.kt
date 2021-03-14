@@ -103,7 +103,7 @@ open external class MeshToonMaterial(parameters: dynamic = definedExternally): c
 
 
 	/**
-	* Defines whether the material uses morphNormals. Set as true to pass morphNormal attributes from the [page:Geometry] to the shader. Default is **false**.
+	* Defines whether the material uses morphNormals. Set as true to pass morphNormal attributes from the geometry to the shader. Default is **false**.
 	*/
 	open var morphNormals: Boolean  = definedExternally
 
@@ -133,27 +133,9 @@ open external class MeshToonMaterial(parameters: dynamic = definedExternally): c
 
 
 	/**
-	* How shiny the [page:.specular] highlight is; a higher value gives a sharper highlight. Default is **30**.
-	*/
-	open var shininess: Double  = definedExternally
-
-
-	/**
 	* Define whether the material uses skinning. Default is false.
 	*/
 	open var skinning: Boolean  = definedExternally
-
-
-	/**
-	* Specular color of the material. Default is a [page:Color] set to **0x111111** (very dark grey). This defines how shiny the material is and the color of its shine.
-	*/
-	open var specular: ch.viseon.threejs.declarations.math.Color  = definedExternally
-
-
-	/**
-	* The specular map value affects both how much the specular surface highlight contributes and how much of the environment map affects the surface. Default is null.
-	*/
-	open var specularMap: ch.viseon.threejs.declarations.textures.Texture  = definedExternally
 
 
 	/**

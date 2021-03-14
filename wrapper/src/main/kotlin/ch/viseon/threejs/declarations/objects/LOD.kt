@@ -13,7 +13,7 @@ open external class LOD: ch.viseon.threejs.declarations.core.Object3D{
 
 
 	/**
-	* An array of [page:object level] objects Each level is an object with two properties: [page:Object3D object] - The [page:Object3D] to display at this level. [page:Float distance] - The distance at which to display this level of detail.
+	* An array of [page:Object level] objects Each level is an object with two properties: [page:Object3D object] - The [page:Object3D] to display at this level. [page:Float distance] - The distance at which to display this level of detail.
 	*/
 	open var levels: Array<dynamic>  = definedExternally
 

@@ -31,9 +31,9 @@ open external class CurvePath: ch.viseon.threejs.declarations.extras.core.Curve{
 
 
 	/**
-	* Adds together the lengths of the curves in the [page:.curves] array.
+	* Get list of cumulative curve lengths of the curves in the [page:.curves] array.
 	*/
-	open fun getCurveLengths() : Double
+	open fun getCurveLengths() : Array<dynamic>
 
 
 	/**
@@ -43,7 +43,7 @@ open external class CurvePath: ch.viseon.threejs.declarations.extras.core.Curve{
 
 
 	/**
-	* divisions -- number of pieces to divide the curve into. Default is **12**. Returns a set of divisions + 1 points using getPoint( t ).
+	* divisions -- number of pieces to divide the curve into. Default is **12**. Returns an array of points representing a sequence of curves. The **division** parameter defines the number of pieces each curve is divided into. However, for optimization and quality purposes, the actual sampling resolution for each curve depends on its type. For example, for a [page:LineCurve], the returned number of points is always just 2.
 	*/
 	override fun getPoints(divisions: Int) : Array<dynamic>
 

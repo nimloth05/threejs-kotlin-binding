@@ -11,7 +11,7 @@ open external class Plane(normal: ch.viseon.threejs.declarations.math.Vector3 = 
 
 
 	/**
-	* [page:Matrix4 matrix] - the [Page:Matrix4] to apply. [page:Matrix3 optionalNormalMatrix] - (optional) pre-computed normal [Page:Matrix3] of the Matrix4 being applied. Apply a Matrix4 to the plane. The matrix must be an affine, homogeneous transform. If supplying an [page:Matrix3 optionalNormalMatrix], it can be created like so: var optionalNormalMatrix = new THREE.Matrix3().getNormalMatrix( matrix );
+	* [page:Matrix4 matrix] - the [Page:Matrix4] to apply. [page:Matrix3 optionalNormalMatrix] - (optional) pre-computed normal [Page:Matrix3] of the Matrix4 being applied. Apply a Matrix4 to the plane. The matrix must be an affine, homogeneous transform. If supplying an [page:Matrix3 optionalNormalMatrix], it can be created like so: const optionalNormalMatrix = new THREE.Matrix3().getNormalMatrix( matrix );
 	*/
 	open fun applyMatrix4(matrix: ch.viseon.threejs.declarations.math.Matrix4 = definedExternally, optionalNormalMatrix: ch.viseon.threejs.declarations.math.Matrix3 = definedExternally) : ch.viseon.threejs.declarations.math.Plane
 

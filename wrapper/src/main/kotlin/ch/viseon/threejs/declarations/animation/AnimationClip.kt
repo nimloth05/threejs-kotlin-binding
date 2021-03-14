@@ -49,6 +49,12 @@ open external class AnimationClip(name: String = definedExternally, duration: Do
 
 
 	/**
+	* Returns a JSON object representing the serialized animation clip.
+	*/
+	open fun toJSON() : dynamic
+
+
+	/**
 	* Trims all tracks to the clip's duration.
 	*/
 	open fun trim() : AnimationClip
@@ -61,13 +67,13 @@ open external class AnimationClip(name: String = definedExternally, duration: Do
 	companion object {
 
 	/**
-	* Returns an array of new AnimationClips created from the [page:Geometry.morphTargets morph target sequences] of a geometry, trying to sort morph target names into animation-group-based patterns like "Walk_001, Walk_002, Run_001, Run_002 ...".
+	* Returns an array of new AnimationClips created from the morph target sequences of a geometry, trying to sort morph target names into animation-group-based patterns like "Walk_001, Walk_002, Run_001, Run_002 ...".
 	*/
 	open fun CreateClipsFromMorphTargetSequences(name: String = definedExternally, morphTargetSequence: Array<dynamic> = definedExternally, fps: Double = definedExternally, noLoop: Boolean = definedExternally) : Array<dynamic>
 
 
 	/**
-	* Returns a new AnimationClip from the passed [page:Geometry.morphTargets morph targets array] of a geometry, taking a name and the number of frames per second. Note: The fps parameter is required, but the animation speed can be overridden in an **AnimationAction** via [page:AnimationAction.setDuration animationAction.setDuration].
+	* Returns a new AnimationClip from the passed morph targets array of a geometry, taking a name and the number of frames per second. Note: The fps parameter is required, but the animation speed can be overridden in an **AnimationAction** via [page:AnimationAction.setDuration animationAction.setDuration].
 	*/
 	open fun CreateFromMorphTargetSequence(name: String = definedExternally, morphTargetSequence: Array<dynamic> = definedExternally, fps: Double = definedExternally, noLoop: Boolean = definedExternally) : ch.viseon.threejs.declarations.animation.AnimationClip
 

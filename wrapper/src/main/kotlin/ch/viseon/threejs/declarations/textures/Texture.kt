@@ -133,13 +133,13 @@ open external class Texture(image: dynamic = definedExternally, mapping: Int = d
 
 
 	/**
-	* If set to **true**, the alpha channel, if present, is multiplied into the color channels when the texture is uploaded to the GPU. Default is **false**. Note that this property has no effect for [link:https://developer.mozilla.org/de/docs/Web/API/ImageBitmap ImageBitmap]. You need to configure on bitmap creation instead. See [page:ImageBitmapLoader].
+	* If set to **true**, the alpha channel, if present, is multiplied into the color channels when the texture is uploaded to the GPU. Default is **false**. Note that this property has no effect for [link:https://developer.mozilla.org/en-US/docs/Web/API/ImageBitmap ImageBitmap]. You need to configure on bitmap creation instead. See [page:ImageBitmapLoader].
 	*/
 	open var premultiplyAlpha: Boolean  = definedExternally
 
 
 	/**
-	* If set to **true**, the texture is flipped along the vertical axis when uploaded to the GPU. Default is **true**. Note that this property has no effect for [link:https://developer.mozilla.org/de/docs/Web/API/ImageBitmap ImageBitmap]. You need to configure on bitmap creation instead. See [page:ImageBitmapLoader].
+	* If set to **true**, the texture is flipped along the vertical axis when uploaded to the GPU. Default is **true**. Note that this property has no effect for [link:https://developer.mozilla.org/en-US/docs/Web/API/ImageBitmap ImageBitmap]. You need to configure on bitmap creation instead. See [page:ImageBitmapLoader].
 	*/
 	open var flipY: Boolean  = definedExternally
 

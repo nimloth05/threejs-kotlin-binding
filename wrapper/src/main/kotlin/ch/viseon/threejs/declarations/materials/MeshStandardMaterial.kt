@@ -85,16 +85,21 @@ open external class MeshStandardMaterial(parameters: dynamic = definedExternally
 
 
 	/**
-	* The environment map. Default is null. Note that in order for the material roughness property to correctly blur out the environment map, the shader must have access to mipmaps of the env texture. TextureCubes created with default settings are correctly configured; if adjusting texture parameters manually, ensure minFilter is set to one of the MipMap options, and that mip maps have not been otherwise forcibly disabled.
-Note: only [link:https://threejs.org/docs/#api/textures/CubeTexture cube environment maps] are supported for MeshStandardMaterial. If you want to use an equirectangular map you will need to use [page:WebGLCubeRenderTarget.fromEquirectangularTexture WebGLCubeRenderTarget.fromEquirectangularTexture](). See this [link:https://threejs.org/examples/webgl_materials_envmaps_exr.html example] for details.
+	* The environment map. To ensure a physically correct rendering, you should only add environment maps which were preprocessed by [page:PMREMGenerator]. Default is null.
 	*/
-	open var envMap: ch.viseon.threejs.declarations.textures.CubeTexture  = definedExternally
+	open var envMap: ch.viseon.threejs.declarations.textures.Texture  = definedExternally
 
 
 	/**
 	* Scales the effect of the environment map by multiplying its color.
 	*/
 	open var envMapIntensity: Double  = definedExternally
+
+
+	/**
+	* Define whether the material is rendered with flat shading. Default is false.
+	*/
+	open var flatShading: Boolean  = definedExternally
 
 
 	/**
@@ -128,7 +133,7 @@ Note: only [link:https://threejs.org/docs/#api/textures/CubeTexture cube environ
 
 
 	/**
-	* Defines whether the material uses morphNormals. Set as true to pass morphNormal attributes from the [page:Geometry] to the shader. Default is **false**.
+	* Defines whether the material uses morphNormals. Set as true to pass morphNormal attributes from the geometry to the shader. Default is **false**.
 	*/
 	open var morphNormals: Boolean  = definedExternally
 

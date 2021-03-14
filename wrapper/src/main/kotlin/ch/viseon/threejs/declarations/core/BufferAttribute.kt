@@ -165,7 +165,7 @@ open external class BufferAttribute(array: Array<dynamic> = definedExternally, i
 	/**
 	* Sets the value of the onUploadCallback property. In the [example:webgl_buffergeometry WebGL / Buffergeometry] this is used to free memory after the buffer has been transferred to the GPU.
 	*/
-	open fun onUpload(callback: dynamic = definedExternally) : dynamic
+	open fun onUpload(callback: dynamic = definedExternally) : BufferAttribute
 
 
 	/**

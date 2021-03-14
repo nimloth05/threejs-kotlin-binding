@@ -19,7 +19,7 @@ open external class Material{
 
 
 	/**
-	* The transparency of the [page:.blendDst]. Default is **null**.
+	* The transparency of the [page:.blendDst]. Uses [page:.blendDst] value if null. Default is **null**.
 	*/
 	open var blendDstAlpha: Int  = definedExternally
 
@@ -31,7 +31,7 @@ open external class Material{
 
 
 	/**
-	* The tranparency of the [page:.blendEquation]. Default is **null**.
+	* The transparency of the [page:.blendEquation]. Uses [page:.blendEquation] value if null. Default is **null**.
 	*/
 	open var blendEquationAlpha: Int  = definedExternally
 
@@ -49,7 +49,7 @@ open external class Material{
 
 
 	/**
-	* The tranparency of the [page:.blendSrc]. Default is **null**.
+	* The transparency of the [page:.blendSrc]. Uses [page:.blendSrc] value if null. Default is **null**.
 	*/
 	open var blendSrcAlpha: Int  = definedExternally
 
@@ -103,7 +103,7 @@ open external class Material{
 
 
 	/**
-	* Whether rendering this material has any effect on the stencil buffer. Default is **false**.
+	* Whether stencil operations are performed against the stencil buffer. In order to perform writes or comparisons against the stencil buffer this value must be **true**. Default is **false**.
 	*/
 	open var stencilWrite: Boolean  = definedExternally
 
@@ -148,12 +148,6 @@ open external class Material{
 	* Which stencil operation to perform when the comparison function returns true and the depth test passes. Default is [page:Materials KeepStencilOp]. See the stencil operations [page:Materials constants] for all possible values.
 	*/
 	open var stencilZPass: Int  = definedExternally
-
-
-	/**
-	* Define whether the material is rendered with flat shading. Default is false.
-	*/
-	open var flatShading: Boolean  = definedExternally
 
 
 	/**
@@ -211,7 +205,7 @@ open external class Material{
 
 
 	/**
-	* Whether to premultiply the alpha (transparency) value. See [Example:webgl_materials_transparency WebGL / Materials / Transparency] for an example of the difference. Default is **false**.
+	* Whether to premultiply the alpha (transparency) value. See [Example:webgl_materials_physical_transmission WebGL / Materials / Physical / Transmission] for an example of the difference. Default is **false**.
 	*/
 	open var premultipliedAlpha: Boolean  = definedExternally
 
@@ -305,6 +299,14 @@ open external class Material{
 Unlike properties, the callback is not supported by [page:Material.clone .clone](), [page:Material.copy .copy]() and [page:Material.toJSON .toJSON]().
 	*/
 	open fun onBeforeCompile(shader: ch.viseon.threejs.declarations.Shader = definedExternally, renderer: ch.viseon.threejs.declarations.renderers.WebGLRenderer = definedExternally) : dynamic
+
+
+	/**
+	* In case onBeforeCompile is used, this callback can be used to identify values of settings used in onBeforeCompile, so three.js can reuse a cached shader or recompile the shader for this material as needed.
+For example, if onBeforeCompile contains a conditional statement like: if ( black ) { shader.fragmentShader = shader.fragmentShader.replace('gl_FragColor = vec4(1)', 'gl_FragColor = vec4(0)') } then customProgramCacheKey should be set like this: material.customProgramCacheKey = function() { return black ? '1' : '0'; }
+Unlike properties, the callback is not supported by [page:Material.clone .clone](), [page:Material.copy .copy]() and [page:Material.toJSON .toJSON]().
+	*/
+	open fun customProgramCacheKey() : String
 
 
 	/**

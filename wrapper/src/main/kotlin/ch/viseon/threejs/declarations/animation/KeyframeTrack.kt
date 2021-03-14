@@ -12,7 +12,7 @@ Corresponding to the different possible types of animated values there are sever
 open external class KeyframeTrack(name: String = definedExternally, times: Array<dynamic> = definedExternally, values: Array<dynamic> = definedExternally, interpolation: Int = definedExternally){
 
 	/**
-	* The track's name can refer to [page:Geometry.morphTargets morph targets] or [page:SkinnedMesh bones] or possibly other values within an animated object. See [page:PropertyBinding.parseTrackName] for the forms of strings that can be parsed for property binding:
+	* The track's name can refer to morph targets or [page:SkinnedMesh bones] or possibly other values within an animated object. See [page:PropertyBinding.parseTrackName] for the forms of strings that can be parsed for property binding:
 The name can specify the node either using its name or its uuid (although it needs to be in the subtree of the scene graph node passed into the mixer). Or, if the track name starts with a dot, the track applies to the root node that was passed into the mixer.
 Usually after the node a property will be specified directly. But you can also specify a subproperty, such as .rotation[x], if you just want to drive the X component of the rotation via a float track.
 You can also specify bones or multimaterials by using an object name, for example: .bones[R_hand].scale; the red channel of the diffuse color of the fourth material in a materials array - as a further example - can be accessed with .materials[3].diffuse[r].
@@ -130,12 +130,6 @@ This method logs errors to the console, if a track is empty, if the [page:.value
 	*/
 	open fun validate() : Boolean
 	companion object {
-
-	/**
-	* Parses a JSON object and returns a new keyframe track of the correct type.
-	*/
-	open fun parse(json: JSON = definedExternally) : ch.viseon.threejs.declarations.animation.KeyframeTrack
-
 
 	/**
 	* Converts the track to JSON.

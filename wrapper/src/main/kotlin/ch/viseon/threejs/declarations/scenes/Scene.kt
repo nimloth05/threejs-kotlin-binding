@@ -13,13 +13,13 @@ open external class Scene: ch.viseon.threejs.declarations.core.Object3D{
 
 
 	/**
-	* If not null, sets the background used when rendering the scene, and is always rendered first. Can be set to a [page:Color] which sets the clear color, a [page:Texture] covering the canvas, or a cubemap as a [page:CubeTexture] or [page:WebGLCubeRenderTarget]. Default is null.
+	* If not null, sets the background used when rendering the scene, and is always rendered first. Can be set to a [page:Color] which sets the clear color, a [page:Texture] covering the canvas, a cubemap as a [page:CubeTexture] or [page:WebGLCubeRenderTarget] or an equirectangular as a [page:Texture] . Default is null.
 	*/
 	open var background: dynamic  = definedExternally
 
 
 	/**
-	* If not null, this texture is set as the environment map for all physical materials in the scene. However, it's not possible to overwrite an existing texture assigned to [page:MeshStandardMaterial.envmap]. Default is null.
+	* If not null, this texture is set as the environment map for all physical materials in the scene. However, it's not possible to overwrite an existing texture assigned to [page:MeshStandardMaterial.envMap]. Default is null.
 	*/
 	open var environment: ch.viseon.threejs.declarations.textures.Texture  = definedExternally
 
@@ -37,13 +37,7 @@ open external class Scene: ch.viseon.threejs.declarations.core.Object3D{
 
 
 	/**
-	* Clears scene related data internally cached by [page:WebGLRenderer].
-	*/
-	open fun dispose() : dynamic
-
-
-	/**
 	* meta -- object containing metadata such as textures or images for the scene. Convert the scene to three.js [link:https://github.com/mrdoob/three.js/wiki/JSON-Object-Scene-format-4 JSON Object/Scene format].
 	*/
-	open fun toJSON() : dynamic
+	override fun toJSON(meta: dynamic) : dynamic
 }

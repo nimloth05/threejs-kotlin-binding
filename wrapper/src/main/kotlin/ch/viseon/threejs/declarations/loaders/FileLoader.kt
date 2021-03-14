@@ -13,21 +13,9 @@ open external class FileLoader(manager: ch.viseon.threejs.declarations.loaders.m
 
 
 	/**
-	* The [link:https://developer.mozilla.org/en-US/docs/Glossary/Request_header request header] used in HTTP request. See [page:.setRequestHeader]. Default is **undefined**.
-	*/
-	open var requestHeader: dynamic  = definedExternally
-
-
-	/**
 	* The expected response type. See [page:.setResponseType]. Default is **undefined**.
 	*/
 	open var responseType: String  = definedExternally
-
-
-	/**
-	* Whether the XMLHttpRequest uses credentials. See [page:.setWithCredentials]. Default is **undefined**.
-	*/
-	open var withCredentials: String  = definedExternally
 
 
 	/**
@@ -43,19 +31,7 @@ open external class FileLoader(manager: ch.viseon.threejs.declarations.loaders.m
 
 
 	/**
-	* [page:object requestHeader] - key: The name of the header whose value is to be set. value: The value to set as the body of the header. Set the [link:https://developer.mozilla.org/en-US/docs/Glossary/Request_header request header] used in HTTP request.
-	*/
-	open fun setRequestHeader(requestHeader: dynamic = definedExternally) : ch.viseon.threejs.declarations.loaders.FileLoader
-
-
-	/**
 	* Change the response type. Valid values are: [page:String text] or empty string (default) - returns the data as [page:String String]. [page:String arraybuffer] - loads the data into a [link:https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer ArrayBuffer] and returns that. [page:String blob] - returns the data as a [link:https://developer.mozilla.org/en/docs/Web/API/Blob Blob]. [page:String document] - parses the file using the [link:https://developer.mozilla.org/en-US/docs/Web/API/DOMParser DOMParser]. [page:String json] - parses the file using [link:https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse JSON.parse].
 	*/
 	open fun setResponseType(responseType: String = definedExternally) : ch.viseon.threejs.declarations.loaders.FileLoader
-
-
-	/**
-	* Whether the XMLHttpRequest uses credentials such as cookies, authorization headers or TLS client certificates. See [link:https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/withCredentials XMLHttpRequest.withCredentials]. Note that this has no effect if you are loading files locally or from the same domain.
-	*/
-	open fun setWithCredentials(value: Boolean = definedExternally) : ch.viseon.threejs.declarations.loaders.FileLoader
 }

@@ -7,7 +7,7 @@ package ch.viseon.threejs.declarations.core
 open external class InstancedBufferGeometry: ch.viseon.threejs.declarations.core.BufferGeometry{
 
 	/**
-	* Default is **undefined**.
+	* Default is **Infinity**.
 	*/
-	open var maxInstancedCount: Double  = definedExternally
+	open var instanceCount: Double  = definedExternally
 }

@@ -31,15 +31,27 @@ open external class InterleavedBufferAttribute(interleavedBuffer: ch.viseon.thre
 
 
 	/**
-	* The offset in the underlying array buffer where an item starts.
+	* Optional name for this attribute instance. Default is an empty string.
 	*/
-	open var offset: Int  = definedExternally
+	open var name: String  = definedExternally
+
+
+	/**
+	* Default is **false**. Setting this to **true** will send the entire interleaved buffer (not just the specific attribute data) to the GPU again.
+	*/
+	open var needsUpdate: Boolean  = definedExternally
 
 
 	/**
 	* Default is **false**.
 	*/
 	open var normalized: Boolean  = definedExternally
+
+
+	/**
+	* The offset in the underlying array buffer where an item starts.
+	*/
+	open var offset: Int  = definedExternally
 
 
 	/**

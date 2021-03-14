@@ -57,7 +57,7 @@ open external class Vector4(x: Double = definedExternally, y: Double = definedEx
 
 
 	/**
-	* The [page:.x x], [page:.y y], [page:.z z] and [page:.w w] components of the vector are rounded up to the nearest integer value.
+	* The [page:.x x], [page:.y y], [page:.z z] and [page:.w w] components of this vector are rounded up to the nearest integer value.
 	*/
 	open fun ceil() : Vector4
 
@@ -111,7 +111,7 @@ open external class Vector4(x: Double = definedExternally, y: Double = definedEx
 
 
 	/**
-	* The components of the vector are rounded down to the nearest integer value.
+	* The components of this vector are rounded down to the nearest integer value.
 	*/
 	open fun floor() : Vector4
 
@@ -171,7 +171,7 @@ open external class Vector4(x: Double = definedExternally, y: Double = definedEx
 
 
 	/**
-	* Converts this vector to a [link:https://en.wikipedia.org/wiki/Unit_vector unit vector] - that is, sets it equal to the vector with the same direction as this one, but [page:.length length] 1.
+	* Converts this vector to a [link:https://en.wikipedia.org/wiki/Unit_vector unit vector] - that is, sets it equal to a vector with the same direction as this one, but [page:.length length] 1.
 	*/
 	open fun normalize() : Vector4
 
@@ -189,19 +189,25 @@ open external class Vector4(x: Double = definedExternally, y: Double = definedEx
 
 
 	/**
+	* Multiplies this vector by [page:Vector4 v].
+	*/
+	open fun multiply(v: ch.viseon.threejs.declarations.math.Vector4 = definedExternally) : Vector4
+
+
+	/**
 	* Multiplies this vector by scalar [page:Float s].
 	*/
 	open fun multiplyScalar(s: Double = definedExternally) : Vector4
 
 
 	/**
-	* The components of the vector are rounded to the nearest integer value.
+	* The components of this vector are rounded to the nearest integer value.
 	*/
 	open fun round() : Vector4
 
 
 	/**
-	* The components of the vector are rounded towards zero (up if negative, down if positive) to an integer value.
+	* The components of this vector are rounded towards zero (up if negative, down if positive) to an integer value.
 	*/
 	open fun roundToZero() : Vector4
 
@@ -231,7 +237,7 @@ open external class Vector4(x: Double = definedExternally, y: Double = definedEx
 
 
 	/**
-	* Sets this vector to the vector with the same direction as this one, but [page:.length length] [page:Float l].
+	* Sets this vector to a vector with the same direction as this one, but [page:.length length] [page:Float l].
 	*/
 	open fun setLength(l: Double = definedExternally) : Vector4
 
@@ -285,7 +291,13 @@ open external class Vector4(x: Double = definedExternally, y: Double = definedEx
 
 
 	/**
-	* [page:Array array] - (optional) array to store the vector to. If this is not provided, a new array will be created. [page:Integer offset] - (optional) optional offset into the array. Returns an array [x, y, z, w], or copies x, y, z and w into the provided [page:Array array].
+	* [page:Array array] - (optional) array to store this vector to. If this is not provided, a new array will be created. [page:Integer offset] - (optional) optional offset into the array. Returns an array [x, y, z, w], or copies x, y, z and w into the provided [page:Array array].
 	*/
 	open fun toArray(array: Array<dynamic> = definedExternally, offset: Int = definedExternally) : Array<dynamic>
+
+
+	/**
+	* Sets each component of this vector to a pseudo-random value between 0 and 1, excluding 1.
+	*/
+	open fun random() : Vector4
 }

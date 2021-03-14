@@ -7,6 +7,12 @@ package ch.viseon.threejs.declarations.core
 open external class Object3D{
 
 	/**
+	* Array with object's animation clips.
+	*/
+	open var animations: ch.viseon.threejs.declarations.animation.AnimationClip  = definedExternally
+
+
+	/**
 	* Whether the object gets rendered into shadow map. Default is **false**.
 	*/
 	open var castShadow: Boolean  = definedExternally
@@ -31,7 +37,7 @@ open external class Object3D{
 
 
 	/**
-	* When this is set, it checks every frame if the object is in the frustum of the camera before rendering the object. Otherwise the object gets rendered every frame even if it isn't visible. Default is **true**.
+	* When this is set, it checks every frame if the object is in the frustum of the camera before rendering the object. If set to `false` the object gets rendered every frame even if it is not in the frustum of the camera. Default is `true`.
 	*/
 	open var frustumCulled: Boolean  = definedExternally
 
@@ -91,13 +97,15 @@ open external class Object3D{
 
 
 	/**
-	* An optional callback that is executed immediately after the Object3D is rendered. This function is called with the following parameters: renderer, scene, camera, geometry, material, group.
+	* An optional callback that is executed immediately after a 3D object is rendered. This function is called with the following parameters: renderer, scene, camera, geometry, material, group.
+Please notice that this callback is only executed for **renderable** 3D objects. Meaning 3D objects which define their visual appearance with geometries and materials like instances of [page:Mesh], [page:Line], [page:Points] or [page:Sprite]. Instances of [page:Object3D], [page:Group] or [page:Bone] are not renderable and thus this callback is not executed for such objects.
 	*/
 	open var onAfterRender: dynamic  = definedExternally
 
 
 	/**
-	* An optional callback that is executed immediately before the Object3D is rendered. This function is called with the following parameters: renderer, scene, camera, geometry, material, group.
+	* An optional callback that is executed immediately before a 3D object is rendered. This function is called with the following parameters: renderer, scene, camera, geometry, material, group.
+Please notice that this callback is only executed for **renderable** 3D objects. Meaning 3D objects which define their visual appearance with geometries and materials like instances of [page:Mesh], [page:Line], [page:Points] or [page:Sprite]. Instances of [page:Object3D], [page:Group] or [page:Bone] are not renderable and thus this callback is not executed for such objects.
 	*/
 	open var onBeforeRender: dynamic  = definedExternally
 
@@ -259,7 +267,7 @@ open external class Object3D{
 
 
 	/**
-	* vector - A vector representing a position in local (object) space. Converts the vector from local space to world space.
+	* vector - A vector representing a position in this object's local space. Converts the vector from this object's local space to world space.
 	*/
 	open fun localToWorld(vector: ch.viseon.threejs.declarations.math.Vector3 = definedExternally) : ch.viseon.threejs.declarations.math.Vector3
 
@@ -280,6 +288,12 @@ open external class Object3D{
 	* Removes **object** as child of this object. An arbitrary number of objects may be removed.
 	*/
 	open fun remove(`object`: ch.viseon.threejs.declarations.core.Object3D = definedExternally) : Object3D
+
+
+	/**
+	* Removes all child objects.
+	*/
+	open fun clear() : Object3D
 
 
 	/**
@@ -367,19 +381,19 @@ open external class Object3D{
 
 
 	/**
-	* callback - A function with as first argument an object3D object. Executes the callback on this object and all descendants.
+	* callback - A function with as first argument an object3D object. Executes the callback on this object and all descendants. Note: Modifying the scene graph inside the callback is discouraged.
 	*/
 	open fun traverse(callback: dynamic = definedExternally) : dynamic
 
 
 	/**
-	* callback - A function with as first argument an object3D object. Like traverse, but the callback will only be executed for visible objects. Descendants of invisible objects are not traversed.
+	* callback - A function with as first argument an object3D object. Like traverse, but the callback will only be executed for visible objects. Descendants of invisible objects are not traversed. Note: Modifying the scene graph inside the callback is discouraged.
 	*/
 	open fun traverseVisible(callback: dynamic = definedExternally) : dynamic
 
 
 	/**
-	* callback - A function with as first argument an object3D object. Executes the callback on all ancestors.
+	* callback - A function with as first argument an object3D object. Executes the callback on all ancestors. Note: Modifying the scene graph inside the callback is discouraged.
 	*/
 	open fun traverseAncestors(callback: dynamic = definedExternally) : dynamic
 
@@ -403,7 +417,7 @@ open external class Object3D{
 
 
 	/**
-	* vector - A world vector. Updates the vector from world space to local space.
+	* vector - A vector representing a position in world space. Converts the vector from world space to this object's local space.
 	*/
 	open fun worldToLocal(vector: ch.viseon.threejs.declarations.math.Vector3 = definedExternally) : ch.viseon.threejs.declarations.math.Vector3
 }

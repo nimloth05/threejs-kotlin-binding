@@ -55,9 +55,15 @@ open external class Sphere(center: ch.viseon.threejs.declarations.math.Vector3 =
 
 
 	/**
-	* Checks to see if the sphere is empty (the radius set to 0).
+	* Checks to see if the sphere is empty (the radius set to a negative number). Spheres with a radius of 0 contain only their center point and are not considered to be empty.
 	*/
-	open fun empty() : Boolean
+	open fun isEmpty() : Boolean
+
+
+	/**
+	* Makes the sphere empty by setting [page:.center center] to (0, 0, 0) and [page:.radius radius] to -1.
+	*/
+	open fun makeEmpty() : ch.viseon.threejs.declarations.math.Sphere
 
 
 	/**

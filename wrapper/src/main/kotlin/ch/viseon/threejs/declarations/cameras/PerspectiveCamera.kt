@@ -13,7 +13,7 @@ open external class PerspectiveCamera(fov: Double = definedExternally, aspect: D
 
 
 	/**
-	* Camera frustum far plane. Default is **2000**. The valid range is between the current value of the [page:.near near] plane and infinity.
+	* Camera frustum far plane. Default is **2000**. Must be greater than the current value of [page:.near near] plane.
 	*/
 	open var far: Double  = definedExternally
 

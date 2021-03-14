@@ -2,9 +2,8 @@
 package ch.viseon.threejs.declarations.core
 
 	/**
-	* An efficient representation of mesh, line, or point geometry. Includes vertex positions, face indices, normals, colors, UVs, and custom attributes within buffers, reducing the cost of passing all this data to the GPU.
+	* A representation of mesh, line, or point geometry. Includes vertex positions, face indices, normals, colors, UVs, and custom attributes within buffers, reducing the cost of passing all this data to the GPU.
 To read and edit data in BufferGeometry attributes, see [page:BufferAttribute] documentation.
-For a less efficient but easier-to-use representation of geometry, see [page:Geometry].
 	*/
 open external class BufferGeometry{
 
@@ -45,13 +44,13 @@ open external class BufferGeometry{
 
 
 	/**
-	* Allows for vertices to be re-used across multiple triangles; this is called using "indexed triangles" and works much the same as it does in [page:Geometry]: each triangle is associated with the indices of three vertices. This attribute therefore stores the index of each vertex for each triangular face. If this attribute is not set, the [page:WebGLRenderer renderer] assumes that each three contiguous positions represent a single triangle. Default is **null**.
+	* Allows for vertices to be re-used across multiple triangles; this is called using "indexed triangles". Each triangle is associated with the indices of three vertices. This attribute therefore stores the index of each vertex for each triangular face. If this attribute is not set, the [page:WebGLRenderer renderer] assumes that each three contiguous positions represent a single triangle. Default is **null**.
 	*/
 	open var index: ch.viseon.threejs.declarations.core.BufferAttribute  = definedExternally
 
 
 	/**
-	* Hashmap of [page:BufferAttribute]s holding details of the geometry's [page:Geometry.morphTargets morphTargets].
+	* Hashmap of [page:BufferAttribute]s holding details of the geometry's morph targets.
 	*/
 	open var morphAttributes: dynamic  = definedExternally
 
@@ -135,6 +134,12 @@ open external class BufferGeometry{
 
 
 	/**
+	* Calculates and adds a tangent attribute to this geometry. The computation is only supported for indexed geometries and if position, normal, and uv attributes are defined.
+	*/
+	open fun computeTangents() : dynamic
+
+
+	/**
 	* Computes vertex normals by averaging face normals.
 	*/
 	open fun computeVertexNormals() : dynamic
@@ -147,18 +152,6 @@ open external class BufferGeometry{
 
 
 	/**
-	* Populates this BufferGeometry with data from a [page:DirectGeometry] object containing faces. Not implemented for a line geometry. Note: [page:DirectGeometry] is mainly used as an intermediary object for converting between [page:Geometry] and BufferGeometry.
-	*/
-	open fun fromDirectGeometry(Geometry: ch.viseon.threejs.declarations.core.Geometry = definedExternally) : ch.viseon.threejs.declarations.core.BufferGeometry
-
-
-	/**
-	* Populates this BufferGeometry with data from a [page:Geometry] object containing faces. Not implemented for a line geometry.
-	*/
-	open fun fromGeometry(Geometry: ch.viseon.threejs.declarations.core.Geometry = definedExternally) : ch.viseon.threejs.declarations.core.BufferGeometry
-
-
-	/**
 	* Returns the [page:BufferAttribute attribute] with the specified name.
 	*/
 	open fun getAttribute(name: String = definedExternally) : ch.viseon.threejs.declarations.core.BufferAttribute
@@ -168,6 +161,12 @@ open external class BufferGeometry{
 	* Return the [page:.index] buffer.
 	*/
 	open fun getIndex() : ch.viseon.threejs.declarations.core.BufferAttribute
+
+
+	/**
+	* Returns **true** if the attribute with the specified name exists.
+	*/
+	open fun hasAttribute(name: String = definedExternally) : Boolean
 
 
 	/**
@@ -221,19 +220,13 @@ open external class BufferGeometry{
 	/**
 	* Set the [page:.index] buffer.
 	*/
-	open fun setIndex(index: ch.viseon.threejs.declarations.core.BufferAttribute = definedExternally) : dynamic
+	open fun setIndex(index: ch.viseon.threejs.declarations.core.BufferAttribute = definedExternally) : ch.viseon.threejs.declarations.core.BufferGeometry
 
 
 	/**
 	* Set the [page:.drawRange] property. For non-indexed BufferGeometry, count is the number of vertices to render. For indexed BufferGeometry, count is the number of indices to render.
 	*/
 	open fun setDrawRange(start: Int = definedExternally, count: Int = definedExternally) : dynamic
-
-
-	/**
-	* Sets the attributes for this BufferGeometry from an [page:Object3D].
-	*/
-	open fun setFromObject(`object`: ch.viseon.threejs.declarations.core.Object3D = definedExternally) : ch.viseon.threejs.declarations.core.BufferGeometry
 
 
 	/**
@@ -258,10 +251,4 @@ open external class BufferGeometry{
 	* Translate the geometry. This is typically done as a one time operation, and not during a loop. Use [page:Object3D.position] for typical real-time mesh translation.
 	*/
 	open fun translate(x: Double = definedExternally, y: Double = definedExternally, z: Double = definedExternally) : ch.viseon.threejs.declarations.core.BufferGeometry
-
-
-	/**
-	* Updates the attributes for this BufferGeometry from an [page:Object3D].
-	*/
-	open fun updateFromObject(`object`: ch.viseon.threejs.declarations.core.Object3D = definedExternally) : ch.viseon.threejs.declarations.core.BufferGeometry
 }

@@ -2,8 +2,8 @@
 package ch.viseon.threejs.declarations.loaders
 
 	/**
-	* A loader for loading an [page:Image] as an [link:https://developer.mozilla.org/de/docs/Web/API/ImageBitmap ImageBitmap]. An ImageBitmap provides an asynchronous and resource efficient pathway to prepare textures for rendering in WebGL. Unlike [page:FileLoader], [name] does not avoid multiple concurrent requests to the same URL.
-Note that [page:Texture.flipY] and [page:Texture.premultiplyAlpha] with [link:https://developer.mozilla.org/de/docs/Web/API/ImageBitmap ImageBitmap] are ignored. [link:https://developer.mozilla.org/de/docs/Web/API/ImageBitmap ImageBitmap] needs these configuration on bitmap creation unlike regular images need them on uploading to GPU. You need to set the equivalent options via [page:ImageBitmapLoader.setOptions] instead. Refer to [link:https://www.khronos.org/registry/webgl/specs/latest/1.0/#6.10 WebGL specification] for the detail.
+	* A loader for loading an [page:Image] as an [link:https://developer.mozilla.org/en-US/docs/Web/API/ImageBitmap ImageBitmap]. An ImageBitmap provides an asynchronous and resource efficient pathway to prepare textures for rendering in WebGL. Unlike [page:FileLoader], [name] does not avoid multiple concurrent requests to the same URL.
+Note that [page:Texture.flipY] and [page:Texture.premultiplyAlpha] with [link:https://developer.mozilla.org/en-US/docs/Web/API/ImageBitmap ImageBitmap] are ignored. [link:https://developer.mozilla.org/en-US/docs/Web/API/ImageBitmap ImageBitmap] needs these configuration on bitmap creation unlike regular images need them on uploading to GPU. You need to set the equivalent options via [page:ImageBitmapLoader.setOptions] instead. Refer to [link:https://www.khronos.org/registry/webgl/specs/latest/1.0/#6.10 WebGL specification] for the detail.
 	*/
 open external class ImageBitmapLoader(manager: ch.viseon.threejs.declarations.loaders.managers.LoadingManager = definedExternally): ch.viseon.threejs.declarations.loaders.Loader{
 

@@ -2,7 +2,7 @@
 package ch.viseon.threejs.declarations.loaders
 
 	/**
-	* Class for loading a font in JSON format. Returns a [page:Font Font], which is an array of [page:Shape Shape]s representing the font. This uses the [page:FileLoader] internally for loading files. You can convert fonts online using [link:https://gero3.github.io/facetype.js/ facetype.js]
+	* Class for loading a font in JSON format. Returns a [page:Font Font], which is an array of [page:Shape Shapes] representing the font. This uses the [page:FileLoader] internally for loading files. You can convert fonts online using [link:https://gero3.github.io/facetype.js/ facetype.js]
 	*/
 open external class FontLoader(manager: ch.viseon.threejs.declarations.loaders.managers.LoadingManager = definedExternally): ch.viseon.threejs.declarations.loaders.Loader{
 

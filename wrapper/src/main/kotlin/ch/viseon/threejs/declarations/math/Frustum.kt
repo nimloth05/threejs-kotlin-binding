@@ -2,7 +2,7 @@
 package ch.viseon.threejs.declarations.math
 
 	/**
-	* [link:http://en.wikipedia.org/wiki/Frustum Frustums] are used to determine what is inside the camera's field of view. They help speed up the rendering process - object which lie outside a camera's frustum can safely be excluded from rendering. This class is mainly intended for use internally by a renderer for calculating a [page:Camera camera] or [page:LightShadow.camera shadowCamera]'s frustum.
+	* [link:http://en.wikipedia.org/wiki/Frustum Frustums] are used to determine what is inside the camera's field of view. They help speed up the rendering process - objects which lie outside a camera's frustum can safely be excluded from rendering. This class is mainly intended for use internally by a renderer for calculating a [page:Camera camera] or [page:LightShadow.camera shadowCamera]'s frustum.
 	*/
 open external class Frustum(p0: ch.viseon.threejs.declarations.math.Plane = definedExternally, p1: ch.viseon.threejs.declarations.math.Plane = definedExternally, p2: ch.viseon.threejs.declarations.math.Plane = definedExternally, p3: ch.viseon.threejs.declarations.math.Plane = definedExternally, p4: ch.viseon.threejs.declarations.math.Plane = definedExternally, p5: ch.viseon.threejs.declarations.math.Plane = definedExternally){
 
@@ -37,7 +37,7 @@ open external class Frustum(p0: ch.viseon.threejs.declarations.math.Plane = defi
 
 
 	/**
-	* Checks whether the [page:Object3D object]'s [page:Geometry.boundingSphere bounding sphere] is intersecting the Frustum. Note that the object must have a [page:Geometry] or [page:BufferGeometry] so that the bounding sphere can be calculated.
+	* Checks whether the [page:Object3D object]'s [page:BufferGeometry.boundingSphere bounding sphere] is intersecting the Frustum. Note that the object must have a [page:BufferGeometry geometry] so that the bounding sphere can be calculated.
 	*/
 	open fun intersectsObject(`object`: ch.viseon.threejs.declarations.core.Object3D = definedExternally) : Boolean
 

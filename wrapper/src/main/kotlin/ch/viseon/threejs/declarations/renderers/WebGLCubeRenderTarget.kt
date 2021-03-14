@@ -11,4 +11,10 @@ open external class WebGLCubeRenderTarget(size: Double = definedExternally, opti
 Use this method if you want to convert an equirectangular panorama to the cubemap format.
 	*/
 	open fun fromEquirectangularTexture(renderer: ch.viseon.threejs.declarations.renderers.WebGLRenderer = definedExternally, texture: ch.viseon.threejs.declarations.textures.Texture = definedExternally) : ch.viseon.threejs.declarations.renderers.WebGLCubeRenderTarget
+
+
+	/**
+	* Call this to clear the renderTarget's color, depth, and/or stencil buffers. The color buffer is set to the renderer's current clear color. Arguments default to **true**.
+	*/
+	open fun clear(renderer: ch.viseon.threejs.declarations.renderers.WebGLRenderer = definedExternally, color: Boolean = definedExternally, depth: Boolean = definedExternally, stencil: Boolean = definedExternally) : dynamic
 }

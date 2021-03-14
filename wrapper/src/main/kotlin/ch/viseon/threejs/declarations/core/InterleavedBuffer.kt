@@ -31,6 +31,12 @@ open external class InterleavedBuffer(array: Array<dynamic> = definedExternally,
 
 
 	/**
+	* [link:http://en.wikipedia.org/wiki/Universally_unique_identifier UUID] of this instance. This gets automatically assigned, so this shouldn't be edited.
+	*/
+	open var uuid: String  = definedExternally
+
+
+	/**
 	* A version number, incremented every time the needsUpdate property is set to true.
 	*/
 	open var version: Int  = definedExternally
@@ -67,13 +73,19 @@ open external class InterleavedBuffer(array: Array<dynamic> = definedExternally,
 
 
 	/**
-	* Creates a clone of this [name].
+	* data - This object holds shared array buffers required for properly cloning geometries with interleaved attributes. Creates a clone of this [name].
 	*/
-	open fun clone() : ch.viseon.threejs.declarations.core.InterleavedBuffer
+	open fun clone(data: dynamic = definedExternally) : ch.viseon.threejs.declarations.core.InterleavedBuffer
 
 
 	/**
-	* Set [page:BufferAttribute.usage usage] to value.
+	* Set [page:InterleavedBuffer.usage usage] to value.
 	*/
-	open fun setUsage(value: Int = definedExternally) : ch.viseon.threejs.declarations.core.BufferAttribute
+	open fun setUsage(value: Int = definedExternally) : ch.viseon.threejs.declarations.core.InterleavedBuffer
+
+
+	/**
+	* data - This object holds shared array buffers required for properly serializing geometries with interleaved attributes. Serializes this [name].
+	*/
+	open fun toJSON(data: dynamic = definedExternally) : ch.viseon.threejs.declarations.core.InterleavedBuffer
 }

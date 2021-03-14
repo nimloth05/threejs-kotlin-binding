@@ -21,7 +21,7 @@ open external class Cache{
 	/**
 	* [page:String key] — the [page:String key] to reference the cached file by. [page:Object file] — The file to be cached. Adds a cache entry with a key to reference the file. If this key already holds a file, it is overwritten.
 	*/
-	open fun add(key: String = definedExternally) : dynamic
+	open fun add(key: String = definedExternally, file: dynamic = definedExternally) : dynamic
 
 
 	/**

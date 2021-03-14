@@ -14,43 +14,43 @@ Begin loading from url and call onLoad with the parsed response content.
 
 
 	/**
-	* [page:Object json] — required. The JSON source to parse. [page:Function onLoad] — Will be called when parsed completes. The argument will be the parsed [page:Object3D object]. Parse a JSON structure and return a threejs object. This is used internally by [page:.load], but can also be used directly to parse a previously loaded JSON structure.
+	* [page:Object json] — required. The JSON source to parse. [page:Function onLoad] — Will be called when parsed completes. The argument will be the parsed [page:Object3D object]. Parse a JSON structure and return a threejs object. This is used internally by [page:.load]() but can also be used directly to parse a previously loaded JSON structure.
 	*/
 	open fun parse(json: dynamic = definedExternally, onLoad: dynamic = definedExternally) : ch.viseon.threejs.declarations.core.Object3D
 
 
 	/**
-	* [page:Object json] — required. The JSON source to parse. This is used [page:.parse] to parse any [page:Geometry geometries] or [page:BufferGeometry buffer geometries] in the JSON structure.
+	* [page:Object json] — required. The JSON source to parse. This is used by [page:.parse]() to parse any [page:BufferGeometry geometries] in the JSON structure.
 	*/
 	open fun parseGeometries(json: dynamic = definedExternally) : ch.viseon.threejs.declarations.core.Object3D
 
 
 	/**
-	* [page:Object json] — required. The JSON source to parse. This is used [page:.parse] to parse any materials in the JSON structure using [page:MaterialLoader].
+	* [page:Object json] — required. The JSON source to parse. This is used by [page:.parse]() to parse any materials in the JSON structure using [page:MaterialLoader].
 	*/
 	open fun parseMaterials(json: dynamic = definedExternally) : ch.viseon.threejs.declarations.core.Object3D
 
 
 	/**
-	* [page:Object json] — required. The JSON source to parse. This is used [page:.parse] to parse any animations in the JSON structure, using [page:AnimationClip.parse].
+	* [page:Object json] — required. The JSON source to parse. This is used by [page:.parse]() to parse any animations in the JSON structure, using [page:AnimationClip.parse]().
 	*/
 	open fun parseAnimations(json: dynamic = definedExternally) : ch.viseon.threejs.declarations.core.Object3D
 
 
 	/**
-	* [page:Object json] — required. The JSON source to parse. This is used [page:.parse] to parse any images in the JSON structure, using [page:ImageLoader].
+	* [page:Object json] — required. The JSON source to parse. This is used by [page:.parse]() to parse any images in the JSON structure, using [page:ImageLoader].
 	*/
 	open fun parseImages(json: dynamic = definedExternally) : ch.viseon.threejs.declarations.core.Object3D
 
 
 	/**
-	* [page:Object json] — required. The JSON source to parse. This is used [page:.parse] to parse any textures in the JSON structure.
+	* [page:Object json] — required. The JSON source to parse. This is used by [page:.parse]() to parse any textures in the JSON structure.
 	*/
 	open fun parseTextures(json: dynamic = definedExternally) : ch.viseon.threejs.declarations.core.Object3D
 
 
 	/**
-	* [page:Object json] — required. The JSON source to parse. This is used [page:.parse] to parse any objects in the JSON structure. Objects can be of the following types:
+	* [page:Object json] — required. The JSON source to parse. [page:BufferGeometry geometries] — required. The geometries of the JSON. [page:Material materials] — required. The materials of the JSON. [page:AnimationClip animations] — required. The animations of the JSON. This is used by [page:.parse]() to parse any 3D objects in the JSON structure.
 	*/
-	open fun parseObject(json: dynamic = definedExternally) : ch.viseon.threejs.declarations.core.Object3D
+	open fun parseObject(json: dynamic = definedExternally, geometries: ch.viseon.threejs.declarations.core.BufferGeometry = definedExternally, materials: ch.viseon.threejs.declarations.materials.Material = definedExternally, animations: ch.viseon.threejs.declarations.animation.AnimationClip = definedExternally) : ch.viseon.threejs.declarations.core.Object3D
 }

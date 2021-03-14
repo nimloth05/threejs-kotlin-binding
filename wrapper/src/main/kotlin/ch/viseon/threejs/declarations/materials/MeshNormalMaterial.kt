@@ -37,13 +37,19 @@ open external class MeshNormalMaterial(parameters: dynamic = definedExternally):
 
 
 	/**
+	* Define whether the material is rendered with flat shading. Default is false.
+	*/
+	open var flatShading: Boolean  = definedExternally
+
+
+	/**
 	* Whether the material is affected by fog. Default is **false**.
 	*/
 	override var fog: Boolean 
 
 
 	/**
-	* Defines whether the material uses morphNormals. Set as true to pass morphNormal attributes from the [page:Geometry] to the shader. Default is **false**.
+	* Defines whether the material uses morphNormals. Set as true to pass morphNormal attributes from the geometry to the shader. Default is **false**.
 	*/
 	open var morphNormals: Boolean  = definedExternally
 

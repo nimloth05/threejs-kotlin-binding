@@ -39,7 +39,7 @@ open external class MeshBasicMaterial(parameters: dynamic = definedExternally): 
 	/**
 	* The environment map. Default is null.
 	*/
-	open var envMap: ch.viseon.threejs.declarations.textures.CubeTexture  = definedExternally
+	open var envMap: ch.viseon.threejs.declarations.textures.Texture  = definedExternally
 
 
 	/**

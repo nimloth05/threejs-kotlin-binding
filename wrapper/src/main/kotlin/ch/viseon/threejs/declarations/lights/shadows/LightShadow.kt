@@ -7,6 +7,12 @@ package ch.viseon.threejs.declarations.lights.shadows
 open external class LightShadow(camera: ch.viseon.threejs.declarations.cameras.Camera = definedExternally){
 
 	/**
+	* Enables automatic updates of the light's shadow. Default is **true**. If you do not require dynamic lighting / shadows, you may set this to **false**.
+	*/
+	open var autoUpdate: Boolean  = definedExternally
+
+
+	/**
 	* The light's view of the world. This is used to generate a depth map of the scene; objects behind other objects from the light's perspective will be in shadow.
 	*/
 	open var camera: ch.viseon.threejs.declarations.cameras.Camera  = definedExternally
@@ -40,6 +46,18 @@ open external class LightShadow(camera: ch.viseon.threejs.declarations.cameras.C
 	* Model to shadow camera space, to compute location and depth in shadow map. Stored in a [page:Matrix4 Matrix4]. This is computed internally during rendering.
 	*/
 	open var matrix: ch.viseon.threejs.declarations.math.Matrix4  = definedExternally
+
+
+	/**
+	* When set to **true**, shadow maps will be updated in the next **render** call. Default is **false**. If you have set [page:.autoUpdate] to **false**, you will need to set this property to **true** and then make a render call to update the light's shadow.
+	*/
+	open var needsUpdate: Boolean  = definedExternally
+
+
+	/**
+	* Defines how much the position used to query the shadow map is offset along the object normal. The default is 0. Increasing this value can be used to reduce shadow acne especially in large scenes where light shines onto geometry at a shallow angle. The cost is that shadows may appear distorted.
+	*/
+	open var normalBias: Double  = definedExternally
 
 
 	/**
